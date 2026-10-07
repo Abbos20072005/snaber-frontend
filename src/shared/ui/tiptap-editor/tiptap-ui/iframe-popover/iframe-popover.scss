@@ -1,0 +1,13 @@
+.tiptap-iframe-input {
+  font-size: 0.875rem;
+  border: none;
+  min-width: 18rem;
+  padding-right: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  &:focus {
+    text-overflow: clip;
+    overflow: visible;
+  }
+}

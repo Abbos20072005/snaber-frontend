@@ -1,0 +1,19 @@
+.tiptap.ProseMirror {
+  div[data-type='iframe'] {
+    margin: 2rem 0;
+    outline: 0.125rem solid transparent;
+    border-radius: var(--tt-radius-xs, 0.25rem);
+    overflow: hidden;
+  }
+
+  div[data-type='iframe'].ProseMirror-selectednode {
+    outline-color: var(--tt-brand-color-500);
+  }
+
+  div[data-type='iframe'] iframe {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    border: 0;
+  }
+}

@@ -1,0 +1,10 @@
+node_modules
+dist
+.env
+.tanstack
+.idea
+.vite
+tsconfig.tsbuildinfo
+src/shared/i18n/locales
+
+src/routeTree.gen.ts

@@ -1,0 +1,2827 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-01-13 18:12+0500\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: uz\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: @lingui/cli\n"
+
+msgid "{orders_count} orders"
+msgstr "{orders_count} ta buyurtma"
+
+msgid "{ordersCount} active buyer conversations"
+msgstr "{ordersCount} ta faol xaridor suhbati"
+
+msgid "{selectedSize} selected"
+msgstr "{selectedSize} ta tanlandi"
+
+msgid "{title} slider"
+msgstr "{title} slayderi"
+
+msgid "15-20 days"
+msgstr "15-20 kun"
+
+msgid "2 hours"
+msgstr "2 soat"
+
+msgid "About"
+msgstr "Biz haqimizda"
+
+msgid "About Us"
+msgstr "Biz haqimizda"
+
+msgid "Accept"
+msgstr "Qabul qilish"
+
+msgid "Accept order"
+msgstr "Buyurtmani qabul qilish"
+
+msgid "Acceptance rate"
+msgstr "Qabul qilish darajasi"
+
+msgid "Accepted"
+msgstr "Qabul qilindi"
+
+msgid "Accepted by buyer"
+msgstr "Xaridor tomonidan qabul qilingan"
+
+msgid "Accepted by seller"
+msgstr "Sotuvchi tomonidan qabul qilingan"
+
+msgid "Accepted orders compared with all loaded orders."
+msgstr "Qabul qilingan buyurtmalar barcha yuklangan buyurtmalar bilan taqqoslangan."
+
+msgid "Accepted RFQs compared with seller RFQ flow."
+msgstr "Qabul qilingan RFQlar sotuvchi RFQ oqimi bilan taqqoslangan."
+
+msgid "Access Forbidden"
+msgstr "Kirish taqiqlangan"
+
+msgid "Account id"
+msgstr "Hisob ID raqami"
+
+msgid "Account Status"
+msgstr "Hisob holati"
+
+msgid "Across active sellers"
+msgstr "Faol sotuvchilar bo‘yicha"
+
+msgid "Actions"
+msgstr "Amallar"
+
+msgid "Active"
+msgstr "Faol"
+
+msgid "Active orders"
+msgstr "Faol buyurtmalar"
+
+msgid "Active variant"
+msgstr "Faol variant"
+
+msgid "Activity"
+msgstr "Faollik"
+
+msgid "Add"
+msgstr "Qo‘shish"
+
+msgid "Add certificate"
+msgstr "Sertifikat qo‘shish"
+
+msgid "Add comment"
+msgstr "Izoh qoldirish"
+
+msgid "Add company certificates, compliance documents, and awards for buyers to review."
+msgstr "Xaridorlar ko‘rib chiqishi uchun kompaniya sertifikatlari, muvofiqlik hujjatlari va mukofotlarini qo‘shing."
+
+msgid "Add photo"
+msgstr "Rasm qo‘shish"
+
+msgid "Add photos that represent your company, production, and workspace."
+msgstr "Kompaniyangiz, ishlab chiqarish va ish jarayoningizni aks ettiruvchi rasmlarni qo‘shing."
+
+msgid "Add product to order"
+msgstr "Buyurtmaga mahsulot qo‘shish"
+
+msgid "Add to cart"
+msgstr "Savatga qo‘shish"
+
+msgid "Add value"
+msgstr "Qiymat qo‘shish"
+
+msgid "Add variant"
+msgstr "Variant qo‘shish"
+
+msgid "Add your first certificate so buyers can review your company credentials."
+msgstr "Xaridorlar kompaniyangiz ma’lumotlarini ko‘rib chiqishi uchun birinchi sertifikatingizni qo‘shing."
+
+msgid "Add your first company photo to show buyers your production and workspace."
+msgstr "Xaridorlarga ishlab chiqarish va ish joyingizni ko‘rsatish uchun kompaniyangizning birinchi rasmini qo‘shing."
+
+#~ msgid "Added to favorites"
+#~ msgstr "Sevimlilarga qo‘shildi"
+
+msgid "Address"
+msgstr "Manzil"
+
+msgid "Address copied"
+msgstr "Manzil nusxalandi"
+
+msgid "Admin"
+msgstr "Admin"
+
+msgid "Admin dashboard"
+msgstr "Admin paneli"
+
+msgid "All"
+msgstr "Barchasi"
+
+msgid "All messages"
+msgstr "Barcha xabarlar"
+
+msgid "All orders"
+msgstr "Barcha buyurtmalar"
+
+msgid "All orders loaded for this buyer profile."
+msgstr "Ushbu xaridor profili uchun barcha buyurtmalar yuklangan."
+
+msgid "Amount"
+msgstr "Miqdor"
+
+msgid "An error occurred while submitting your comment"
+msgstr "Izohingizni yuborishda xatolik yuz berdi"
+
+msgid "Answer"
+msgstr "Javob"
+
+msgid "Apr"
+msgstr "Apr"
+
+msgid "April"
+msgstr "Aprel"
+
+msgid "Are you a company?"
+msgstr "Siz kompaniyamisiz?"
+
+msgid "Are you a service provider?"
+msgstr "Siz xizmat ko‘rsatuvchimisiz?"
+
+msgid "Are you sure to delete all notifications."
+msgstr "Haqiqatan ham barcha bildirishnomalarni o‘chirmoqchimisiz?"
+
+msgid "Are you sure to delete this member."
+msgstr "Haqiqatan ham ushbu a’zoni o‘chirmoqchimisiz?"
+
+msgid "Are you sure to delete this notification."
+msgstr "Haqiqatan ham ushbu bildirishnomani o‘chirmoqchimisiz?"
+
+msgid "Are you sure to logout?"
+msgstr "Haqiqatan ham tizimdan chiqmoqchimisiz?"
+
+msgid "Are you sure you want to close this order? This action cannot be undone."
+msgstr "Haqiqatan ham ushbu buyurtmani yopmoqchimisiz? Bu amalni ortga qaytarib bo‘lmaydi."
+
+msgid "Are you sure you want to delete this {itemName}? This action cannot be undone."
+msgstr "Haqiqatan ham ushbu {itemName}ni o‘chirmoqchimisiz? Bu amalni ortga qaytarib bo‘lmaydi."
+
+msgid "Are you sure you want to delete this attribute? This action cannot be undone."
+msgstr "Haqiqatan ham ushbu atributni o‘chirmoqchimisiz? Bu amalni ortga qaytarib bo‘lmaydi."
+
+msgid "Are you sure you want to delete this category? This action cannot be undone."
+msgstr "Haqiqatan ham ushbu kategoriyani o‘chirmoqchimisiz? Bu amalni ortga qaytarib bo‘lmaydi."
+
+msgid "Are you sure you want to delete this company? This action cannot be undone."
+msgstr "Haqiqatan ham ushbu kompaniyani o‘chirmoqchimisiz? Bu amalni ortga qaytarib bo‘lmaydi."
+
+msgid "Are you sure you want to delete this FAQ? This action cannot be undone."
+msgstr "Haqiqatan ham ushbu FAQni o‘chirmoqchimisiz? Bu amalni ortga qaytarib bo‘lmaydi."
+
+msgid "Are you sure you want to delete this product? This action cannot be undone."
+msgstr "Haqiqatan ham ushbu mahsulotni o‘chirmoqchimisiz? Bu amalni ortga qaytarib bo‘lmaydi."
+
+msgid "Are you sure you want to delete this unit? This action cannot be undone."
+msgstr "Haqiqatan ham ushbu birlikni o‘chirmoqchimisiz? Bu amalni ortga qaytarib bo‘lmaydi."
+
+msgid "Are you sure you want to delete this user? This action cannot be undone."
+msgstr "Haqiqatan ham ushbu foydalanuvchini o‘chirmoqchimisiz? Bu amalni ortga qaytarib bo‘lmaydi."
+
+msgid "Are you sure you want to delete this value? This action cannot be undone."
+msgstr "Haqiqatan ham ushbu qiymatni o‘chirmoqchimisiz? Bu amalni ortga qaytarib bo‘lmaydi."
+
+msgid "Are you sure you want to delete this variant? This action cannot be undone."
+msgstr "Haqiqatan ham ushbu variantni o‘chirmoqchimisiz? Bu amalni ortga qaytarib bo‘lmaydi."
+
+msgid "Asc"
+msgstr "O‘sish bo‘yicha"
+
+msgid "Attribute"
+msgstr "Atribut"
+
+msgid "Attribute deleted successfully."
+msgstr "Atribut muvaffaqiyatli o‘chirildi."
+
+msgid "Attribute is required"
+msgstr "Atribut majburiy"
+
+msgid "Attribute stock"
+msgstr "Atribut zaxirasi"
+
+msgid "Attribute values"
+msgstr "Atribut qiymatlari"
+
+msgid "Attributes"
+msgstr "Atributlar"
+
+msgid "Aug"
+msgstr "Avg"
+
+msgid "August"
+msgstr "Avgust"
+
+msgid "Average delivery time"
+msgstr "O‘rtacha yetkazib berish vaqti"
+
+msgid "Average response time"
+msgstr "O‘rtacha javob vaqti"
+
+#~ msgid "B2B connects verified companies, product catalogs, RFQs, orders, and supplier communication in one practical marketplace for industrial trade."
+#~ msgstr "B2B sanoat savdosi uchun tasdiqlangan kompaniyalar, mahsulot kataloglari, RFQlar, buyurtmalar va yetkazib beruvchilar bilan aloqani yagona amaliy savdo platformasi’da birlashtiradi."
+
+msgid "Back"
+msgstr "Orqaga"
+
+msgid "Back to Home"
+msgstr "Bosh sahifaga"
+
+msgid "Back to Login"
+msgstr "Kirishga qaytish"
+
+msgid "Banner"
+msgstr "Banner"
+
+msgid "Base fields"
+msgstr "Asosiy maydonlar"
+
+msgid "Base product created."
+msgstr "Asosiy mahsulot yaratildi."
+
+msgid "Base range"
+msgstr "Asosiy diapazon"
+
+msgid "Be the first buyer to comment on this product."
+msgstr "Ushbu mahsulotga birinchi bo‘lib izoh qoldiring."
+
+msgid "Block reason"
+msgstr "Bloklash sababi"
+
+msgid "Block status"
+msgstr "Blok statusi"
+
+msgid "Blocked"
+msgstr "Bloklangan"
+
+msgid "Boolean"
+msgstr "Boolean"
+
+msgid "Both"
+msgstr "Buyurtma asosida va tayyor"
+
+msgid "Both accepted"
+msgstr "Ikkalasi ham qabul qildi"
+
+msgid "Both accepted, the order is completed."
+msgstr "Ikkalasi ham qabul qildi, buyurtma yakunlandi."
+
+msgid "Both rejected"
+msgstr "Ikkalasi ham rad etdi"
+
+msgid "Both rejected, the order is canceled."
+msgstr "Ikkalasi ham rad etdi, buyurtma bekor qilindi."
+
+#~ msgid "Both sides agree delivery and documents"
+#~ msgstr "Har ikki tomon yetkazib berish va hujjatlarga rozilik bildiradi"
+
+msgid "Brand files"
+msgstr "Brend fayllari"
+
+msgid "Browse the catalog and add items to get started."
+msgstr "Boshlash uchun katalogni ko‘rib chiqing va mahsulotlarni qo‘shing."
+
+msgid "Building materials"
+msgstr "Qurilish materiallari"
+
+msgid "Buyer"
+msgstr "Xaridor"
+
+msgid "Buyer accepted the order."
+msgstr "Xaridor buyurtmani qabul qildi."
+
+msgid "Buyer and seller growth"
+msgstr "Xaridor va sotuvchi o‘sishi"
+
+msgid "Buyer and seller share across all marketplace users."
+msgstr "Marketplace’dagi barcha foydalanuvchilar orasida xaridor va sotuvchilar ulushi."
+
+msgid "Buyer dashboard"
+msgstr "Xaridor dashboard’i"
+
+msgid "Buyer engagement"
+msgstr "Xaridor faolligi"
+
+msgid "Buyer rejected the order too, the order is canceled."
+msgstr "Xaridor ham buyurtmani rad etdi, buyurtma bekor qilindi."
+
+#~ msgid "Buyer starts a chat from this product"
+#~ msgstr "Xaridor ushbu mahsulotdan chat boshlaydi"
+
+msgid "Buyer workspace"
+msgstr "Xaridor workspace’i"
+
+msgid "Buyers"
+msgstr "Xaridorlar"
+
+msgid "Calculated from quantity and variant price."
+msgstr "Miqdor va variant narxidan hisoblangan."
+
+msgid "Cancel"
+msgstr "Bekor qilish"
+
+msgid "Cart"
+msgstr "Savat"
+
+msgid "Catalog"
+msgstr "Katalog"
+
+msgid "Catalogs"
+msgstr "Kataloglar"
+
+msgid "Categories"
+msgstr "Kategoriyalar"
+
+msgid "Category"
+msgstr "Kategoriya"
+
+msgid "Category deleted successfully."
+msgstr "Kategoriya muvaffaqiyatli o‘chirildi."
+
+msgid "Category demand"
+msgstr "Kategoriya talabi"
+
+msgid "Category is required"
+msgstr "Kategoriya majburiy"
+
+msgid "Certificate deleted successfully."
+msgstr "Sertifikat muvaffaqiyatli o‘chirildi."
+
+msgid "Certificate file"
+msgstr "Sertifikat fayli"
+
+msgid "Certificate name"
+msgstr "Sertifikat nomi"
+
+msgid "Certificate No"
+msgstr "Sertifikat raqami"
+
+msgid "Certificates"
+msgstr "Sertifikatlar"
+
+msgid "Certificates not found"
+msgstr "Sertifikatlar topilmadi"
+
+msgid "Change photo"
+msgstr "Rasmni o‘zgartirish"
+
+msgid "Characteristics"
+msgstr "Xususiyatlar"
+
+msgid "Chat"
+msgstr "Chat"
+
+#~ msgid "Chat based purchase"
+#~ msgstr "Chat orqali xarid"
+
+msgid "Chat is not connected yet."
+msgstr "Chat hali ulanmagan."
+
+msgid "Chats"
+msgstr "Chatlar"
+
+msgid "China"
+msgstr "Xitoy"
+
+msgid "Chinese yuan"
+msgstr "Xitoy yuani"
+
+msgid "Choose every value that can be stocked for this variant."
+msgstr "Ushbu variant uchun zaxiraga kiritilishi mumkin bo‘lgan barcha qiymatlarni tanlang."
+
+msgid "Choose variant"
+msgstr "Variantni tanlang"
+
+msgid "Clear"
+msgstr "Tozalash"
+
+msgid "Clear {title} filter"
+msgstr "{title} filtrini tozalash"
+
+msgid "Clear all"
+msgstr "Barchasini tozalash"
+
+msgid "Clear category"
+msgstr "Kategoriyani tozalash"
+
+msgid "Clear date"
+msgstr "Sanani tozalash"
+
+msgid "Clear dates"
+msgstr "Sanalarni tozalash"
+
+msgid "Clear filters"
+msgstr "Filtrlarni tozalash"
+
+msgid "Click the ♡ icon on items you usually order or want to buy later."
+msgstr "Odatda buyurtma qiladigan yoki keyinroq sotib olmoqchi bo‘lgan mahsulotlarda ♡ ikonkasini bosing."
+
+msgid "Close"
+msgstr "Yopish"
+
+msgid "Close order"
+msgstr "Buyurtmani yopish"
+
+msgid "Closed"
+msgstr "Yopilgan"
+
+msgid "Code"
+msgstr "Kod"
+
+msgid "Code is required"
+msgstr "Kod majburiy"
+
+msgid "Code resent successfully"
+msgstr "Kod qayta yuborildi"
+
+msgid "Code sent to"
+msgstr "Kod yuborildi"
+
+msgid "Combination"
+msgstr "Kombinatsiya"
+
+msgid "Comment"
+msgstr "Izoh"
+
+msgid "Comments will appear here after buyers review this product."
+msgstr "Xaridorlar ushbu mahsulotni baholagandan so‘ng izohlar shu yerda ko‘rinadi."
+
+msgid "Commercial terms"
+msgstr "Tijorat shartlari"
+
+msgid "Companies"
+msgstr "Kompaniyalar"
+
+msgid "Company"
+msgstr "Kompaniya"
+
+msgid "Company descriptions"
+msgstr "Kompaniya tavsiflari"
+
+msgid "Company features"
+msgstr "Kompaniya xususiyatlari"
+
+msgid "Company Filters"
+msgstr "Kompaniya filtrlari"
+
+msgid "Company images"
+msgstr "Kompaniya rasmlari"
+
+msgid "Company industries"
+msgstr "Kompaniya sohalari"
+
+msgid "Company logo"
+msgstr "Kompaniya logosi"
+
+msgid "Company names"
+msgstr "Kompaniya nomlari"
+
+msgid "Company profile"
+msgstr "Kompaniya profili"
+
+#~ msgid "Company profile available"
+#~ msgstr "Kompaniya profili mavjud"
+
+msgid "Complete"
+msgstr "Yakunlash"
+
+msgid "Completed"
+msgstr "Yakunlangan"
+
+msgid "Confirm new password"
+msgstr "Yangi parolni tasdiqlang"
+
+msgid "Confirmed orders"
+msgstr "Tasdiqlangan buyurtmalar"
+
+msgid "Connect verified manufacturers, supplier catalogs, RFQs, and institutional purchasing in one operational B2B market system."
+msgstr "Tasdiqlangan ishlab chiqaruvchilar, yetkazib beruvchi kataloglari, RFQ va institutsional xaridlarni yagona B2B tizimida birlashtiring."
+
+msgid "Contact"
+msgstr "Aloqa"
+
+msgid "Contact information"
+msgstr "Kontakt ma’lumotlari"
+
+msgid "Contents"
+msgstr "Kontent"
+
+msgid "Continue"
+msgstr "Davom etish"
+
+msgid "Continue with Google"
+msgstr "Google orqali davom etish"
+
+#~ msgid "Copyright {year} B2B Marketplace. Industrial trade infrastructure."
+#~ msgstr "@ {year} OʻZBEKISTON RESPUBLIKASI VAZIRLAR MAHKAMASI HUZURIDAGI YENGIL SANOATNI RIVOJLANTIRISH AGENTLIGI B2B SAVDO PLATFORMASI."
+
+msgid "Copyright {year} snaber.uz. Building materials and tools marketplace."
+msgstr "Copyright {year} snaber.uz. Qurilish materiallari va asboblari marketpleysi."
+
+msgid "Country"
+msgstr "Mamlakat"
+
+msgid "Create"
+msgstr "Yaratish"
+
+msgid "Create a unit of measure to reuse it in product forms."
+msgstr "Mahsulot formalarida qayta foydalanish uchun o‘lchov birligini yarating."
+
+msgid "Create and manage allowed values for this attribute."
+msgstr "Ushbu atribut uchun ruxsat etilgan qiymatlarni yarating va boshqaring."
+
+msgid "Create attribute"
+msgstr "Atribut yaratish"
+
+msgid "Create category"
+msgstr "Kategoriya yaratish"
+
+msgid "Create certificate"
+msgstr "Sertifikat yaratish"
+
+msgid "Create FAQ"
+msgstr "FAQ yaratish"
+
+msgid "Create gallery"
+msgstr "Galereya yaratish"
+
+msgid "Create member"
+msgstr "A’zo yaratish"
+
+msgid "Create order"
+msgstr "Buyurtma yaratish"
+
+msgid "Create product"
+msgstr "Mahsulot yaratish"
+
+msgid "Create unit"
+msgstr "Birlik yaratish"
+
+msgid "Create value"
+msgstr "Qiymat yaratish"
+
+msgid "Create variant"
+msgstr "Variant yaratish"
+
+msgid "Created"
+msgstr "Yaratilgan"
+
+msgid "Created at"
+msgstr "Yaratilgan sana"
+
+msgid "Currency"
+msgstr "Valyuta"
+
+msgid "Current distribution across buyer order statuses."
+msgstr "Xaridor buyurtma statuslari bo‘yicha joriy taqsimot."
+
+msgid "Current password"
+msgstr "Joriy parol"
+
+msgid "Current RFQ order distribution across workflow statuses."
+msgstr "Joriy RFQ buyurtmalarining workflow statuslari bo‘yicha taqsimoti."
+
+msgid "Custom requests"
+msgstr "Custom so‘rovlar"
+
+msgid "Customer comments"
+msgstr "Mijozlar izohlari"
+
+msgid "Danger zone"
+msgstr "Xavfli zona"
+
+msgid "Danger Zone"
+msgstr "Xavfli zona"
+
+msgid "Dark"
+msgstr "Qorong‘i"
+
+msgid "Dashboard"
+msgstr "Boshqaruv paneli"
+
+msgid "Data not found"
+msgstr "Ma’lumot topilmadi"
+
+msgid "Date"
+msgstr "Sana"
+
+msgid "days"
+msgstr "kun"
+
+msgid "Deadline"
+msgstr "Muddat"
+
+msgid "Dec"
+msgstr "Dek"
+
+msgid "December"
+msgstr "Dekabr"
+
+msgid "Delete"
+msgstr "O‘chirish"
+
+msgid "Delete {itemName}"
+msgstr "{itemName}ni o‘chirish"
+
+msgid "Delete all"
+msgstr "Barchasini o‘chirish"
+
+msgid "Delete attribute"
+msgstr "Atributni o‘chirish"
+
+msgid "Delete certificate"
+msgstr "Sertifikatni o‘chirish"
+
+msgid "Delete gallery"
+msgstr "Galereyani o‘chirish"
+
+msgid "Delete notifications"
+msgstr "Bildirishnomalarni o‘chirish"
+
+msgid "Delete product"
+msgstr "Mahsulotni o‘chirish"
+
+msgid "Delete this category?"
+msgstr "Ushbu kategoriyani o‘chirasizmi?"
+
+msgid "Delete this company?"
+msgstr "Ushbu kompaniyani o‘chirasizmi?"
+
+msgid "Delete this FAQ?"
+msgstr "Ushbu FAQni o‘chirasizmi?"
+
+msgid "Delete this product?"
+msgstr "Ushbu mahsulot o‘chirilsinmi?"
+
+msgid "Delete this user?"
+msgstr "Ushbu foydalanuvchini o‘chirasizmi?"
+
+msgid "Delete unit"
+msgstr "Birlikni o‘chirish"
+
+msgid "Delete value"
+msgstr "Qiymatni o‘chirish"
+
+msgid "Delete variant"
+msgstr "Variantni o‘chirish"
+
+msgid "Delivering"
+msgstr "Yetkazilmoqda"
+
+msgid "Desc"
+msgstr "Kamayish bo‘yicha"
+
+msgid "Description"
+msgstr "Tavsif"
+
+msgid "Description is required"
+msgstr "Tavsif majburiy"
+
+msgid "Description moderator"
+msgstr "Tavsif moderatori"
+
+msgid "Dispatch due today"
+msgstr "Bugun jo‘natilishi kerak"
+
+msgid "Displayed price"
+msgstr "Ko‘rsatilgan narx"
+
+msgid "Displays the mobile sidebar."
+msgstr "Mobil yon panelni ko‘rsatadi."
+
+msgid "does not exist or might have been removed."
+msgstr "mavjud emas yoki o‘chirilgan bo‘lishi mumkin."
+
+msgid "Dollar"
+msgstr "Dollar"
+
+#~ msgid "Download"
+#~ msgstr "Yuklab olish"
+
+msgid "Draft"
+msgstr "Qoralama"
+
+msgid "Draft products"
+msgstr "Draft mahsulotlar"
+
+msgid "Drop a file here or choose one"
+msgstr "Faylni shu yerga tashlang yoki tanlang"
+
+msgid "Drop a new image here or choose a clear square photo."
+msgstr "Yangi rasmni shu yerga tashlang yoki aniq kvadrat rasm tanlang."
+
+msgid "Each generated pair becomes one attribute stock."
+msgstr "Har bir yaratilgan juftlik bitta atribut zaxirasiga aylanadi."
+
+msgid "Edit"
+msgstr "Tahrirlash"
+
+msgid "Edit certificate"
+msgstr "Sertifikatni tahrirlash"
+
+msgid "Edit company"
+msgstr "Kompaniyani tahrirlash"
+
+msgid "Edit gallery"
+msgstr "Galereyani tahrirlash"
+
+msgid "Editable identity and contact information."
+msgstr "Tahrirlanadigan identifikatsiya va kontakt ma’lumotlari."
+
+msgid "Electronics"
+msgstr "Elektronika"
+
+msgid "Email"
+msgstr "Email"
+
+msgid "Email already registered"
+msgstr "Email allaqachon ro‘yxatdan o‘tgan"
+
+msgid "Email is required"
+msgstr "Email majburiy"
+
+msgid "Email not found"
+msgstr "Email topilmadi"
+
+msgid "Email notifications"
+msgstr "Email bildirishnomalari"
+
+msgid "Email verified successfully. Welcome!"
+msgstr "Email muvaffaqiyatli tasdiqlandi. Xush kelibsiz!"
+
+msgid "Employees"
+msgstr "Xodimlar"
+
+msgid "English"
+msgstr "Ingliz"
+
+msgid "Enter block reason"
+msgstr "Bloklash sababini kiriting"
+
+msgid "Enter category code"
+msgstr "Kategoriya kodini kiriting"
+
+msgid "Enter category name"
+msgstr "Kategoriya nomini kiriting"
+
+msgid "Enter certificate name"
+msgstr "Sertifikat nomini kiriting"
+
+msgid "Enter company address"
+msgstr "Kompaniya manzilini kiriting"
+
+msgid "Enter company INN"
+msgstr "Kompaniya INNisini kiriting"
+
+msgid "Enter company name"
+msgstr "Kompaniya nomini kiriting"
+
+msgid "Enter current password"
+msgstr "Joriy parolni kiriting"
+
+msgid "Enter custom value…"
+msgstr "Custom qiymat kiriting…"
+
+msgid "Enter Description"
+msgstr "Tavsif kiriting"
+
+msgid "Enter email"
+msgstr "Email kiriting"
+
+msgid "Enter full name"
+msgstr "To‘liq ismni kiriting"
+
+msgid "Enter message"
+msgstr "Xabar kiriting"
+
+msgid "Enter password"
+msgstr "Parolni kiriting"
+
+msgid "Enter phone number"
+msgstr "Telefon raqamini kiriting"
+
+msgid "Enter quantities"
+msgstr "Miqdorlarni kiriting"
+
+msgid "Enter the 6-digit verification code"
+msgstr "6 xonali tasdiqlash kodini kiriting"
+
+msgid "Enter unit of measure"
+msgstr "O‘lchov birligini kiriting"
+
+msgid "Enter valid email"
+msgstr "Yaroqli email kiriting"
+
+msgid "Enter your email"
+msgstr "Emailingizni kiriting"
+
+msgid "Enter your email address"
+msgstr "Email manzilingizni kiriting"
+
+msgid "Enter your email address and we will send a verification code to reset your password."
+msgstr "Email manzilingizni kiriting va parolni tiklash uchun tasdiqlash kodini yuboramiz."
+
+msgid "Enter your full name"
+msgstr "To‘liq ismingizni kiriting"
+
+msgid "Estimated spend"
+msgstr "Taxminiy xarajat"
+
+msgid "Euro"
+msgstr "Yevro"
+
+msgid "European Union"
+msgstr "Yevropa Ittifoqi"
+
+msgid "Exact"
+msgstr "Belgilangan narx"
+
+msgid "Example: Blue"
+msgstr "Misol: Ko‘k"
+
+msgid "Example: Color, Size"
+msgstr "Misol: Rang, O‘lcham"
+
+msgid "Explore catalog"
+msgstr "Katalogni ko‘rish"
+
+#~ msgid "Factories and sellers you can order from"
+#~ msgstr "Buyurtma berishingiz mumkin bo‘lgan fabrikalar va sotuvchilar"
+
+msgid "Factory photos"
+msgstr "Fabrika rasmlari"
+
+msgid "Factory photos not found"
+msgstr "Fabrika rasmlari topilmadi"
+
+msgid "Failed to complete registration. Please try again."
+msgstr "Ro‘yxatdan o‘tishni yakunlash amalga oshmadi. Qayta urinib ko‘ring."
+
+msgid "Failed to create attribute."
+msgstr "Atribut yaratilmadi."
+
+msgid "Failed to create category."
+msgstr "Kategoriya yaratilmadi."
+
+msgid "Failed to create certificate."
+msgstr "Sertifikat yaratilmadi."
+
+msgid "Failed to create FAQ."
+msgstr "FAQ yaratilmadi."
+
+msgid "Failed to create gallery."
+msgstr "Galereya yaratilmadi."
+
+msgid "Failed to create member."
+msgstr "A’zo yaratilmadi."
+
+msgid "Failed to create product variant."
+msgstr "Mahsulot varianti yaratilmadi."
+
+msgid "Failed to create product."
+msgstr "Mahsulot yaratilmadi."
+
+msgid "Failed to create the mini site. Please try again."
+msgstr "Mini sayt yaratilmadi. Qayta urinib ko‘ring."
+
+msgid "Failed to create unit."
+msgstr "Birlik yaratilmadi."
+
+msgid "Failed to create value."
+msgstr "Qiymat yaratilmadi."
+
+msgid "Failed to delete attribute."
+msgstr "Atributni o‘chirish amalga oshmadi."
+
+msgid "Failed to delete category."
+msgstr "Kategoriyani o‘chirish amalga oshmadi."
+
+msgid "Failed to delete certificate."
+msgstr "Sertifikatni o‘chirish amalga oshmadi."
+
+msgid "Failed to delete FAQ."
+msgstr "FAQni o‘chirish amalga oshmadi."
+
+msgid "Failed to delete gallery."
+msgstr "Galereyani o‘chirish amalga oshmadi."
+
+msgid "Failed to delete product."
+msgstr "Mahsulotni o‘chirish amalga oshmadi."
+
+msgid "Failed to delete product. Please try again."
+msgstr "Mahsulotni o‘chirish amalga oshmadi. Qayta urinib ko‘ring."
+
+msgid "Failed to delete unit."
+msgstr "Birlikni o‘chirish amalga oshmadi."
+
+msgid "Failed to delete user."
+msgstr "Foydalanuvchini o‘chirish amalga oshmadi."
+
+msgid "Failed to delete value."
+msgstr "Qiymatni o‘chirish amalga oshmadi."
+
+msgid "Failed to delete variant."
+msgstr "Variantni o‘chirish amalga oshmadi."
+
+msgid "Failed to load document"
+msgstr "Hujjatni yuklash amalga oshmadi"
+
+msgid "Failed to register. Please try again"
+msgstr "Ro‘yxatdan o‘tish amalga oshmadi. Qayta urinib ko‘ring"
+
+msgid "Failed to resend code"
+msgstr "Kod qayta yuborilmadi"
+
+msgid "Failed to send message."
+msgstr "Xabar yuborilmadi."
+
+msgid "Failed to send verification code"
+msgstr "Tasdiqlash kodini yuborish amalga oshmadi"
+
+msgid "Failed to update attribute."
+msgstr "Atributni yangilash amalga oshmadi."
+
+msgid "Failed to update category."
+msgstr "Kategoriyani yangilash amalga oshmadi."
+
+msgid "Failed to update certificate."
+msgstr "Sertifikatni yangilash amalga oshmadi."
+
+msgid "Failed to update FAQ."
+msgstr "FAQni yangilash amalga oshmadi."
+
+msgid "Failed to update gallery."
+msgstr "Galereyani yangilash amalga oshmadi."
+
+msgid "Failed to update notifications."
+msgstr "Bildirishnomalarni yangilash amalga oshmadi."
+
+msgid "Failed to update product variant."
+msgstr "Mahsulot variantini yangilash amalga oshmadi."
+
+msgid "Failed to update product."
+msgstr "Mahsulotni yangilash amalga oshmadi."
+
+msgid "Failed to update profile"
+msgstr "Profilni yangilash amalga oshmadi"
+
+msgid "Failed to update the mini site. Please try again."
+msgstr "Mini saytni yangilash amalga oshmadi. Qayta urinib ko‘ring."
+
+msgid "Failed to update unit."
+msgstr "Birlikni yangilash amalga oshmadi."
+
+msgid "Failed to update user."
+msgstr "Foydalanuvchini yangilash amalga oshmadi."
+
+msgid "Failed to update value."
+msgstr "Qiymatni yangilash amalga oshmadi."
+
+msgid "FAQ deleted successfully."
+msgstr "FAQ muvaffaqiyatli o‘chirildi."
+
+msgid "FAQs"
+msgstr "FAQlar"
+
+msgid "Favorites"
+msgstr "Sevimlilar"
+
+msgid "Feature"
+msgstr "Funksiya"
+
+msgid "Feature name"
+msgstr "Funksiya nomi"
+
+msgid "Features"
+msgstr "Funksiyalar"
+
+msgid "Feb"
+msgstr "Fev"
+
+msgid "February"
+msgstr "Fevral"
+
+msgid "File size must be less than 50MB"
+msgstr "Fayl hajmi 50MB dan kichik bo‘lishi kerak"
+
+msgid "Filter"
+msgstr "Filtr"
+
+msgid "Filter by role"
+msgstr "Rol bo‘yicha filtrlash"
+
+msgid "Filterable"
+msgstr "Filtrlash mumkin"
+
+msgid "Filters"
+msgstr "Filtrlar"
+
+msgid "Find a partner"
+msgstr "Hamkor toping"
+
+msgid "Find a reliable partner for your business. Quickly and effectively collaborate with verified companies, services, and specialists through our platform."
+msgstr "Biznesingiz uchun ishonchli hamkor toping. Platformamiz orqali tasdiqlangan kompaniyalar, xizmatlar va mutaxassislar bilan tez va samarali hamkorlik qiling."
+
+msgid "Footer navigation"
+msgstr "Footer navigatsiyasi"
+
+msgid "Forget password"
+msgstr "Parolni unutdingiz"
+
+msgid "Forget password?"
+msgstr "Parolni unutdingizmi?"
+
+msgid "Format: Any image or video format."
+msgstr "Format: Istalgan rasm yoki video formati."
+
+msgid "Format: PNG or JPEG."
+msgstr "Format: PNG yoki JPEG."
+
+msgid "Frequently Asked Questions"
+msgstr "Ko‘p so‘raladigan savollar"
+
+msgid "Friday"
+msgstr "Juma"
+
+msgid "from"
+msgstr "dan"
+
+msgid "From"
+msgstr "Dan"
+
+msgid "Full name"
+msgstr "To‘liq ism"
+
+msgid "Full Name"
+msgstr "To‘liq ism"
+
+msgid "Full name is required"
+msgstr "To‘liq ism majburiy"
+
+msgid "Gallery"
+msgstr "Galereya"
+
+msgid "Gallery deleted successfully."
+msgstr "Galereya muvaffaqiyatli o‘chirildi."
+
+msgid "Gallery photo"
+msgstr "Galereya rasmi"
+
+msgid "General"
+msgstr "Umumiy"
+
+msgid "General information"
+msgstr "Umumiy ma’lumot"
+
+msgid "generated"
+msgstr "yaratilgan"
+
+msgid "Get notifications about catalog updates and feature releases."
+msgstr "Katalog yangilanishlari va yangi funksiyalar haqida bildirishnomalar oling."
+
+msgid "Go Back"
+msgstr "Orqaga"
+
+msgid "Go to next page"
+msgstr "Keyingi sahifaga o‘tish"
+
+msgid "Go to previous page"
+msgstr "Oldingi sahifaga o‘tish"
+
+msgid "Hide"
+msgstr "Yashirish"
+
+msgid "High-risk actions that impact account access."
+msgstr "Hisobga kirishga ta’sir qiluvchi yuqori xavfli amallar."
+
+msgid "Home"
+msgstr "Bosh sahifa"
+
+msgid "Identity, category, pricing, MOQ and lead time."
+msgstr "Identifikatsiya, kategoriya, narx, MOQ va bajarish vaqti."
+
+msgid "Image"
+msgstr "Rasm"
+
+msgid "Image title"
+msgstr "Rasm nomi"
+
+msgid "Inactive"
+msgstr "Nofaol"
+
+msgid "Inactive variant"
+msgstr "Nofaol variant"
+
+msgid "Industrial B2B marketplace operations background"
+msgstr "Sanoat B2B marketplace operatsion background’i"
+
+msgid "Industries"
+msgstr "Sohalar"
+
+msgid "Info"
+msgstr "Ma’lumot"
+
+msgid "INN"
+msgstr "INN"
+
+msgid "Insert iframe"
+msgstr "Iframe qo‘shish"
+
+msgid "Invalid email address"
+msgstr "Noto‘g‘ri email manzili"
+
+msgid "Invalid URL"
+msgstr "Noto‘g‘ri URL"
+
+msgid "Invalid verification code"
+msgstr "Noto‘g‘ri tasdiqlash kodi"
+
+msgid "Is active"
+msgstr "Faol"
+
+msgid "Is blocked"
+msgstr "Bloklangan"
+
+msgid "Issued at"
+msgstr "Berilgan sana"
+
+msgid "It seems like the page you're looking for"
+msgstr "Siz qidirayotgan sahifa"
+
+msgid "Jan"
+msgstr "Yan"
+
+msgid "January"
+msgstr "Yanvar"
+
+msgid "Join Us"
+msgstr "Bizga qo‘shiling"
+
+msgid "Jul"
+msgstr "Iyul"
+
+msgid "July"
+msgstr "Iyul"
+
+msgid "Jun"
+msgstr "Iyun"
+
+msgid "June"
+msgstr "Iyun"
+
+msgid "k"
+msgstr "k"
+
+msgid "Keep your account secure with a strong password."
+msgstr "Kuchli parol orqali hisobingizni xavfsiz saqlang."
+
+msgid "Language"
+msgstr "Til"
+
+msgid "Last 30 days"
+msgstr "So‘nggi 30 kun"
+
+msgid "Last updated"
+msgstr "So‘nggi yangilanish"
+
+msgid "Latest orders from your buyer account."
+msgstr "Xaridor hisobingizdagi oxirgi buyurtmalar."
+
+msgid "Lead max"
+msgstr "Maksimal bajarish vaqti"
+
+msgid "Lead min"
+msgstr "Minimal bajarish vaqti"
+
+msgid "Lead time"
+msgstr "Bajarish vaqti"
+
+msgid "Lead Time"
+msgstr "Bajarish vaqti"
+
+msgid "Lead time max must be a positive number"
+msgstr "Maksimal bajarish vaqti musbat son bo‘lishi kerak"
+
+msgid "Lead time max must be greater than or equal to lead time min"
+msgstr "Maksimal bajarish vaqti minimal bajarish vaqti’dan katta yoki teng bo‘lishi kerak"
+
+msgid "Lead time min must be a positive number"
+msgstr "Minimal bajarish vaqti musbat son bo‘lishi kerak"
+
+msgid "Lifecycle events for this product record."
+msgstr "Ushbu mahsulot yozuvi uchun lifecycle hodisalari."
+
+msgid "Light"
+msgstr "Yorug'"
+
+msgid "Load more"
+msgstr "Yana yuklash"
+
+msgid "Load older messages"
+msgstr "Eski xabarlarni yuklash"
+
+msgid "Loading attributes..."
+msgstr "Atributlar yuklanmoqda..."
+
+msgid "Loading content..."
+msgstr "Kontent yuklanmoqda..."
+
+msgid "Loading countries..."
+msgstr "Mamlakatlar yuklanmoqda..."
+
+msgid "Loading currencies..."
+msgstr "Valyutalar yuklanmoqda..."
+
+msgid "Loading image..."
+msgstr "Rasm yuklanmoqda..."
+
+msgid "Loading media..."
+msgstr "Media yuklanmoqda..."
+
+msgid "Loading photo..."
+msgstr "Rasm yuklanmoqda..."
+
+msgid "Loading..."
+msgstr "Yuklanmoqda..."
+
+msgid "Location"
+msgstr "Joylashuv"
+
+msgid "Login"
+msgstr "Kirish"
+
+msgid "Logo"
+msgstr "Logo"
+
+msgid "Logout"
+msgstr "Chiqish"
+
+msgid "Made to order"
+msgstr "Buyurtma asosida"
+
+msgid "Main media"
+msgstr "Asosiy media"
+
+msgid "Make a accept"
+msgstr "Qabul qilish"
+
+msgid "Make a reject"
+msgstr "Rad etish"
+
+msgid "Manage category attributes and reusable values for product variants."
+msgstr "Mahsulot variantlari uchun kategoriya atributlari va qayta foydalaniladigan qiymatlarni boshqaring."
+
+msgid "Manage reusable values assigned to product attributes."
+msgstr "Mahsulot atributlariga biriktirilgan qayta foydalaniladigan qiymatlarni boshqaring."
+
+msgid "Manage SKU, stock, override pricing, media and attributes."
+msgstr "SKU, zaxira, narx override, media va atributlarni boshqaring."
+
+msgid "Manage values"
+msgstr "Qiymatlarni boshqarish"
+
+msgid "Manage your personal and public information."
+msgstr "Shaxsiy va ommaviy ma’lumotlaringizni boshqaring."
+
+msgid "Mar"
+msgstr "Mar"
+
+msgid "March"
+msgstr "Mart"
+
+msgid "Mark all as read"
+msgstr "Hammasini o‘qilgan deb belgilash"
+
+msgid "Mark as read"
+msgstr "O‘qilgan deb belgilash"
+
+msgid "Mark notification as read"
+msgstr "Bildirishnomani o‘qilgan deb belgilash"
+
+msgid "Marketplace command center"
+msgstr "Marketplace boshqaruv markazi"
+
+msgid "May"
+msgstr "May"
+
+msgid "Media"
+msgstr "Media"
+
+msgid "Member created successfully."
+msgstr "A’zo muvaffaqiyatli yaratildi."
+
+msgid "Member deleted"
+msgstr "A’zo o‘chirildi"
+
+msgid "Members"
+msgstr "A’zolar"
+
+msgid "Message"
+msgstr "Xabar"
+
+msgid "Message is required"
+msgstr "Xabar majburiy"
+
+msgid "Min. order"
+msgstr "Min. buyurtma"
+
+#~ msgid "Mini site"
+#~ msgstr "Mini sayt"
+
+msgid "Minimum 8 characters"
+msgstr "Kamida 8 ta belgi"
+
+msgid "mln"
+msgstr "mln"
+
+msgid "mlrd"
+msgstr "mlrd"
+
+msgid "Moderation"
+msgstr "Moderatsiya"
+
+msgid "Moderator"
+msgstr "Moderator"
+
+msgid "Moderator description"
+msgstr "Moderator tavsifi"
+
+msgid "Monday"
+msgstr "Dushanba"
+
+msgid ""
+"Monitor B2B marketplace liquidity, supplier quality, RFQ conversion and order flow\n"
+"              from one operational view."
+msgstr ""
+"B2B marketplace likvidligi, yetkazib beruvchilar sifati, RFQ konversiyasi va buyurtma oqimini\n"
+"              yagona operatsion ko‘rinishda kuzating."
+
+msgid "Monitor revenue momentum, category demand, RFQ pipeline and recent order activity using seller APIs."
+msgstr "Daromad dinamikasini, Kategoriya bo‘yicha talablarni, taklif so‘rovlari uchun savdo voronkasini va so‘nggi buyurtmalar faoliyatini kuzatib boring."
+
+msgid "Monthly growth"
+msgstr "Oylik o‘sish"
+
+msgid "Monthly revenue, order count and quote volume."
+msgstr "Oylik daromad, buyurtmalar soni va hajmi."
+
+msgid "MOQ must be a positive number"
+msgstr "MOQ musbat son bo‘lishi kerak"
+
+msgid "MOQ override"
+msgstr "MOQ override"
+
+msgid "MOQ unit"
+msgstr "MOQ birligi"
+
+msgid "MOQ unit is required"
+msgstr "MOQ birligi majburiy"
+
+msgid "More"
+msgstr "Ko‘proq"
+
+msgid "More pages"
+msgstr "Ko‘proq sahifalar"
+
+msgid "Most ordered"
+msgstr "Eng ko‘p buyurtma qilingan"
+
+msgid "Most products"
+msgstr "Eng ko‘p mahsulot"
+
+msgid "Multi select"
+msgstr "Ko‘p tanlov"
+
+msgid "My Account"
+msgstr "Mening hisobim"
+
+msgid "My Orders"
+msgstr "Mening buyurtmalarim"
+
+msgid "N/A"
+msgstr "Mavjud emas"
+
+msgid "Name"
+msgstr "Nom"
+
+msgid "Name is required"
+msgstr "Nom majburiy"
+
+msgid "Navigation"
+msgstr "Navigatsiya"
+
+msgid "Negotiation"
+msgstr "Muzokara"
+
+msgid "New"
+msgstr "Yangi"
+
+msgid "New password"
+msgstr "Yangi parol"
+
+msgid "New user registrations by weekday."
+msgstr "Hafta kunlari bo‘yicha yangi foydalanuvchilar ro‘yxatdan o‘tishi."
+
+msgid "New variant"
+msgstr "Yangi variant"
+
+msgid "Next"
+msgstr "Keyingi"
+
+msgid "Next slide"
+msgstr "Keyingi slayd"
+
+msgid "No"
+msgstr "Yo‘q"
+
+msgid "No attribute values available."
+msgstr "Atribut qiymatlari mavjud emas."
+
+msgid "No attributes added."
+msgstr "Atributlar qo‘shilmagan."
+
+msgid "No attributes available."
+msgstr "Atributlar mavjud emas."
+
+msgid "No category selected"
+msgstr "Kategoriya tanlanmagan"
+
+msgid "No certificates added yet."
+msgstr "Hali sertifikatlar qo‘shilmagan."
+
+msgid "No characteristics added."
+msgstr "Xususiyatlar qo‘shilmagan."
+
+msgid "No characteristics available."
+msgstr "Xususiyatlar mavjud emas."
+
+msgid "No columns found."
+msgstr "Ustunlar topilmadi."
+
+msgid "No comments yet"
+msgstr "Hozircha izohlar yo‘q"
+
+msgid "No company description provided."
+msgstr "Kompaniya tavsifi kiritilmagan."
+
+msgid "No description available."
+msgstr "Tavsif mavjud emas."
+
+msgid "No features yet."
+msgstr "Hali funksiyalar mavjud emas."
+
+msgid "No gallery photos yet"
+msgstr "Hali galereya rasmlari mavjud emas"
+
+msgid "No media assets available for this product."
+msgstr "Ushbu mahsulot uchun media mavjud emas."
+
+msgid "No messages found"
+msgstr "Xabarlar topilmadi"
+
+msgid "No messages yet."
+msgstr "Hali xabarlar yo‘q."
+
+msgid "No order selected"
+msgstr "Buyurtma tanlanmagan"
+
+msgid "No orders found."
+msgstr "Buyurtmalar topilmadi."
+
+msgid "No product matches this slug. Please return to the products list and open an existing item."
+msgstr "Bu slugga mos mahsulot topilmadi. Mahsulotlar ro‘yxatiga qayting va mavjud mahsulotni oching."
+
+msgid "No products in this order."
+msgstr "Ushbu buyurtmada mahsulotlar yo‘q."
+
+msgid "No reason provided"
+msgstr "Sabab ko‘rsatilmagan"
+
+msgid "No results found."
+msgstr "Natijalar topilmadi."
+
+msgid "No results."
+msgstr "Natija yo‘q."
+
+msgid "No units yet"
+msgstr "Hali birliklar yo‘q"
+
+msgid "No variant selected"
+msgstr "Variant tanlanmagan"
+
+msgid "No variants added for this product."
+msgstr "Ushbu mahsulot uchun variantlar qo‘shilmagan."
+
+msgid "No, keep it"
+msgstr "Yo‘q, saqlab qolish"
+
+msgid "Not assigned"
+msgstr "Biriktirilmagan"
+
+msgid "Notification deleted"
+msgstr "Bildirishnoma o‘chirildi"
+
+msgid "Notifications"
+msgstr "Bildirishnomalar"
+
+msgid "Notifications deleted"
+msgstr "Bildirishnomalar o‘chirildi"
+
+msgid "Nov"
+msgstr "Noy"
+
+msgid "November"
+msgstr "Noyabr"
+
+msgid "Number"
+msgstr "Raqam"
+
+msgid "Number of rows:"
+msgstr "Qatorlar soni:"
+
+msgid "Oct"
+msgstr "Okt"
+
+msgid "October"
+msgstr "Oktabr"
+
+msgid "of"
+msgstr "dan"
+
+msgid "Office supply"
+msgstr "Ofis jihozlari"
+
+msgid "Okay"
+msgstr "Yaxshi"
+
+msgid "Old"
+msgstr "Eski"
+
+msgid "Old password"
+msgstr "Eski parol"
+
+msgid "On request"
+msgstr "So‘rov asosida"
+
+msgid "Only {maxValue} left"
+msgstr "Faqat {maxValue} ta qoldi"
+
+msgid "Oops! Page Not Found!"
+msgstr "Voy! Sahifa topilmadi!"
+
+msgid "Oops! Something went wrong"
+msgstr "Voy! Nimadir noto‘g‘ri ketdi"
+
+msgid "Open activity that may still need seller confirmation."
+msgstr "Hali sotuvchi tasdig‘ini talab qilishi mumkin bo‘lgan ochiq faollik."
+
+msgid "Open gallery preview"
+msgstr "Galereya preview’ni ochish"
+
+msgid "Open in new tab"
+msgstr "Yangi oynada ochish"
+
+msgid "Open panel"
+msgstr "Panelni ochish"
+
+msgid "Open RFQs"
+msgstr "Ochiq RFQlar"
+
+msgid "Option {optionNumber}"
+msgstr "Variant {optionNumber}"
+
+msgid "options"
+msgstr "variantlar"
+
+msgid "Order"
+msgstr "Buyurtma"
+
+msgid "Order #{activeOrderId}"
+msgstr "Buyurtma #{activeOrderId}"
+
+#~ msgid "Order #{orderId}"
+#~ msgstr "Buyurtma #{orderId}"
+
+msgid "Order closed"
+msgstr "Buyurtma yopildi"
+
+#~ msgid "Order conversation"
+#~ msgstr "Buyurtma suhbati"
+
+msgid "Order count"
+msgstr "Buyurtmalar soni"
+
+msgid "Order details"
+msgstr "Buyurtma tafsilotlari"
+
+msgid "Order is already completed."
+msgstr "Buyurtma allaqachon yakunlangan."
+
+#~ msgid "Order is created from the confirmed chat"
+#~ msgstr "Buyurtma tasdiqlangan chat asosida yaratildi"
+
+msgid "Order status mix"
+msgstr "Buyurtma statuslari taqsimoti"
+
+msgid "Order status updated to {nextStatusLabel}."
+msgstr "Buyurtma statusi {nextStatusLabel} ga yangilandi."
+
+msgid "Order status updated."
+msgstr "Buyurtma statusi yangilandi."
+
+msgid "Order Summary"
+msgstr "Buyurtma xulosasi"
+
+msgid "Order type split"
+msgstr "Buyurtma turlari taqsimoti"
+
+msgid "Order volume and estimated spend over the last six months."
+msgstr "So‘nggi olti oy uchun buyurtma hajmi va taxminiy xarajat."
+
+#~ msgid "Ordering"
+#~ msgstr "Buyurtma jarayoni"
+
+msgid "Orders"
+msgstr "Buyurtmalar"
+
+msgid "Orders confirmed by buyers."
+msgstr "Xaridorlar tomonidan tasdiqlangan buyurtmalar."
+
+msgid "Orders in progress"
+msgstr "Jarayondagi buyurtmalar"
+
+msgid "Orders still moving through the workflow."
+msgstr "Workflow jarayonida davom etayotgan buyurtmalar."
+
+msgid "Other"
+msgstr "Boshqa"
+
+msgid "Others"
+msgstr "Boshqalar"
+
+msgid "Out of stock"
+msgstr "Sotuvda yo‘q"
+
+msgid "Overview"
+msgstr "Umumiy ma’lumot"
+
+msgid "Owner"
+msgstr "Ega"
+
+msgid "Packaging"
+msgstr "Qadoqlash"
+
+msgid "Packing"
+msgstr "Qadoqlash"
+
+msgid "Parent"
+msgstr "Asosiy"
+
+msgid "Parent category"
+msgstr "Asosiy kategoriya"
+
+msgid "Password"
+msgstr "Parol"
+
+msgid "Password is required"
+msgstr "Parol majburiy"
+
+msgid "Password must be at least 8 characters long"
+msgstr "Parol kamida 8 ta belgidan iborat bo‘lishi kerak"
+
+msgid "Password update and session controls."
+msgstr "Parol yangilash va sessiya boshqaruvi."
+
+msgid "Password updated failed"
+msgstr "Parolni yangilash amalga oshmadi"
+
+msgid "Password updated successfully"
+msgstr "Parol muvaffaqiyatli yangilandi"
+
+msgid "Passwords do not match"
+msgstr "Parollar mos kelmadi"
+
+msgid "Paste iframe or URL..."
+msgstr "Iframe yoki URL joylashtiring..."
+
+#~ msgid "pcs"
+#~ msgstr "dona"
+
+msgid "Pending"
+msgstr "Kutilmoqda"
+
+msgid "Personal Information"
+msgstr "Shaxsiy ma’lumot"
+
+msgid "Phone"
+msgstr "Telefon"
+
+msgid "Phone number"
+msgstr "Telefon raqami"
+
+msgid "Phone number is required"
+msgstr "Telefon raqami majburiy"
+
+msgid "Pick a deadline date"
+msgstr "Muddat sanasini tanlang"
+
+msgid "Please log in with the appropriate credentials"
+msgstr "Tegishli hisob ma’lumotlari bilan tizimga kiring"
+
+msgid "Preferences"
+msgstr "Sozlamalar"
+
+msgid "Present your services to a wide audience. Find new clients and grow your business through our platform."
+msgstr "Xizmatlaringizni keng auditoriyaga taqdim eting. Platformamiz orqali yangi mijozlar toping va biznesingizni rivojlantiring."
+
+msgid "Previous"
+msgstr "Oldingi"
+
+msgid "Previous slide"
+msgstr "Oldingi slayd"
+
+msgid "Price"
+msgstr "Narx"
+
+msgid "Price max"
+msgstr "Maksimal narx"
+
+msgid "Price max must be a positive number"
+msgstr "Maksimal narx musbat son bo‘lishi kerak"
+
+msgid "Price min"
+msgstr "Minimal narx"
+
+msgid "Price min must be a positive number"
+msgstr "Minimal narx musbat son bo‘lishi kerak"
+
+msgid "Price model"
+msgstr "Narx modeli"
+
+msgid "Price override"
+msgstr "Narx override"
+
+msgid "Price type"
+msgstr "Narx turi"
+
+msgid "Pricing and fulfillment baseline terms."
+msgstr "Narx va fulfillment bo‘yicha asosiy shartlar."
+
+msgid "Primary product identity and classification."
+msgstr "Mahsulotning asosiy identifikatsiyasi va klassifikatsiyasi."
+
+msgid "Process"
+msgstr "Jarayon"
+
+msgid "Procurement built for national-scale production."
+msgstr "Yengil sanoat uchun mahsulot sotish va sotib olish tizimiga asoslangan tizim."
+
+msgid "Product"
+msgstr "Mahsulot"
+
+msgid "Product checks"
+msgstr "Mahsulot tekshiruvlari"
+
+msgid "Product deleted successfully."
+msgstr "Mahsulot muvaffaqiyatli o‘chirildi."
+
+msgid "Product detail"
+msgstr "Mahsulot tafsiloti"
+
+msgid "Product details"
+msgstr "Mahsulot tafsilotlari"
+
+msgid "Product ID"
+msgstr "Mahsulot ID"
+
+msgid "Product image"
+msgstr "Mahsulot rasmi"
+
+msgid "Product not found"
+msgstr "Mahsulot topilmadi"
+
+msgid "Product performance ranked by confirmed order value."
+msgstr "Tasdiqlangan buyurtma qiymati bo‘yicha saralangan mahsulot natijalari."
+
+msgid "Product SKU"
+msgstr "Mahsulot SKU"
+
+msgid "Product type"
+msgstr "Mahsulot turi"
+
+msgid "Product updates"
+msgstr "Mahsulot yangilanishlari"
+
+msgid "Product variants"
+msgstr "Mahsulot variantlari"
+
+msgid "Product views"
+msgstr "Mahsulot ko‘rishlari"
+
+msgid "Product views compared with buyer chat starts."
+msgstr "Mahsulot ko‘rishlar va xaridor chat boshlashlari taqqoslanishi."
+
+msgid "Products"
+msgstr "Mahsulotlar"
+
+msgid "Profile"
+msgstr "Profil"
+
+msgid "Profile image"
+msgstr "Profil rasmi"
+
+msgid "Profile Information"
+msgstr "Profil ma’lumotlari"
+
+msgid "Profile updated successfully"
+msgstr "Profil muvaffaqiyatli yangilandi"
+
+msgid "Publish"
+msgstr "Nashr qilish"
+
+msgid "Purchase momentum"
+msgstr "Xarid dinamikasi"
+
+msgid "Qty:"
+msgstr "Soni:"
+
+msgid "Quantity"
+msgstr "Miqdor"
+
+msgid "Question"
+msgstr "Savol"
+
+msgid "Question and Answer"
+msgstr "Savol va Javob"
+
+msgid "Quote-based purchases and negotiations."
+msgstr "Quote asosidagi xaridlar va muzokaralar."
+
+msgid "Quotes"
+msgstr "Quote’lar"
+
+msgid "Range"
+msgstr "Diapazon"
+
+msgid "Ranked by orders and quality score."
+msgstr "Buyurtmalar va sifat reytingi asosida saralangan."
+
+msgid "Rating"
+msgstr "Baho"
+
+msgid "Rating is required"
+msgstr "Baho majburiy"
+
+msgid "Rating must be between 1 and 5"
+msgstr "Baho 1 dan 5 gacha bo‘lishi kerak"
+
+msgid "Read all"
+msgstr "Barchasini o‘qish"
+
+msgid "Read-only status from your user account."
+msgstr "Foydalanuvchi hisobingizdagi faqat o‘qish statusi."
+
+msgid "Ready"
+msgstr "Tayyor"
+
+msgid "Ready-product orders compared with RFQ requests."
+msgstr "Tayyor mahsulot buyurtmalari RFQ so‘rovlari bilan taqqoslangan."
+
+msgid "Reason"
+msgstr "Sabab"
+
+msgid "Receive account health and activity updates by email."
+msgstr "Hisob holati va faollik yangilanishlarini email orqali qabul qiling."
+
+msgid "Recent buyer activity"
+msgstr "Mijozlarning eng so'nggi faolligi"
+
+msgid "Recent buying activity"
+msgstr "Oxirgi xarid faolligi"
+
+msgid "Recent orders"
+msgstr "Oxirgi buyurtmalar"
+
+msgid "Recommended banner size: 1200 x 400 px"
+msgstr "Tavsiya etilgan banner o‘lchami: 1200 x 400 px"
+
+msgid "Recommended logo size: 512 x 512 px"
+msgstr "Tavsiya etilgan logo o‘lchami: 512 x 512 px"
+
+msgid "Recommended ratio: 1:1."
+msgstr "Tavsiya etilgan nisbat: 1:1."
+
+msgid "Recommended ratio: 3:1."
+msgstr "Tavsiya etilgan nisbat: 3:1."
+
+msgid "Recommended size: 1200 x 400 px."
+msgstr "Tavsiya etilgan o‘lcham: 1200 x 400 px."
+
+msgid "Recommended size: 512 x 512 px."
+msgstr "Tavsiya etilgan o‘lcham: 512 x 512 px."
+
+msgid "Record timeline"
+msgstr "Yozuv timeline’i"
+
+msgid "Region"
+msgstr "Hudud"
+
+msgid "Regional and communication preferences."
+msgstr "Hududiy va kommunikatsion sozlamalar."
+
+msgid "Register"
+msgstr "Ro‘yxatdan o‘tish"
+
+#~ msgid "Registered entities"
+#~ msgstr "Ro‘yxatdan o‘tgan tashkilotlar"
+
+msgid "Registration completed successfully."
+msgstr "Ro‘yxatdan o‘tish muvaffaqiyatli yakunlandi."
+
+msgid "Reject"
+msgstr "Rad etish"
+
+msgid "Reject draft product"
+msgstr "Draft mahsulotni rad etish"
+
+msgid "Reject order"
+msgstr "Buyurtmani rad etish"
+
+msgid "Rejected"
+msgstr "Rad etilgan"
+
+msgid "Rejected by buyer"
+msgstr "Xaridor tomonidan rad etilgan"
+
+msgid "Rejected by seller"
+msgstr "Sotuvchi tomonidan rad etilgan"
+
+msgid "Remove"
+msgstr "Olib tashlash"
+
+msgid "Remove product"
+msgstr "Mahsulotni olib tashlash"
+
+msgid "Repeat new password"
+msgstr "Yangi parolni qayta kiriting"
+
+msgid "Request for Quotation pipeline"
+msgstr "Takliflar uchun so'rov voronkasi"
+
+msgid "Request for Quotation win rate"
+msgstr "Takliflar uchun so'rov yutuq darajasi"
+
+msgid "Requests moving through your sales flow."
+msgstr "Savdo jarayoningiz bo‘ylab harakatlanayotgan so‘rovlar."
+
+msgid "Resend code"
+msgstr "Kodni qayta yuborish"
+
+msgid "Resending..."
+msgstr "Qayta yuborilmoqda..."
+
+msgid "Reset"
+msgstr "Tozalash"
+
+msgid "Reset filters"
+msgstr "Filtrlarni tozalash"
+
+msgid "Restricted"
+msgstr "Cheklangan"
+
+msgid "Returned for correction"
+msgstr "Tuzatish uchun qaytarildi"
+
+msgid "Revenue"
+msgstr "Daromad"
+
+msgid "Revenue momentum"
+msgstr "Daromad dinamikasi"
+
+msgid "Reviewing"
+msgstr "Ko‘rib chiqilmoqda"
+
+msgid "RFQ"
+msgstr "RFQ"
+
+msgid "RFQ orders"
+msgstr "RFQ buyurtmalari"
+
+msgid "RFQ orders by status"
+msgstr "Status bo‘yicha RFQ buyurtmalari"
+
+msgid "RFQs"
+msgstr "RFQlar"
+
+msgid "Role"
+msgstr "Rol"
+
+msgid "Ruble"
+msgstr "Rubl"
+
+msgid "Russia"
+msgstr "Rossiya"
+
+msgid "Russian"
+msgstr "Rus"
+
+msgid "Russian ruble"
+msgstr "Rossiya rubli"
+
+msgid "Sales by category"
+msgstr "Kategoriya bo‘yicha savdo"
+
+msgid "Saturday"
+msgstr "Shanba"
+
+msgid "Save"
+msgstr "Saqlash"
+
+msgid "Save changes"
+msgstr "O‘zgarishlarni saqlash"
+
+msgid "Save profile"
+msgstr "Profilni saqlash"
+
+msgid "Search"
+msgstr "Qidirish"
+
+msgid "Search building materials"
+msgstr "Qurilish materiallarini qidirish"
+
+msgid "Search chats"
+msgstr "Chatlarni qidirish"
+
+msgid "Search columns..."
+msgstr "Ustunlardan qidirish..."
+
+msgid "Search company"
+msgstr "Kompaniyani qidirish"
+
+msgid "Search notifications"
+msgstr "Bildirishnomalarni qidirish"
+
+msgid "Search results for"
+msgstr "Qidiruv natijalari"
+
+msgid "Search..."
+msgstr "Qidirish..."
+
+msgid "Security"
+msgstr "Xavfsizlik"
+
+msgid "Select"
+msgstr "Tanlash"
+
+msgid "Select a chat to start messaging."
+msgstr "Xabar yozishni boshlash uchun chatni tanlang."
+
+msgid "Select a date"
+msgstr "Sanani tanlang"
+
+msgid "Select a product to add to the order."
+msgstr "Buyurtmaga qo‘shish uchun mahsulotni tanlang."
+
+msgid "Select a region"
+msgstr "Hududni tanlang"
+
+msgid "Select an attribute"
+msgstr "Atributni tanlang"
+
+msgid "Select an order to view products."
+msgstr "Mahsulotlarni ko‘rish uchun buyurtmani tanlang."
+
+msgid "Select attribute"
+msgstr "Atributni tanlang"
+
+msgid "Select attribute values first, then fill quantities for every generated combination."
+msgstr "Avval atribut qiymatlarini tanlang, so‘ng har bir yaratilgan kombinatsiya uchun miqdorlarni kiriting."
+
+msgid "Select attribute values to generate stock rows."
+msgstr "Zaxira qatorlarini yaratish uchun atribut qiymatlarini tanlang."
+
+msgid "Select category"
+msgstr "Kategoriyani tanlang"
+
+msgid "Select country"
+msgstr "Mamlakatni tanlang"
+
+msgid "Select currency"
+msgstr "Valyutani tanlang"
+
+msgid "Select date"
+msgstr "Sanani tanlang"
+
+msgid "Select date range"
+msgstr "Sana oralig‘ini tanlang"
+
+msgid "Select file"
+msgstr "Faylni tanlang"
+
+msgid "Select image"
+msgstr "Rasmni tanlang"
+
+msgid "Select industries"
+msgstr "Sohalarni tanlang"
+
+msgid "Select issued date"
+msgstr "Berilgan sanani tanlang"
+
+msgid "Select language"
+msgstr "Tilni tanlang"
+
+msgid "Select media"
+msgstr "Media tanlang"
+
+msgid "Select price type"
+msgstr "Narx turini tanlang"
+
+msgid "Select product type"
+msgstr "Mahsulot turini tanlang"
+
+msgid "Select role"
+msgstr "Rolni tanlang"
+
+msgid "Select status"
+msgstr "Statusni tanlang"
+
+msgid "Select subcategory"
+msgstr "Subkategoriyani tanlang"
+
+msgid "Select the company status and leave a comment"
+msgstr "Kompaniya statusini tanlang va izoh qoldiring"
+
+msgid "Select type"
+msgstr "Turni tanlang"
+
+msgid "Select unit"
+msgstr "Birlikni tanlang"
+
+msgid "Select value"
+msgstr "Qiymatni tanlang"
+
+msgid "Select values"
+msgstr "Qiymatlarni tanlang"
+
+msgid "selected"
+msgstr "tanlangan"
+
+msgid "Selected products"
+msgstr "Tanlangan mahsulotlar"
+
+msgid "Selected variant price"
+msgstr "Tanlangan variant narxi"
+
+msgid "Selected variant SKU"
+msgstr "Tanlangan variant SKU"
+
+msgid "Seller"
+msgstr "Sotuvchi"
+
+msgid "Seller accepted the order, waiting for buyer's response."
+msgstr "Sotuvchi buyurtmani qabul qildi, xaridor javobi kutilmoqda."
+
+msgid "Seller accepted the order. Click accept to confirm your acceptance."
+msgstr "Sotuvchi buyurtmani qabul qildi. Tasdiqlash uchun qabul qilish tugmasini bosing."
+
+msgid "Seller accepted this order. Are you sure you want to accept this order too?"
+msgstr "Sotuvchi ushbu buyurtmani qabul qildi. Siz ham ushbu buyurtmani qabul qilmoqchimisiz?"
+
+msgid "Seller accepted this order. Click to accept this order as a buyer."
+msgstr "Sotuvchi ushbu buyurtmani qabul qildi. Xaridor sifatida qabul qilish uchun bosing."
+
+#~ msgid "Seller confirms selected variant and quantity"
+#~ msgstr "Sotuvchi tanlangan variant va miqdorni tasdiqlaydi"
+
+msgid "Seller quality and trust"
+msgstr "Sotuvchi sifati va ishonchliligi"
+
+msgid "Seller rejected the order, waiting for buyer's response."
+msgstr "Sotuvchi buyurtmani rad etdi, xaridor javobi kutilmoqda."
+
+msgid "Seller rejected the order. Click reject to confirm your rejection."
+msgstr "Sotuvchi buyurtmani rad etdi. Rad etishni tasdiqlash uchun bosing."
+
+msgid "Seller rejected this order. Are you sure you want to reject this order?"
+msgstr "Sotuvchi ushbu buyurtmani rad etdi. Siz ham ushbu buyurtmani rad etmoqchimisiz?"
+
+msgid "Seller rejected this order. Click to reject this order as a buyer."
+msgstr "Sotuvchi ushbu buyurtmani rad etdi. Xaridor sifatida rad etish uchun bosing."
+
+msgid "Seller revenue from completed order activity."
+msgstr "Yakunlangan buyurtmalardan sotuvchi daromadi."
+
+msgid "Sellers"
+msgstr "Sotuvchilar"
+
+msgid "Send code"
+msgstr "Kod yuborish"
+
+msgid "Send to admin"
+msgstr "Adminga yuborish"
+
+msgid "Sep"
+msgstr "Sen"
+
+msgid "September"
+msgstr "Sentabr"
+
+msgid "Set rating"
+msgstr "Bahoni belgilang"
+
+msgid "Settings"
+msgstr "Sozlamalar"
+
+msgid "Share of marketplace activity."
+msgstr "Marketplace faolligidagi ulush."
+
+msgid "Share your experience with this product"
+msgstr "Ushbu mahsulot bo‘yicha tajribangizni ulashing"
+
+msgid "Share your product experience with other buyers."
+msgstr "Mahsulot bo‘yicha tajribangizni boshqa xaridorlar bilan ulashing."
+
+msgid "Show all characteristics"
+msgstr "Barcha xususiyatlarni ko'rsatish"
+
+msgid "Show More"
+msgstr "Ko‘proq ko‘rsatish"
+
+msgid "Showing"
+msgstr "Ko‘rsatilmoqda"
+
+msgid "Sidebar"
+msgstr "Yon panel"
+
+#~ msgid "Sign in"
+#~ msgstr "Kirish"
+
+msgid "Sign up"
+msgstr "Ro‘yxatdan o‘tish"
+
+msgid "SKU is required"
+msgstr "SKU majburiy"
+
+msgid "SKU, stock, override pricing, media and attributes."
+msgstr "SKU, zaxira, narx override, media va atributlar."
+
+msgid "SKU:"
+msgstr "SKU:"
+
+msgid "snaber.uz is a marketplace for building materials and tools — cement, bricks, steel, lumber, roofing, paints, plumbing, electrical goods and equipment from verified suppliers."
+msgstr "snaber.uz — qurilish materiallari va asboblari marketpleysi: sement, g'isht, metall, yog'och, tom, bo'yoqlar, santexnika va elektr jihozlari tasdiqlangan yetkazib beruvchilardan."
+
+msgid "so'm"
+msgstr "so‘m"
+
+msgid "So'm"
+msgstr "So‘m"
+
+msgid "Social links"
+msgstr "Ijtimoiy havolalar"
+
+msgid "Som"
+msgstr "So‘m"
+
+msgid "Something went wrong!"
+msgstr "Nimadir xato ketdi!"
+
+msgid "Sort"
+msgstr "Saralash"
+
+msgid "Sorting"
+msgstr "Saralash"
+
+msgid "Spend"
+msgstr "Xarajat"
+
+msgid "Start procurement"
+msgstr "Xaridni boshlash"
+
+msgid "Start with the base product data, then continue to variants and characteristics."
+msgstr "Asosiy mahsulot ma’lumotlaridan boshlang, so‘ng variantlar va xususiyatlarga o‘ting."
+
+msgid "Status"
+msgstr "Status"
+
+msgid "Step 1. Select values"
+msgstr "1-qadam. Qiymatlarni tanlang"
+
+msgid "Step 2. Enter quantities"
+msgstr "2-qadam. Miqdorlarni kiriting"
+
+msgid "Stock"
+msgstr "Zaxira"
+
+msgid "Stock health"
+msgstr "Zaxira holati"
+
+msgid "Stock quantity"
+msgstr "Zaxira miqdori"
+
+msgid "stock rows"
+msgstr "zaxira qatorlari"
+
+#~ msgid "Strategic Categories"
+#~ msgstr "Strategik kategoriyalar"
+
+msgid "Submit"
+msgstr "Yuborish"
+
+msgid "Successfully created certificate."
+msgstr "Sertifikat muvaffaqiyatli yaratildi."
+
+msgid "Successfully created gallery."
+msgstr "Galereya muvaffaqiyatli yaratildi."
+
+msgid "Successfully created the mini site!"
+msgstr "Mini sayt muvaffaqiyatli yaratildi!"
+
+msgid "Successfully created."
+msgstr "Muvaffaqiyatli yaratildi."
+
+msgid "Successfully deleted company"
+msgstr "Kompaniya muvaffaqiyatli o‘chirildi"
+
+msgid "Successfully deleted product."
+msgstr "Mahsulot muvaffaqiyatli o‘chirildi."
+
+msgid "Successfully deleted variant."
+msgstr "Variant muvaffaqiyatli o‘chirildi."
+
+msgid "Successfully deleted."
+msgstr "Muvaffaqiyatli o‘chirildi."
+
+msgid "Successfully updated certificate."
+msgstr "Sertifikat muvaffaqiyatli yangilandi."
+
+msgid "Successfully updated gallery."
+msgstr "Galereya muvaffaqiyatli yangilandi."
+
+msgid "Successfully updated the mini site!"
+msgstr "Mini sayt muvaffaqiyatli yangilandi!"
+
+msgid "Successfully updated."
+msgstr "Muvaffaqiyatli yangilandi."
+
+msgid "Sunday"
+msgstr "Yakshanba"
+
+msgid "Super admin"
+msgstr "Super admin"
+
+msgid "Supplier"
+msgstr "Yetkazib beruvchi"
+
+msgid "System"
+msgstr "Tizim"
+
+msgid "Tell us about your production, sourcing, or partnership needs"
+msgstr "Ishlab chiqarish, ta’minot yoki hamkorlik ehtiyojlaringiz haqida yozing"
+
+msgid "Text"
+msgstr "Matn"
+
+msgid "Text is required"
+msgstr "Matn majburiy"
+
+msgid "Text is too long"
+msgstr "Matn juda uzun"
+
+msgid "Textiles"
+msgstr "Tekstil"
+
+msgid "The old password you entered is incorrect. Please try again."
+msgstr "Kiritilgan eski parol noto‘g‘ri. Qayta urinib ko‘ring."
+
+msgid "The order is closed, you can't edit it anymore."
+msgstr "Buyurtma yopilgan, uni endi tahrirlay olmaysiz."
+
+msgid "Theme"
+msgstr "Mavzu"
+
+msgid "There is no conversations"
+msgstr "Suhbatlar mavjud emas"
+
+msgid "These actions are sensitive and may permanently affect your account."
+msgstr "Bu amallar muhim hisoblanadi va hisobingizga doimiy ta’sir qilishi mumkin."
+
+msgid "This action cannot be undone. This will permanently delete your account and remove your data from our servers."
+msgstr "Bu amalni bekor qilib bo‘lmaydi. Bu hisobingizni butunlay o‘chiradi va ma’lumotlaringizni serverlarimizdan olib tashlaydi."
+
+msgid "This field has to be filled"
+msgstr "Bu maydon to‘ldirilishi kerak"
+
+msgid "This field has to be filled."
+msgstr "Bu maydon to‘ldirilishi kerak."
+
+msgid "This field is required."
+msgstr "Bu maydon majburiy."
+
+msgid "This is not a valid email."
+msgstr "Bu yaroqli email emas."
+
+msgid "Thursday"
+msgstr "Payshanba"
+
+msgid "Title"
+msgstr "Sarlavha"
+
+msgid "to"
+msgstr "gacha"
+
+msgid "to access this resource."
+msgstr "ushbu resursdan foydalanish uchun."
+
+msgid "To cart"
+msgstr "Savatga"
+
+msgid "to view this resource."
+msgstr "ushbu resursni ko‘rish uchun."
+
+msgid "Today"
+msgstr "Bugun"
+
+msgid "Toggle columns"
+msgstr "Ustunlarni almashtirish"
+
+msgid "Toggle email notifications"
+msgstr "Email bildirishnomalarini yoqish/o‘chirish"
+
+msgid "Toggle product updates"
+msgstr "Mahsulot yangilanishlarini yoqish/o‘chirish"
+
+msgid "Toggle Sidebar"
+msgstr "Yon panelni almashtirish"
+
+msgid "Toggle theme"
+msgstr "Mavzuni almashtirish"
+
+#~ msgid "Top companies"
+#~ msgstr "Top kompaniyalar"
+
+msgid "Top products"
+msgstr "Top mahsulotlar"
+
+msgid "Top seller performance"
+msgstr "Top sotuvchilar natijasi"
+
+msgid "Topic"
+msgstr "Mavzu"
+
+msgid "Total"
+msgstr "Jami"
+
+#~ msgid "Total companies"
+#~ msgstr "Jami kompaniyalar"
+
+msgid "total messages"
+msgstr "jami xabarlar"
+
+msgid "Total orders"
+msgstr "Jami buyurtmalar"
+
+msgid "Total price"
+msgstr "Umumiy narx"
+
+#~ msgid "Total product"
+#~ msgstr "Jami mahsulot"
+
+msgid "Total revenue by month for the current year."
+msgstr "Joriy yil uchun oylar bo‘yicha umumiy daromad."
+
+#~ msgid "Total stock"
+#~ msgstr "Umumiy zaxira"
+
+msgid "Total users"
+msgstr "Jami foydalanuvchilar"
+
+msgid "Track quotes, buyer chats and dispatch pressure from one seller dashboard."
+msgstr "Sotuvchi boshqaruv panelidan narxlarni, xaridor suhbatlarini va dispetcherlik bosimini kuzatib boring."
+
+msgid "Track your order activity, RFQ flow, purchase value and recent buying signals."
+msgstr "Buyurtma faolligi, RFQ oqimi, xarid qiymati va oxirgi xarid signallarini kuzating."
+
+msgid "Try adjusting your search or switch tabs to browse other notifications."
+msgstr "Qidiruvni o‘zgartirib ko‘ring yoki boshqa bildirishnomalarni ko‘rish uchun tablarni almashtiring."
+
+msgid "Try again in {resendCooldown}s"
+msgstr "{resendCooldown} soniyadan keyin qayta urinib ko‘ring"
+
+msgid "Tuesday"
+msgstr "Seshanba"
+
+msgid "Type"
+msgstr "Tur"
+
+msgid "Type a command or search..."
+msgstr "Buyruq kiriting yoki qidiring..."
+
+msgid "Type a message"
+msgstr "Xabar yozing"
+
+msgid "Unauthorized Access"
+msgstr "Ruxsatsiz kirish"
+
+msgid "unit"
+msgstr "birlik"
+
+msgid "Unit"
+msgstr "Birlik"
+
+msgid "Unit deleted successfully."
+msgstr "Birlik muvaffaqiyatli o‘chirildi."
+
+msgid "Unit of Measure"
+msgstr "O‘lchov birligi"
+
+msgid "Unit of measure is required"
+msgstr "O‘lchov birligi majburiy"
+
+msgid "Unit of Measures"
+msgstr "O‘lchov birliklari"
+
+msgid "United States"
+msgstr "Amerika Qo‘shma Shtatlari"
+
+msgid "Units"
+msgstr "Birliklar"
+
+msgid "unread"
+msgstr "o‘qilmagan"
+
+msgid "Unread"
+msgstr "O‘qilmagan"
+
+msgid "Unread buyer chats"
+msgstr "O‘qilmagan xaridor chatlari"
+
+msgid "Unverified"
+msgstr "Tasdiqlanmagan"
+
+msgid "Update"
+msgstr "Yangilash"
+
+msgid "Update attribute"
+msgstr "Atributni yangilash"
+
+msgid "Update category"
+msgstr "Kategoriyani yangilash"
+
+msgid "Update certificate"
+msgstr "Sertifikatni yangilash"
+
+msgid "Update FAQ"
+msgstr "FAQni yangilash"
+
+msgid "Update gallery"
+msgstr "Galereyani yangilash"
+
+msgid "Update password"
+msgstr "Parolni yangilash"
+
+msgid "Update product"
+msgstr "Mahsulotni yangilash"
+
+msgid "Update unit"
+msgstr "Birlikni yangilash"
+
+msgid "Update user"
+msgstr "Foydalanuvchini yangilash"
+
+msgid "Update value"
+msgstr "Qiymatni yangilash"
+
+msgid "Update variant"
+msgstr "Variantni yangilash"
+
+msgid "Updated"
+msgstr "Yangilangan"
+
+msgid "US dollar"
+msgstr "AQSH dollari"
+
+msgid "Use as catalog filter"
+msgstr "Katalog filtri sifatida foydalanish"
+
+msgid "Use RFQs when ready-made inventory does not match your needs."
+msgstr "Tayyor inventory ehtiyojingizga mos kelmasa RFQlardan foydalaning."
+
+msgid "Use the actions menu in the attributes table to manage values for a specific attribute."
+msgstr "Muayyan atribut qiymatlarini boshqarish uchun atributlar jadvalidagi amallar menyusidan foydalaning."
+
+msgid "User"
+msgstr "Foydalanuvchi"
+
+msgid "User distribution"
+msgstr "Foydalanuvchilar taqsimoti"
+
+msgid "User email"
+msgstr "Foydalanuvchi email’i"
+
+msgid "User Management"
+msgstr "Foydalanuvchilar boshqaruvi"
+
+msgid "Users"
+msgstr "Foydalanuvchilar"
+
+msgid "Uzbek"
+msgstr "O‘zbek"
+
+msgid "Uzbek som"
+msgstr "O‘zbekiston so‘mi"
+
+msgid "Uzbekistan"
+msgstr "O‘zbekiston"
+
+msgid "Value"
+msgstr "Qiymat"
+
+msgid "Value deleted successfully."
+msgstr "Qiymat muvaffaqiyatli o‘chirildi."
+
+msgid "Value is required"
+msgstr "Qiymat majburiy"
+
+msgid "Values for"
+msgstr "Qiymatlar uchun"
+
+msgid "values selected"
+msgstr "qiymat tanlandi"
+
+msgid "Variant fields"
+msgstr "Variant maydonlari"
+
+msgid "Variant ID"
+msgstr "Variant ID"
+
+msgid "Variant is required"
+msgstr "Variant majburiy"
+
+msgid "Variant MOQ"
+msgstr "Variant MOQ"
+
+msgid "Variant price"
+msgstr "Variant narxi"
+
+msgid "Variant SKU"
+msgstr "Variant SKU"
+
+#~ msgid "Variant stock"
+#~ msgstr "Variant zaxirasi"
+
+msgid "Variants"
+msgstr "Variantlar"
+
+msgid "Verification"
+msgstr "Tasdiqlash"
+
+msgid "Verification code sent"
+msgstr "Tasdiqlash kodi yuborildi"
+
+msgid "Verified"
+msgstr "Tasdiqlangan"
+
+msgid "Verified industrial marketplace"
+msgstr "Tasdiqlangan sanoat bozori"
+
+msgid "Verified sellers"
+msgstr "Tasdiqlangan sotuvchilar"
+
+msgid "Verify"
+msgstr "Tasdiqlash"
+
+msgid "Verify and finish"
+msgstr "Tasdiqlash va yakunlash"
+
+msgid "Video"
+msgstr "Video"
+
+msgid "View"
+msgstr "Ko‘rish"
+
+msgid "View {label} section"
+msgstr "{label} bo‘limini ko‘rish"
+
+msgid "View all"
+msgstr "Barchasini ko‘rish"
+
+msgid "View certificate"
+msgstr "Sertifikatni ko‘rish"
+
+msgid "View document"
+msgstr "Hujjatni ko‘rish"
+
+msgid "View Profile"
+msgstr "Profilni ko‘rish"
+
+msgid "We keep your favorite products here."
+msgstr "Sevimli mahsulotlaringiz shu yerda saqlanadi."
+
+msgid "We provide effective collaboration and professional development opportunities for businesses. Achieve sustainable growth and outstanding results through partnership."
+msgstr "Biz bizneslar uchun samarali hamkorlik va professional rivojlanish imkoniyatlarini taqdim etamiz. Hamkorlik orqali barqaror o‘sish va yuqori natijalarga erishing."
+
+msgid "Website"
+msgstr "Vebsayt"
+
+msgid "Wednesday"
+msgstr "Chorshanba"
+
+msgid "Weekly joined users"
+msgstr "Haftalik qo‘shilgan foydalanuvchilar"
+
+#~ msgid "What happens next"
+#~ msgstr "Keyin nima bo‘ladi"
+
+msgid "What would you like to discuss?"
+msgstr "Nimani muhokama qilmoqchisiz?"
+
+msgid "Where current buyer demand comes from."
+msgstr "Hozirgi xaridor talabi qayerdan kelmoqda."
+
+msgid "Workspace"
+msgstr "Ish maydoni"
+
+msgid "Write a short company description"
+msgstr "Qisqa kompaniya tavsifini yozing"
+
+msgid "Write the message that will be shown to the seller."
+msgstr "Sotuvchiga ko‘rsatiladigan xabarni yozing."
+
+msgid "Yearly revenue"
+msgstr "Yillik daromad"
+
+msgid "Yes"
+msgstr "Ha"
+
+msgid "Yes, close it"
+msgstr "Ha, yopish"
+
+msgid "You are not allowed to submit a comment for this product. You should make a purchase first."
+msgstr "Ushbu mahsulot uchun izoh qoldira olmaysiz. Avval mahsulotni xarid qilishingiz kerak."
+
+msgid "You can resend now"
+msgstr "Endi qayta yuborishingiz mumkin"
+
+msgid "You do not have permission to perform this action."
+msgstr "Ushbu amalni bajarish uchun sizda ruxsat yo‘q."
+
+msgid "You don't have necessary permission"
+msgstr "Sizda zarur ruxsat yo‘q"
+
+msgid "You have reached the maximum number of OTP requests. Please try again later."
+msgstr "OTP so‘rovlarining maksimal soniga yetdingiz. Keyinroq qayta urinib ko‘ring."
+
+msgid "You need to save the company information first to access this section."
+msgstr "Bu bo‘limga kirish uchun avval kompaniya ma’lumotlarini saqlashingiz kerak."
+
+msgid "You rejected the order, the order is canceled."
+msgstr "Siz buyurtmani rad etdingiz, buyurtma bekor qilindi."
+
+msgid "Your cart is empty"
+msgstr "Savatingiz bo‘sh"
+
+msgid "Your comment has been submitted"
+msgstr "Izohingiz yuborildi"
+
+msgid "Your email is not registered. Please complete the registration to continue."
+msgstr "Email manzilingiz ro‘yxatdan o‘tmagan. Davom etish uchun ro‘yxatdan o‘tishni yakunlang."
+
+msgid "Your request has been sent successfully!"
+msgstr "So‘rovingiz muvaffaqiyatli yuborildi!"
+
+msgid "Yuan"
+msgstr "Yuan"

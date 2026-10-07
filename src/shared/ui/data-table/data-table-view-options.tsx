@@ -1,0 +1,80 @@
+import type { Table } from '@tanstack/react-table';
+
+import { useLingui } from '@lingui/react/macro';
+import { Check, ChevronsUpDown, Settings2 } from 'lucide-react';
+import * as React from 'react';
+
+import { cn } from '@/shared/lib/utils';
+import { Button } from '@/shared/ui/button';
+import {
+  Command,
+  CommandEmpty,
+  CommandGroup,
+  CommandInput,
+  CommandItem,
+  CommandList
+} from '@/shared/ui/command';
+import { Popover, PopoverContent, PopoverTrigger } from '@/shared/ui/popover';
+
+interface DataTableViewOptionsProps<TData> {
+  table: Table<TData>;
+}
+
+export const DataTableViewOptions = <TData,>({ table }: DataTableViewOptionsProps<TData>) => {
+  const { t } = useLingui();
+  const columns = React.useMemo(
+    () =>
+      table
+        .getAllColumns()
+        .filter((column) => typeof column.accessorFn !== 'undefined' && column.getCanHide()),
+    [table]
+  );
+
+  return (
+    <Popover>
+      <PopoverTrigger
+        render={
+          <Button
+            aria-label={t`Toggle columns`}
+            className='ml-auto hidden h-8 lg:flex'
+            size='sm'
+            variant='outline'
+            role='combobox'
+          >
+            <Settings2 />
+            {t`View`}
+            <ChevronsUpDown className='ml-auto opacity-50' />
+          </Button>
+        }
+      />
+      <PopoverContent align='end' className='w-44 p-0'>
+        <Command>
+          <CommandInput placeholder={t`Search columns...`} />
+          <CommandList>
+            <CommandEmpty>{t`No columns found.`}</CommandEmpty>
+            <CommandGroup>
+              {columns.map((column) => (
+                <CommandItem
+                  key={column.id}
+                  onSelect={() => column.toggleVisibility(!column.getIsVisible())}
+                >
+                  <span className='truncate'>
+                    {typeof column.columnDef.header === 'string'
+                      ? column.columnDef.header
+                      : column.id}
+                  </span>
+                  <Check
+                    className={cn(
+                      'ml-auto size-4 shrink-0',
+                      column.getIsVisible() ? 'opacity-100' : 'opacity-0'
+                    )}
+                  />
+                </CommandItem>
+              ))}
+            </CommandGroup>
+          </CommandList>
+        </Command>
+      </PopoverContent>
+    </Popover>
+  );
+};

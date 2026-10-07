@@ -1,0 +1,1 @@
+export { useDraftProductTableColumns } from './useDraftProductTableColumns';

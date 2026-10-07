@@ -1,0 +1,72 @@
+name: Frontend CI/CD Pipeline
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 9
+          run_install: false
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22.20.0'
+          cache: 'pnpm'
+
+      - name: Install Dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build Application
+        env:
+          NODE_OPTIONS: "--max-old-space-size=4096"
+          VITE_API_URL: ${{ secrets.VITE_API_URL }}
+        run: |
+          pnpm build
+          echo "--- DIRECTORY CONTENTS AFTER BUILD ---"
+          ls -la
+
+      - name: Setup SSH Directory and Key
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -p ${{ secrets.PORT }} -H ${{ secrets.HOST }} >> ~/.ssh/known_hosts
+
+      - name: Deploy Compiled Assets
+        run: |
+          rsync -avz --delete \
+            -e "ssh -i ~/.ssh/id_rsa -p ${{ secrets.PORT }}" \
+            ./.output/ ${{ secrets.USERNAME }}@${{ secrets.HOST }}:/home/zerodev/dev/${{ secrets.PROJECT_NAME }}/.output/
+          
+          # Sync package files for production dependency installation
+          rsync -avz \
+            -e "ssh -i ~/.ssh/id_rsa -p ${{ secrets.PORT }}" \
+            ./package.json ./pnpm-lock.yaml ${{ secrets.USERNAME }}@${{ secrets.HOST }}:/home/zerodev/dev/${{ secrets.PROJECT_NAME }}/
+
+      - name: Restart Server Service
+        run: |
+          ssh -i ~/.ssh/id_rsa -p ${{ secrets.PORT }} ${{ secrets.USERNAME }}@${{ secrets.HOST }} << 'EOF'
+            set -e
+
+            export PATH=/home/zerodev/.nvm/versions/node/v22.20.0/bin:$PATH
+            cd /home/zerodev/dev/${{ secrets.PROJECT_NAME }}
+
+            # Install strictly production dependencies for speed and stability
+            pnpm install --prod --frozen-lockfile
+
+            # Restart the Node server service seamlessly
+            echo '${{ secrets.PASSWORD }}' | sudo -S systemctl restart ${{ secrets.PROJECT_NAME }}
+          
+            echo "Deployment sequence completed successfully, sir."
+          EOF

@@ -1,0 +1,35 @@
+import type { ColumnSort, RowData } from '@tanstack/react-table';
+
+import type { DataTableConfig } from '@/shared/config/data-table.ts';
+import type { FilterItemSchema } from '@/shared/lib/parsers.ts';
+
+declare module '@tanstack/react-table' {
+  // biome-ignore lint/correctness/noUnusedVariables: <explanation>
+  // eslint-disable-next-line unused-imports/no-unused-vars
+  interface ColumnMeta<TData extends RowData, TValue> {
+    icon?: React.FC<React.SVGProps<SVGSVGElement>>;
+    label?: string;
+    options?: Option[];
+    placeholder?: string;
+    range?: [number, number];
+    unit?: string;
+    variant?: FilterVariant;
+  }
+}
+
+export interface Option {
+  count?: number;
+  icon?: React.FC<React.SVGProps<SVGSVGElement>>;
+  label: string;
+  value: string;
+}
+
+export type FilterVariant = DataTableConfig['filterVariants'][number];
+
+export interface ExtendedColumnSort<TData> extends Omit<ColumnSort, 'id'> {
+  id: Extract<keyof TData, string>;
+}
+
+export interface ExtendedColumnFilter<TData> extends FilterItemSchema {
+  id: Extract<keyof TData, string>;
+}
