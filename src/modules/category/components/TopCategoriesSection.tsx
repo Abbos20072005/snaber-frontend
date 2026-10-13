@@ -9,7 +9,7 @@ const CategoryTile = ({ category }: { category: Category }) => (
     params={{ slug: generateSlugId(category.id, category.name) }}
     to='/catalog/$slug'
   >
-    <span className='border-border block border bg-white p-1.5'>
+    <span className='border-border block border bg-white p-1'>
       <img
         alt={category.name}
         className='aspect-square w-full object-cover'
@@ -17,7 +17,7 @@ const CategoryTile = ({ category }: { category: Category }) => (
         src={category.image}
       />
     </span>
-    <span className='text-foreground/80 mt-1.5 block text-center text-[13px] leading-tight'>
+    <span className='text-foreground/80 mt-1 block text-center text-xs leading-tight'>
       {category.name}
     </span>
   </Link>
@@ -38,13 +38,13 @@ export const TopCategoriesSection = () => {
         return (
           <section key={root.id}>
             <Link
-              className='text-primary text-lg font-semibold hover:underline'
+              className='text-primary text-base font-semibold hover:underline'
               params={{ slug: generateSlugId(root.id, root.name) }}
               to='/catalog/$slug'
             >
               {root.name}
             </Link>
-            <div className='mt-3 grid grid-cols-3 gap-x-3 gap-y-5 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8'>
+            <div className='mt-2 grid grid-cols-4 gap-x-2 gap-y-4 sm:grid-cols-6 lg:grid-cols-9'>
               {children.map((child) => (
                 <CategoryTile key={child.id} category={child} />
               ))}
