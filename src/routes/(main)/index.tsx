@@ -2,7 +2,7 @@ import { useLingui } from '@lingui/react/macro';
 import { createFileRoute } from '@tanstack/react-router';
 import { Suspense } from 'react';
 
-import { CategorySkeleton, TopCategoriesSection } from '@/modules/category';
+import { CategoryDirectory, CategoryDirectorySkeleton, CategorySkeleton, TopCategoriesSection } from '@/modules/category';
 // FEATURE DISABLED: Top companies section on the home page.
 // import { CompanyCardSkeleton, TopCompaniesSlider } from '@/modules/company';
 // FEATURE DISABLED: Contact section.
@@ -39,6 +39,11 @@ const App = () => {
           }
         >
           <TopCategoriesSection />
+        </Suspense>
+      </SectionWrapper>
+      <SectionWrapper title={t`All categories`}>
+        <Suspense fallback={<CategoryDirectorySkeleton />}>
+          <CategoryDirectory />
         </Suspense>
       </SectionWrapper>
       <SectionWrapper search={{ is_popular: 'true' }} title={t`Top products`} to='/products'>

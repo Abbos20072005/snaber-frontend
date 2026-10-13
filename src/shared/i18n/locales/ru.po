@@ -143,6 +143,9 @@ msgstr "Панель администратора"
 msgid "All"
 msgstr "Все"
 
+msgid "All categories"
+msgstr "Все категории"
+
 msgid "All messages"
 msgstr "Все сообщения"
 
@@ -1355,8 +1358,8 @@ msgstr "Сообщение"
 msgid "Message is required"
 msgstr "Сообщение обязательно"
 
-msgid "Min. order"
-msgstr "Мин. заказ"
+#~ msgid "Min. order"
+#~ msgstr "Мин. заказ"
 
 #~ msgid "Mini site"
 #~ msgstr "Мини-сайт"
@@ -1431,8 +1434,8 @@ msgstr "Мой аккаунт"
 msgid "My Orders"
 msgstr "Мои заказы"
 
-msgid "N/A"
-msgstr "Н/Д"
+#~ msgid "N/A"
+#~ msgstr "Н/Д"
 
 msgid "Name"
 msgstr "Название"

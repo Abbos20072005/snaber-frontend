@@ -4,6 +4,7 @@ export { CategoryBreadcrumb } from './components/CategoryBreadcrumb';
 export { CategoryCard } from './components/CategoryCard';
 export { CategoryCombobox } from './components/CategoryCombobox';
 export { CategoryDialog } from './components/CategoryDialog';
+export { CategoryDirectory, CategoryDirectorySkeleton } from './components/CategoryDirectory';
 export * from './components/CategoryForm';
 export { CategoryNestedSelect } from './components/CategoryNestedSelect';
 export { CategoryPendingComponent } from './components/CategoryPendingComponent';

@@ -143,6 +143,9 @@ msgstr "Admin paneli"
 msgid "All"
 msgstr "Barchasi"
 
+msgid "All categories"
+msgstr "Barcha kategoriyalar"
+
 msgid "All messages"
 msgstr "Barcha xabarlar"
 
@@ -1355,8 +1358,8 @@ msgstr "Xabar"
 msgid "Message is required"
 msgstr "Xabar majburiy"
 
-msgid "Min. order"
-msgstr "Min. buyurtma"
+#~ msgid "Min. order"
+#~ msgstr "Min. buyurtma"
 
 #~ msgid "Mini site"
 #~ msgstr "Mini sayt"
@@ -1431,8 +1434,8 @@ msgstr "Mening hisobim"
 msgid "My Orders"
 msgstr "Mening buyurtmalarim"
 
-msgid "N/A"
-msgstr "Mavjud emas"
+#~ msgid "N/A"
+#~ msgstr "Mavjud emas"
 
 msgid "Name"
 msgstr "Nom"

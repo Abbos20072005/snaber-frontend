@@ -142,6 +142,9 @@ msgstr "Admin dashboard"
 msgid "All"
 msgstr "All"
 
+msgid "All categories"
+msgstr "All categories"
+
 msgid "All messages"
 msgstr "All messages"
 
@@ -1354,8 +1357,8 @@ msgstr "Message"
 msgid "Message is required"
 msgstr "Message is required"
 
-msgid "Min. order"
-msgstr "Min. order"
+#~ msgid "Min. order"
+#~ msgstr "Min. order"
 
 #~ msgid "Mini site"
 #~ msgstr "Mini site"
@@ -1430,8 +1433,8 @@ msgstr "My Account"
 msgid "My Orders"
 msgstr "My Orders"
 
-msgid "N/A"
-msgstr "N/A"
+#~ msgid "N/A"
+#~ msgstr "N/A"
 
 msgid "Name"
 msgstr "Name"
