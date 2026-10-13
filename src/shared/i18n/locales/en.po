@@ -142,8 +142,8 @@ msgstr "Admin dashboard"
 msgid "All"
 msgstr "All"
 
-msgid "All categories"
-msgstr "All categories"
+#~ msgid "All categories"
+#~ msgstr "All categories"
 
 msgid "All messages"
 msgstr "All messages"
@@ -420,6 +420,9 @@ msgstr "China"
 
 msgid "Chinese yuan"
 msgstr "Chinese yuan"
+
+msgid "Choose a category"
+msgstr "Choose a category"
 
 msgid "Choose every value that can be stocked for this variant."
 msgstr "Choose every value that can be stocked for this variant."

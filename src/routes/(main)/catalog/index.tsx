@@ -1,14 +1,15 @@
 import { useLingui } from '@lingui/react/macro';
 import { useSuspenseQuery } from '@tanstack/react-query';
 import { createFileRoute, Link } from '@tanstack/react-router';
+import { useState } from 'react';
 
 import {
-  CategoryCard,
   CategoryPendingComponent,
+  CategoryTile,
   getPublicAllCategoriesOptions
 } from '@/modules/category';
-import { generateSlugId } from '@/shared/constants';
 import { getLocale } from '@/shared/i18n';
+import { cn } from '@/shared/lib/utils';
 import { createBreadcrumbJsonLd, createSeoMeta, DEFAULT_OG_IMAGE } from '@/shared/lib/seo';
 import {
   Breadcrumb,
@@ -25,7 +26,10 @@ const RouteComponent = () => {
   const { t } = useLingui();
 
   const categoriesQuery = useSuspenseQuery(getPublicAllCategoriesOptions());
-  const categories = categoriesQuery.data;
+  const roots = categoriesQuery.data ?? [];
+  const [selectedId, setSelectedId] = useState<number | undefined>(roots[0]?.id);
+  const selected = roots.find((root) => root.id === selectedId) ?? roots[0];
+  const tiles = selected?.children ?? [];
 
   return (
     <div>
@@ -41,16 +45,40 @@ const RouteComponent = () => {
             </BreadcrumbItem>
           </BreadcrumbList>
         </Breadcrumb>
-        <div className='grid grid-cols-[repeat(auto-fill,minmax(160px,1fr))] gap-2 md:grid-cols-[repeat(auto-fill,minmax(230px,1fr))] md:gap-4'>
-          {categories.map((item) => (
-            <Link
-              key={item.id}
-              params={{ slug: generateSlugId(item.id, item.name) }}
-              to={'/catalog/$slug'}
-            >
-              <CategoryCard category={item} />
-            </Link>
-          ))}
+        <div className='flex flex-col gap-6 md:flex-row'>
+          <aside className='shrink-0 md:w-55'>
+            <p className='border-b pb-2 text-[15px] font-semibold'>{t`Choose a category`}</p>
+            <ul className='mt-1 flex gap-1 overflow-x-auto py-1 md:flex-col md:overflow-visible'>
+              {roots.map((root) => (
+                <li key={root.id} className='shrink-0'>
+                  <button
+                    className={cn(
+                      'w-full rounded-sm px-2 py-1.5 text-left text-sm whitespace-nowrap transition-colors md:whitespace-normal',
+                      root.id === selected?.id
+                        ? 'bg-primary/10 text-primary font-semibold'
+                        : 'text-foreground/80 hover:bg-muted'
+                    )}
+                    type='button'
+                    onClick={() => setSelectedId(root.id)}
+                  >
+                    {root.name}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </aside>
+          <div className='min-w-0 flex-1'>
+            {selected && (
+              <>
+                <p className='text-primary text-xl font-semibold'>{selected.name}</p>
+                <div className='mt-3 grid grid-cols-4 gap-x-2 gap-y-4 sm:grid-cols-6 xl:grid-cols-8'>
+                  {tiles.map((child) => (
+                    <CategoryTile key={child.id} category={child} />
+                  ))}
+                </div>
+              </>
+            )}
+          </div>
         </div>
       </SectionWrapper>
     </div>

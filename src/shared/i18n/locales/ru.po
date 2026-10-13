@@ -143,8 +143,8 @@ msgstr "Панель администратора"
 msgid "All"
 msgstr "Все"
 
-msgid "All categories"
-msgstr "Все категории"
+#~ msgid "All categories"
+#~ msgstr "Все категории"
 
 msgid "All messages"
 msgstr "Все сообщения"
@@ -421,6 +421,9 @@ msgstr "Китай"
 
 msgid "Chinese yuan"
 msgstr "Китайский юань"
+
+msgid "Choose a category"
+msgstr "Выберите категорию"
 
 msgid "Choose every value that can be stocked for this variant."
 msgstr "Выберите все значения, для которых можно вести запас по этому варианту."
