@@ -1,13 +1,13 @@
 import { useLingui } from '@lingui/react/macro';
+import { useSuspenseQuery } from '@tanstack/react-query';
 import { createFileRoute, Link } from '@tanstack/react-router';
-import { Suspense } from 'react';
 
 import {
-  CategoryDirectory,
-  CategoryDirectorySkeleton,
+  CategoryCard,
   CategoryPendingComponent,
   getPublicAllCategoriesOptions
 } from '@/modules/category';
+import { generateSlugId } from '@/shared/constants';
 import { getLocale } from '@/shared/i18n';
 import { createBreadcrumbJsonLd, createSeoMeta, DEFAULT_OG_IMAGE } from '@/shared/lib/seo';
 import {
@@ -24,6 +24,9 @@ import { SectionWrapper } from '@/shared/ui/section-wrapper';
 const RouteComponent = () => {
   const { t } = useLingui();
 
+  const categoriesQuery = useSuspenseQuery(getPublicAllCategoriesOptions());
+  const categories = categoriesQuery.data;
+
   return (
     <div>
       <SectionWrapper title={t`Catalog`}>
@@ -38,9 +41,17 @@ const RouteComponent = () => {
             </BreadcrumbItem>
           </BreadcrumbList>
         </Breadcrumb>
-        <Suspense fallback={<CategoryDirectorySkeleton />}>
-          <CategoryDirectory />
-        </Suspense>
+        <div className='grid grid-cols-[repeat(auto-fill,minmax(160px,1fr))] gap-2 md:grid-cols-[repeat(auto-fill,minmax(230px,1fr))] md:gap-4'>
+          {categories.map((item) => (
+            <Link
+              key={item.id}
+              params={{ slug: generateSlugId(item.id, item.name) }}
+              to={'/catalog/$slug'}
+            >
+              <CategoryCard category={item} />
+            </Link>
+          ))}
+        </div>
       </SectionWrapper>
     </div>
   );

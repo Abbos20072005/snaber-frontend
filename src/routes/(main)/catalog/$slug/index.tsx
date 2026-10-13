@@ -1,6 +1,6 @@
 import { useLingui } from '@lingui/react/macro';
 import { useInfiniteQuery, useSuspenseQuery } from '@tanstack/react-query';
-import { createFileRoute, Link, useParams, useSearch } from '@tanstack/react-router';
+import { createFileRoute, useParams, useSearch } from '@tanstack/react-router';
 
 import {
   CategoryBreadcrumb,
@@ -44,22 +44,6 @@ const RouteComponent = () => {
     <div>
       <SectionWrapper title={categories.name}>
         <CategoryBreadcrumb id={id} />
-
-        {(categories.children ?? []).length > 0 && (
-          <ul className='columns-1 gap-6 sm:columns-2 lg:columns-3'>
-            {(categories.children ?? []).map((child) => (
-              <li key={child.id} className='break-inside-avoid py-1'>
-                <Link
-                  className='text-primary text-[15px] font-medium hover:underline'
-                  params={{ slug: generateSlugId(child.id, child.name) }}
-                  to='/catalog/$slug'
-                >
-                  {child.name}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        )}
 
         <div className='flex w-full items-center justify-between md:hidden'>
           <h2 className='text-muted-foreground text-lg font-semibold'>{t`Filter`}</h2>

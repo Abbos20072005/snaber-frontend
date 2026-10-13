@@ -2,7 +2,7 @@ import { useLingui } from '@lingui/react/macro';
 import { createFileRoute } from '@tanstack/react-router';
 import { Suspense } from 'react';
 
-import { CategoryDirectory, CategoryDirectorySkeleton, CategorySkeleton, TopCategoriesSection } from '@/modules/category';
+import { CategorySkeleton, TopCategoriesSection } from '@/modules/category';
 // FEATURE DISABLED: Top companies section on the home page.
 // import { CompanyCardSkeleton, TopCompaniesSlider } from '@/modules/company';
 // FEATURE DISABLED: Contact section.
@@ -29,21 +29,18 @@ const App = () => {
       <SectionWrapper title={t`Building materials`} to='/catalog'>
         <Suspense
           fallback={
-            <div className='-ml-4 flex overflow-hidden'>
-              {Array.from({ length: 10 }).map((_, index) => (
-                <div key={index} className='shrink-0 basis-70 pl-4'>
-                  <CategorySkeleton />
+            <div className='grid grid-cols-3 gap-x-3 gap-y-5 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8'>
+              {Array.from({ length: 8 }).map((_, index) => (
+                <div key={index}>
+                  <div className='border-border aspect-square border bg-white p-1.5'>
+                    <CategorySkeleton />
+                  </div>
                 </div>
               ))}
             </div>
           }
         >
           <TopCategoriesSection />
-        </Suspense>
-      </SectionWrapper>
-      <SectionWrapper title={t`All categories`}>
-        <Suspense fallback={<CategoryDirectorySkeleton />}>
-          <CategoryDirectory />
         </Suspense>
       </SectionWrapper>
       <SectionWrapper search={{ is_popular: 'true' }} title={t`Top products`} to='/products'>

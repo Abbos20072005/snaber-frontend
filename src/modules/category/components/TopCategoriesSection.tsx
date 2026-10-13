@@ -1,37 +1,57 @@
 import { useSuspenseQuery } from '@tanstack/react-query';
 import { Link } from '@tanstack/react-router';
 
-import { CategoryCard, getPublicAllCategoriesOptions } from '@/modules/category';
+import { getPublicAllCategoriesOptions } from '@/modules/category';
 import { generateSlugId } from '@/shared/constants';
-import { cn } from '@/shared/lib/utils';
 
-const MAX_VISIBLE_CATEGORIES = 18;
-
-const getVisibilityClassName = (index: number) => {
-  if (index >= 12) return 'hidden lg:block';
-  if (index >= 9) return 'hidden sm:block';
-  return undefined;
-};
+const CategoryTile = ({ category }: { category: Category }) => (
+  <Link
+    params={{ slug: generateSlugId(category.id, category.name) }}
+    to='/catalog/$slug'
+  >
+    <span className='border-border block border bg-white p-1.5'>
+      <img
+        alt={category.name}
+        className='aspect-square w-full object-cover'
+        loading='lazy'
+        src={category.image}
+      />
+    </span>
+    <span className='text-foreground/80 mt-1.5 block text-center text-[13px] leading-tight'>
+      {category.name}
+    </span>
+  </Link>
+);
 
 export const TopCategoriesSection = () => {
-  const getPublicAllCategoriesQuery = useSuspenseQuery(
-    getPublicAllCategoriesOptions({ params: { is_popular: true } })
-  );
+  const getPublicAllCategoriesQuery = useSuspenseQuery(getPublicAllCategoriesOptions());
 
-  const topCategories = getPublicAllCategoriesQuery.data.slice(0, MAX_VISIBLE_CATEGORIES);
+  const roots = getPublicAllCategoriesQuery.data ?? [];
 
   return (
-    <div className='grid grid-cols-3 gap-2 sm:grid-cols-4 md:gap-3 lg:grid-cols-6'>
-      {topCategories.map((item, index) => (
-        <Link
-          key={item.id}
-          className={cn(getVisibilityClassName(index))}
-          params={{ slug: generateSlugId(item.id, item.name) }}
-          to='/catalog/$slug'
-        >
-          <CategoryCard category={item} compact />
-        </Link>
-      ))}
+    <div className='space-y-8'>
+      {roots.map((root) => {
+        const children = root.children ?? [];
+
+        if (children.length === 0) return null;
+
+        return (
+          <section key={root.id}>
+            <Link
+              className='text-primary text-lg font-semibold hover:underline'
+              params={{ slug: generateSlugId(root.id, root.name) }}
+              to='/catalog/$slug'
+            >
+              {root.name}
+            </Link>
+            <div className='mt-3 grid grid-cols-3 gap-x-3 gap-y-5 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8'>
+              {children.map((child) => (
+                <CategoryTile key={child.id} category={child} />
+              ))}
+            </div>
+          </section>
+        );
+      })}
     </div>
   );
 };
