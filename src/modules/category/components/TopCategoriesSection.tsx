@@ -1,38 +1,34 @@
 import { useSuspenseQuery } from '@tanstack/react-query';
-import { Link } from '@tanstack/react-router';
+import { useState } from 'react';
 
-import { CategoryTile, getPublicAllCategoriesOptions } from '@/modules/category';
-import { generateSlugId } from '@/shared/constants';
+import {
+  CategorySidebar,
+  CategoryTile,
+  getPublicAllCategoriesOptions
+} from '@/modules/category';
 
 export const TopCategoriesSection = () => {
   const getPublicAllCategoriesQuery = useSuspenseQuery(getPublicAllCategoriesOptions());
-
   const roots = getPublicAllCategoriesQuery.data ?? [];
+  const [selectedId, setSelectedId] = useState<number | undefined>(roots[0]?.id);
+  const selected = roots.find((root) => root.id === selectedId) ?? roots[0];
+  const tiles = selected?.children ?? [];
 
   return (
-    <div className='space-y-8'>
-      {roots.map((root) => {
-        const children = root.children ?? [];
-
-        if (children.length === 0) return null;
-
-        return (
-          <section key={root.id}>
-            <Link
-              className='text-primary text-base font-semibold hover:underline'
-              params={{ slug: generateSlugId(root.id, root.name) }}
-              to='/catalog/$slug'
-            >
-              {root.name}
-            </Link>
-            <div className='mt-2 grid grid-cols-4 gap-x-2 gap-y-4 sm:grid-cols-6 lg:grid-cols-9'>
-              {children.map((child) => (
+    <div className='flex flex-col gap-6 md:flex-row'>
+      <CategorySidebar roots={roots} selectedId={selected?.id} onSelect={setSelectedId} />
+      <div className='min-w-0 flex-1'>
+        {selected && (
+          <>
+            <p className='text-primary text-xl font-semibold'>{selected.name}</p>
+            <div className='mt-3 grid grid-cols-4 gap-x-2 gap-y-4 sm:grid-cols-6 xl:grid-cols-8'>
+              {tiles.map((child) => (
                 <CategoryTile key={child.id} category={child} />
               ))}
             </div>
-          </section>
-        );
-      })}
+          </>
+        )}
+      </div>
     </div>
   );
 };

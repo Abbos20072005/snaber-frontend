@@ -5,11 +5,11 @@ import { useState } from 'react';
 
 import {
   CategoryPendingComponent,
+  CategorySidebar,
   CategoryTile,
   getPublicAllCategoriesOptions
 } from '@/modules/category';
 import { getLocale } from '@/shared/i18n';
-import { cn } from '@/shared/lib/utils';
 import { createBreadcrumbJsonLd, createSeoMeta, DEFAULT_OG_IMAGE } from '@/shared/lib/seo';
 import {
   Breadcrumb,
@@ -46,27 +46,7 @@ const RouteComponent = () => {
           </BreadcrumbList>
         </Breadcrumb>
         <div className='flex flex-col gap-6 md:flex-row'>
-          <aside className='shrink-0 md:w-55'>
-            <p className='border-b pb-2 text-[15px] font-semibold'>{t`Choose a category`}</p>
-            <ul className='mt-1 flex gap-1 overflow-x-auto py-1 md:flex-col md:overflow-visible'>
-              {roots.map((root) => (
-                <li key={root.id} className='shrink-0'>
-                  <button
-                    className={cn(
-                      'w-full rounded-sm px-2 py-1.5 text-left text-sm whitespace-nowrap transition-colors md:whitespace-normal',
-                      root.id === selected?.id
-                        ? 'bg-primary/10 text-primary font-semibold'
-                        : 'text-foreground/80 hover:bg-muted'
-                    )}
-                    type='button'
-                    onClick={() => setSelectedId(root.id)}
-                  >
-                    {root.name}
-                  </button>
-                </li>
-              ))}
-            </ul>
-          </aside>
+          <CategorySidebar roots={roots} selectedId={selected?.id} onSelect={setSelectedId} />
           <div className='min-w-0 flex-1'>
             {selected && (
               <>
