@@ -29,12 +29,10 @@ const App = () => {
       <SectionWrapper title={t`Building materials`} to='/catalog'>
         <Suspense
           fallback={
-            <div className='grid grid-cols-3 gap-x-3 gap-y-5 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8'>
-              {Array.from({ length: 8 }).map((_, index) => (
-                <div key={index}>
-                  <div className='border-border aspect-square border bg-white p-1.5'>
-                    <CategorySkeleton />
-                  </div>
+            <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4'>
+              {Array.from({ length: 4 }).map((_, index) => (
+                <div key={index} className='space-y-2 rounded-lg border bg-white p-4'>
+                  <CategorySkeleton />
                 </div>
               ))}
             </div>

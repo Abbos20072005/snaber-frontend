@@ -1,12 +1,10 @@
 import { useLingui } from '@lingui/react/macro';
-import { useSuspenseQuery } from '@tanstack/react-query';
 import { createFileRoute, Link } from '@tanstack/react-router';
-import { useState } from 'react';
+import { Suspense } from 'react';
 
 import {
   CategoryPendingComponent,
-  CategorySidebar,
-  CategoryTile,
+  TopCategoriesSection,
   getPublicAllCategoriesOptions
 } from '@/modules/category';
 import { getLocale } from '@/shared/i18n';
@@ -25,14 +23,6 @@ import { SectionWrapper } from '@/shared/ui/section-wrapper';
 const RouteComponent = () => {
   const { t } = useLingui();
 
-  const categoriesQuery = useSuspenseQuery(getPublicAllCategoriesOptions());
-  const roots = categoriesQuery.data ?? [];
-  const [selectedId, setSelectedId] = useState<number | undefined>(undefined);
-  const selected = roots.find((root) => root.id === selectedId);
-  const tiles = selected
-    ? (selected.children ?? [])
-    : roots.flatMap((root) => root.children ?? []);
-
   return (
     <div>
       <SectionWrapper title={t`Catalog`}>
@@ -47,19 +37,9 @@ const RouteComponent = () => {
             </BreadcrumbItem>
           </BreadcrumbList>
         </Breadcrumb>
-        <div className='flex flex-col gap-6 md:flex-row'>
-          <CategorySidebar roots={roots} selectedId={selected?.id} onSelect={setSelectedId} />
-          <div className='min-w-0 flex-1'>
-            <p className='text-primary text-xl font-semibold'>
-              {selected ? selected.name : t`All categories`}
-            </p>
-            <div className='mt-3 grid grid-cols-4 gap-x-2 gap-y-4 sm:grid-cols-6 xl:grid-cols-8'>
-              {tiles.map((child) => (
-                <CategoryTile key={child.id} category={child} />
-              ))}
-            </div>
-          </div>
-        </div>
+        <Suspense fallback={<CategoryPendingComponent />}>
+          <TopCategoriesSection />
+        </Suspense>
       </SectionWrapper>
     </div>
   );
