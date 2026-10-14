@@ -1,6 +1,6 @@
 import { useLingui } from '@lingui/react/macro';
 import { useQueries, useQuery, useQueryClient } from '@tanstack/react-query';
-import { ChevronDownIcon, ChevronRightIcon } from 'lucide-react';
+import { ChevronDownIcon, ChevronRightIcon, ImageIcon } from 'lucide-react';
 import { parseAsInteger as parseAsInt, useQueryState } from 'nuqs';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 
@@ -110,7 +110,7 @@ export const FilterCategoryList = ({ resetRef, category }: Props) => {
     return (
       <Collapsible key={cat.id} open={isExpanded}>
         <Button
-          className={cn('w-full justify-start', depth > 0 && 'ml-3')}
+          className={cn('h-auto w-full justify-start py-1.5 whitespace-normal', depth > 0 && 'ml-3')}
           variant={isSelected ? 'secondary' : 'ghost'}
           onClick={() => {
             void setCategoryId(cat.id);
@@ -123,9 +123,15 @@ export const FilterCategoryList = ({ resetRef, category }: Props) => {
             if (hasChildren) prefetchChildren(cat.id);
           }}
         >
-          <div className='flex w-full items-center gap-1'>
-            <img alt={cat.name} className='size-6 rounded-xs border object-cover' src={cat.image} />
-            <span className='flex-1 text-left'>{cat.name}</span>
+          <div className='flex w-full items-center gap-1.5'>
+            {cat.image ? (
+              <img alt={cat.name} className='size-6 shrink-0 rounded-xs border object-cover' src={cat.image} />
+            ) : (
+              <span className='bg-muted/60 flex size-6 shrink-0 items-center justify-center rounded-xs border'>
+                <ImageIcon className='text-muted-foreground/60 size-3.5' />
+              </span>
+            )}
+            <span className='min-w-0 flex-1 text-left break-words'>{cat.name}</span>
             {hasChildren &&
               (isExpanded ? (
                 <ChevronDownIcon className='size-4 shrink-0' />
