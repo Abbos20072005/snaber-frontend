@@ -33,7 +33,7 @@ export const CategoryBreadcrumb = ({ id }: Props) => {
         </BreadcrumbItem>
         <BreadcrumbSeparator />
         <BreadcrumbItem>
-          <BreadcrumbLink render={<Link to='/catalog'>{t`Catalogs`}</Link>} />
+          <BreadcrumbLink render={<Link to='/catalog'>{t`Catalog`}</Link>} />
         </BreadcrumbItem>
         {breadcrumb.map((item, index) => (
           <React.Fragment key={`breadcrumb-${index}`}>
