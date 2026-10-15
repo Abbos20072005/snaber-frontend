@@ -1,4 +1,5 @@
 import { useLingui } from '@lingui/react/macro';
+import { ImageIcon } from 'lucide-react';
 
 import { cn } from '@/shared/lib/utils';
 
@@ -19,7 +20,7 @@ export const CategorySidebar = ({ roots, selectedId, onSelect }: CategorySidebar
           <li key={root.id} className='shrink-0'>
             <button
               className={cn(
-                'w-full rounded-sm px-2 py-1.5 text-left text-sm whitespace-nowrap transition-colors md:whitespace-normal',
+                'flex w-full items-center gap-2 rounded-sm px-2 py-1.5 text-left text-sm whitespace-nowrap transition-colors md:whitespace-normal',
                 root.id === selectedId
                   ? 'bg-yellow-400 font-semibold text-black'
                   : 'text-foreground/80 hover:bg-yellow-400/20 hover:text-black'
@@ -27,7 +28,19 @@ export const CategorySidebar = ({ roots, selectedId, onSelect }: CategorySidebar
               type='button'
               onClick={() => onSelect(root.id)}
             >
-              {root.name}
+              {root.image ? (
+                <img
+                  alt={root.name}
+                  className='size-8 shrink-0 rounded-md border object-cover'
+                  loading='lazy'
+                  src={root.image}
+                />
+              ) : (
+                <span className='bg-muted/60 flex size-8 shrink-0 items-center justify-center rounded-md border'>
+                  <ImageIcon className='text-muted-foreground/60 size-4' />
+                </span>
+              )}
+              <span className='min-w-0 flex-1 break-words'>{root.name}</span>
             </button>
           </li>
         ))}
