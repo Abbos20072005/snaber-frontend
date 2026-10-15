@@ -1,6 +1,6 @@
 import { useLingui } from '@lingui/react/macro';
 import { Link } from '@tanstack/react-router';
-import { ArrowRightIcon, EyeIcon } from 'lucide-react';
+import { ArrowRightIcon, ChevronRightIcon } from 'lucide-react';
 // FEATURE DISABLED: Favorites toggle.
 // import { useMutation } from '@tanstack/react-query';
 // import { HeartIcon } from 'lucide-react';
@@ -10,7 +10,7 @@ import { currencySymbolMap } from '@/modules/currency';
 // FEATURE DISABLED: Favorites API + store.
 // import { postFavouriteProduct } from '@/shared/api';
 import { generateSlugId } from '@/shared/constants';
-import { formatPrice, useFormatCount } from '@/shared/lib/format';
+import { formatPrice } from '@/shared/lib/format';
 import { cn } from '@/shared/lib/utils';
 // import { useFavoritesStore } from '@/shared/store';
 import { Badge } from '@/shared/ui/badge';
@@ -33,7 +33,6 @@ export const ProductCard = ({ product, isShowCompany = true, className }: Props)
   // const { isFavorite, toggleFavorite } = useFavoritesStore();
   const productId = product.product_id ?? product.id;
   const images = product.images ?? [];
-  const formatCount = useFormatCount();
 
   // const isFav = isFavorite(productId);
 
@@ -77,10 +76,6 @@ export const ProductCard = ({ product, isShowCompany = true, className }: Props)
               <ProductImageIndicators images={images} />
             </Carousel>
           </Link>
-          <div className='absolute top-2 left-2 flex items-center gap-1 rounded-full bg-black/50 px-2 py-1 text-white backdrop-blur-sm'>
-            <EyeIcon className='size-3' />
-            <span className='text-[10px] font-medium'>{formatCount(product.view_count)}</span>
-          </div>
           {/* FEATURE DISABLED: Favorites toggle. */}
           {/* <Button */}
           {/*   className='size-5 cursor-pointer rounded-full p-4' */}
@@ -139,7 +134,7 @@ export const ProductCard = ({ product, isShowCompany = true, className }: Props)
           )}
           {(product.specifications ?? []).length > 0 && (
             <dl className='mt-3 space-y-1.5'>
-              {(product.specifications ?? []).map((spec) => (
+              {(product.specifications ?? []).slice(0, 6).map((spec) => (
                 <div key={`${spec.name}-${spec.value}`} className='flex gap-1 text-sm leading-6'>
                   <dt className='text-muted-foreground shrink-0'>{spec.name}:</dt>
                   <dd className='min-w-0 truncate font-medium'>{spec.value}</dd>
@@ -147,6 +142,14 @@ export const ProductCard = ({ product, isShowCompany = true, className }: Props)
               ))}
             </dl>
           )}
+          <Link
+            className='text-primary mt-3 inline-flex items-center gap-1 text-sm font-semibold hover:underline'
+            params={{ slug: generateSlugId(productId, product.name) }}
+            to='/product/$slug'
+          >
+            {t`Show all characteristics`}
+            <ChevronRightIcon className='size-4' />
+          </Link>
         </div>
         <div className='flex shrink-0 flex-row items-center justify-between gap-3 border-t pt-3 sm:w-52 sm:flex-col sm:items-stretch sm:justify-start sm:border-t-0 sm:border-l sm:pt-0 sm:pl-6 lg:w-60'>
           <div>
@@ -174,26 +177,26 @@ export const ProductCard = ({ product, isShowCompany = true, className }: Props)
         </div>
       </div>
       {/* FEATURE DISABLED: Min order / lead time info. */}
-        {/* <div className='flex justify-between gap-2'> */}
-        {/*   <div> */}
-        {/*     <p className='text-muted-foreground text-xs font-semibold'>{t`Min. order`}</p> */}
-        {/*     <p className='text-sm font-medium'> */}
-        {/*       {product.moq} {product.moq_unit.unit} */}
-        {/*     </p> */}
-        {/*   </div> */}
-        {/*   <div> */}
-        {/*     <p className='text-muted-foreground text-xs font-semibold'>{t`Lead time`}</p> */}
-        {/*     <p className='text-sm font-medium'> */}
-        {/*       {(() => { */}
-        {/*         if (product.lead_time_min && product.lead_time_max) */}
-        {/*           return `${product.lead_time_min}-${product.lead_time_max} ${t`days`}`; */}
-        {/*         else if (product.lead_time_min) return `${product.lead_time_min}+ ${t`days`}`; */}
-        {/*         else if (product.lead_time_max) return `Up to ${product.lead_time_max} ${t`days`}`; */}
-        {/*         return t`N/A`; */}
-        {/*       })()} */}
-        {/*     </p> */}
-        {/*   </div> */}
-        {/* </div> */}
-      </Card>
+      {/* <div className='flex justify-between gap-2'> */}
+      {/*   <div> */}
+      {/*     <p className='text-muted-foreground text-xs font-semibold'>{t`Min. order`}</p> */}
+      {/*     <p className='text-sm font-medium'> */}
+      {/*       {product.moq} {product.moq_unit.unit} */}
+      {/*     </p> */}
+      {/*   </div> */}
+      {/*   <div> */}
+      {/*     <p className='text-muted-foreground text-xs font-semibold'>{t`Lead time`}</p> */}
+      {/*     <p className='text-sm font-medium'> */}
+      {/*       {(() => { */}
+      {/*         if (product.lead_time_min && product.lead_time_max) */}
+      {/*           return `${product.lead_time_min}-${product.lead_time_max} ${t`days`}`; */}
+      {/*         else if (product.lead_time_min) return `${product.lead_time_min}+ ${t`days`}`; */}
+      {/*         else if (product.lead_time_max) return `Up to ${product.lead_time_max} ${t`days`}`; */}
+      {/*         return t`N/A`; */}
+      {/*       })()} */}
+      {/*     </p> */}
+      {/*   </div> */}
+      {/* </div> */}
+    </Card>
   );
 };

@@ -74,7 +74,9 @@ const RouteComponent = () => {
 
 export const Route = createFileRoute('/(main)/products/')({
   loader: async ({ context: { queryClient }, location: { search } }) => {
-    await queryClient.prefetchInfiniteQuery(getPublicProductsInfiniteOptions({ params: search }));
+    await queryClient.prefetchInfiniteQuery(
+      getPublicProductsInfiniteOptions({ params: { page_size: 12, ...search } })
+    );
   },
   component: RouteComponent,
   head: ({ match }) => {
