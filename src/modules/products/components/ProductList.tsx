@@ -32,7 +32,7 @@ export const ProductList = ({
       {view === 'grid' && (
         <div
           className={cn(
-            'grid grid-cols-[repeat(auto-fill,minmax(230px,1fr))] gap-3 md:gap-4',
+            'flex flex-col gap-3 md:gap-4',
             className
           )}
           {...props}

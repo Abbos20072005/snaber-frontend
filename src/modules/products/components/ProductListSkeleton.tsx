@@ -29,7 +29,7 @@ export const ProductListSkeleton = ({
   if (view === 'grid') {
     return (
       <div
-        className={cn('grid grid-cols-[repeat(auto-fill,minmax(230px,1fr))] gap-3 md:gap-4', className)}
+        className={cn('flex flex-col gap-3 md:gap-4', className)}
         {...props}
       >
         {items.map((_, i) => (

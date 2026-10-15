@@ -29,6 +29,7 @@ interface ProductPreview extends ProductBase {
   constructor_id?: number;
   images?: string[];
   product_id?: number;
+  specifications?: { name: string; value: string }[];
   variants: number;
 }
 

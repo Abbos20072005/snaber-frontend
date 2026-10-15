@@ -15,7 +15,7 @@ import { cn } from '@/shared/lib/utils';
 // import { useFavoritesStore } from '@/shared/store';
 import { Badge } from '@/shared/ui/badge';
 import { Button } from '@/shared/ui/button';
-import { Card, CardContent } from '@/shared/ui/card';
+import { Card } from '@/shared/ui/card';
 import { Carousel, CarouselContent, CarouselItem } from '@/shared/ui/carousel';
 
 import { productTypeColorMap, productTypeLabelMap } from '../constants';
@@ -54,21 +54,21 @@ export const ProductCard = ({ product, isShowCompany = true, className }: Props)
   // };
 
   return (
-    <Card className={cn('h-full p-2', className)} size='sm'>
-      <div className='flex gap-2'>
-        <div className='relative shrink-0'>
+    <Card className={cn('p-3 sm:p-5', className)} size='sm'>
+      <div className='flex flex-col gap-4 sm:flex-row sm:gap-6'>
+        <div className='relative mx-auto w-full max-w-55 shrink-0 sm:mx-0 sm:w-48 lg:w-56'>
           <Link
-            className='block h-20 w-20 sm:h-24 sm:w-24'
+            className='block'
             params={{ slug: generateSlugId(productId, product.name) }}
             to='/product/$slug'
           >
-            <Carousel className='h-full' data-product-image-carousel>
-              <CarouselContent className='h-full'>
+            <Carousel className='w-full' data-product-image-carousel>
+              <CarouselContent>
                 {images.map((image) => (
-                  <CarouselItem key={image} className='h-full'>
+                  <CarouselItem key={image}>
                     <img
                       alt={t`Product image`}
-                      className='h-full w-full rounded-md border object-cover'
+                      className='aspect-square w-full rounded-lg border object-cover'
                       src={image}
                     />
                   </CarouselItem>
@@ -77,7 +77,7 @@ export const ProductCard = ({ product, isShowCompany = true, className }: Props)
               <ProductImageIndicators images={images} />
             </Carousel>
           </Link>
-          <div className='absolute top-1 left-1 flex items-center gap-1 rounded-full bg-black/50 px-1.5 py-0.5 text-white backdrop-blur-sm'>
+          <div className='absolute top-2 left-2 flex items-center gap-1 rounded-full bg-black/50 px-2 py-1 text-white backdrop-blur-sm'>
             <EyeIcon className='size-3' />
             <span className='text-[10px] font-medium'>{formatCount(product.view_count)}</span>
           </div>
@@ -90,7 +90,7 @@ export const ProductCard = ({ product, isShowCompany = true, className }: Props)
           {/*   <HeartIcon className={isFav ? 'fill-red-500' : ''} /> */}
           {/* </Button> */}
         </div>
-        <CardContent className='flex min-w-0 flex-1 flex-col p-0'>
+        <div className='min-w-0 flex-1'>
           <div className='flex flex-wrap gap-1'>
             {product.product_type === 'both' ? (
               <>
@@ -120,7 +120,7 @@ export const ProductCard = ({ product, isShowCompany = true, className }: Props)
             )}
           </div>
           <Link
-            className='line-clamp-2 text-xs leading-4 font-semibold hover:underline sm:text-[13px]'
+            className='mt-2 line-clamp-3 text-base leading-6 font-semibold hover:underline lg:text-lg'
             params={{ slug: generateSlugId(productId, product.name) }}
             to='/product/$slug'
           >
@@ -135,20 +135,31 @@ export const ProductCard = ({ product, isShowCompany = true, className }: Props)
             // >
             //   {product.company.name}
             // </Link>
-            <p className='text-success mt-0.5 truncate text-[11px]'>{product.company.name}</p>
+            <p className='text-success mt-1 truncate text-sm'>{product.company.name}</p>
           )}
-          <div className='mt-auto flex flex-wrap items-baseline gap-1 pt-1.5'>
-            <p className='text-sm leading-none font-extrabold sm:text-base'>
+          {(product.specifications ?? []).length > 0 && (
+            <dl className='mt-3 space-y-1.5'>
+              {(product.specifications ?? []).map((spec) => (
+                <div key={`${spec.name}-${spec.value}`} className='flex gap-1 text-sm leading-6'>
+                  <dt className='text-muted-foreground shrink-0'>{spec.name}:</dt>
+                  <dd className='min-w-0 truncate font-medium'>{spec.value}</dd>
+                </div>
+              ))}
+            </dl>
+          )}
+        </div>
+        <div className='flex shrink-0 flex-row items-center justify-between gap-3 border-t pt-3 sm:w-52 sm:flex-col sm:items-stretch sm:justify-start sm:border-t-0 sm:border-l sm:pt-0 sm:pl-6 lg:w-60'>
+          <div>
+            <p className='text-xl leading-tight font-extrabold whitespace-nowrap lg:text-2xl'>
               {formatPrice(product.price_min)}
               {currencySymbolMap[product.currency]}
             </p>
-            <p className='text-muted-foreground text-[11px] leading-none capitalize'>
+            <p className='text-muted-foreground mt-1 text-xs capitalize'>
               / {product.moq_unit.unit}
             </p>
           </div>
           <Button
-            className='mt-1.5 h-8 w-full shrink-0 bg-yellow-400 text-xs font-bold text-black hover:bg-yellow-300'
-            size='sm'
+            className='shrink-0 bg-yellow-400 font-bold text-black hover:bg-yellow-300 sm:mt-3 sm:w-full'
             render={
               <Link
                 params={{ slug: generateSlugId(productId, product.name) }}
@@ -160,7 +171,7 @@ export const ProductCard = ({ product, isShowCompany = true, className }: Props)
             }
             variant='secondary'
           />
-        </CardContent>
+        </div>
       </div>
       {/* FEATURE DISABLED: Min order / lead time info. */}
         {/* <div className='flex justify-between gap-2'> */}
