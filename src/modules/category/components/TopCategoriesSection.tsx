@@ -30,18 +30,24 @@ export const TopCategoriesSection = () => {
           if (subcategories.length === 0) return null;
 
           return (
-            <section key={section.id}>
-              <div className='border-primary/60 border-t-2 pt-2'>
-                <h2 className='text-primary text-lg font-bold md:text-xl'>
-                  <Link
-                    className='hover:underline'
-                    params={{ slug: generateSlugId(section.id, section.name) }}
-                    to='/catalog/$slug'
-                  >
-                    {section.name}
-                  </Link>
-                </h2>
-              </div>
+          <section key={section.id}>
+            <div className='border-primary/60 border-t-2 pt-2'>
+              <Link
+                className='flex items-center gap-3 hover:underline'
+                params={{ slug: generateSlugId(section.id, section.name) }}
+                to='/catalog/$slug'
+              >
+                {section.image && (
+                  <img
+                    alt={section.name}
+                    className='size-12 shrink-0 rounded-lg border object-cover'
+                    loading='lazy'
+                    src={section.image}
+                  />
+                )}
+                <h2 className='text-primary text-xl font-bold md:text-2xl'>{section.name}</h2>
+              </Link>
+            </div>
               <div className='mt-3 grid grid-cols-5 gap-x-1.5 gap-y-4 sm:grid-cols-7 lg:grid-cols-10'>
                 {subcategories.map((sub) => (
                   <CategoryTile key={sub.id} category={sub} />

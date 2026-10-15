@@ -78,7 +78,7 @@ export const Header = () => {
                 to={item.to}
               >
                 {t(item.label)}
-                <div className='bg-primary h-0.5 w-0 transition-all group-hover:w-full group-[.active]:w-full' />
+                <div className='h-0.5 w-0 bg-yellow-400 transition-all group-hover:w-full group-[.active]:w-full' />
               </Link>
             ))}
           </nav>

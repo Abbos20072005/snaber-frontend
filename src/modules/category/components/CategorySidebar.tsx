@@ -21,8 +21,8 @@ export const CategorySidebar = ({ roots, selectedId, onSelect }: CategorySidebar
               className={cn(
                 'w-full rounded-sm px-2 py-1.5 text-left text-sm whitespace-nowrap transition-colors md:whitespace-normal',
                 root.id === selectedId
-                  ? 'bg-primary/10 text-primary font-semibold'
-                  : 'text-foreground/80 hover:bg-muted'
+                  ? 'bg-yellow-400 font-semibold text-black'
+                  : 'text-foreground/80 hover:bg-yellow-400/20 hover:text-black'
               )}
               type='button'
               onClick={() => onSelect(root.id)}
