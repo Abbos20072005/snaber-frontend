@@ -14,7 +14,7 @@ export const Footer = () => {
   const year = new Date().getFullYear();
 
   return (
-    <footer className='mt-15 hidden bg-[#14243A] text-white md:mt-20 md:block lg:mt-25'>
+    <footer className='mt-15 hidden border-t-4 border-yellow-400 bg-[#141414] text-white md:mt-20 md:block lg:mt-25'>
       <div className='container py-12 md:py-16'>
         <div className='grid gap-10 lg:grid-cols-[1.25fr_0.75fr_1fr] lg:gap-14'>
           <div className='space-y-5'>
@@ -33,14 +33,14 @@ export const Footer = () => {
           </div>
 
           <nav aria-label={t`Footer navigation`} className='space-y-4'>
-            <p className='text-sm font-semibold tracking-[0.14em] text-cyan-100 uppercase'>
+            <p className='text-sm font-semibold tracking-[0.14em] text-yellow-400 uppercase'>
               {t`Navigation`}
             </p>
             <ul className='space-y-2'>
               {links.map((item) => (
                 <li key={item.to}>
                   <Link
-                    className='text-sm text-white/72 transition-colors hover:text-white'
+                    className='text-sm text-white/72 transition-colors hover:text-yellow-400'
                     to={item.to}
                   >
                     {t(item.label)}
@@ -51,7 +51,7 @@ export const Footer = () => {
           </nav>
 
           <div className='space-y-4'>
-            <p className='text-sm font-semibold tracking-[0.14em] text-cyan-100 uppercase'>
+            <p className='text-sm font-semibold tracking-[0.14em] text-yellow-400 uppercase'>
               {t`Contact`}
             </p>
             <ul className='space-y-3'>
@@ -62,11 +62,11 @@ export const Footer = () => {
                   <li key={item.href}>
                     <a
                       href={item.href}
-                      className='group flex items-start gap-3 rounded-lg border border-white/10 bg-white/5 p-3 text-sm transition-colors hover:border-cyan-200/40 hover:bg-white/8'
+                      className='group flex items-start gap-3 rounded-lg border border-white/10 bg-white/5 p-3 text-sm transition-colors hover:border-yellow-400/50 hover:bg-white/8'
                       rel={item.href.startsWith('http') ? 'noreferrer' : undefined}
                       target={item.href.startsWith('http') ? '_blank' : undefined}
                     >
-                      <span className='mt-0.5 flex size-8 shrink-0 items-center justify-center rounded-md bg-cyan-300/14 text-cyan-200'>
+                      <span className='mt-0.5 flex size-8 shrink-0 items-center justify-center rounded-md bg-yellow-400 text-black'>
                         <Icon className='size-4' />
                       </span>
                       <span className='min-w-0'>
