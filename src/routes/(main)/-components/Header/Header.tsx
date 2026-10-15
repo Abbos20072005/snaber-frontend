@@ -13,6 +13,7 @@ import { Link } from '@tanstack/react-router';
 // import { CurrencySwitcher } from '@/modules/currency';
 import { GlobalSearch } from '@/modules/global-search';
 import { LangSwitcher } from '@/modules/lang-switcher';
+import { SiteLogo } from '@/routes/(main)/-components/SiteLogo';
 // FEATURE DISABLED: Notifications data.
 // import { getUnreadNotificationCountQueryOptions, NotificationCard } from '@/modules/notifications';
 // FEATURE DISABLED: Auth context (sign-in dialog).
@@ -60,9 +61,11 @@ export const Header = () => {
           >
             {/* FEATURE DISABLED: Old B2b logo image. */}
             {/* <img alt={t`Logo`} className='size-full rounded-md object-contain' src={HB2bImage} /> */}
-            <span className='text-primary text-2xl font-extrabold tracking-tight'>
-              snaber<span className='text-foreground'>.uz</span>
-            </span>
+            {/* FEATURE DISABLED: Old snaber.uz text logo (replaced by SiteLogo). */}
+            {/* <span className='text-primary text-2xl font-extrabold tracking-tight'> */}
+            {/*   snaber<span className='text-foreground'>.uz</span> */}
+            {/* </span> */}
+            <SiteLogo />
           </Link>
 
           <nav className='hidden items-center gap-8 md:flex'>

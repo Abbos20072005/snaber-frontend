@@ -1,6 +1,6 @@
 import { useLingui } from '@lingui/react/macro';
 import { Link } from '@tanstack/react-router';
-import { EyeIcon } from 'lucide-react';
+import { ArrowRightIcon, EyeIcon } from 'lucide-react';
 // FEATURE DISABLED: Favorites toggle.
 // import { useMutation } from '@tanstack/react-query';
 // import { HeartIcon } from 'lucide-react';
@@ -14,7 +14,7 @@ import { formatPrice, useFormatCount } from '@/shared/lib/format';
 import { cn } from '@/shared/lib/utils';
 // import { useFavoritesStore } from '@/shared/store';
 import { Badge } from '@/shared/ui/badge';
-// import { Button } from '@/shared/ui/button';
+import { Button } from '@/shared/ui/button';
 import { Card, CardContent } from '@/shared/ui/card';
 import { Carousel, CarouselContent, CarouselItem } from '@/shared/ui/carousel';
 
@@ -54,32 +54,32 @@ export const ProductCard = ({ product, isShowCompany = true, className }: Props)
   // };
 
   return (
-    <Card className={cn('@container pt-0!', className)} size='sm'>
-      <div className='relative'>
-        <Link
-          className='block h-60'
-          params={{ slug: generateSlugId(productId, product.name) }}
-          to='/product/$slug'
-        >
-          <Carousel data-product-image-carousel>
-            <CarouselContent>
-              {images.map((image) => (
-                <CarouselItem key={image}>
-                  <img
-                    alt={t`Product image`}
-                    className='h-60 w-full rounded-xl object-cover'
-                    src={image}
-                  />
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <ProductImageIndicators images={images} />
-          </Carousel>
-        </Link>
-        <div className='absolute top-0 flex w-full items-center justify-between gap-2 p-3'>
-          <div className='flex items-center gap-1 rounded-full bg-black/50 px-2 py-1 text-white backdrop-blur-sm'>
+    <Card className={cn('p-3 sm:p-4', className)} size='sm'>
+      <div className='flex gap-3 sm:gap-4'>
+        <div className='relative shrink-0'>
+          <Link
+            className='block h-24 w-24 sm:h-32 sm:w-32'
+            params={{ slug: generateSlugId(productId, product.name) }}
+            to='/product/$slug'
+          >
+            <Carousel className='h-full' data-product-image-carousel>
+              <CarouselContent className='h-full'>
+                {images.map((image) => (
+                  <CarouselItem key={image} className='h-full'>
+                    <img
+                      alt={t`Product image`}
+                      className='h-full w-full rounded-lg border object-cover'
+                      src={image}
+                    />
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <ProductImageIndicators images={images} />
+            </Carousel>
+          </Link>
+          <div className='absolute top-1 left-1 flex items-center gap-1 rounded-full bg-black/50 px-1.5 py-0.5 text-white backdrop-blur-sm'>
             <EyeIcon className='size-3' />
-            <span className='text-xs font-medium'>{formatCount(product.view_count)}</span>
+            <span className='text-[10px] font-medium'>{formatCount(product.view_count)}</span>
           </div>
           {/* FEATURE DISABLED: Favorites toggle. */}
           {/* <Button */}
@@ -90,19 +90,10 @@ export const ProductCard = ({ product, isShowCompany = true, className }: Props)
           {/*   <HeartIcon className={isFav ? 'fill-red-500' : ''} /> */}
           {/* </Button> */}
         </div>
-      </div>
-      <CardContent className='space-y-3'>
-        <div>
-          <Link
-            className='text-primary line-clamp-2 min-h-9.5 text-base leading-4.5 font-semibold hover:underline'
-            params={{ slug: generateSlugId(productId, product.name) }}
-            to='/product/$slug'
-          >
-            {product.name}
-          </Link>
-          <div className='my-1'>
+        <CardContent className='flex min-w-0 flex-1 flex-col p-0'>
+          <div className='flex flex-wrap gap-1'>
             {product.product_type === 'both' ? (
-              <div className='flex flex-wrap gap-2'>
+              <>
                 <Badge
                   style={{
                     backgroundColor: productTypeColorMap.ready
@@ -117,7 +108,7 @@ export const ProductCard = ({ product, isShowCompany = true, className }: Props)
                 >
                   {t(productTypeLabelMap.made_to_order)}
                 </Badge>
-              </div>
+              </>
             ) : (
               <Badge
                 style={{
@@ -128,7 +119,13 @@ export const ProductCard = ({ product, isShowCompany = true, className }: Props)
               </Badge>
             )}
           </div>
-
+          <Link
+            className='mt-1 line-clamp-2 text-sm leading-5 font-semibold hover:underline sm:text-base'
+            params={{ slug: generateSlugId(productId, product.name) }}
+            to='/product/$slug'
+          >
+            {product.name}
+          </Link>
           {isShowCompany && (
             /* FEATURE DISABLED: Company mini-site link. */
             // <Link
@@ -138,21 +135,36 @@ export const ProductCard = ({ product, isShowCompany = true, className }: Props)
             // >
             //   {product.company.name}
             // </Link>
-            <p className='text-success text-xs'>{product.company.name}</p>
+            <p className='text-success mt-0.5 truncate text-xs'>{product.company.name}</p>
           )}
-        </div>
-        <div className='space-y-3 border-b pb-4'>
-          <div className='flex flex-wrap items-baseline gap-1'>
-            <p className='text-primary text-base leading-none font-bold lg:text-lg'>
-              {formatPrice(product.price_min)}
-              {currencySymbolMap[product.currency]}
-            </p>
-            <p className='text-muted-foreground text-xs leading-none capitalize'>
-              / {product.moq_unit.unit}
-            </p>
+          <div className='mt-auto flex flex-wrap items-end justify-between gap-2 pt-2'>
+            <div className='flex min-w-0 flex-wrap items-baseline gap-1'>
+              <p className='text-lg leading-none font-extrabold sm:text-xl'>
+                {formatPrice(product.price_min)}
+                {currencySymbolMap[product.currency]}
+              </p>
+              <p className='text-muted-foreground text-xs leading-none capitalize'>
+                / {product.moq_unit.unit}
+              </p>
+            </div>
+            <Button
+              className='shrink-0 bg-yellow-400 font-bold text-black hover:bg-yellow-300'
+              size='sm'
+              render={
+                <Link
+                  params={{ slug: generateSlugId(productId, product.name) }}
+                  to='/product/$slug'
+                >
+                  {t`Details`}
+                  <ArrowRightIcon />
+                </Link>
+              }
+              variant='secondary'
+            />
           </div>
-        </div>
-        {/* FEATURE DISABLED: Min order / lead time info. */}
+        </CardContent>
+      </div>
+      {/* FEATURE DISABLED: Min order / lead time info. */}
         {/* <div className='flex justify-between gap-2'> */}
         {/*   <div> */}
         {/*     <p className='text-muted-foreground text-xs font-semibold'>{t`Min. order`}</p> */}
@@ -173,7 +185,6 @@ export const ProductCard = ({ product, isShowCompany = true, className }: Props)
         {/*     </p> */}
         {/*   </div> */}
         {/* </div> */}
-      </CardContent>
-    </Card>
+      </Card>
   );
 };

@@ -719,6 +719,9 @@ msgstr "Описание обязательно"
 msgid "Description moderator"
 msgstr "Модератор описания"
 
+msgid "Details"
+msgstr "Подробнее"
+
 msgid "Dispatch due today"
 msgstr "Отправка запланирована на сегодня"
 

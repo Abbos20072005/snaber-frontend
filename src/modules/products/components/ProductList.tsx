@@ -30,13 +30,7 @@ export const ProductList = ({
   return (
     <>
       {view === 'grid' && (
-        <div
-          className={cn(
-            'grid grid-cols-[repeat(auto-fill,minmax(180px,1fr))] gap-3 sm:grid-cols-[repeat(auto-fill,minmax(220px,1fr))] md:gap-4',
-            className
-          )}
-          {...props}
-        >
+        <div className={cn('flex flex-col gap-3 md:gap-4', className)} {...props}>
           {products.map((product) => {
             const productId = product.product_id ?? product.id;
             return <ProductCard key={productId} isShowCompany={isShowCompany} product={product} />;

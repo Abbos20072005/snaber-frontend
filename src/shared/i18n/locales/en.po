@@ -718,6 +718,9 @@ msgstr "Description is required"
 msgid "Description moderator"
 msgstr "Description moderator"
 
+msgid "Details"
+msgstr "Details"
+
 msgid "Dispatch due today"
 msgstr "Dispatch due today"
 

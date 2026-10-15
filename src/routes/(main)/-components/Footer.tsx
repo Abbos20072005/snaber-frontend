@@ -2,6 +2,7 @@ import { useLingui } from '@lingui/react/macro';
 import { Link } from '@tanstack/react-router';
 
 import { links } from '@/routes/(main)/-components/Header/Header';
+import { SiteLogo } from '@/routes/(main)/-components/SiteLogo';
 import { Separator } from '@/shared/ui/separator';
 
 // FEATURE DISABLED: Old B2B logo image (rebranded to snaber.uz text logo).
@@ -18,13 +19,13 @@ export const Footer = () => {
         <div className='grid gap-10 lg:grid-cols-[1.25fr_0.75fr_1fr] lg:gap-14'>
           <div className='space-y-5'>
             <Link className='inline-flex items-center gap-3' to='/'>
-              <span className='flex h-13 items-center justify-center rounded-lg px-1'>
-                {/* FEATURE DISABLED: Old B2B logo image. */}
-                {/* <img alt={t`Logo`} className='size-full rounded-md object-contain' src={HImage} /> */}
-                <span className='text-2xl font-extrabold tracking-tight text-white'>
-                  snaber<span className='text-cyan-300'>.uz</span>
-                </span>
-              </span>
+              {/* FEATURE DISABLED: Old B2B logo image. */}
+              {/* <img alt={t`Logo`} className='size-full rounded-md object-contain' src={HImage} /> */}
+              {/* FEATURE DISABLED: Old snaber.uz text logo (replaced by SiteLogo). */}
+              {/* <span className='text-2xl font-extrabold tracking-tight text-white'> */}
+              {/*   snaber<span className='text-cyan-300'>.uz</span> */}
+              {/* </span> */}
+              <SiteLogo dark />
             </Link>
             <p className='max-w-md text-sm leading-6 text-white/72'>
               {t`snaber.uz is a marketplace for building materials and tools — cement, bricks, steel, lumber, roofing, paints, plumbing, electrical goods and equipment from verified suppliers.`}

@@ -11,5 +11,5 @@ export const TopProductsList = () => {
     })
   );
 
-  return <ProductList view='carousel' products={data.results} />;
+  return <ProductList view='grid' products={data.results} />;
 };

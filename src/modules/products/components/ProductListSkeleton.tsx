@@ -28,13 +28,7 @@ export const ProductListSkeleton = ({
 
   if (view === 'grid') {
     return (
-      <div
-        className={cn(
-          'grid grid-cols-[repeat(auto-fill,minmax(180px,1fr))] gap-3 sm:grid-cols-[repeat(auto-fill,minmax(220px,1fr))] md:gap-4',
-          className
-        )}
-        {...props}
-      >
+      <div className={cn('flex flex-col gap-3 md:gap-4', className)} {...props}>
         {items.map((_, i) => (
           <ProductCardSkeleton key={i} isShowCompany={isShowCompany} />
         ))}

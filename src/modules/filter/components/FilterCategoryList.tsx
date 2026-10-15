@@ -42,7 +42,12 @@ export const FilterCategoryList = ({ resetRef, category }: Props) => {
   }, [resetRef]);
 
   const allCategoriesQuery = useQuery(getPublicAllCategoriesOptions());
-  const allCategories: Category[] = allCategoriesQuery.data ?? [];
+  // FEATURE DISABLED: Group level (level 0) is not shown in the storefront.
+  // Only main categories (sections) are listed, like on the main page.
+  const allCategories: Category[] = useMemo(
+    () => (allCategoriesQuery.data ?? []).flatMap((group) => group.children ?? []),
+    [allCategoriesQuery.data]
+  );
   const expandedCategoryIds = useMemo(
     () => new Set(expandedIds.map((item) => item.categoryId)),
     [expandedIds]
@@ -104,8 +109,8 @@ export const FilterCategoryList = ({ resetRef, category }: Props) => {
     const categoryByIdOptions = getPublicCategoryByIdOptions({ id: cat.id });
     const cachedExpandedData = queryClient.getQueryData<Category>(categoryByIdOptions.queryKey);
     const expandedData = expandedCategoriesMap[cat.id] ?? cachedExpandedData;
-    const isLoadingChildren = isExpanded && !expandedData;
-    const children = expandedData?.children ?? [];
+    const children = expandedData?.children ?? cat.children ?? [];
+    const isLoadingChildren = isExpanded && !expandedData && !(cat.children ?? []).length;
 
     return (
       <Collapsible key={cat.id} open={isExpanded}>

@@ -719,6 +719,9 @@ msgstr "Tavsif majburiy"
 msgid "Description moderator"
 msgstr "Tavsif moderatori"
 
+msgid "Details"
+msgstr "Batafsil"
+
 msgid "Dispatch due today"
 msgstr "Bugun jo‘natilishi kerak"
 

@@ -42,7 +42,7 @@ const App = () => {
         </Suspense>
       </SectionWrapper>
       <SectionWrapper search={{ is_popular: 'true' }} title={t`Top products`} to='/products'>
-        <Suspense fallback={<ProductListSkeleton view='carousel' />}>
+        <Suspense fallback={<ProductListSkeleton view='grid' />}>
           <TopProductsList />
         </Suspense>
       </SectionWrapper>
