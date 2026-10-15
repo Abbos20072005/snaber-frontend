@@ -20,9 +20,9 @@ export const CategorySidebar = ({ roots, selectedId, onSelect }: CategorySidebar
           <li key={root.id} className='shrink-0'>
             <button
               className={cn(
-                'w-full rounded-sm px-2 py-1.5 text-left text-sm whitespace-nowrap transition-colors hover:bg-transparent md:whitespace-normal',
+                'flex w-full items-center gap-2 rounded-sm px-2 py-1.5 text-left text-sm whitespace-nowrap transition-colors md:whitespace-normal',
                 root.id === selectedId
-                  ? 'bg-yellow-400 font-semibold text-black hover:bg-yellow-400'
+                  ? 'bg-yellow-400 font-semibold text-black'
                   : 'text-foreground/80 hover:bg-yellow-400/20 hover:text-black'
               )}
               type='button'
