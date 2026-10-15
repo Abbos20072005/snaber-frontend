@@ -1,7 +1,8 @@
 import { useLingui } from '@lingui/react/macro';
 import { useQuery } from '@tanstack/react-query';
 import { useQueryStates } from 'nuqs';
-import { useRef } from 'react';
+// FEATURE DISABLED: Categories block in the filter panel.
+// import { useRef } from 'react';
 
 import { getPublicFilterQueryOptions } from '@/modules/attributes';
 import { ProductTypeFilter } from '@/modules/filter';
@@ -9,7 +10,8 @@ import { cn } from '@/shared/lib/utils';
 import { Skeleton } from '@/shared/ui/skeleton';
 
 import { AttributeFilter } from './AttributeFilter';
-import { FilterCategoryList } from './FilterCategoryList';
+// FEATURE DISABLED: Categories block in the filter panel.
+// import { FilterCategoryList } from './FilterCategoryList';
 import { productFilterQueryConfig } from './product-filters.config';
 import { RangeSlider } from './RangeSlider';
 
@@ -23,7 +25,8 @@ export const FilterSection = ({ className, category, ...props }: Props) => {
   const defaultCategoryId = Number.isFinite(defaultCategory) ? defaultCategory : undefined;
 
   const [queryStates, setQueryStates] = useQueryStates(productFilterQueryConfig);
-  const resetExpandedRef = useRef<(() => void) | null>(null);
+  // FEATURE DISABLED: Categories block in the filter panel.
+  // const resetExpandedRef = useRef<(() => void) | null>(null);
 
   const handleClear = () => {
     setQueryStates({
@@ -34,7 +37,8 @@ export const FilterSection = ({ className, category, ...props }: Props) => {
       price_min: null,
       values: null
     });
-    resetExpandedRef.current?.();
+    // FEATURE DISABLED: Categories block in the filter panel.
+    // resetExpandedRef.current?.();
   };
 
   const filtersAttributeID = queryStates.category || defaultCategoryId;
@@ -61,7 +65,8 @@ export const FilterSection = ({ className, category, ...props }: Props) => {
         </button>
       </div>
       <ProductTypeFilter />
-      <FilterCategoryList resetRef={resetExpandedRef} category={category} />
+      {/* FEATURE DISABLED: Categories block in the filter panel. */}
+      {/* <FilterCategoryList resetRef={resetExpandedRef} category={category} /> */}
       {filters ? (
         <>
           <RangeSlider max={filters.price_max} min={filters.price_min} />
