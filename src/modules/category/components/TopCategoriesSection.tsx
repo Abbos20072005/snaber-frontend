@@ -31,8 +31,8 @@ export const TopCategoriesSection = () => {
 
           return (
           <section key={section.id}>
-            <div className='border-primary/60 border-t-2 pt-2'>
-              <h2 className='text-primary text-xl font-bold md:text-2xl'>
+            <div className='border-t-2 border-yellow-400 pt-2'>
+              <h2 className='text-foreground text-xl font-bold md:text-2xl'>
                 <Link
                   className='hover:underline'
                   params={{ slug: generateSlugId(section.id, section.name) }}

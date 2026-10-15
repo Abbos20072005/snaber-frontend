@@ -26,7 +26,7 @@ const App = () => {
     <>
       {/* FEATURE DISABLED: Hero banner on the home page. */}
       {/* <HeroSection /> */}
-      <SectionWrapper>
+      <SectionWrapper className='pt-0 lg:pt-0'>
         <Suspense
           fallback={
             <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4'>

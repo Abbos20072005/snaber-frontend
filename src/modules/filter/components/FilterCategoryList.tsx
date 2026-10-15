@@ -115,8 +115,8 @@ export const FilterCategoryList = ({ resetRef, category }: Props) => {
     return (
       <Collapsible key={cat.id} open={isExpanded}>
         <Button
-          className={cn('h-auto w-full justify-start py-1.5 whitespace-normal', depth > 0 && 'ml-3')}
-          variant={isSelected ? 'secondary' : 'ghost'}
+          className={cn('h-auto w-full justify-start py-1.5 whitespace-normal')}
+          variant='ghost'
           onClick={() => {
             void setCategoryId(cat.id);
             if (hasChildren) toggleExpand(cat.id, depth);
@@ -128,7 +128,15 @@ export const FilterCategoryList = ({ resetRef, category }: Props) => {
             if (hasChildren) prefetchChildren(cat.id);
           }}
         >
-          <div className='flex w-full items-center gap-1.5'>
+          <div
+            className={cn(
+              'flex w-full items-center gap-1.5 rounded-sm px-1 py-0.5 transition-colors',
+              depth > 0 && 'ml-3',
+              isSelected
+                ? 'bg-yellow-400 font-semibold text-black'
+                : 'group-hover/button:bg-yellow-400/20'
+            )}
+          >
             {cat.image ? (
               <img alt={cat.name} className='size-6 shrink-0 rounded-xs border object-cover' src={cat.image} />
             ) : (

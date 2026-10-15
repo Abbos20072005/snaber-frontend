@@ -2,8 +2,8 @@ import type { MessageDescriptor } from '@lingui/core';
 import type { LinkProps } from '@tanstack/react-router';
 
 import { msg } from '@lingui/core/macro';
-import { useLingui } from '@lingui/react/macro';
 import { Link } from '@tanstack/react-router';
+import { PhoneIcon } from 'lucide-react';
 // FEATURE DISABLED: Cart/favorites/notifications icons.
 // import { BellIcon, HeartIcon, ShoppingCartIcon } from 'lucide-react';
 
@@ -37,7 +37,6 @@ export const links: { label: MessageDescriptor; to: LinkProps['to'] }[] = [
 ];
 
 export const Header = () => {
-  const { t } = useLingui();
   // FEATURE DISABLED: Auth/notifications logic.
   // const { setIsOpen } = useAuthContext();
   // const { user } = useAuth();
@@ -68,28 +67,36 @@ export const Header = () => {
             <SiteLogo />
           </Link>
 
-          <nav className='hidden items-center gap-8 md:flex'>
-            {links.map((item) => (
-              <Link
-                key={item.to}
-                className='group'
-                activeProps={{ className: 'active' }}
-                inactiveProps={{ className: 'text-muted-foreground' }}
-                to={item.to}
-              >
-                {t(item.label)}
-                <div className='h-0.5 w-0 bg-yellow-400 transition-all group-hover:w-full group-[.active]:w-full' />
-              </Link>
-            ))}
-          </nav>
+          {/* FEATURE DISABLED: Main nav (Catalog link removed from header). */}
+          {/* <nav className='hidden items-center gap-8 md:flex'> */}
+          {/*   {links.map((item) => ( */}
+          {/*     <Link */}
+          {/*       key={item.to} */}
+          {/*       className='group' */}
+          {/*       activeProps={{ className: 'active' }} */}
+          {/*       inactiveProps={{ className: 'text-muted-foreground' }} */}
+          {/*       to={item.to} */}
+          {/*     > */}
+          {/*       {t(item.label)} */}
+          {/*       <div className='h-0.5 w-0 bg-yellow-400 transition-all group-hover:w-full group-[.active]:w-full' /> */}
+          {/*     </Link> */}
+          {/*   ))} */}
+          {/* </nav> */}
 
-          <div className='flex flex-1 items-center justify-end gap-1 sm:gap-2'>
-            <GlobalSearch />
+          <div className='flex flex-1 items-center justify-center gap-1 sm:gap-2'>
+            <GlobalSearch className='max-w-2xl' />
             {/* FEATURE DISABLED: Currency switcher (prices show in UZS only). */}
             {/* <CurrencySwitcher /> */}
             {/* FEATURE DISABLED: Currency switcher (auth-gated). */}
             {/* {!!user && <CurrencySwitcher />} */}
             <LangSwitcher />
+            <a
+              className='hidden items-center gap-1.5 text-sm font-semibold whitespace-nowrap hover:underline md:flex'
+              href='tel:+998712037772'
+            >
+              <PhoneIcon className='size-4' />
+              +998 71 203 77 72
+            </a>
             {/* FEATURE DISABLED: Favorites shortcut. */}
             {/* {user?.role !== 'admin' && ( */}
             {/*   <> */}
