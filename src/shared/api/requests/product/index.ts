@@ -1,4 +1,4 @@
-import { api } from '@/shared/api';
+import { api, apiWithoutAuth } from '@/shared/api';
 
 export interface GetProductsRequest {
   params?: Partial<{
@@ -37,14 +37,16 @@ export interface GetPublicProductsRequest {
 }
 
 export const getPublicProducts = (request?: GetPublicProductsRequest) =>
-  api.get<PublicProductsResponse>('product/public/', request).then(({ data }) => data);
+  apiWithoutAuth
+    .get<PublicProductsResponse>('product/public/', request)
+    .then(({ data }) => data);
 
 export interface GetPublicProductByIdRequest {
   id: number;
 }
 
 export const getPublicProductById = ({ id }: GetPublicProductByIdRequest) =>
-  api.get<PublicProductResponse>(`product/public/${id}/`);
+  apiWithoutAuth.get<PublicProductResponse>(`product/public/${id}/`);
 
 interface PostProductRequest {
   data: PostProductDto;

@@ -47,7 +47,7 @@ export interface GetPublicAttributesByCategoryRequest {
 }
 
 export const getAttributesByCategory = ({ categoryId }: GetPublicAttributesByCategoryRequest) =>
-  api.get<AttributesResponse>(`product/public/categories/${categoryId}/attributes/`);
+  apiWithoutAuth.get<AttributesResponse>(`product/public/categories/${categoryId}/attributes/`);
 
 export interface GetFilterRequest {
   params?: Partial<{

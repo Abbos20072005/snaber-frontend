@@ -77,4 +77,4 @@ export interface GetPublicCompanyByIdRequest {
 }
 
 export const getPublicCompanyById = ({ id }: GetPublicCompanyByIdRequest) =>
-  api.get<MiniSite>(`company/public/${id}/`);
+  apiWithoutAuth.get<MiniSite>(`company/public/${id}/`);
