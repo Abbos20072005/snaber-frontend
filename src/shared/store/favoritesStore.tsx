@@ -11,7 +11,7 @@ interface FavoritesStore {
   toggleFavorite: (product: ProductPreview) => void;
 }
 
-const getFavoriteId = (product: ProductPreview) => product.product_id ?? product.id;
+const getFavoriteId = (product: ProductPreview) => product.id;
 
 const createFavoritesStore = (initialFavorites: ProductPreview[] = []) => {
   const initialMap: Record<number, ProductPreview> = {};

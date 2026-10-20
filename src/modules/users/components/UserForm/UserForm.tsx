@@ -52,9 +52,7 @@ export const UserForm = ({ defaultValues, roleDisabled = false, onSubmit }: Prop
           )}
         </form.AppField>
         <form.AppField name='email'>
-          {(field) => (
-            <field.Input isRequired label='Email' type='email' placeholder={t`Enter email`} />
-          )}
+          {(field) => <field.Input label='Email' type='email' placeholder={t`Enter email`} />}
         </form.AppField>
         <form.AppField name='phone_number'>
           {(field) => (

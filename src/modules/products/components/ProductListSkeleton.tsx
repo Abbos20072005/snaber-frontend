@@ -14,13 +14,11 @@ import { ProductCardSkeleton } from './ProductCardSkeleton';
 type Props = ComponentProps<'div'> & {
   view?: 'carousel' | 'grid';
   count?: number;
-  isShowCompany?: boolean;
 };
 
 export const ProductListSkeleton = ({
   view = 'carousel',
   count = 8,
-  isShowCompany,
   className,
   ...props
 }: Props) => {
@@ -28,12 +26,9 @@ export const ProductListSkeleton = ({
 
   if (view === 'grid') {
     return (
-      <div
-        className={cn('flex flex-col gap-3 md:gap-4', className)}
-        {...props}
-      >
+      <div className={cn('flex flex-col gap-3 md:gap-4', className)} {...props}>
         {items.map((_, i) => (
-          <ProductCardSkeleton key={i} isShowCompany={isShowCompany} />
+          <ProductCardSkeleton key={i} />
         ))}
       </div>
     );
@@ -44,7 +39,7 @@ export const ProductListSkeleton = ({
       <div className={cn('relative overflow-x-auto py-4 md:hidden', className)} {...props}>
         <div className='flex gap-3'>
           {items.map((_, i) => (
-            <ProductCardSkeleton key={i} isShowCompany={isShowCompany} />
+            <ProductCardSkeleton key={i} />
           ))}
         </div>
       </div>
@@ -55,7 +50,7 @@ export const ProductListSkeleton = ({
               key={i}
               className='basis-[230px] sm:basis-1/2 md:basis-1/3 lg:basis-1/4 xl:basis-1/5'
             >
-              <ProductCardSkeleton isShowCompany={isShowCompany} />
+              <ProductCardSkeleton />
             </CarouselItem>
           ))}
         </CarouselContent>

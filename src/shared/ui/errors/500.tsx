@@ -14,7 +14,9 @@ export const GeneralError: ErrorRouteComponent = ({ error }: ErrorComponentProps
     <div className='w-full py-50'>
       <div className='m-auto flex h-full w-full flex-col items-center justify-center gap-2'>
         {error?.status && <h1 className='text-[7rem] leading-tight font-bold'>{error.status}</h1>}
-        <span className='font-medium'>{t`Oops! Something went wrong`} {`:')`}</span>
+        <span className='font-medium'>
+          {t`Oops! Something went wrong`} {`:')`}
+        </span>
         <p className='text-muted-foreground text-center'>
           {error?.response?.data?.message ?? error.message}
         </p>

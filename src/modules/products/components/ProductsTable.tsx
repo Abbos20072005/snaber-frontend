@@ -5,13 +5,9 @@ import { getProductsQueryOptions, useProductTableColumns } from '@/modules/produ
 import { useDataTable } from '@/shared/hooks/use-data-table';
 import { DataTable, DataTableToolbar } from '@/shared/ui/data-table';
 
-interface Props {
-  from: '/admin/products/' | '/seller/products/';
-}
-
-export const ProductsTable = ({ from }: Props) => {
+export const ProductsTable = () => {
   const columns = useProductTableColumns();
-  const params = useSearch({ from });
+  const params = useSearch({ from: '/admin/products/' });
   const queryParams = {
     page: 1,
     page_size: 10,

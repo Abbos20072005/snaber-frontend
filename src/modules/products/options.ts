@@ -4,10 +4,7 @@ import type {
   GetAttributesByCategoryRequest,
   GetAttributeValuesRequest,
   GetProductByIdRequest,
-  GetProductDraftByIdRequest,
-  GetProductDraftRequest,
   GetProductsRequest,
-  GetProductVariantsRequest,
   GetPublicProductByIdRequest,
   GetPublicProductsRequest
 } from '@/shared/api';
@@ -17,10 +14,7 @@ import {
   getAttributeValues,
   getFavouriteProducts,
   getProductById,
-  getProductDraftById,
-  getProductDrafts,
   getProducts,
-  getProductVariant,
   getPublicProductById,
   getPublicProducts
 } from '@/shared/api';
@@ -34,26 +28,10 @@ export const PRODUCT_QUERY_KEYS = {
   getPublicProducts: (request?: GetPublicProductsRequest) =>
     [...PRODUCT_QUERY_KEYS.base(), 'public', request] as const,
   getPublicProductById: (request: GetPublicProductByIdRequest) =>
-    [...PRODUCT_QUERY_KEYS.base(), 'detail', request] as const,
+    [...PRODUCT_QUERY_KEYS.base(), 'public-detail', request] as const,
   getFavorites: () => [...PRODUCT_QUERY_KEYS.base(), 'favorites'] as const,
-  getDraftProducts: (request?: GetProductDraftRequest) =>
-    [...PRODUCT_QUERY_KEYS.base(), 'draft', request] as const,
-  getDraftProductById: (request: GetProductDraftByIdRequest) =>
-    [...PRODUCT_QUERY_KEYS.base(), 'draft', 'detail', request] as const,
   getCartList: () => [...PRODUCT_QUERY_KEYS.base(), 'cartList'] as const
 } as const;
-
-export const getDraftProductsQueryOptions = (request?: GetProductDraftRequest) =>
-  queryOptions({
-    queryKey: PRODUCT_QUERY_KEYS.getDraftProducts(request),
-    queryFn: () => getProductDrafts(request)
-  });
-
-export const getDraftProductByIdQueryOptions = (request: GetProductDraftByIdRequest) =>
-  queryOptions({
-    queryKey: PRODUCT_QUERY_KEYS.getDraftProductById(request),
-    queryFn: () => getProductDraftById(request)
-  });
 
 export const getPublicProductsQueryOptions = (request: GetPublicProductsRequest) =>
   queryOptions({
@@ -97,18 +75,6 @@ export const getProductByIdQueryOptions = (request: GetProductByIdRequest) =>
   queryOptions({
     queryKey: PRODUCT_QUERY_KEYS.getById(request),
     queryFn: () => getProductById(request)
-  });
-
-export const PRODUCT_VARIANT_QUERY_KEYS = {
-  all: () => ['product-variants'] as const,
-  getById: (request: GetProductVariantsRequest) =>
-    [...PRODUCT_VARIANT_QUERY_KEYS.all(), request] as const
-};
-
-export const getProductVariantQueryOptions = (request: GetProductVariantsRequest) =>
-  queryOptions({
-    queryFn: () => getProductVariant(request),
-    queryKey: PRODUCT_VARIANT_QUERY_KEYS.getById(request)
   });
 
 export const PRODUCT_ATTRIBUTE_QUERY_KEYS = {

@@ -6,6 +6,12 @@ export const localeLabelMap: Record<Locale, string> = {
   en: 'English'
 };
 
+export const localeShortLabelMap: Record<Locale, string> = {
+  uz: 'Uz',
+  ru: 'Ру',
+  en: 'En'
+};
+
 export const localeImageMap: Record<Locale, string> = {
   uz: 'uz',
   ru: 'ru',

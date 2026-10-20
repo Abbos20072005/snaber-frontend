@@ -4,10 +4,7 @@ import { msg } from '@lingui/core/macro';
 
 export const userRoleLabelMap: Record<UserRole, MessageDescriptor> = {
   admin: msg`Admin`,
-  buyer: msg`Buyer`,
-  moderator: msg`Moderator`,
-  seller: msg`Seller`,
-  super_admin: msg`Super admin`
+  buyer: msg`Client`
 };
 
 export const userRoleOptions = Object.entries(userRoleLabelMap).map(([value, label]) => ({
@@ -17,8 +14,5 @@ export const userRoleOptions = Object.entries(userRoleLabelMap).map(([value, lab
 
 export const userRoleColorMap: Record<UserRole, string> = {
   admin: '#F43F5E',
-  buyer: '#22C55E',
-  moderator: '#64748B',
-  seller: '#6366F1',
-  super_admin: '#A855F7'
+  buyer: '#22C55E'
 };

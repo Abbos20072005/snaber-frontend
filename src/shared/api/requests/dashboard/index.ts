@@ -9,14 +9,11 @@ export const getAdminMonthlyRevenue = () =>
 export const getAdminOrdersByCategory = () =>
   api.get<AdminOrdersByCategory>('dashboards/admins/orders-by-category/');
 
-export const getAdminRFQOrdersByStatus = () =>
-  api.get<AdminRFQOrdersByStatus>('dashboards/admins/rfq-orders-by-status/');
-
 export const getAdminTodayOrders = () =>
   api.get<AdminTodayOrders>('dashboards/admins/today-orders/');
 
-export const getAdminTopCompanies = () =>
-  api.get<AdminTopCompany>('dashboards/admins/top-companies/');
+export const getAdminTopProducts = () =>
+  api.get<AdminTopProduct>('dashboards/admins/top-products/');
 
 export const getAdminUserCounts = () => api.get<AdminUserCounts>('dashboards/admins/user-counts/');
 
@@ -24,4 +21,3 @@ export const getAdminWeeklyJoinedUsers = () =>
   api.get<AdminWeeklyJoinedUsers>('dashboards/admins/weekly-joined-users/');
 
 export * from './buyer';
-export * from './seller';

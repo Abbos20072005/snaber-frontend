@@ -2,11 +2,9 @@ import type { MessageDescriptor } from '@lingui/core';
 
 import { msg } from '@lingui/core/macro';
 
-export type AuthModalStep = 'forget-password' | 'login' | 'register' | 'verify';
+export type AuthModalStep = 'phone' | 'verify';
 
 export const authModalStepLabelMap: Record<AuthModalStep, MessageDescriptor> = {
-  login: msg`Login`,
-  register: msg`Register`,
-  verify: msg`Verify`,
-  'forget-password': msg`Forget password`
+  phone: msg`Login or register`,
+  verify: msg`Verify`
 };

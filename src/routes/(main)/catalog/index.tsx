@@ -4,8 +4,8 @@ import { Suspense } from 'react';
 
 import {
   CategoryPendingComponent,
-  TopCategoriesSection,
-  getPublicAllCategoriesOptions
+  getPublicAllCategoriesOptions,
+  TopCategoriesSection
 } from '@/modules/category';
 import { getLocale } from '@/shared/i18n';
 import { createBreadcrumbJsonLd, createSeoMeta, DEFAULT_OG_IMAGE } from '@/shared/lib/seo';

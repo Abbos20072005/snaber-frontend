@@ -2,7 +2,7 @@ import { useLingui } from '@lingui/react/macro';
 import { useMutation } from '@tanstack/react-query';
 import { toast } from 'sonner';
 
-import { statusLabelOptions } from '@/modules/draft';
+import { statusLabelOptions } from '@/modules/company';
 import { patchCompanyDraft } from '@/shared/api/requests/company';
 import { Button } from '@/shared/ui/button';
 import {

@@ -12,7 +12,7 @@ interface Attribute {
   values: AttributeValue[];
 }
 
-interface ProductVariantAttribute {
+interface ProductAttribute {
   attribute_type: AttributeType;
   category: number;
   id: number;
@@ -22,15 +22,6 @@ interface ProductVariantAttribute {
     id: number;
     value: string;
   };
-}
-
-interface ProductVariantAttributeStock {
-  id: number;
-  quantity: number;
-  attribute_values: {
-    id: number;
-    value: string;
-  }[];
 }
 
 interface FilterAttribute extends Attribute {

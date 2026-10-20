@@ -13,8 +13,7 @@ export const UnauthorisedError = () => {
         <h1 className='text-[7rem] leading-tight font-bold'>401</h1>
         <span className='font-medium'>{t`Unauthorized Access`}</span>
         <p className='text-muted-foreground text-center'>
-          {t`Please log in with the appropriate credentials`} <br />{' '}
-          {t`to access this resource.`}
+          {t`Please log in with the appropriate credentials`} <br /> {t`to access this resource.`}
         </p>
         <div className='mt-6 flex gap-4'>
           <Button variant='outline' onClick={() => history.go(-1)}>

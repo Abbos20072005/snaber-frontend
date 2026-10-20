@@ -4,7 +4,6 @@ import { useQueryStates } from 'nuqs';
 import { useRef } from 'react';
 
 import { getPublicFilterQueryOptions } from '@/modules/attributes';
-import { ProductTypeFilter } from '@/modules/filter';
 import { cn } from '@/shared/lib/utils';
 import { Skeleton } from '@/shared/ui/skeleton';
 
@@ -29,7 +28,6 @@ export const FilterSection = ({ className, category, ...props }: Props) => {
     setQueryStates({
       type: null,
       category: null,
-      product_type: null,
       price_max: null,
       price_min: null,
       values: null
@@ -60,7 +58,6 @@ export const FilterSection = ({ className, category, ...props }: Props) => {
           {t`Clear all`}
         </button>
       </div>
-      <ProductTypeFilter />
       <FilterCategoryList resetRef={resetExpandedRef} category={category} />
       {filters ? (
         <>

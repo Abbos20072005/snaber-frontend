@@ -1,17 +1,12 @@
 import { useLingui } from '@lingui/react/macro';
 import { useQuery } from '@tanstack/react-query';
 import { createFileRoute, Link } from '@tanstack/react-router';
-import { BuildingIcon, ShoppingCartIcon } from 'lucide-react';
+import { ShoppingCartIcon } from 'lucide-react';
 
-import { useAuth } from '@/modules/auth';
-import { CartCompanySection, CartOrderSummary } from '@/modules/cart';
-import { currencySymbolMap } from '@/modules/currency';
+import { CartItems, CartOrderSummary } from '@/modules/cart';
 import { getCartListQueryOptions } from '@/modules/products';
-// FEATURE DISABLED: Company mini-site link.
-// import { generateSlugId } from '@/shared/constants';
+import { CURRENCY_SYMBOL } from '@/shared/constants';
 import { formatPrice } from '@/shared/lib/format';
-import { Avatar, AvatarFallback, AvatarImage } from '@/shared/ui/avatar';
-import { Badge } from '@/shared/ui/badge';
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -31,9 +26,6 @@ const RouteComponent = () => {
   const cartQuery = useQuery(getCartListQueryOptions());
   const carts = cartQuery.data;
 
-  const { user } = useAuth();
-  const currency = user?.currency ?? carts?.currency ?? 'UZS';
-
   return (
     <SectionWrapper title={t`Cart`}>
       <Breadcrumb>
@@ -50,11 +42,6 @@ const RouteComponent = () => {
 
       <div className='flex flex-wrap items-center gap-4'>
         <Button variant='outline'>
-          <span className='text-muted-foreground text-xs'>{t`Companies`}:</span>
-          <span className='text-sm font-medium'>{carts?.companies}</span>
-        </Button>
-
-        <Button variant='outline'>
           <span className='text-muted-foreground text-xs'>{t`Products`}:</span>
           <span className='text-sm font-medium'>{carts?.products}</span>
         </Button>
@@ -62,24 +49,19 @@ const RouteComponent = () => {
         <Button variant='outline'>
           <span className='text-muted-foreground text-xs'>{t`Total`}:</span>
           <span className='text-primary text-sm font-bold'>
-            {formatPrice(carts?.total_amount || 0)} {currencySymbolMap[currency]}
+            {formatPrice(carts?.total_amount || 0)} {CURRENCY_SYMBOL}
           </span>
         </Button>
       </div>
 
       {cartQuery.isPending ? (
         <div className='space-y-5'>
-          {Array.from({ length: 2 }).map((_, sectionIndex) => (
+          {Array.from({ length: 1 }).map((_, sectionIndex) => (
             <div
               key={sectionIndex}
               className='grid items-start gap-4 lg:grid-cols-[minmax(0,1fr)_320px]'
             >
               <div className='space-y-3'>
-                <div className='bg-card flex items-center gap-2 rounded-lg border px-2 py-1.5'>
-                  <Skeleton className='size-8 rounded-full' />
-                  <Skeleton className='h-4 w-40' />
-                  <Skeleton className='h-5 w-14 rounded-full' />
-                </div>
                 {Array.from({ length: 3 }).map((_, itemIndex) => (
                   <Card key={itemIndex}>
                     <CardContent className='flex gap-4 pt-6'>
@@ -108,7 +90,7 @@ const RouteComponent = () => {
             </div>
           ))}
         </div>
-      ) : carts?.groups.length === 0 ? (
+      ) : carts?.items.length === 0 ? (
         <Empty className='w-full'>
           <EmptyHeader>
             <EmptyMedia variant='icon'>
@@ -121,45 +103,12 @@ const RouteComponent = () => {
           </EmptyHeader>
         </Empty>
       ) : (
-        <div className='space-y-5'>
-          {carts?.groups.map((cart) => (
-            <div
-              key={cart.company.id}
-              className='grid items-start gap-4 lg:grid-cols-[minmax(0,1fr)_320px]'
-            >
-              <div className='space-y-3'>
-                {/* FEATURE DISABLED: Company mini-site link. */}
-                {/* <Link
-                  className='bg-card hover:border-primary/50 hover:bg-muted/40 flex items-center gap-4 rounded-lg border px-2 py-1.5 transition-colors'
-                  params={{ slug: generateSlugId(cart.company.id, cart.company.name) }}
-                  to='/companies/$slug'
-                > */}
-                <div className='bg-card flex items-center gap-4 rounded-lg border px-2 py-1.5'>
-                  <div className='flex items-center gap-2'>
-                    <Avatar className='size-8 shrink-0'>
-                      <AvatarImage alt={cart.company.name} src={cart.company.logo} />
-                      <AvatarFallback>
-                        <BuildingIcon className='size-3.5' />
-                      </AvatarFallback>
-                    </Avatar>
-                    <div className='min-w-0'>
-                      <p className='truncate text-sm font-semibold'>{cart.company.name}</p>
-                      <p className='text-muted-foreground text-[11px] leading-4'>
-                        {formatPrice(cart.total_price)} {currencySymbolMap[currency]}
-                      </p>
-                    </div>
-                  </div>
-                  <Badge className='h-5 shrink-0 px-1.5 text-[11px]' variant='secondary'>
-                    {cart.items.length}
-                  </Badge>
-                </div>
-                {/* </Link> */}
-                <CartCompanySection cart={cart} />
-              </div>
-              <CartOrderSummary cart={cart} />
-            </div>
-          ))}
-        </div>
+        carts && (
+          <div className='grid items-start gap-4 lg:grid-cols-[minmax(0,1fr)_320px]'>
+            <CartItems items={carts.items} />
+            <CartOrderSummary cart={carts} />
+          </div>
+        )
       )}
     </SectionWrapper>
   );

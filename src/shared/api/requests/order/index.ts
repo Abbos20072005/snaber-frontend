@@ -5,8 +5,6 @@ export interface GetOrdersRequest {
     page: number;
     page_size: number;
     category: number;
-    status: OrderStatus;
-    order_type: OrderType;
   }>;
 }
 
@@ -20,23 +18,3 @@ export interface GetOrderRequest {
 }
 
 export const getOrder = ({ id }: GetOrderRequest) => api.get<Order>(`order/${id}/`);
-
-interface PostOrderRequest {
-  data: {
-    company: number;
-  };
-}
-
-export const postOrder = ({ data }: PostOrderRequest) =>
-  api.post<Order>('order/', data).then(({ data }) => data);
-
-interface PatchOrderRequest {
-  id: number;
-  data: Partial<{
-    status: OrderStatus;
-    is_closed: boolean;
-  }>;
-}
-
-export const patchOrder = ({ id, data }: PatchOrderRequest) =>
-  api.patch<Order>(`order/${id}/`, data);

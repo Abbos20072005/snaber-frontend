@@ -5,15 +5,32 @@ import z from 'zod';
 
 export const companySortLabelMap: Record<SortType, MessageDescriptor> = {
   new: msg`New`,
-  old: msg`Old`,
-  most_ordered: msg`Most ordered`,
-  most_products: msg`Most products`
+  old: msg`Old`
 };
 
 export const companySortLabelOptions = Object.entries(companySortLabelMap).map(([key, value]) => ({
   value: key as SortType,
   label: value
 }));
+
+export const statusLabelMap: Record<Status, MessageDescriptor> = {
+  active: msg`Active`,
+  blocked: msg`Blocked`,
+  draft: msg`Draft`,
+  inactive: msg`Inactive`
+};
+
+export const statusLabelOptions = Object.entries(statusLabelMap).map(([key, value]) => ({
+  value: key as Status,
+  label: value
+}));
+
+export const statusColorMap: Record<Status, string> = {
+  active: '#00A63E',
+  blocked: '#E14343',
+  draft: '#2F3542',
+  inactive: '#6C7483'
+};
 
 export const companyFormSchema = () =>
   z.object({

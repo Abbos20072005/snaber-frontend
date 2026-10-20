@@ -6,7 +6,7 @@ import { EditIcon, LinkIcon, Trash2Icon } from 'lucide-react';
 import { useState } from 'react';
 import { toast } from 'sonner';
 
-import { statusColorMap, statusLabelMap, statusLabelOptions } from '@/modules/draft';
+import { statusColorMap, statusLabelMap, statusLabelOptions } from '@/modules/company';
 import { deleteCompany } from '@/shared/api/requests/company';
 import useFancybox from '@/shared/hooks/useFancybox';
 import { cn } from '@/shared/lib/utils';

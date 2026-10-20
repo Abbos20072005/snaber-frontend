@@ -87,9 +87,7 @@ export const Footer = () => {
 
         <div className='flex flex-col justify-between gap-3 text-sm text-white/60 md:flex-row md:items-center'>
           <p className='max-w-xl'>{t`Copyright ${year} snaber.uz. Building materials and tools marketplace.`}</p>
-          <span className='font-semibold text-white md:text-lg lg:text-2xl'>
-            Buildex System
-          </span>
+          <span className='font-semibold text-white md:text-lg lg:text-2xl'>Buildex System</span>
         </div>
       </div>
     </footer>

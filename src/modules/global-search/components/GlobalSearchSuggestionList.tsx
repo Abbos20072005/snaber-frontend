@@ -13,8 +13,7 @@ interface Props {
 export const GlobalSearchSuggestionList = ({ result, onCloseDialog }: Props) => {
   const { t } = useLingui();
 
-  const hasResults =
-    !!result?.products?.length || !!result?.categories?.length; // FEATURE DISABLED: companies search results.
+  const hasResults = !!result?.products?.length || !!result?.categories?.length; // FEATURE DISABLED: companies search results.
 
   return (
     <div>

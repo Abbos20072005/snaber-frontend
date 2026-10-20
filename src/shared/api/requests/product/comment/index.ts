@@ -4,7 +4,6 @@ export interface GetCommentsRequest {
   params?: Partial<{
     page: number;
     page_size: number;
-    variant: number;
     product: number;
   }>;
 }
@@ -43,7 +42,7 @@ export const deleteComment = ({ id }: DeleteCommentRequest) => api.delete(`revie
 
 export interface GetProductCommentStatusRequest {
   params: {
-    variant: number;
+    product: number;
   };
 }
 

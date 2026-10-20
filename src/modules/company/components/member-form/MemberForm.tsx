@@ -23,8 +23,8 @@ export const MemberForm = ({ onSubmit }: Props) => {
       password: ''
     } satisfies CreateMemberFormValues as CreateMemberFormValues,
     onSubmit: ({ value }) => {
-			console.log(value);
-			
+      console.log(value);
+
       onSubmit(value);
     }
   });

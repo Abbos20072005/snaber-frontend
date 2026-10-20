@@ -1,19 +1,28 @@
-interface ProductDto {
-  category: number;
-  constructor_id?: number;
-  image: File;
-  lead_time_max: number;
-  lead_time_min: number;
-  moq: number;
-  moq_unit: number;
+interface ProductCharacteristicDto {
   name_en: string;
   name_ru: string;
   name_uz: string;
-  price_max: number;
-  price_min: number;
-  price_type: PriceType;
-  product_type: ProductType;
+  value_en: string;
+  value_ru: string;
+  value_uz: string;
+}
+
+interface ProductDto {
+  attribute_values: number[];
+  category: number;
+  characteristics: ProductCharacteristicDto[];
+  description_en: string;
+  description_ru: string;
+  description_uz: string;
+  discount_percent: number;
+  is_active: boolean;
+  name_en: string;
+  name_ru: string;
+  name_uz: string;
+  price: number;
   sku: string;
+  stock_quantity: number;
+  unit: number | null;
 }
 
 type PostProductDto = ProductDto;

@@ -9,28 +9,16 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as SellerRouteRouteImport } from './routes/seller/route'
 import { Route as AdminRouteRouteImport } from './routes/admin/route'
 import { Route as mainRouteRouteImport } from './routes/(main)/route'
-import { Route as SellerIndexRouteImport } from './routes/seller/index'
 import { Route as AdminIndexRouteImport } from './routes/admin/index'
 import { Route as mainIndexRouteImport } from './routes/(main)/index'
 import { Route as mainProfileRouteRouteImport } from './routes/(main)/profile/route'
-import { Route as SellerSettingsIndexRouteImport } from './routes/seller/settings/index'
-import { Route as SellerProfileIndexRouteImport } from './routes/seller/profile/index'
-import { Route as SellerProductsIndexRouteImport } from './routes/seller/products/index'
-import { Route as SellerProductChecksIndexRouteImport } from './routes/seller/product-checks/index'
-import { Route as SellerOrdersIndexRouteImport } from './routes/seller/orders/index'
-import { Route as SellerNotificationsIndexRouteImport } from './routes/seller/notifications/index'
-import { Route as SellerDashboardIndexRouteImport } from './routes/seller/dashboard/index'
-import { Route as SellerChatsIndexRouteImport } from './routes/seller/chats/index'
 import { Route as AdminUsersIndexRouteImport } from './routes/admin/users/index'
 import { Route as AdminUnitOfMeasureIndexRouteImport } from './routes/admin/unit-of-measure/index'
 import { Route as AdminProfileIndexRouteImport } from './routes/admin/profile/index'
 import { Route as AdminProductsIndexRouteImport } from './routes/admin/products/index'
-import { Route as AdminProductChecksIndexRouteImport } from './routes/admin/product-checks/index'
 import { Route as AdminOrdersIndexRouteImport } from './routes/admin/orders/index'
-import { Route as AdminNotificationsIndexRouteImport } from './routes/admin/notifications/index'
 import { Route as AdminDashboardIndexRouteImport } from './routes/admin/dashboard/index'
 import { Route as AdminCompaniesIndexRouteImport } from './routes/admin/companies/index'
 import { Route as AdminChatsIndexRouteImport } from './routes/admin/chats/index'
@@ -40,40 +28,27 @@ import { Route as AdminAttributeValuesIndexRouteImport } from './routes/admin/at
 import { Route as mainSupportIndexRouteImport } from './routes/(main)/support/index'
 import { Route as mainProfileIndexRouteImport } from './routes/(main)/profile/index'
 import { Route as mainProductsIndexRouteImport } from './routes/(main)/products/index'
+import { Route as mainLegalIndexRouteImport } from './routes/(main)/legal/index'
 import { Route as mainFavoritesIndexRouteImport } from './routes/(main)/favorites/index'
 import { Route as mainDeliveryIndexRouteImport } from './routes/(main)/delivery/index'
 import { Route as mainCompaniesIndexRouteImport } from './routes/(main)/companies/index'
 import { Route as mainCatalogIndexRouteImport } from './routes/(main)/catalog/index'
 import { Route as mainCartIndexRouteImport } from './routes/(main)/cart/index'
 import { Route as mainAboutIndexRouteImport } from './routes/(main)/about/index'
-import { Route as SellerProductChecksCreateRouteImport } from './routes/seller/product-checks/create'
-import { Route as AdminProductChecksCreateRouteImport } from './routes/admin/product-checks/create'
+import { Route as AdminProductsCreateRouteImport } from './routes/admin/products/create'
 import { Route as AdminCategoryIdRouteImport } from './routes/admin/category/$id'
 import { Route as mainProfileSettingsRouteImport } from './routes/(main)/profile/settings'
-import { Route as mainProfileNotificationsRouteImport } from './routes/(main)/profile/notifications'
 import { Route as mainProfileDashboardRouteImport } from './routes/(main)/profile/dashboard'
 import { Route as mainCompaniesSlugRouteImport } from './routes/(main)/companies/$slug'
-import { Route as SellerProductsIdIndexRouteImport } from './routes/seller/products/$id/index'
-import { Route as SellerProductChecksIdIndexRouteImport } from './routes/seller/product-checks/$id/index'
-import { Route as SellerCompanySiteGeneratorIndexRouteImport } from './routes/seller/company/site-generator/index'
 import { Route as AdminProductsIdIndexRouteImport } from './routes/admin/products/$id/index'
-import { Route as AdminProductChecksIdIndexRouteImport } from './routes/admin/product-checks/$id/index'
+import { Route as AdminContentsLegalIndexRouteImport } from './routes/admin/contents/legal/index'
 import { Route as AdminContentsFaqsIndexRouteImport } from './routes/admin/contents/faqs/index'
 import { Route as AdminContentsAboutIndexRouteImport } from './routes/admin/contents/about/index'
 import { Route as mainProfileOrdersIndexRouteImport } from './routes/(main)/profile/orders/index'
 import { Route as mainProductSlugIndexRouteImport } from './routes/(main)/product.$slug/index'
 import { Route as mainCatalogSlugIndexRouteImport } from './routes/(main)/catalog/$slug/index'
 import { Route as mainProfileOrdersIdRouteImport } from './routes/(main)/profile/orders/$id'
-import { Route as SellerProductChecksIdVariantsCreateRouteImport } from './routes/seller/product-checks/$id/variants/create'
-import { Route as SellerProductChecksIdVariantsVariantIdRouteImport } from './routes/seller/product-checks/$id/variants/$variantId'
-import { Route as AdminProductChecksIdVariantsCreateRouteImport } from './routes/admin/product-checks/$id/variants/create'
-import { Route as AdminProductChecksIdVariantsVariantIdRouteImport } from './routes/admin/product-checks/$id/variants/$variantId'
 
-const SellerRouteRoute = SellerRouteRouteImport.update({
-  id: '/seller',
-  path: '/seller',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const AdminRouteRoute = AdminRouteRouteImport.update({
   id: '/admin',
   path: '/admin',
@@ -82,11 +57,6 @@ const AdminRouteRoute = AdminRouteRouteImport.update({
 const mainRouteRoute = mainRouteRouteImport.update({
   id: '/(main)',
   getParentRoute: () => rootRouteImport,
-} as any)
-const SellerIndexRoute = SellerIndexRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => SellerRouteRoute,
 } as any)
 const AdminIndexRoute = AdminIndexRouteImport.update({
   id: '/',
@@ -102,48 +72,6 @@ const mainProfileRouteRoute = mainProfileRouteRouteImport.update({
   id: '/profile',
   path: '/profile',
   getParentRoute: () => mainRouteRoute,
-} as any)
-const SellerSettingsIndexRoute = SellerSettingsIndexRouteImport.update({
-  id: '/settings/',
-  path: '/settings/',
-  getParentRoute: () => SellerRouteRoute,
-} as any)
-const SellerProfileIndexRoute = SellerProfileIndexRouteImport.update({
-  id: '/profile/',
-  path: '/profile/',
-  getParentRoute: () => SellerRouteRoute,
-} as any)
-const SellerProductsIndexRoute = SellerProductsIndexRouteImport.update({
-  id: '/products/',
-  path: '/products/',
-  getParentRoute: () => SellerRouteRoute,
-} as any)
-const SellerProductChecksIndexRoute =
-  SellerProductChecksIndexRouteImport.update({
-    id: '/product-checks/',
-    path: '/product-checks/',
-    getParentRoute: () => SellerRouteRoute,
-  } as any)
-const SellerOrdersIndexRoute = SellerOrdersIndexRouteImport.update({
-  id: '/orders/',
-  path: '/orders/',
-  getParentRoute: () => SellerRouteRoute,
-} as any)
-const SellerNotificationsIndexRoute =
-  SellerNotificationsIndexRouteImport.update({
-    id: '/notifications/',
-    path: '/notifications/',
-    getParentRoute: () => SellerRouteRoute,
-  } as any)
-const SellerDashboardIndexRoute = SellerDashboardIndexRouteImport.update({
-  id: '/dashboard/',
-  path: '/dashboard/',
-  getParentRoute: () => SellerRouteRoute,
-} as any)
-const SellerChatsIndexRoute = SellerChatsIndexRouteImport.update({
-  id: '/chats/',
-  path: '/chats/',
-  getParentRoute: () => SellerRouteRoute,
 } as any)
 const AdminUsersIndexRoute = AdminUsersIndexRouteImport.update({
   id: '/users/',
@@ -165,19 +93,9 @@ const AdminProductsIndexRoute = AdminProductsIndexRouteImport.update({
   path: '/products/',
   getParentRoute: () => AdminRouteRoute,
 } as any)
-const AdminProductChecksIndexRoute = AdminProductChecksIndexRouteImport.update({
-  id: '/product-checks/',
-  path: '/product-checks/',
-  getParentRoute: () => AdminRouteRoute,
-} as any)
 const AdminOrdersIndexRoute = AdminOrdersIndexRouteImport.update({
   id: '/orders/',
   path: '/orders/',
-  getParentRoute: () => AdminRouteRoute,
-} as any)
-const AdminNotificationsIndexRoute = AdminNotificationsIndexRouteImport.update({
-  id: '/notifications/',
-  path: '/notifications/',
   getParentRoute: () => AdminRouteRoute,
 } as any)
 const AdminDashboardIndexRoute = AdminDashboardIndexRouteImport.update({
@@ -226,6 +144,11 @@ const mainProductsIndexRoute = mainProductsIndexRouteImport.update({
   path: '/products/',
   getParentRoute: () => mainRouteRoute,
 } as any)
+const mainLegalIndexRoute = mainLegalIndexRouteImport.update({
+  id: '/legal/',
+  path: '/legal/',
+  getParentRoute: () => mainRouteRoute,
+} as any)
 const mainFavoritesIndexRoute = mainFavoritesIndexRouteImport.update({
   id: '/favorites/',
   path: '/favorites/',
@@ -256,18 +179,11 @@ const mainAboutIndexRoute = mainAboutIndexRouteImport.update({
   path: '/about/',
   getParentRoute: () => mainRouteRoute,
 } as any)
-const SellerProductChecksCreateRoute =
-  SellerProductChecksCreateRouteImport.update({
-    id: '/product-checks/create',
-    path: '/product-checks/create',
-    getParentRoute: () => SellerRouteRoute,
-  } as any)
-const AdminProductChecksCreateRoute =
-  AdminProductChecksCreateRouteImport.update({
-    id: '/product-checks/create',
-    path: '/product-checks/create',
-    getParentRoute: () => AdminRouteRoute,
-  } as any)
+const AdminProductsCreateRoute = AdminProductsCreateRouteImport.update({
+  id: '/products/create',
+  path: '/products/create',
+  getParentRoute: () => AdminRouteRoute,
+} as any)
 const AdminCategoryIdRoute = AdminCategoryIdRouteImport.update({
   id: '/category/$id',
   path: '/category/$id',
@@ -278,12 +194,6 @@ const mainProfileSettingsRoute = mainProfileSettingsRouteImport.update({
   path: '/settings',
   getParentRoute: () => mainProfileRouteRoute,
 } as any)
-const mainProfileNotificationsRoute =
-  mainProfileNotificationsRouteImport.update({
-    id: '/notifications',
-    path: '/notifications',
-    getParentRoute: () => mainProfileRouteRoute,
-  } as any)
 const mainProfileDashboardRoute = mainProfileDashboardRouteImport.update({
   id: '/dashboard',
   path: '/dashboard',
@@ -294,34 +204,16 @@ const mainCompaniesSlugRoute = mainCompaniesSlugRouteImport.update({
   path: '/companies/$slug',
   getParentRoute: () => mainRouteRoute,
 } as any)
-const SellerProductsIdIndexRoute = SellerProductsIdIndexRouteImport.update({
-  id: '/products/$id/',
-  path: '/products/$id/',
-  getParentRoute: () => SellerRouteRoute,
-} as any)
-const SellerProductChecksIdIndexRoute =
-  SellerProductChecksIdIndexRouteImport.update({
-    id: '/product-checks/$id/',
-    path: '/product-checks/$id/',
-    getParentRoute: () => SellerRouteRoute,
-  } as any)
-const SellerCompanySiteGeneratorIndexRoute =
-  SellerCompanySiteGeneratorIndexRouteImport.update({
-    id: '/company/site-generator/',
-    path: '/company/site-generator/',
-    getParentRoute: () => SellerRouteRoute,
-  } as any)
 const AdminProductsIdIndexRoute = AdminProductsIdIndexRouteImport.update({
   id: '/products/$id/',
   path: '/products/$id/',
   getParentRoute: () => AdminRouteRoute,
 } as any)
-const AdminProductChecksIdIndexRoute =
-  AdminProductChecksIdIndexRouteImport.update({
-    id: '/product-checks/$id/',
-    path: '/product-checks/$id/',
-    getParentRoute: () => AdminRouteRoute,
-  } as any)
+const AdminContentsLegalIndexRoute = AdminContentsLegalIndexRouteImport.update({
+  id: '/contents/legal/',
+  path: '/contents/legal/',
+  getParentRoute: () => AdminRouteRoute,
+} as any)
 const AdminContentsFaqsIndexRoute = AdminContentsFaqsIndexRouteImport.update({
   id: '/contents/faqs/',
   path: '/contents/faqs/',
@@ -352,51 +244,24 @@ const mainProfileOrdersIdRoute = mainProfileOrdersIdRouteImport.update({
   path: '/orders/$id',
   getParentRoute: () => mainProfileRouteRoute,
 } as any)
-const SellerProductChecksIdVariantsCreateRoute =
-  SellerProductChecksIdVariantsCreateRouteImport.update({
-    id: '/product-checks/$id/variants/create',
-    path: '/product-checks/$id/variants/create',
-    getParentRoute: () => SellerRouteRoute,
-  } as any)
-const SellerProductChecksIdVariantsVariantIdRoute =
-  SellerProductChecksIdVariantsVariantIdRouteImport.update({
-    id: '/product-checks/$id/variants/$variantId',
-    path: '/product-checks/$id/variants/$variantId',
-    getParentRoute: () => SellerRouteRoute,
-  } as any)
-const AdminProductChecksIdVariantsCreateRoute =
-  AdminProductChecksIdVariantsCreateRouteImport.update({
-    id: '/product-checks/$id/variants/create',
-    path: '/product-checks/$id/variants/create',
-    getParentRoute: () => AdminRouteRoute,
-  } as any)
-const AdminProductChecksIdVariantsVariantIdRoute =
-  AdminProductChecksIdVariantsVariantIdRouteImport.update({
-    id: '/product-checks/$id/variants/$variantId',
-    path: '/product-checks/$id/variants/$variantId',
-    getParentRoute: () => AdminRouteRoute,
-  } as any)
 
 export interface FileRoutesByFullPath {
   '/admin': typeof AdminRouteRouteWithChildren
-  '/seller': typeof SellerRouteRouteWithChildren
   '/profile': typeof mainProfileRouteRouteWithChildren
   '/': typeof mainIndexRoute
   '/admin/': typeof AdminIndexRoute
-  '/seller/': typeof SellerIndexRoute
   '/companies/$slug': typeof mainCompaniesSlugRoute
   '/profile/dashboard': typeof mainProfileDashboardRoute
-  '/profile/notifications': typeof mainProfileNotificationsRoute
   '/profile/settings': typeof mainProfileSettingsRoute
   '/admin/category/$id': typeof AdminCategoryIdRoute
-  '/admin/product-checks/create': typeof AdminProductChecksCreateRoute
-  '/seller/product-checks/create': typeof SellerProductChecksCreateRoute
+  '/admin/products/create': typeof AdminProductsCreateRoute
   '/about/': typeof mainAboutIndexRoute
   '/cart/': typeof mainCartIndexRoute
   '/catalog/': typeof mainCatalogIndexRoute
   '/companies/': typeof mainCompaniesIndexRoute
   '/delivery/': typeof mainDeliveryIndexRoute
   '/favorites/': typeof mainFavoritesIndexRoute
+  '/legal/': typeof mainLegalIndexRoute
   '/products/': typeof mainProductsIndexRoute
   '/profile/': typeof mainProfileIndexRoute
   '/support/': typeof mainSupportIndexRoute
@@ -406,54 +271,35 @@ export interface FileRoutesByFullPath {
   '/admin/chats/': typeof AdminChatsIndexRoute
   '/admin/companies/': typeof AdminCompaniesIndexRoute
   '/admin/dashboard/': typeof AdminDashboardIndexRoute
-  '/admin/notifications/': typeof AdminNotificationsIndexRoute
   '/admin/orders/': typeof AdminOrdersIndexRoute
-  '/admin/product-checks/': typeof AdminProductChecksIndexRoute
   '/admin/products/': typeof AdminProductsIndexRoute
   '/admin/profile/': typeof AdminProfileIndexRoute
   '/admin/unit-of-measure/': typeof AdminUnitOfMeasureIndexRoute
   '/admin/users/': typeof AdminUsersIndexRoute
-  '/seller/chats/': typeof SellerChatsIndexRoute
-  '/seller/dashboard/': typeof SellerDashboardIndexRoute
-  '/seller/notifications/': typeof SellerNotificationsIndexRoute
-  '/seller/orders/': typeof SellerOrdersIndexRoute
-  '/seller/product-checks/': typeof SellerProductChecksIndexRoute
-  '/seller/products/': typeof SellerProductsIndexRoute
-  '/seller/profile/': typeof SellerProfileIndexRoute
-  '/seller/settings/': typeof SellerSettingsIndexRoute
   '/profile/orders/$id': typeof mainProfileOrdersIdRoute
   '/catalog/$slug/': typeof mainCatalogSlugIndexRoute
   '/product/$slug/': typeof mainProductSlugIndexRoute
   '/profile/orders/': typeof mainProfileOrdersIndexRoute
   '/admin/contents/about/': typeof AdminContentsAboutIndexRoute
   '/admin/contents/faqs/': typeof AdminContentsFaqsIndexRoute
-  '/admin/product-checks/$id/': typeof AdminProductChecksIdIndexRoute
+  '/admin/contents/legal/': typeof AdminContentsLegalIndexRoute
   '/admin/products/$id/': typeof AdminProductsIdIndexRoute
-  '/seller/company/site-generator/': typeof SellerCompanySiteGeneratorIndexRoute
-  '/seller/product-checks/$id/': typeof SellerProductChecksIdIndexRoute
-  '/seller/products/$id/': typeof SellerProductsIdIndexRoute
-  '/admin/product-checks/$id/variants/$variantId': typeof AdminProductChecksIdVariantsVariantIdRoute
-  '/admin/product-checks/$id/variants/create': typeof AdminProductChecksIdVariantsCreateRoute
-  '/seller/product-checks/$id/variants/$variantId': typeof SellerProductChecksIdVariantsVariantIdRoute
-  '/seller/product-checks/$id/variants/create': typeof SellerProductChecksIdVariantsCreateRoute
 }
 export interface FileRoutesByTo {
   '/': typeof mainIndexRoute
   '/admin': typeof AdminIndexRoute
-  '/seller': typeof SellerIndexRoute
   '/companies/$slug': typeof mainCompaniesSlugRoute
   '/profile/dashboard': typeof mainProfileDashboardRoute
-  '/profile/notifications': typeof mainProfileNotificationsRoute
   '/profile/settings': typeof mainProfileSettingsRoute
   '/admin/category/$id': typeof AdminCategoryIdRoute
-  '/admin/product-checks/create': typeof AdminProductChecksCreateRoute
-  '/seller/product-checks/create': typeof SellerProductChecksCreateRoute
+  '/admin/products/create': typeof AdminProductsCreateRoute
   '/about': typeof mainAboutIndexRoute
   '/cart': typeof mainCartIndexRoute
   '/catalog': typeof mainCatalogIndexRoute
   '/companies': typeof mainCompaniesIndexRoute
   '/delivery': typeof mainDeliveryIndexRoute
   '/favorites': typeof mainFavoritesIndexRoute
+  '/legal': typeof mainLegalIndexRoute
   '/products': typeof mainProductsIndexRoute
   '/profile': typeof mainProfileIndexRoute
   '/support': typeof mainSupportIndexRoute
@@ -463,59 +309,39 @@ export interface FileRoutesByTo {
   '/admin/chats': typeof AdminChatsIndexRoute
   '/admin/companies': typeof AdminCompaniesIndexRoute
   '/admin/dashboard': typeof AdminDashboardIndexRoute
-  '/admin/notifications': typeof AdminNotificationsIndexRoute
   '/admin/orders': typeof AdminOrdersIndexRoute
-  '/admin/product-checks': typeof AdminProductChecksIndexRoute
   '/admin/products': typeof AdminProductsIndexRoute
   '/admin/profile': typeof AdminProfileIndexRoute
   '/admin/unit-of-measure': typeof AdminUnitOfMeasureIndexRoute
   '/admin/users': typeof AdminUsersIndexRoute
-  '/seller/chats': typeof SellerChatsIndexRoute
-  '/seller/dashboard': typeof SellerDashboardIndexRoute
-  '/seller/notifications': typeof SellerNotificationsIndexRoute
-  '/seller/orders': typeof SellerOrdersIndexRoute
-  '/seller/product-checks': typeof SellerProductChecksIndexRoute
-  '/seller/products': typeof SellerProductsIndexRoute
-  '/seller/profile': typeof SellerProfileIndexRoute
-  '/seller/settings': typeof SellerSettingsIndexRoute
   '/profile/orders/$id': typeof mainProfileOrdersIdRoute
   '/catalog/$slug': typeof mainCatalogSlugIndexRoute
   '/product/$slug': typeof mainProductSlugIndexRoute
   '/profile/orders': typeof mainProfileOrdersIndexRoute
   '/admin/contents/about': typeof AdminContentsAboutIndexRoute
   '/admin/contents/faqs': typeof AdminContentsFaqsIndexRoute
-  '/admin/product-checks/$id': typeof AdminProductChecksIdIndexRoute
+  '/admin/contents/legal': typeof AdminContentsLegalIndexRoute
   '/admin/products/$id': typeof AdminProductsIdIndexRoute
-  '/seller/company/site-generator': typeof SellerCompanySiteGeneratorIndexRoute
-  '/seller/product-checks/$id': typeof SellerProductChecksIdIndexRoute
-  '/seller/products/$id': typeof SellerProductsIdIndexRoute
-  '/admin/product-checks/$id/variants/$variantId': typeof AdminProductChecksIdVariantsVariantIdRoute
-  '/admin/product-checks/$id/variants/create': typeof AdminProductChecksIdVariantsCreateRoute
-  '/seller/product-checks/$id/variants/$variantId': typeof SellerProductChecksIdVariantsVariantIdRoute
-  '/seller/product-checks/$id/variants/create': typeof SellerProductChecksIdVariantsCreateRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/(main)': typeof mainRouteRouteWithChildren
   '/admin': typeof AdminRouteRouteWithChildren
-  '/seller': typeof SellerRouteRouteWithChildren
   '/(main)/profile': typeof mainProfileRouteRouteWithChildren
   '/(main)/': typeof mainIndexRoute
   '/admin/': typeof AdminIndexRoute
-  '/seller/': typeof SellerIndexRoute
   '/(main)/companies/$slug': typeof mainCompaniesSlugRoute
   '/(main)/profile/dashboard': typeof mainProfileDashboardRoute
-  '/(main)/profile/notifications': typeof mainProfileNotificationsRoute
   '/(main)/profile/settings': typeof mainProfileSettingsRoute
   '/admin/category/$id': typeof AdminCategoryIdRoute
-  '/admin/product-checks/create': typeof AdminProductChecksCreateRoute
-  '/seller/product-checks/create': typeof SellerProductChecksCreateRoute
+  '/admin/products/create': typeof AdminProductsCreateRoute
   '/(main)/about/': typeof mainAboutIndexRoute
   '/(main)/cart/': typeof mainCartIndexRoute
   '/(main)/catalog/': typeof mainCatalogIndexRoute
   '/(main)/companies/': typeof mainCompaniesIndexRoute
   '/(main)/delivery/': typeof mainDeliveryIndexRoute
   '/(main)/favorites/': typeof mainFavoritesIndexRoute
+  '/(main)/legal/': typeof mainLegalIndexRoute
   '/(main)/products/': typeof mainProductsIndexRoute
   '/(main)/profile/': typeof mainProfileIndexRoute
   '/(main)/support/': typeof mainSupportIndexRoute
@@ -525,59 +351,39 @@ export interface FileRoutesById {
   '/admin/chats/': typeof AdminChatsIndexRoute
   '/admin/companies/': typeof AdminCompaniesIndexRoute
   '/admin/dashboard/': typeof AdminDashboardIndexRoute
-  '/admin/notifications/': typeof AdminNotificationsIndexRoute
   '/admin/orders/': typeof AdminOrdersIndexRoute
-  '/admin/product-checks/': typeof AdminProductChecksIndexRoute
   '/admin/products/': typeof AdminProductsIndexRoute
   '/admin/profile/': typeof AdminProfileIndexRoute
   '/admin/unit-of-measure/': typeof AdminUnitOfMeasureIndexRoute
   '/admin/users/': typeof AdminUsersIndexRoute
-  '/seller/chats/': typeof SellerChatsIndexRoute
-  '/seller/dashboard/': typeof SellerDashboardIndexRoute
-  '/seller/notifications/': typeof SellerNotificationsIndexRoute
-  '/seller/orders/': typeof SellerOrdersIndexRoute
-  '/seller/product-checks/': typeof SellerProductChecksIndexRoute
-  '/seller/products/': typeof SellerProductsIndexRoute
-  '/seller/profile/': typeof SellerProfileIndexRoute
-  '/seller/settings/': typeof SellerSettingsIndexRoute
   '/(main)/profile/orders/$id': typeof mainProfileOrdersIdRoute
   '/(main)/catalog/$slug/': typeof mainCatalogSlugIndexRoute
   '/(main)/product/$slug/': typeof mainProductSlugIndexRoute
   '/(main)/profile/orders/': typeof mainProfileOrdersIndexRoute
   '/admin/contents/about/': typeof AdminContentsAboutIndexRoute
   '/admin/contents/faqs/': typeof AdminContentsFaqsIndexRoute
-  '/admin/product-checks/$id/': typeof AdminProductChecksIdIndexRoute
+  '/admin/contents/legal/': typeof AdminContentsLegalIndexRoute
   '/admin/products/$id/': typeof AdminProductsIdIndexRoute
-  '/seller/company/site-generator/': typeof SellerCompanySiteGeneratorIndexRoute
-  '/seller/product-checks/$id/': typeof SellerProductChecksIdIndexRoute
-  '/seller/products/$id/': typeof SellerProductsIdIndexRoute
-  '/admin/product-checks/$id/variants/$variantId': typeof AdminProductChecksIdVariantsVariantIdRoute
-  '/admin/product-checks/$id/variants/create': typeof AdminProductChecksIdVariantsCreateRoute
-  '/seller/product-checks/$id/variants/$variantId': typeof SellerProductChecksIdVariantsVariantIdRoute
-  '/seller/product-checks/$id/variants/create': typeof SellerProductChecksIdVariantsCreateRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/admin'
-    | '/seller'
     | '/profile'
     | '/'
     | '/admin/'
-    | '/seller/'
     | '/companies/$slug'
     | '/profile/dashboard'
-    | '/profile/notifications'
     | '/profile/settings'
     | '/admin/category/$id'
-    | '/admin/product-checks/create'
-    | '/seller/product-checks/create'
+    | '/admin/products/create'
     | '/about/'
     | '/cart/'
     | '/catalog/'
     | '/companies/'
     | '/delivery/'
     | '/favorites/'
+    | '/legal/'
     | '/products/'
     | '/profile/'
     | '/support/'
@@ -587,54 +393,35 @@ export interface FileRouteTypes {
     | '/admin/chats/'
     | '/admin/companies/'
     | '/admin/dashboard/'
-    | '/admin/notifications/'
     | '/admin/orders/'
-    | '/admin/product-checks/'
     | '/admin/products/'
     | '/admin/profile/'
     | '/admin/unit-of-measure/'
     | '/admin/users/'
-    | '/seller/chats/'
-    | '/seller/dashboard/'
-    | '/seller/notifications/'
-    | '/seller/orders/'
-    | '/seller/product-checks/'
-    | '/seller/products/'
-    | '/seller/profile/'
-    | '/seller/settings/'
     | '/profile/orders/$id'
     | '/catalog/$slug/'
     | '/product/$slug/'
     | '/profile/orders/'
     | '/admin/contents/about/'
     | '/admin/contents/faqs/'
-    | '/admin/product-checks/$id/'
+    | '/admin/contents/legal/'
     | '/admin/products/$id/'
-    | '/seller/company/site-generator/'
-    | '/seller/product-checks/$id/'
-    | '/seller/products/$id/'
-    | '/admin/product-checks/$id/variants/$variantId'
-    | '/admin/product-checks/$id/variants/create'
-    | '/seller/product-checks/$id/variants/$variantId'
-    | '/seller/product-checks/$id/variants/create'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/admin'
-    | '/seller'
     | '/companies/$slug'
     | '/profile/dashboard'
-    | '/profile/notifications'
     | '/profile/settings'
     | '/admin/category/$id'
-    | '/admin/product-checks/create'
-    | '/seller/product-checks/create'
+    | '/admin/products/create'
     | '/about'
     | '/cart'
     | '/catalog'
     | '/companies'
     | '/delivery'
     | '/favorites'
+    | '/legal'
     | '/products'
     | '/profile'
     | '/support'
@@ -644,58 +431,38 @@ export interface FileRouteTypes {
     | '/admin/chats'
     | '/admin/companies'
     | '/admin/dashboard'
-    | '/admin/notifications'
     | '/admin/orders'
-    | '/admin/product-checks'
     | '/admin/products'
     | '/admin/profile'
     | '/admin/unit-of-measure'
     | '/admin/users'
-    | '/seller/chats'
-    | '/seller/dashboard'
-    | '/seller/notifications'
-    | '/seller/orders'
-    | '/seller/product-checks'
-    | '/seller/products'
-    | '/seller/profile'
-    | '/seller/settings'
     | '/profile/orders/$id'
     | '/catalog/$slug'
     | '/product/$slug'
     | '/profile/orders'
     | '/admin/contents/about'
     | '/admin/contents/faqs'
-    | '/admin/product-checks/$id'
+    | '/admin/contents/legal'
     | '/admin/products/$id'
-    | '/seller/company/site-generator'
-    | '/seller/product-checks/$id'
-    | '/seller/products/$id'
-    | '/admin/product-checks/$id/variants/$variantId'
-    | '/admin/product-checks/$id/variants/create'
-    | '/seller/product-checks/$id/variants/$variantId'
-    | '/seller/product-checks/$id/variants/create'
   id:
     | '__root__'
     | '/(main)'
     | '/admin'
-    | '/seller'
     | '/(main)/profile'
     | '/(main)/'
     | '/admin/'
-    | '/seller/'
     | '/(main)/companies/$slug'
     | '/(main)/profile/dashboard'
-    | '/(main)/profile/notifications'
     | '/(main)/profile/settings'
     | '/admin/category/$id'
-    | '/admin/product-checks/create'
-    | '/seller/product-checks/create'
+    | '/admin/products/create'
     | '/(main)/about/'
     | '/(main)/cart/'
     | '/(main)/catalog/'
     | '/(main)/companies/'
     | '/(main)/delivery/'
     | '/(main)/favorites/'
+    | '/(main)/legal/'
     | '/(main)/products/'
     | '/(main)/profile/'
     | '/(main)/support/'
@@ -705,53 +472,28 @@ export interface FileRouteTypes {
     | '/admin/chats/'
     | '/admin/companies/'
     | '/admin/dashboard/'
-    | '/admin/notifications/'
     | '/admin/orders/'
-    | '/admin/product-checks/'
     | '/admin/products/'
     | '/admin/profile/'
     | '/admin/unit-of-measure/'
     | '/admin/users/'
-    | '/seller/chats/'
-    | '/seller/dashboard/'
-    | '/seller/notifications/'
-    | '/seller/orders/'
-    | '/seller/product-checks/'
-    | '/seller/products/'
-    | '/seller/profile/'
-    | '/seller/settings/'
     | '/(main)/profile/orders/$id'
     | '/(main)/catalog/$slug/'
     | '/(main)/product/$slug/'
     | '/(main)/profile/orders/'
     | '/admin/contents/about/'
     | '/admin/contents/faqs/'
-    | '/admin/product-checks/$id/'
+    | '/admin/contents/legal/'
     | '/admin/products/$id/'
-    | '/seller/company/site-generator/'
-    | '/seller/product-checks/$id/'
-    | '/seller/products/$id/'
-    | '/admin/product-checks/$id/variants/$variantId'
-    | '/admin/product-checks/$id/variants/create'
-    | '/seller/product-checks/$id/variants/$variantId'
-    | '/seller/product-checks/$id/variants/create'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   mainRouteRoute: typeof mainRouteRouteWithChildren
   AdminRouteRoute: typeof AdminRouteRouteWithChildren
-  SellerRouteRoute: typeof SellerRouteRouteWithChildren
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/seller': {
-      id: '/seller'
-      path: '/seller'
-      fullPath: '/seller'
-      preLoaderRoute: typeof SellerRouteRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/admin': {
       id: '/admin'
       path: '/admin'
@@ -765,13 +507,6 @@ declare module '@tanstack/react-router' {
       fullPath: ''
       preLoaderRoute: typeof mainRouteRouteImport
       parentRoute: typeof rootRouteImport
-    }
-    '/seller/': {
-      id: '/seller/'
-      path: '/'
-      fullPath: '/seller/'
-      preLoaderRoute: typeof SellerIndexRouteImport
-      parentRoute: typeof SellerRouteRoute
     }
     '/admin/': {
       id: '/admin/'
@@ -793,62 +528,6 @@ declare module '@tanstack/react-router' {
       fullPath: '/profile'
       preLoaderRoute: typeof mainProfileRouteRouteImport
       parentRoute: typeof mainRouteRoute
-    }
-    '/seller/settings/': {
-      id: '/seller/settings/'
-      path: '/settings'
-      fullPath: '/seller/settings/'
-      preLoaderRoute: typeof SellerSettingsIndexRouteImport
-      parentRoute: typeof SellerRouteRoute
-    }
-    '/seller/profile/': {
-      id: '/seller/profile/'
-      path: '/profile'
-      fullPath: '/seller/profile/'
-      preLoaderRoute: typeof SellerProfileIndexRouteImport
-      parentRoute: typeof SellerRouteRoute
-    }
-    '/seller/products/': {
-      id: '/seller/products/'
-      path: '/products'
-      fullPath: '/seller/products/'
-      preLoaderRoute: typeof SellerProductsIndexRouteImport
-      parentRoute: typeof SellerRouteRoute
-    }
-    '/seller/product-checks/': {
-      id: '/seller/product-checks/'
-      path: '/product-checks'
-      fullPath: '/seller/product-checks/'
-      preLoaderRoute: typeof SellerProductChecksIndexRouteImport
-      parentRoute: typeof SellerRouteRoute
-    }
-    '/seller/orders/': {
-      id: '/seller/orders/'
-      path: '/orders'
-      fullPath: '/seller/orders/'
-      preLoaderRoute: typeof SellerOrdersIndexRouteImport
-      parentRoute: typeof SellerRouteRoute
-    }
-    '/seller/notifications/': {
-      id: '/seller/notifications/'
-      path: '/notifications'
-      fullPath: '/seller/notifications/'
-      preLoaderRoute: typeof SellerNotificationsIndexRouteImport
-      parentRoute: typeof SellerRouteRoute
-    }
-    '/seller/dashboard/': {
-      id: '/seller/dashboard/'
-      path: '/dashboard'
-      fullPath: '/seller/dashboard/'
-      preLoaderRoute: typeof SellerDashboardIndexRouteImport
-      parentRoute: typeof SellerRouteRoute
-    }
-    '/seller/chats/': {
-      id: '/seller/chats/'
-      path: '/chats'
-      fullPath: '/seller/chats/'
-      preLoaderRoute: typeof SellerChatsIndexRouteImport
-      parentRoute: typeof SellerRouteRoute
     }
     '/admin/users/': {
       id: '/admin/users/'
@@ -878,25 +557,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AdminProductsIndexRouteImport
       parentRoute: typeof AdminRouteRoute
     }
-    '/admin/product-checks/': {
-      id: '/admin/product-checks/'
-      path: '/product-checks'
-      fullPath: '/admin/product-checks/'
-      preLoaderRoute: typeof AdminProductChecksIndexRouteImport
-      parentRoute: typeof AdminRouteRoute
-    }
     '/admin/orders/': {
       id: '/admin/orders/'
       path: '/orders'
       fullPath: '/admin/orders/'
       preLoaderRoute: typeof AdminOrdersIndexRouteImport
-      parentRoute: typeof AdminRouteRoute
-    }
-    '/admin/notifications/': {
-      id: '/admin/notifications/'
-      path: '/notifications'
-      fullPath: '/admin/notifications/'
-      preLoaderRoute: typeof AdminNotificationsIndexRouteImport
       parentRoute: typeof AdminRouteRoute
     }
     '/admin/dashboard/': {
@@ -962,6 +627,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof mainProductsIndexRouteImport
       parentRoute: typeof mainRouteRoute
     }
+    '/(main)/legal/': {
+      id: '/(main)/legal/'
+      path: '/legal'
+      fullPath: '/legal/'
+      preLoaderRoute: typeof mainLegalIndexRouteImport
+      parentRoute: typeof mainRouteRoute
+    }
     '/(main)/favorites/': {
       id: '/(main)/favorites/'
       path: '/favorites'
@@ -1004,18 +676,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof mainAboutIndexRouteImport
       parentRoute: typeof mainRouteRoute
     }
-    '/seller/product-checks/create': {
-      id: '/seller/product-checks/create'
-      path: '/product-checks/create'
-      fullPath: '/seller/product-checks/create'
-      preLoaderRoute: typeof SellerProductChecksCreateRouteImport
-      parentRoute: typeof SellerRouteRoute
-    }
-    '/admin/product-checks/create': {
-      id: '/admin/product-checks/create'
-      path: '/product-checks/create'
-      fullPath: '/admin/product-checks/create'
-      preLoaderRoute: typeof AdminProductChecksCreateRouteImport
+    '/admin/products/create': {
+      id: '/admin/products/create'
+      path: '/products/create'
+      fullPath: '/admin/products/create'
+      preLoaderRoute: typeof AdminProductsCreateRouteImport
       parentRoute: typeof AdminRouteRoute
     }
     '/admin/category/$id': {
@@ -1032,13 +697,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof mainProfileSettingsRouteImport
       parentRoute: typeof mainProfileRouteRoute
     }
-    '/(main)/profile/notifications': {
-      id: '/(main)/profile/notifications'
-      path: '/notifications'
-      fullPath: '/profile/notifications'
-      preLoaderRoute: typeof mainProfileNotificationsRouteImport
-      parentRoute: typeof mainProfileRouteRoute
-    }
     '/(main)/profile/dashboard': {
       id: '/(main)/profile/dashboard'
       path: '/dashboard'
@@ -1053,27 +711,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof mainCompaniesSlugRouteImport
       parentRoute: typeof mainRouteRoute
     }
-    '/seller/products/$id/': {
-      id: '/seller/products/$id/'
-      path: '/products/$id'
-      fullPath: '/seller/products/$id/'
-      preLoaderRoute: typeof SellerProductsIdIndexRouteImport
-      parentRoute: typeof SellerRouteRoute
-    }
-    '/seller/product-checks/$id/': {
-      id: '/seller/product-checks/$id/'
-      path: '/product-checks/$id'
-      fullPath: '/seller/product-checks/$id/'
-      preLoaderRoute: typeof SellerProductChecksIdIndexRouteImport
-      parentRoute: typeof SellerRouteRoute
-    }
-    '/seller/company/site-generator/': {
-      id: '/seller/company/site-generator/'
-      path: '/company/site-generator'
-      fullPath: '/seller/company/site-generator/'
-      preLoaderRoute: typeof SellerCompanySiteGeneratorIndexRouteImport
-      parentRoute: typeof SellerRouteRoute
-    }
     '/admin/products/$id/': {
       id: '/admin/products/$id/'
       path: '/products/$id'
@@ -1081,11 +718,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AdminProductsIdIndexRouteImport
       parentRoute: typeof AdminRouteRoute
     }
-    '/admin/product-checks/$id/': {
-      id: '/admin/product-checks/$id/'
-      path: '/product-checks/$id'
-      fullPath: '/admin/product-checks/$id/'
-      preLoaderRoute: typeof AdminProductChecksIdIndexRouteImport
+    '/admin/contents/legal/': {
+      id: '/admin/contents/legal/'
+      path: '/contents/legal'
+      fullPath: '/admin/contents/legal/'
+      preLoaderRoute: typeof AdminContentsLegalIndexRouteImport
       parentRoute: typeof AdminRouteRoute
     }
     '/admin/contents/faqs/': {
@@ -1130,40 +767,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof mainProfileOrdersIdRouteImport
       parentRoute: typeof mainProfileRouteRoute
     }
-    '/seller/product-checks/$id/variants/create': {
-      id: '/seller/product-checks/$id/variants/create'
-      path: '/product-checks/$id/variants/create'
-      fullPath: '/seller/product-checks/$id/variants/create'
-      preLoaderRoute: typeof SellerProductChecksIdVariantsCreateRouteImport
-      parentRoute: typeof SellerRouteRoute
-    }
-    '/seller/product-checks/$id/variants/$variantId': {
-      id: '/seller/product-checks/$id/variants/$variantId'
-      path: '/product-checks/$id/variants/$variantId'
-      fullPath: '/seller/product-checks/$id/variants/$variantId'
-      preLoaderRoute: typeof SellerProductChecksIdVariantsVariantIdRouteImport
-      parentRoute: typeof SellerRouteRoute
-    }
-    '/admin/product-checks/$id/variants/create': {
-      id: '/admin/product-checks/$id/variants/create'
-      path: '/product-checks/$id/variants/create'
-      fullPath: '/admin/product-checks/$id/variants/create'
-      preLoaderRoute: typeof AdminProductChecksIdVariantsCreateRouteImport
-      parentRoute: typeof AdminRouteRoute
-    }
-    '/admin/product-checks/$id/variants/$variantId': {
-      id: '/admin/product-checks/$id/variants/$variantId'
-      path: '/product-checks/$id/variants/$variantId'
-      fullPath: '/admin/product-checks/$id/variants/$variantId'
-      preLoaderRoute: typeof AdminProductChecksIdVariantsVariantIdRouteImport
-      parentRoute: typeof AdminRouteRoute
-    }
   }
 }
 
 interface mainProfileRouteRouteChildren {
   mainProfileDashboardRoute: typeof mainProfileDashboardRoute
-  mainProfileNotificationsRoute: typeof mainProfileNotificationsRoute
   mainProfileSettingsRoute: typeof mainProfileSettingsRoute
   mainProfileIndexRoute: typeof mainProfileIndexRoute
   mainProfileOrdersIdRoute: typeof mainProfileOrdersIdRoute
@@ -1172,7 +780,6 @@ interface mainProfileRouteRouteChildren {
 
 const mainProfileRouteRouteChildren: mainProfileRouteRouteChildren = {
   mainProfileDashboardRoute: mainProfileDashboardRoute,
-  mainProfileNotificationsRoute: mainProfileNotificationsRoute,
   mainProfileSettingsRoute: mainProfileSettingsRoute,
   mainProfileIndexRoute: mainProfileIndexRoute,
   mainProfileOrdersIdRoute: mainProfileOrdersIdRoute,
@@ -1192,6 +799,7 @@ interface mainRouteRouteChildren {
   mainCompaniesIndexRoute: typeof mainCompaniesIndexRoute
   mainDeliveryIndexRoute: typeof mainDeliveryIndexRoute
   mainFavoritesIndexRoute: typeof mainFavoritesIndexRoute
+  mainLegalIndexRoute: typeof mainLegalIndexRoute
   mainProductsIndexRoute: typeof mainProductsIndexRoute
   mainSupportIndexRoute: typeof mainSupportIndexRoute
   mainCatalogSlugIndexRoute: typeof mainCatalogSlugIndexRoute
@@ -1208,6 +816,7 @@ const mainRouteRouteChildren: mainRouteRouteChildren = {
   mainCompaniesIndexRoute: mainCompaniesIndexRoute,
   mainDeliveryIndexRoute: mainDeliveryIndexRoute,
   mainFavoritesIndexRoute: mainFavoritesIndexRoute,
+  mainLegalIndexRoute: mainLegalIndexRoute,
   mainProductsIndexRoute: mainProductsIndexRoute,
   mainSupportIndexRoute: mainSupportIndexRoute,
   mainCatalogSlugIndexRoute: mainCatalogSlugIndexRoute,
@@ -1221,105 +830,52 @@ const mainRouteRouteWithChildren = mainRouteRoute._addFileChildren(
 interface AdminRouteRouteChildren {
   AdminIndexRoute: typeof AdminIndexRoute
   AdminCategoryIdRoute: typeof AdminCategoryIdRoute
-  AdminProductChecksCreateRoute: typeof AdminProductChecksCreateRoute
+  AdminProductsCreateRoute: typeof AdminProductsCreateRoute
   AdminAttributeValuesIndexRoute: typeof AdminAttributeValuesIndexRoute
   AdminAttributesIndexRoute: typeof AdminAttributesIndexRoute
   AdminCategoryIndexRoute: typeof AdminCategoryIndexRoute
   AdminChatsIndexRoute: typeof AdminChatsIndexRoute
   AdminCompaniesIndexRoute: typeof AdminCompaniesIndexRoute
   AdminDashboardIndexRoute: typeof AdminDashboardIndexRoute
-  AdminNotificationsIndexRoute: typeof AdminNotificationsIndexRoute
   AdminOrdersIndexRoute: typeof AdminOrdersIndexRoute
-  AdminProductChecksIndexRoute: typeof AdminProductChecksIndexRoute
   AdminProductsIndexRoute: typeof AdminProductsIndexRoute
   AdminProfileIndexRoute: typeof AdminProfileIndexRoute
   AdminUnitOfMeasureIndexRoute: typeof AdminUnitOfMeasureIndexRoute
   AdminUsersIndexRoute: typeof AdminUsersIndexRoute
   AdminContentsAboutIndexRoute: typeof AdminContentsAboutIndexRoute
   AdminContentsFaqsIndexRoute: typeof AdminContentsFaqsIndexRoute
-  AdminProductChecksIdIndexRoute: typeof AdminProductChecksIdIndexRoute
+  AdminContentsLegalIndexRoute: typeof AdminContentsLegalIndexRoute
   AdminProductsIdIndexRoute: typeof AdminProductsIdIndexRoute
-  AdminProductChecksIdVariantsVariantIdRoute: typeof AdminProductChecksIdVariantsVariantIdRoute
-  AdminProductChecksIdVariantsCreateRoute: typeof AdminProductChecksIdVariantsCreateRoute
 }
 
 const AdminRouteRouteChildren: AdminRouteRouteChildren = {
   AdminIndexRoute: AdminIndexRoute,
   AdminCategoryIdRoute: AdminCategoryIdRoute,
-  AdminProductChecksCreateRoute: AdminProductChecksCreateRoute,
+  AdminProductsCreateRoute: AdminProductsCreateRoute,
   AdminAttributeValuesIndexRoute: AdminAttributeValuesIndexRoute,
   AdminAttributesIndexRoute: AdminAttributesIndexRoute,
   AdminCategoryIndexRoute: AdminCategoryIndexRoute,
   AdminChatsIndexRoute: AdminChatsIndexRoute,
   AdminCompaniesIndexRoute: AdminCompaniesIndexRoute,
   AdminDashboardIndexRoute: AdminDashboardIndexRoute,
-  AdminNotificationsIndexRoute: AdminNotificationsIndexRoute,
   AdminOrdersIndexRoute: AdminOrdersIndexRoute,
-  AdminProductChecksIndexRoute: AdminProductChecksIndexRoute,
   AdminProductsIndexRoute: AdminProductsIndexRoute,
   AdminProfileIndexRoute: AdminProfileIndexRoute,
   AdminUnitOfMeasureIndexRoute: AdminUnitOfMeasureIndexRoute,
   AdminUsersIndexRoute: AdminUsersIndexRoute,
   AdminContentsAboutIndexRoute: AdminContentsAboutIndexRoute,
   AdminContentsFaqsIndexRoute: AdminContentsFaqsIndexRoute,
-  AdminProductChecksIdIndexRoute: AdminProductChecksIdIndexRoute,
+  AdminContentsLegalIndexRoute: AdminContentsLegalIndexRoute,
   AdminProductsIdIndexRoute: AdminProductsIdIndexRoute,
-  AdminProductChecksIdVariantsVariantIdRoute:
-    AdminProductChecksIdVariantsVariantIdRoute,
-  AdminProductChecksIdVariantsCreateRoute:
-    AdminProductChecksIdVariantsCreateRoute,
 }
 
 const AdminRouteRouteWithChildren = AdminRouteRoute._addFileChildren(
   AdminRouteRouteChildren,
 )
 
-interface SellerRouteRouteChildren {
-  SellerIndexRoute: typeof SellerIndexRoute
-  SellerProductChecksCreateRoute: typeof SellerProductChecksCreateRoute
-  SellerChatsIndexRoute: typeof SellerChatsIndexRoute
-  SellerDashboardIndexRoute: typeof SellerDashboardIndexRoute
-  SellerNotificationsIndexRoute: typeof SellerNotificationsIndexRoute
-  SellerOrdersIndexRoute: typeof SellerOrdersIndexRoute
-  SellerProductChecksIndexRoute: typeof SellerProductChecksIndexRoute
-  SellerProductsIndexRoute: typeof SellerProductsIndexRoute
-  SellerProfileIndexRoute: typeof SellerProfileIndexRoute
-  SellerSettingsIndexRoute: typeof SellerSettingsIndexRoute
-  SellerCompanySiteGeneratorIndexRoute: typeof SellerCompanySiteGeneratorIndexRoute
-  SellerProductChecksIdIndexRoute: typeof SellerProductChecksIdIndexRoute
-  SellerProductsIdIndexRoute: typeof SellerProductsIdIndexRoute
-  SellerProductChecksIdVariantsVariantIdRoute: typeof SellerProductChecksIdVariantsVariantIdRoute
-  SellerProductChecksIdVariantsCreateRoute: typeof SellerProductChecksIdVariantsCreateRoute
-}
-
-const SellerRouteRouteChildren: SellerRouteRouteChildren = {
-  SellerIndexRoute: SellerIndexRoute,
-  SellerProductChecksCreateRoute: SellerProductChecksCreateRoute,
-  SellerChatsIndexRoute: SellerChatsIndexRoute,
-  SellerDashboardIndexRoute: SellerDashboardIndexRoute,
-  SellerNotificationsIndexRoute: SellerNotificationsIndexRoute,
-  SellerOrdersIndexRoute: SellerOrdersIndexRoute,
-  SellerProductChecksIndexRoute: SellerProductChecksIndexRoute,
-  SellerProductsIndexRoute: SellerProductsIndexRoute,
-  SellerProfileIndexRoute: SellerProfileIndexRoute,
-  SellerSettingsIndexRoute: SellerSettingsIndexRoute,
-  SellerCompanySiteGeneratorIndexRoute: SellerCompanySiteGeneratorIndexRoute,
-  SellerProductChecksIdIndexRoute: SellerProductChecksIdIndexRoute,
-  SellerProductsIdIndexRoute: SellerProductsIdIndexRoute,
-  SellerProductChecksIdVariantsVariantIdRoute:
-    SellerProductChecksIdVariantsVariantIdRoute,
-  SellerProductChecksIdVariantsCreateRoute:
-    SellerProductChecksIdVariantsCreateRoute,
-}
-
-const SellerRouteRouteWithChildren = SellerRouteRoute._addFileChildren(
-  SellerRouteRouteChildren,
-)
-
 const rootRouteChildren: RootRouteChildren = {
   mainRouteRoute: mainRouteRouteWithChildren,
   AdminRouteRoute: AdminRouteRouteWithChildren,
-  SellerRouteRoute: SellerRouteRouteWithChildren,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

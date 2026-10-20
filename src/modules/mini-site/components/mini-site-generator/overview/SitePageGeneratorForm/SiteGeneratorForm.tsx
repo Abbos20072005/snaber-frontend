@@ -224,11 +224,7 @@ export const SiteGeneratorForm = ({ defaultValues, onSubmit }: Props) => {
             </form.AppField>
             <form.AppField name='avg_answer_time'>
               {(field) => (
-                <field.Input
-                  isRequired
-                  label={t`Average response time`}
-                  placeholder={t`2 hours`}
-                />
+                <field.Input isRequired label={t`Average response time`} placeholder={t`2 hours`} />
               )}
             </form.AppField>
             <form.AppField name='avg_delivery_time'>

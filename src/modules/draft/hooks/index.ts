@@ -1,1 +1,0 @@
-export { useDraftProductTableColumns } from './useDraftProductTableColumns';

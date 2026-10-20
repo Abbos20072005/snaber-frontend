@@ -18,7 +18,7 @@ export const FactoryPhotosSection = ({ gallery }: Props) => {
     <section className='space-y-4'>
       <article className='ring-muted rounded-2xl bg-white p-5 shadow-sm ring-1'>
         <h2 className='text-primary text-lg font-semibold'>{t`Company images`}</h2>
-        <div ref={fancyboxRef} className='mt-4 gap-3 grid grid-cols-4'>
+        <div ref={fancyboxRef} className='mt-4 grid grid-cols-4 gap-3'>
           {gallery.map((tile, index) => {
             const Icon = icons[index % icons.length];
 

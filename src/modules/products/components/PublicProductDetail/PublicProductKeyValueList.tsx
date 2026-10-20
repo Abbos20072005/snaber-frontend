@@ -10,10 +10,7 @@ interface PublicProductKeyValueListProps {
   items: PublicProductKeyValueItem[];
 }
 
-export const PublicProductKeyValueList = ({
-  emptyText,
-  items
-}: PublicProductKeyValueListProps) => {
+export const PublicProductKeyValueList = ({ emptyText, items }: PublicProductKeyValueListProps) => {
   if (!items.length) return <p className='text-muted-foreground text-sm'>{emptyText}</p>;
 
   return (

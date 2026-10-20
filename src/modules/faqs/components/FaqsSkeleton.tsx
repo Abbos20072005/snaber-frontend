@@ -15,13 +15,19 @@ export const FaqsSkeleton = ({ count = 6 }: { count?: number }) => {
   return (
     <div className='grid lg:grid-cols-2 lg:gap-10'>
       <div className='block lg:hidden'>
-        {items.map((_, i) => <FaqItemSkeleton key={i} index={i} />)}
+        {items.map((_, i) => (
+          <FaqItemSkeleton key={i} index={i} />
+        ))}
       </div>
       <div className='hidden lg:block'>
-        {items.slice(0, half).map((_, i) => <FaqItemSkeleton key={i} index={i} />)}
+        {items.slice(0, half).map((_, i) => (
+          <FaqItemSkeleton key={i} index={i} />
+        ))}
       </div>
       <div className='hidden lg:block'>
-        {items.slice(half).map((_, i) => <FaqItemSkeleton key={i} index={i + half} />)}
+        {items.slice(half).map((_, i) => (
+          <FaqItemSkeleton key={i} index={i + half} />
+        ))}
       </div>
     </div>
   );

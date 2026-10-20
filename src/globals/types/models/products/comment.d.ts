@@ -15,13 +15,11 @@ interface Comment {
     full_name: string;
     image: string;
   };
-  variant: {
-    id: number;
-    product_id: number;
-    product_name: string;
-    sku_variant: string;
-    image: string;
+  product: {
     average_rating: string;
+    id: number;
+    image: string | null;
+    name: string;
   };
 }
 

@@ -4,14 +4,6 @@ import { CameraIcon, ImageIcon, LoaderCircleIcon, Trash2Icon } from 'lucide-reac
 import React, { useEffect, useId, useMemo, useRef } from 'react';
 
 import { getCountryNameMap, getCountryOptions, getCountryQueryOptions } from '@/modules/country';
-import {
-  currencyFlagMap,
-  currencyLabelMap,
-  currencyOptions,
-  currencySymbolMap,
-  defaultCurrencyCode,
-  getCurrencyQueryOptions
-} from '@/modules/currency';
 import { useFileFetcher } from '@/shared/hooks/use-file-fetcher';
 import { cn } from '@/shared/lib/utils';
 import { Button } from '@/shared/ui/button';
@@ -194,14 +186,10 @@ export const ProfileForm = ({ defaultValues, onSubmit, formId }: Props) => {
   const { t } = useLingui();
 
   const countriesQuery = useQuery(getCountryQueryOptions());
-  const currenciesQuery = useQuery(getCurrencyQueryOptions());
 
   const imageLinks = defaultValues?.image ? [defaultValues.image] : [];
   const countryOptions = getCountryOptions(countriesQuery.data?.data);
   const countryNameMap = getCountryNameMap(countriesQuery.data?.data);
-  const availableCurrencyCodes =
-    currenciesQuery.data?.data.map((currency) => currency.code) ??
-    currencyOptions.map(({ value }) => value);
 
   const { files, isError, isLoading } = useFileFetcher({
     links: imageLinks,
@@ -217,7 +205,6 @@ export const ProfileForm = ({ defaultValues, onSubmit, formId }: Props) => {
       email: defaultValues?.email || '',
       phone_number: defaultValues?.phone_number || '',
       country: defaultValues?.country || '',
-      currency: defaultValues?.currency || defaultCurrencyCode,
       image: !isError && isLoading ? [] : files
     } satisfies ProfileFormSchema as ProfileFormSchema,
     onSubmit: ({ value }) => {
@@ -272,19 +259,13 @@ export const ProfileForm = ({ defaultValues, onSubmit, formId }: Props) => {
           </form.AppField>
           <form.AppField name='phone_number'>
             {(field) => (
-              <field.PhoneInput isRequired label={t`Phone number`} placeholder='99112223344' />
+              <field.PhoneInput disabled label={t`Phone number`} placeholder='99112223344' />
             )}
           </form.AppField>
         </div>
         <form.AppField name='email'>
           {(field) => (
-            <field.Input
-              disabled
-              isRequired
-              label='Email'
-              type='email'
-              placeholder='mirmaxsudov@gmail.com'
-            />
+            <field.Input disabled label='Email' type='email' placeholder='mirmaxsudov@gmail.com' />
           )}
         </form.AppField>
         <div className='grid gap-4 sm:grid-cols-2'>
@@ -301,41 +282,6 @@ export const ProfileForm = ({ defaultValues, onSubmit, formId }: Props) => {
                   <SelectItem key={country.value} value={country.value}>
                     <span className='min-w-0 flex-1 truncate'>{country.label}</span>
                     <span className='text-muted-foreground ml-auto text-xs'>{country.value}</span>
-                  </SelectItem>
-                ))}
-              </field.Select>
-            )}
-          </form.AppField>
-          <form.AppField name='currency'>
-            {(field) => (
-              <field.Select
-                isRequired
-                renderValue={(value) => {
-                  const currencyCode = value as CurrencyCode;
-
-                  return (
-                    <>
-                      <span className={`fi fi-${currencyFlagMap[currencyCode]}`} />
-                      <span>{t(currencyLabelMap[currencyCode])}</span>
-                      <span className='text-muted-foreground ml-auto text-xs'>
-                        {currencySymbolMap[currencyCode]}
-                      </span>
-                    </>
-                  );
-                }}
-                disabled={currenciesQuery.isLoading}
-                label={t`Currency`}
-                placeholder={
-                  currenciesQuery.isLoading ? t`Loading currencies...` : t`Select currency`
-                }
-              >
-                {availableCurrencyCodes.map((code) => (
-                  <SelectItem key={code} value={code}>
-                    <span className={`fi fi-${currencyFlagMap[code]}`} />
-                    <span className='min-w-0 flex-1 truncate'>{t(currencyLabelMap[code])}</span>
-                    <span className='text-muted-foreground ml-auto text-xs'>
-                      {code} · {currencySymbolMap[code]}
-                    </span>
                   </SelectItem>
                 ))}
               </field.Select>

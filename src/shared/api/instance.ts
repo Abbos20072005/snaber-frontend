@@ -35,11 +35,6 @@ apiWithoutAuth.interceptors.request.use((config) => {
   const cookie = getServerCookieHeader();
   if (cookie) config.headers.Cookie = cookie;
 
-  // FEATURE DISABLED: Guest currency choice (prices show in UZS only).
-  // const currency = isomorphicCookie.get(COOKIES.CURRENCY);
-  // if (currency) {
-  //   config.params = { ...config.params, currency };
-  // }
   return config;
 });
 
@@ -106,11 +101,7 @@ api.interceptors.response.use(
         return api.request(originalRequest);
       }
 
-      if (
-        accessToken &&
-        typeof window !== 'undefined' &&
-        location.pathname !== '/'
-      ) {
+      if (accessToken && typeof window !== 'undefined' && location.pathname !== '/') {
         location.href = '/';
       }
     }

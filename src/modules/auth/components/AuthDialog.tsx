@@ -11,11 +11,8 @@ import {
   DialogHeader,
   DialogTitle
 } from '@/shared/ui/dialog';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/shared/ui/tabs';
 
-import { ForgetPasswordForm } from './ForgetPasswordForm';
-import { LoginForm } from './LoginForm';
-import { RegisterForm } from './RegisterForm';
+import { PhoneForm } from './PhoneForm';
 import { VerifyForm } from './VerifyForm';
 
 export const AuthDialog = () => {
@@ -24,48 +21,26 @@ export const AuthDialog = () => {
 
   return (
     <Dialog
+      // a stray click outside must not drop a half-typed code
+      disablePointerDismissal={step === 'verify'}
       onOpenChange={(open) => {
-        if (!open) setIsOpen(open);
-        setStep('login');
+        if (!open) {
+          setIsOpen(open);
+          setStep('phone');
+        }
       }}
       open={isOpen}
     >
       <DialogContent>
         <DialogHeader>
           <DialogTitle>{t(authModalStepLabelMap[step as AuthModalStep])}</DialogTitle>
-          {step === 'forget-password' && (
+          {step === 'phone' && (
             <DialogDescription>
-              {t`Enter your email address and we will send a verification code to reset your password.`}
+              {t`Enter your phone number and we will send you a verification code.`}
             </DialogDescription>
           )}
         </DialogHeader>
-        <Tabs className={'w-full'} value={step} onValueChange={setStep}>
-          {(step === 'login' || step === 'register') && (
-            <TabsList className='grid h-10 w-full grid-cols-2'>
-              <TabsTrigger value='login'>{t`Login`}</TabsTrigger>
-              <TabsTrigger value='register'>{t`Register`}</TabsTrigger>
-            </TabsList>
-          )}
-
-          <TabsContent value={'login'}>
-            <LoginForm />
-          </TabsContent>
-          <TabsContent value={'register'}>
-            <RegisterForm />
-          </TabsContent>
-          <TabsContent value={'verify'}>
-            <VerifyForm />
-          </TabsContent>
-          <TabsContent value={'forget-password'}>
-            <ForgetPasswordForm
-              onBackToLogin={() => setStep('login')}
-              onSuccess={() => {
-                setStep('login');
-                setIsOpen(false);
-              }}
-            />
-          </TabsContent>
-        </Tabs>
+        {step === 'phone' ? <PhoneForm /> : <VerifyForm />}
       </DialogContent>
     </Dialog>
   );

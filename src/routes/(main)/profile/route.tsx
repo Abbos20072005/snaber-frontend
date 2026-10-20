@@ -5,7 +5,7 @@ import type React from 'react';
 import { msg } from '@lingui/core/macro';
 import { useLingui } from '@lingui/react/macro';
 import { createFileRoute, Link, Outlet, redirect } from '@tanstack/react-router';
-import { BarChart3Icon, BellIcon, PackageIcon, SettingsIcon } from 'lucide-react';
+import { BarChart3Icon, PackageIcon, SettingsIcon } from 'lucide-react';
 
 import { getAuthMeQueryOptions, useAuthed } from '@/modules/auth';
 import { Avatar, AvatarFallback, AvatarImage } from '@/shared/ui/avatar';
@@ -29,12 +29,6 @@ const sections: {
     label: msg`Orders`,
     to: '/profile/orders',
     icon: PackageIcon,
-    exact: false
-  },
-  {
-    label: msg`Notifications`,
-    to: '/profile/notifications',
-    icon: BellIcon,
     exact: false
   },
   {
@@ -105,8 +99,7 @@ export const Route = createFileRoute('/(main)/profile')({
       throw redirect({ to: '/' });
     });
 
-    if (user.role === 'admin' || user.role === 'super_admin')
-      throw redirect({ to: '/admin/dashboard' });
+    if (user.role === 'admin') throw redirect({ to: '/admin/dashboard' });
 
     if (user.role !== 'buyer') throw redirect({ to: '/' });
 

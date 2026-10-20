@@ -1,5 +1,4 @@
-export { AttributeStockSelector } from './AttributeStockSelector';
-export { getGallery, getLeadTimeLabel } from './helpers';
+export { getGallery } from './helpers';
 export { PublicProductAside } from './PublicProductAside';
 export { PublicProductCharacteristicsTab } from './PublicProductCharacteristicsTab';
 export { PublicProductDescriptionTab } from './PublicProductDescriptionTab';

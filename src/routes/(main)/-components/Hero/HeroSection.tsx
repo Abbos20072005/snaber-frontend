@@ -57,7 +57,7 @@ export const HeroSection = () => {
             {t`Procurement built for national-scale production.`}
           </h1>
           <p className='mt-6 max-w-2xl text-base leading-8 text-slate-200/88 sm:text-lg'>
-            {t`Connect verified manufacturers, supplier catalogs, RFQs, and institutional purchasing in one operational B2B market system.`}
+            {t`Connect verified manufacturers, supplier catalogs, and institutional purchasing in one operational B2B market system.`}
           </p>
           <div className='mt-9 flex flex-wrap items-center gap-3'>
             <Link className={buttonVariants({ size: 'lg' })} to='/products'>

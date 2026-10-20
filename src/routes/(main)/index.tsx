@@ -2,7 +2,7 @@ import { useLingui } from '@lingui/react/macro';
 import { createFileRoute } from '@tanstack/react-router';
 import { Suspense } from 'react';
 
-import { CategorySkeleton, TopCategoriesSection } from '@/modules/category';
+import { TopCategoriesSection, TopCategoriesSkeleton } from '@/modules/category';
 // FEATURE DISABLED: Top companies section on the home page.
 // import { CompanyCardSkeleton, TopCompaniesSlider } from '@/modules/company';
 // FEATURE DISABLED: Contact section.
@@ -13,12 +13,22 @@ import { ProductListSkeleton } from '@/modules/products';
 import { getLocale } from '@/shared/i18n';
 import { createSeoMeta, DEFAULT_OG_IMAGE } from '@/shared/lib/seo';
 import { GeneralError, NotFoundError } from '@/shared/ui/errors';
-import { PageLoading } from '@/shared/ui/page';
 import { SectionWrapper } from '@/shared/ui/section-wrapper.tsx';
 
 import { TopProductsList } from './-components';
 // FEATURE DISABLED: Hero banner on the home page.
 // import { HeroSection } from './-components';
+
+const HomePending = () => (
+  <>
+    <SectionWrapper className='pt-4 lg:pt-5'>
+      <TopCategoriesSkeleton />
+    </SectionWrapper>
+    <SectionWrapper>
+      <ProductListSkeleton view='grid' />
+    </SectionWrapper>
+  </>
+);
 
 const App = () => {
   const { t } = useLingui();
@@ -27,17 +37,7 @@ const App = () => {
       {/* FEATURE DISABLED: Hero banner on the home page. */}
       {/* <HeroSection /> */}
       <SectionWrapper className='pt-4 lg:pt-5'>
-        <Suspense
-          fallback={
-            <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4'>
-              {Array.from({ length: 4 }).map((_, index) => (
-                <div key={index} className='space-y-2 rounded-lg border bg-white p-4'>
-                  <CategorySkeleton />
-                </div>
-              ))}
-            </div>
-          }
-        >
+        <Suspense fallback={<TopCategoriesSkeleton />}>
           <TopCategoriesSection />
         </Suspense>
       </SectionWrapper>
@@ -76,7 +76,7 @@ const App = () => {
 
 export const Route = createFileRoute('/(main)/')({
   component: App,
-  pendingComponent: PageLoading,
+  pendingComponent: HomePending,
   notFoundComponent: NotFoundError,
   errorComponent: GeneralError,
   head: ({ match }) => {

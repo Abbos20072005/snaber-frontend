@@ -3,7 +3,6 @@ interface GlobalSearchProduct {
   id: number;
   media?: string;
   name: string;
-  owner?: string;
 }
 
 interface GlobalSearchCategory {
@@ -20,16 +19,8 @@ interface GlobalSearchCategory {
   parent?: number | null;
 }
 
-interface GlobalSearchCompany {
-  id: number;
-  logo?: string;
-  name?: string;
-  region: RegionList;
-}
-
 interface GlobalSearch {
   categories: GlobalSearchCategory[];
-  companies: GlobalSearchCompany[];
   products: GlobalSearchProduct[];
 }
 

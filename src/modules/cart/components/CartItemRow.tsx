@@ -1,13 +1,9 @@
 import { useLingui } from '@lingui/react/macro';
 import { Link } from '@tanstack/react-router';
-import { format } from 'date-fns';
 import { Trash2Icon } from 'lucide-react';
 
-import { useAuth } from '@/modules/auth';
-import { currencySymbolMap } from '@/modules/currency';
-import { generateSlugId } from '@/shared/constants';
+import { CURRENCY_SYMBOL, generateSlugId } from '@/shared/constants';
 import { formatPrice } from '@/shared/lib/format';
-import { Badge } from '@/shared/ui/badge';
 import { Button } from '@/shared/ui/button';
 import { Card, CardContent } from '@/shared/ui/card';
 
@@ -21,32 +17,10 @@ interface Props {
 export const CartItemRow = ({ item }: Props) => {
   const { t } = useLingui();
 
-  const { user } = useAuth();
-
-  const { state, functions } = useCartItem(
-    item.product.company,
-    item.variant,
-    item.attribute_stock
-      ? {
-          type: 'ready',
-          attributeStock: item.attribute_stock
-        }
-      : {
-          type: 'rfq',
-          deadline: item.deadline!,
-          attributes:
-            item.attributes?.map((item) => ({
-              ...item,
-              value_option: item.value_option?.id
-            })) ?? []
-        }
-  );
-
-  const image =
-    item.variant.medias?.find((m) => m.product_media_type === 'photo')?.file ?? item.product.image;
+  const { state, functions } = useCartItem(item.product);
 
   const slug = generateSlugId(item.product.id, item.product.name);
-  const unitPrice = item.variant.price_override;
+  const unitPrice = item.product.final_price;
 
   return (
     <Card size='sm'>
@@ -55,7 +29,7 @@ export const CartItemRow = ({ item }: Props) => {
           <img
             alt={item.product.name}
             className='ring-foreground/10 size-16 rounded-lg object-contain ring-1 sm:size-20'
-            src={image}
+            src={item.product.image ?? undefined}
           />
         </Link>
 
@@ -68,43 +42,21 @@ export const CartItemRow = ({ item }: Props) => {
             >
               {item.product.name}
             </Link>
-            <p className='text-muted-foreground text-xs'>SKU: {item.variant.sku_variant}</p>
-            <div className='flex flex-wrap items-center gap-2'>
-              {item.attribute_stock?.attribute_values.map((attr) => (
-                <Badge key={attr.id} variant='secondary'>
-                  {attr.value}
-                </Badge>
-              ))}
-              {item.attributes?.map((attr) => (
-                <Badge key={attr.attribute} variant='secondary'>
-                  {attr.value_option?.value ?? attr.value}
-                </Badge>
-              ))}
-            </div>
-            <div>
-              {item.attribute_stock ? (
-                <Badge>{t`Ready`}</Badge>
-              ) : (
-                <span className='text-muted-foreground text-xs'>
-                  <Badge>{t`RFQ`}</Badge> {t`Deadline`}:{' '}
-                  {format(item.deadline ?? new Date(), 'dd.MM.yyyy')}
-                </span>
-              )}
-            </div>
+            {item.product.sku && (
+              <p className='text-muted-foreground text-xs'>SKU: {item.product.sku}</p>
+            )}
           </div>
 
           <div className='flex items-center justify-between gap-2 pt-1'>
             <div className='flex items-center gap-1'>
               <p className='text-sm font-semibold'>
-                {formatPrice(item.total_price)}{' '}
-                {user?.currency && currencySymbolMap[user?.currency]}
+                {formatPrice(item.total_price)} {CURRENCY_SYMBOL}
               </p>
               {state.cartCount > 1 && (
                 <>
                   <span className='text-muted-foreground'>/</span>
                   <p className='text-muted-foreground text-xs'>
-                    {formatPrice(unitPrice)} {user?.currency && currencySymbolMap[user?.currency]}{' '}
-                    {t`unit`}
+                    {formatPrice(unitPrice)} {CURRENCY_SYMBOL} {t`unit`}
                   </p>
                 </>
               )}
@@ -112,7 +64,7 @@ export const CartItemRow = ({ item }: Props) => {
 
             <div className='flex items-center gap-2 sm:hidden'>
               <CartCounter
-                maxValue={item.attribute_stock ? item.attribute_stock.quantity : 1_000_000}
+                maxValue={item.product.stock_quantity}
                 value={state.cartCount}
                 onChange={functions.onCartCountChange}
               />
@@ -125,7 +77,7 @@ export const CartItemRow = ({ item }: Props) => {
 
         <div className='hidden max-w-32 flex-col items-end justify-between sm:flex'>
           <CartCounter
-            maxValue={item.attribute_stock ? item.attribute_stock.quantity : 1_000_000}
+            maxValue={item.product.stock_quantity}
             value={state.cartCount}
             onChange={functions.onCartCountChange}
           />

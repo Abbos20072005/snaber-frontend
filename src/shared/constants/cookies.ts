@@ -2,8 +2,7 @@ export const COOKIES = {
   ACCESS_TOKEN: 'access_token',
   REFRESH_TOKEN: 'refresh_token',
   LOCALE: 'locale',
-  CURRENT_USER: 'current_user',
-  CURRENCY: 'currency'
+  CURRENT_USER: 'current_user'
 };
 
 const LOCAL_HOSTS = ['localhost', '127.0.0.1', '::1'];
@@ -14,9 +13,7 @@ const LOCAL_HOSTS = ['localhost', '127.0.0.1', '::1'];
 const canUseCrossSiteCookies = () => {
   if (typeof window === 'undefined') return false;
 
-  return (
-    window.location.protocol === 'https:' || LOCAL_HOSTS.includes(window.location.hostname)
-  );
+  return window.location.protocol === 'https:' || LOCAL_HOSTS.includes(window.location.hostname);
 };
 
 export const CROSS_SITE_COOKIE_OPTIONS = {

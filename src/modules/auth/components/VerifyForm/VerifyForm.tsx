@@ -1,14 +1,13 @@
 import { useLingui } from '@lingui/react/macro';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { useRouter } from '@tanstack/react-router';
-import { AxiosError } from 'axios';
 import Cookies from 'js-cookie';
 import { ChevronLeftIcon } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { toast } from 'sonner';
 
 import { AUTH_QUERY_KEYS } from '@/modules/auth';
-import { postOtpResend, postVerifyOtp } from '@/shared/api';
+import { postOtpSend, postOtpVerify } from '@/shared/api';
 import { COOKIES, CROSS_SITE_COOKIE_OPTIONS } from '@/shared/constants';
 import { useAuthContext } from '@/shared/context';
 import { Button } from '@/shared/ui/button';
@@ -18,35 +17,32 @@ export const VerifyForm = () => {
   const { t } = useLingui();
   const queryClient = useQueryClient();
   const router = useRouter();
-  const { setStep, email, setIsOpen } = useAuthContext();
+  const { setStep, phone, setIsOpen, resendAt, setResendAt } = useAuthContext();
   const [otpError, setOtpError] = useState<string | null>(null);
   const [otpCode, setOtpCode] = useState<string>('');
-  const [resendCooldown, setResendCooldown] = useState(60);
+  const [resendCooldown, setResendCooldown] = useState(
+    Math.max(0, Math.ceil((resendAt - Date.now()) / 1000))
+  );
 
   const OTP_LENGTH: number = 6;
-  const RESEND_COOLDOWN_SECONDS: number = 60;
 
   const handleOtpChange = (value: string) => {
     setOtpCode(value);
     if (otpError) setOtpError(null);
   };
 
-  const postVerifyOtpMutation = useMutation({
+  const verifyOtpMutation = useMutation({
     mutationFn: () =>
-      postVerifyOtp({
+      postOtpVerify({
         data: {
-          email,
+          phone_number: phone,
           otp_code: otpCode
         }
       }),
     onSuccess: (data) => {
       Cookies.set(COOKIES.ACCESS_TOKEN, data.data.result.access_token, CROSS_SITE_COOKIE_OPTIONS);
-      Cookies.set(
-        COOKIES.REFRESH_TOKEN,
-        data.data.result.refresh_token,
-        CROSS_SITE_COOKIE_OPTIONS
-      );
-      toast.success(t`Email verified successfully. Welcome!`);
+      Cookies.set(COOKIES.REFRESH_TOKEN, data.data.result.refresh_token, CROSS_SITE_COOKIE_OPTIONS);
+      toast.success(t`Phone number verified. Welcome!`);
       setIsOpen(false);
       void queryClient.invalidateQueries({ queryKey: AUTH_QUERY_KEYS.me() });
       void router.invalidate();
@@ -60,21 +56,11 @@ export const VerifyForm = () => {
   });
 
   const resendOtpMutation = useMutation({
-    mutationFn: postOtpResend,
-    onSuccess: () => {
-      setResendCooldown(RESEND_COOLDOWN_SECONDS);
+    mutationFn: postOtpSend,
+    onSuccess: ({ data }) => {
+      setResendAt(Date.now() + data.result.resend_after * 1000);
+      setResendCooldown(data.result.resend_after);
       toast.success(t`Code resent successfully`);
-    },
-    meta: {
-      withoutToastOnError: true
-    },
-    onError: (error) => {
-      if (error instanceof AxiosError) {
-        if (error.status === 400)
-          toast.error(
-            t`You have reached the maximum number of OTP requests. Please try again later.`
-          );
-      } else toast.error(t`Failed to resend code`);
     }
   });
 
@@ -100,24 +86,20 @@ export const VerifyForm = () => {
     }
 
     setOtpError(null);
-    postVerifyOtpMutation.mutate();
+    verifyOtpMutation.mutate();
   };
 
   const handleResendCode = () => {
-    if (!email || resendCooldown > 0 || resendOtpMutation.isPending) return;
+    if (!phone || resendCooldown > 0 || resendOtpMutation.isPending) return;
 
-    resendOtpMutation.mutate({
-      data: {
-        email
-      }
-    });
+    resendOtpMutation.mutate({ data: { phone_number: phone } });
   };
 
   return (
     <form className='grid gap-4' onSubmit={handleSubmit}>
       <div className='flex items-center justify-between rounded-lg border border-dashed p-3 text-sm'>
         <p className='font-medium'>{t`Code sent to`}</p>
-        <p className='text-muted-foreground mt-1'>{email}</p>
+        <p className='text-muted-foreground mt-1'>{phone}</p>
       </div>
       <div className='grid gap-2'>
         <InputOTP
@@ -137,7 +119,7 @@ export const VerifyForm = () => {
 
       <div className='flex items-center justify-between gap-3 text-sm'>
         <Button
-          className='px-0'
+          className='shrink-0 px-0'
           disabled={resendCooldown > 0 || resendOtpMutation.isPending}
           type='button'
           variant='link'
@@ -145,18 +127,18 @@ export const VerifyForm = () => {
         >
           {resendOtpMutation.isPending ? t`Resending...` : t`Resend code`}
         </Button>
-        <span className='text-muted-foreground'>
+        <span className='text-muted-foreground text-right text-xs'>
           {resendCooldown > 0 ? t`Try again in ${resendCooldown}s` : t`You can resend now`}
         </span>
       </div>
 
       <div className='grid grid-cols-2 gap-2'>
-        <Button className='w-full' type='button' variant='outline' onClick={() => setStep('login')}>
+        <Button className='w-full' type='button' variant='outline' onClick={() => setStep('phone')}>
           <ChevronLeftIcon />
           {t`Back`}
         </Button>
         <Button className='w-full' type='submit'>
-          {t`Verify and finish`}
+          {t`Verify`}
         </Button>
       </div>
     </form>

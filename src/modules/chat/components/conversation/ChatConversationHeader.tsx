@@ -19,14 +19,14 @@ export const ChatConversationHeader = ({ conversation, readyState, thread }: Pro
   const fullName =
     user.role === 'buyer'
       ? conversation?.seller.full_name
-      : user.role === 'seller'
+      : user.role === 'admin'
         ? conversation?.buyer.full_name
         : '';
 
   const email =
     user.role === 'buyer'
       ? conversation?.seller.email
-      : user.role === 'seller'
+      : user.role === 'admin'
         ? conversation?.buyer.email
         : '';
 

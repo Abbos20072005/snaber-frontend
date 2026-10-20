@@ -2,12 +2,6 @@ import type { MessageDescriptor } from '@lingui/core';
 
 import { msg } from '@lingui/core/macro';
 
-export const ACTIVE_ORDER_STATUSES: OrderStatus[] = ['negotiation'];
-
-export const ORDER_STATUSES: OrderStatus[] = ['negotiation', 'accepted', 'rejected'];
-
-export const ORDER_TYPES: OrderType[] = ['ready', 'rfq'];
-
 export const BUYER_DASHBOARD_MONTHS = [
   'jan',
   'feb',

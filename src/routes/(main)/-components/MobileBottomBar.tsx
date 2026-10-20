@@ -43,7 +43,7 @@ export const MobileBottomBar = () => {
   const cartItemsLength = useCartStore((state) => state.cartItemsLength);
   const favoritesCount = useFavoritesStore((state) => state.favorites.length);
 
-  const isAdmin = user?.role === 'admin' || user?.role === 'super_admin';
+  const isAdmin = user?.role === 'admin';
 
   return (
     <nav className='bg-background fixed right-0 bottom-0 left-0 z-50 border-t md:hidden'>
@@ -63,7 +63,8 @@ export const MobileBottomBar = () => {
               label={t`Cart`}
               icon={<ShoppingCartIcon size={22} />}
               to='/cart'
-            />          </>
+            />{' '}
+          </>
         )}
         {user ? (
           <NavItem

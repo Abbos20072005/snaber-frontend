@@ -46,7 +46,7 @@ export const ProductsSection = () => {
   const params = useSearch({ from: '/(main)/companies/$slug' }) as { category?: number | string };
   const { slug } = useParams({ from: '/(main)/companies/$slug' });
   const id = extractSlugId(slug);
-  
+
   const productsQuery = useInfiniteQuery(
     getMiniSiteProductsInfiniteQueryOptions({
       id,
@@ -90,10 +90,12 @@ export const ProductsSection = () => {
   }));
   const miniSiteCategories = allProductsQuery.isPending ? undefined : categories;
 
-
   return (
-    <section className='grid relative gap-4 md:grid-cols-[230px_minmax(0,1fr)]'>
-      <MiniSiteFilterSection className='hidden md:block top-27 sticky' categories={miniSiteCategories} />
+    <section className='relative grid gap-4 md:grid-cols-[230px_minmax(0,1fr)]'>
+      <MiniSiteFilterSection
+        className='sticky top-27 hidden md:block'
+        categories={miniSiteCategories}
+      />
       <div className='space-y-4'>
         <div className='ring-muted flex justify-between gap-4 rounded-2xl bg-white p-3 shadow-sm ring-1 md:grid-cols-[minmax(0,1fr)_140px_140px]'>
           <label>
@@ -111,9 +113,9 @@ export const ProductsSection = () => {
           <MobileFilter category={params?.category} miniSiteCategories={miniSiteCategories} />
         </div>
         {productsQuery.isPending ? (
-          <ProductListSkeleton view='grid' count={12} isShowCompany={false} />
+          <ProductListSkeleton view='grid' count={12} />
         ) : (
-          <ProductList view='grid' isShowCompany={false} products={products} />
+          <ProductList view='grid' products={products} />
         )}
         {products?.length === 0 && !productsQuery.isPending && (
           <div className='col-span-10 flex h-full items-center justify-center'>

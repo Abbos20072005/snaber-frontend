@@ -53,10 +53,6 @@ export const ImageZoomer = ({
       onMouseMove={handleMouseMove}
     >
       <img
-        className={cn(
-          'block size-full object-cover transition-transform duration-200',
-          className
-        )}
         style={
           isMobile
             ? undefined
@@ -66,6 +62,7 @@ export const ImageZoomer = ({
                 transform: position.visible ? `scale(${zoomScale})` : 'scale(1)'
               }
         }
+        className={cn('block size-full object-cover transition-transform duration-200', className)}
         {...props}
       />
     </div>

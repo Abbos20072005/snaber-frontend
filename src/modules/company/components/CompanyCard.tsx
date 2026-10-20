@@ -2,7 +2,6 @@ import { useLingui } from '@lingui/react/macro';
 import { Link } from '@tanstack/react-router';
 import { EyeIcon, MapPinIcon } from 'lucide-react';
 
-import { productTypeColorMap, productTypeLabelMap } from '@/modules/products';
 import { generateSlugId } from '@/shared/constants';
 import { useFormatCount } from '@/shared/lib/format.ts';
 import { cn } from '@/shared/lib/utils';
@@ -23,8 +22,8 @@ export const CompanyCard = ({ company }: Props) => {
   const formatCount = useFormatCount();
 
   return (
-    <Card className='flex h-full flex-col items-stretch relative' size='sm'>
-      <div className='absolute flex items-center gap-1 rounded-full bg-black/50 px-2 right-2 py-1 text-white backdrop-blur-sm'>
+    <Card className='relative flex h-full flex-col items-stretch' size='sm'>
+      <div className='absolute right-2 flex items-center gap-1 rounded-full bg-black/50 px-2 py-1 text-white backdrop-blur-sm'>
         <EyeIcon className='size-3' />
         <span className='text-xs font-medium'>{formatCount(company.view_count)}</span>
       </div>
@@ -42,36 +41,6 @@ export const CompanyCard = ({ company }: Props) => {
             </div>
           </div>
         </div>
-        {company.product_badges && (
-          <>
-            {company.product_badges === 'both' ? (
-              <div className='flex flex-wrap gap-2'>
-                <Badge
-                  style={{
-                    backgroundColor: productTypeColorMap.ready
-                  }}
-                >
-                  {t(productTypeLabelMap.ready)}
-                </Badge>
-                <Badge
-                  style={{
-                    backgroundColor: productTypeColorMap.made_to_order
-                  }}
-                >
-                  {t(productTypeLabelMap.made_to_order)}
-                </Badge>
-              </div>
-            ) : (
-              <Badge
-                style={{
-                  backgroundColor: productTypeColorMap[company.product_badges]
-                }}
-              >
-                {t(productTypeLabelMap[company.product_badges])}
-              </Badge>
-            )}
-          </>
-        )}
       </CardHeader>
       <CardContent className='space-y-3'>
         <div className='flex flex-wrap gap-2'>

@@ -1,15 +1,16 @@
 import { useLingui } from '@lingui/react/macro';
 
+import { BackendContent } from '@/modules/about';
+
 interface Props {
-  selectedVariant?: ProductVariant;
+  product: PublicProduct;
 }
 
-export const PublicProductDescriptionTab = ({ selectedVariant }: Props) => {
+export const PublicProductDescriptionTab = ({ product }: Props) => {
   const { t } = useLingui();
 
-  return (
-    <p className='text-muted-foreground text-sm'>
-      {selectedVariant?.description ?? t`No description available.`}
-    </p>
-  );
+  if (!product.description)
+    return <p className='text-muted-foreground text-sm'>{t`No description available.`}</p>;
+
+  return <BackendContent html={product.description} />;
 };

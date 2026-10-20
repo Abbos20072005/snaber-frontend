@@ -4,16 +4,16 @@ import { useNavigate } from '@tanstack/react-router';
 import { ShoppingBagIcon } from 'lucide-react';
 
 import { useAuth } from '@/modules/auth';
-import { currencySymbolMap } from '@/modules/currency';
 import { PRODUCT_QUERY_KEYS } from '@/modules/products';
-import { postOrder } from '@/shared/api';
+import { postCartCheckout } from '@/shared/api/requests/product/cart';
+import { CURRENCY_SYMBOL } from '@/shared/constants';
 import { useAuthContext } from '@/shared/context';
 import { formatPrice } from '@/shared/lib/format.ts';
 import { Button } from '@/shared/ui/button';
 import { Card, CardContent } from '@/shared/ui/card';
 
 interface Props {
-  cart: Cart;
+  cart: FullCart;
 }
 
 export const CartOrderSummary = ({ cart }: Props) => {
@@ -23,7 +23,7 @@ export const CartOrderSummary = ({ cart }: Props) => {
   const navigate = useNavigate();
 
   const checkoutMutation = useMutation({
-    mutationFn: () => postOrder({ data: { company: cart.company.id } }),
+    mutationFn: () => postCartCheckout().then(({ data }) => data),
     meta: {
       invalidatesQuery: PRODUCT_QUERY_KEYS.getCartList()
     },
@@ -31,7 +31,7 @@ export const CartOrderSummary = ({ cart }: Props) => {
       void navigate({ to: '/profile/orders/$id', params: { id: String(data.id) } })
   });
 
-  const totalItems = cart.items.reduce((sum, item) => sum + item.quantity, 0) ?? 0;
+  const totalItems = cart.items.reduce((sum, item) => sum + item.quantity, 0);
 
   const onSubmit = () => {
     if (user) {
@@ -48,10 +48,6 @@ export const CartOrderSummary = ({ cart }: Props) => {
 
         <div className='space-y-2 text-sm'>
           <div className='flex justify-between'>
-            <span className='text-muted-foreground'>{t`Supplier`}</span>
-            <span className='max-w-[55%] truncate text-right font-medium'>{cart.company.name}</span>
-          </div>
-          <div className='flex justify-between'>
             <span className='text-muted-foreground'>{t`Products`}</span>
             <span>{cart.items.length}</span>
           </div>
@@ -64,7 +60,7 @@ export const CartOrderSummary = ({ cart }: Props) => {
         <div className='flex justify-between border-t pt-3 text-base font-bold'>
           <span>{t`Total`}</span>
           <span>
-            {formatPrice(cart.total_price)} {user?.currency && currencySymbolMap[user?.currency]}
+            {formatPrice(cart.total_amount)} {CURRENCY_SYMBOL}
           </span>
         </div>
 

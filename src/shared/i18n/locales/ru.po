@@ -17,9 +17,6 @@ msgstr ""
 msgid "{orders_count} orders"
 msgstr "{orders_count} заказов"
 
-msgid "{ordersCount} active buyer conversations"
-msgstr "{ordersCount} активных диалогов с покупателями"
-
 msgid "{selectedSize} selected"
 msgstr "Выбрано: {selectedSize}"
 
@@ -41,41 +38,8 @@ msgstr "О нас"
 msgid "About Us"
 msgstr "О нас"
 
-msgid "Accept"
-msgstr "Принять"
-
-msgid "Accept order"
-msgstr "Принять заказ"
-
-msgid "Acceptance rate"
-msgstr "Уровень принятия"
-
-msgid "Accepted"
-msgstr "Принято"
-
-msgid "Accepted by buyer"
-msgstr "Принято покупателем"
-
-msgid "Accepted by seller"
-msgstr "Принято продавцом"
-
-msgid "Accepted orders compared with all loaded orders."
-msgstr "Принятые заказы по сравнению со всеми загруженными заказами."
-
-msgid "Accepted RFQs compared with seller RFQ flow."
-msgstr "Принятые RFQ по сравнению с потоком RFQ продавца."
-
 msgid "Access Forbidden"
 msgstr "Доступ запрещён"
-
-msgid "Account id"
-msgstr "ID аккаунта"
-
-msgid "Account Status"
-msgstr "Статус аккаунта"
-
-msgid "Across active sellers"
-msgstr "Среди активных продавцов"
 
 msgid "Actions"
 msgstr "Действия"
@@ -83,20 +47,14 @@ msgstr "Действия"
 msgid "Active"
 msgstr "Активный"
 
-msgid "Active orders"
-msgstr "Активные заказы"
-
-msgid "Active variant"
-msgstr "Активный вариант"
-
-msgid "Activity"
-msgstr "Активность"
-
 msgid "Add"
 msgstr "Добавить"
 
 msgid "Add certificate"
 msgstr "Добавить сертификат"
+
+msgid "Add characteristic"
+msgstr "Добавить характеристику"
 
 msgid "Add comment"
 msgstr "Добавить комментарий"
@@ -104,14 +62,17 @@ msgstr "Добавить комментарий"
 msgid "Add company certificates, compliance documents, and awards for buyers to review."
 msgstr "Добавьте сертификаты компании, документы соответствия и награды для просмотра покупателями."
 
+msgid "Add images"
+msgstr "Добавить изображения"
+
 msgid "Add photo"
 msgstr "Добавить фото"
 
 msgid "Add photos that represent your company, production, and workspace."
 msgstr "Добавьте фотографии, отражающие вашу компанию, производство и рабочее пространство."
 
-msgid "Add product to order"
-msgstr "Добавить товар в заказ"
+msgid "Add products, set prices and keep the stock up to date."
+msgstr "Добавляйте товары, задавайте цены и обновляйте остатки."
 
 msgid "Add to cart"
 msgstr "Добавить в корзину"
@@ -121,9 +82,6 @@ msgstr "Добавить в избранное"
 
 msgid "Add value"
 msgstr "Добавить значение"
-
-msgid "Add variant"
-msgstr "Добавить вариант"
 
 msgid "Add your first certificate so buyers can review your company credentials."
 msgstr "Добавьте свой первый сертификат, чтобы покупатели могли ознакомиться с данными вашей компании."
@@ -149,17 +107,17 @@ msgstr "Администратор"
 msgid "Admin dashboard"
 msgstr "Панель администратора"
 
-msgid "All"
-msgstr "Все"
+msgid "Admins"
+msgstr "Админы"
 
 msgid "All categories"
 msgstr "Все категории"
 
+msgid "All characteristics"
+msgstr "Все характеристики"
+
 msgid "All messages"
 msgstr "Все сообщения"
-
-msgid "All orders"
-msgstr "Все заказы"
 
 msgid "All orders loaded for this buyer profile."
 msgstr "Все заказы загружены для этого профиля покупателя."
@@ -188,20 +146,11 @@ msgstr "Вы компания?"
 msgid "Are you a service provider?"
 msgstr "Вы поставщик услуг?"
 
-msgid "Are you sure to delete all notifications."
-msgstr "Вы уверены, что хотите удалить все уведомления?"
-
 msgid "Are you sure to delete this member."
 msgstr "Вы уверены, что хотите удалить этого участника?"
 
-msgid "Are you sure to delete this notification."
-msgstr "Вы уверены, что хотите удалить это уведомление?"
-
 msgid "Are you sure to logout?"
 msgstr "Вы уверены, что хотите выйти?"
-
-msgid "Are you sure you want to close this order? This action cannot be undone."
-msgstr "Вы уверены, что хотите закрыть этот заказ? Это действие нельзя отменить."
 
 msgid "Are you sure you want to delete this {itemName}? This action cannot be undone."
 msgstr "Вы уверены, что хотите удалить {itemName}? Это действие нельзя отменить."
@@ -230,9 +179,6 @@ msgstr "Вы уверены, что хотите удалить этого по�
 msgid "Are you sure you want to delete this value? This action cannot be undone."
 msgstr "Вы уверены, что хотите удалить это значение? Это действие нельзя отменить."
 
-msgid "Are you sure you want to delete this variant? This action cannot be undone."
-msgstr "Вы уверены, что хотите удалить этот вариант? Это действие нельзя отменить."
-
 msgid "Asc"
 msgstr "По возрастанию"
 
@@ -244,9 +190,6 @@ msgstr "Атрибут успешно удалён."
 
 msgid "Attribute is required"
 msgstr "Атрибут обязателен"
-
-msgid "Attribute stock"
-msgstr "Запас атрибута"
 
 msgid "Attribute values"
 msgstr "Значения атрибутов"
@@ -266,9 +209,6 @@ msgstr "Среднее время доставки"
 msgid "Average response time"
 msgstr "Среднее время ответа"
 
-#~ msgid "B2B connects verified companies, product catalogs, RFQs, orders, and supplier communication in one practical marketplace for industrial trade."
-#~ msgstr "B2B объединяет проверенные компании, каталоги товаров, запросы коммерческих предложений (RFQ), заказы и коммуникацию с поставщиками на единой практической торговой платформе."
-
 msgid "Back"
 msgstr "Назад"
 
@@ -281,14 +221,8 @@ msgstr "Ко входу"
 msgid "Banner"
 msgstr "Баннер"
 
-msgid "Base fields"
-msgstr "Базовые поля"
-
-msgid "Base product created."
-msgstr "Базовый товар создан."
-
-msgid "Base range"
-msgstr "Базовый диапазон"
+msgid "Basic information"
+msgstr "Основная информация"
 
 msgid "Be the first buyer to comment on this product."
 msgstr "Станьте первым покупателем, оставившим комментарий к этому товару."
@@ -296,32 +230,11 @@ msgstr "Станьте первым покупателем, оставившим
 msgid "Block reason"
 msgstr "Причина блокировки"
 
-msgid "Block status"
-msgstr "Статус блокировки"
-
 msgid "Blocked"
 msgstr "Заблокирован"
 
 msgid "Boolean"
 msgstr "Boolean"
-
-msgid "Both"
-msgstr "Оба"
-
-msgid "Both accepted"
-msgstr "Обе стороны приняли"
-
-msgid "Both accepted, the order is completed."
-msgstr "Обе стороны приняли заказ, заказ завершён."
-
-msgid "Both rejected"
-msgstr "Обе стороны отклонили"
-
-msgid "Both rejected, the order is canceled."
-msgstr "Обе стороны отклонили заказ, заказ отменён."
-
-#~ msgid "Both sides agree delivery and documents"
-#~ msgstr "Обе стороны согласовывают доставку и документы"
 
 msgid "Brand files"
 msgstr "Файлы бренда"
@@ -329,32 +242,11 @@ msgstr "Файлы бренда"
 msgid "Browse the catalog and add items to get started."
 msgstr "Просмотрите каталог и добавьте товары, чтобы начать."
 
-#~ msgid "Building materials"
-#~ msgstr "Стройматериалы"
-
 msgid "Buyer"
 msgstr "Покупатель"
 
-msgid "Buyer accepted the order."
-msgstr "Покупатель принял заказ."
-
-msgid "Buyer and seller growth"
-msgstr "Рост покупателей и продавцов"
-
-msgid "Buyer and seller share across all marketplace users."
-msgstr "Доля покупателей и продавцов среди всех пользователей маркетплейса."
-
 msgid "Buyer dashboard"
 msgstr "Панель покупателя"
-
-msgid "Buyer engagement"
-msgstr "Активность покупателей"
-
-msgid "Buyer rejected the order too, the order is canceled."
-msgstr "Покупатель также отклонил заказ, заказ отменён."
-
-#~ msgid "Buyer starts a chat from this product"
-#~ msgstr "Покупатель начинает чат с этого товара"
 
 msgid "Buyer workspace"
 msgstr "Рабочее пространство покупателя"
@@ -362,8 +254,8 @@ msgstr "Рабочее пространство покупателя"
 msgid "Buyers"
 msgstr "Покупатели"
 
-msgid "Calculated from quantity and variant price."
-msgstr "Рассчитано на основе количества и цены варианта."
+msgid "Calculated from product prices and quantities."
+msgstr "Рассчитано по ценам и количеству товаров."
 
 msgid "Cancel"
 msgstr "Отмена"
@@ -416,32 +308,14 @@ msgstr "Изменить фото"
 msgid "Characteristics"
 msgstr "Характеристики"
 
-msgid "Chat"
-msgstr "Чат"
-
-#~ msgid "Chat based purchase"
-#~ msgstr "Покупка через чат"
-
 msgid "Chat is not connected yet."
 msgstr "Чат ещё не подключён."
-
-msgid "Chats"
-msgstr "Чаты"
-
-msgid "China"
-msgstr "Китай"
-
-msgid "Chinese yuan"
-msgstr "Китайский юань"
 
 msgid "Choose a category"
 msgstr "Выберите категорию"
 
-msgid "Choose every value that can be stocked for this variant."
-msgstr "Выберите все значения, для которых можно вести запас по этому варианту."
-
-msgid "Choose variant"
-msgstr "Выберите вариант"
+msgid "Choose the last-level category, the one that lists products."
+msgstr "Выберите категорию последнего уровня — именно она показывает список товаров."
 
 msgid "Clear"
 msgstr "Очистить"
@@ -467,14 +341,17 @@ msgstr "Очистить фильтры"
 msgid "Click the ♡ icon on items you usually order or want to buy later."
 msgstr "Нажмите на иконку ♡ у товаров, которые вы обычно заказываете или хотите купить позже."
 
+msgid "Client"
+msgstr "Клиент"
+
+msgid "Clients"
+msgstr "Клиенты"
+
+msgid "Clients and admins among all users."
+msgstr "Доля клиентов и администраторов среди всех пользователей."
+
 msgid "Close"
 msgstr "Закрыть"
-
-msgid "Close order"
-msgstr "Закрыть заказ"
-
-msgid "Closed"
-msgstr "Закрыто"
 
 msgid "Code"
 msgstr "Код"
@@ -488,17 +365,11 @@ msgstr "Код успешно отправлен повторно"
 msgid "Code sent to"
 msgstr "Код отправлен на"
 
-msgid "Combination"
-msgstr "Комбинация"
-
 msgid "Comment"
 msgstr "Комментарий"
 
 msgid "Comments will appear here after buyers review this product."
 msgstr "Комментарии появятся здесь после того, как покупатели оставят отзывы о товаре."
-
-msgid "Commercial terms"
-msgstr "Коммерческие условия"
 
 msgid "Companies"
 msgstr "Компании"
@@ -530,23 +401,11 @@ msgstr "Названия компаний"
 msgid "Company profile"
 msgstr "Профиль компании"
 
-#~ msgid "Company profile available"
-#~ msgstr "Профиль компании доступен"
-
-msgid "Complete"
-msgstr "Завершить"
-
 msgid "Completed"
 msgstr "Завершено"
 
-msgid "Confirm new password"
-msgstr "Подтвердите новый пароль"
-
-msgid "Confirmed orders"
-msgstr "Подтверждённые заказы"
-
-msgid "Connect verified manufacturers, supplier catalogs, RFQs, and institutional purchasing in one operational B2B market system."
-msgstr "Объедините проверенных производителей, каталоги поставщиков, RFQ и институциональные закупки в одной B2B-системе."
+msgid "Connect verified manufacturers, supplier catalogs, and institutional purchasing in one operational B2B market system."
+msgstr "Объедините проверенных производителей, каталоги поставщиков и корпоративные закупки в одной B2B-системе."
 
 msgid "Contact"
 msgstr "Контакт"
@@ -554,23 +413,23 @@ msgstr "Контакт"
 msgid "Contact information"
 msgstr "Контактная информация"
 
+msgid "Content"
+msgstr "Содержимое"
+
 msgid "Contents"
 msgstr "Содержимое"
 
-msgid "Continue"
-msgstr "Продолжить"
-
-msgid "Continue with Google"
-msgstr "Продолжить через Google"
-
-#~ msgid "Copyright {year} B2B Marketplace. Industrial trade infrastructure."
-#~ msgstr "Copyright {year} B2B Marketplace. Инфраструктура промышленной торговли."
+msgid "Copy code"
+msgstr "Копировать код"
 
 msgid "Copyright {year} snaber.uz. Building materials and tools marketplace."
 msgstr "Copyright {year} snaber.uz. Маркетплейс строительных материалов и инструментов."
 
 msgid "Country"
 msgstr "Страна"
+
+msgid "Cover"
+msgstr "Обложка"
 
 msgid "Create"
 msgstr "Создать"
@@ -611,37 +470,16 @@ msgstr "Создать единицу"
 msgid "Create value"
 msgstr "Создать значение"
 
-msgid "Create variant"
-msgstr "Создать вариант"
-
 msgid "Created"
 msgstr "Создано"
 
-msgid "Created at"
-msgstr "Дата создания"
-
-msgid "Currency"
-msgstr "Валюта"
-
-msgid "Current distribution across buyer order statuses."
-msgstr "Текущее распределение по статусам заказов покупателей."
-
-msgid "Current password"
-msgstr "Текущий пароль"
-
-msgid "Current RFQ order distribution across workflow statuses."
-msgstr "Текущее распределение RFQ-заказов по статусам workflow."
-
-msgid "Custom requests"
-msgstr "Индивидуальные запросы"
+msgid "Current images"
+msgstr "Текущие изображения"
 
 msgid "Customer comments"
 msgstr "Комментарии покупателей"
 
 msgid "Danger zone"
-msgstr "Опасная зона"
-
-msgid "Danger Zone"
 msgstr "Опасная зона"
 
 msgid "Dark"
@@ -656,12 +494,6 @@ msgstr "Данные не найдены"
 msgid "Date"
 msgstr "Дата"
 
-msgid "days"
-msgstr "дней"
-
-msgid "Deadline"
-msgstr "Срок"
-
 msgid "Dec"
 msgstr "Дек"
 
@@ -674,9 +506,6 @@ msgstr "Удалить"
 msgid "Delete {itemName}"
 msgstr "Удалить {itemName}"
 
-msgid "Delete all"
-msgstr "Удалить всё"
-
 msgid "Delete attribute"
 msgstr "Удалить атрибут"
 
@@ -686,8 +515,8 @@ msgstr "Удалить сертификат"
 msgid "Delete gallery"
 msgstr "Удалить галерею"
 
-msgid "Delete notifications"
-msgstr "Удалить уведомления"
+msgid "Delete image"
+msgstr "Удалить изображение"
 
 msgid "Delete product"
 msgstr "Удалить товар"
@@ -713,9 +542,6 @@ msgstr "Удалить единицу"
 msgid "Delete value"
 msgstr "Удалить значение"
 
-msgid "Delete variant"
-msgstr "Удалить вариант"
-
 msgid "Delivering"
 msgstr "Доставляется"
 
@@ -724,6 +550,9 @@ msgstr "Доставка"
 
 msgid "Delivery and payment"
 msgstr "Получение и оплата"
+
+msgid "Delivery terms are agreed when the order is confirmed."
+msgstr "Условия доставки согласовываются при подтверждении заказа."
 
 msgid "Delivery to other regions is available for orders above a certain amount."
 msgstr "Доставка в другие регионы доступна при заказе от определенной суммы."
@@ -743,14 +572,11 @@ msgstr "Описание обязательно"
 msgid "Description moderator"
 msgstr "Модератор описания"
 
-#~ msgid "Details"
-#~ msgstr "Подробнее"
+msgid "Discount (%)"
+msgstr "Скидка (%)"
 
-msgid "Dispatch due today"
-msgstr "Отправка запланирована на сегодня"
-
-msgid "Displayed price"
-msgstr "Отображаемая цена"
+msgid "Discount must be between 0 and 100"
+msgstr "Скидка должна быть от 0 до 100"
 
 msgid "Displays the mobile sidebar."
 msgstr "Показывает мобильную боковую панель."
@@ -758,26 +584,14 @@ msgstr "Показывает мобильную боковую панель."
 msgid "does not exist or might have been removed."
 msgstr "не существует или была удалена."
 
-msgid "Dollar"
-msgstr "Доллар"
-
-#~ msgid "Download"
-#~ msgstr "Скачать"
-
 msgid "Draft"
 msgstr "Черновик"
-
-msgid "Draft products"
-msgstr "Draft товары"
 
 msgid "Drop a file here or choose one"
 msgstr "Перетащите файл сюда или выберите его"
 
 msgid "Drop a new image here or choose a clear square photo."
 msgstr "Перетащите новое изображение сюда или выберите чёткое квадратное фото."
-
-msgid "Each generated pair becomes one attribute stock."
-msgstr "Каждая созданная пара становится запасом одного атрибута."
 
 msgid "Edit"
 msgstr "Редактировать"
@@ -791,35 +605,17 @@ msgstr "Редактировать компанию"
 msgid "Edit gallery"
 msgstr "Редактировать галерею"
 
-msgid "Editable identity and contact information."
-msgstr "Редактируемая информация об идентификации и контактах."
-
-msgid "Electronics"
-msgstr "Электроника"
-
 msgid "Email"
 msgstr "Email"
-
-msgid "Email already registered"
-msgstr "Email уже зарегистрирован"
 
 msgid "Email is required"
 msgstr "Email обязателен"
 
-msgid "Email not found"
-msgstr "Email не найден"
-
-msgid "Email notifications"
-msgstr "Email-уведомления"
-
-msgid "Email verified successfully. Welcome!"
-msgstr "Email успешно подтверждён. Добро пожаловать!"
-
 msgid "Employees"
 msgstr "Сотрудники"
 
-msgid "English"
-msgstr "Английский"
+msgid "Enter a valid phone number"
+msgstr "Введите корректный номер телефона"
 
 msgid "Enter block reason"
 msgstr "Введите причину блокировки"
@@ -842,12 +638,6 @@ msgstr "Введите ИНН компании"
 msgid "Enter company name"
 msgstr "Введите название компании"
 
-msgid "Enter current password"
-msgstr "Введите текущий пароль"
-
-msgid "Enter custom value…"
-msgstr "Введите custom значение…"
-
 msgid "Enter Description"
 msgstr "Введите описание"
 
@@ -857,17 +647,11 @@ msgstr "Введите email"
 msgid "Enter full name"
 msgstr "Введите полное имя"
 
-msgid "Enter message"
-msgstr "Введите сообщение"
-
 msgid "Enter password"
 msgstr "Введите пароль"
 
 msgid "Enter phone number"
 msgstr "Введите номер телефона"
-
-msgid "Enter quantities"
-msgstr "Введите количество"
 
 msgid "Enter the 6-digit verification code"
 msgstr "Введите 6-значный код подтверждения"
@@ -878,29 +662,17 @@ msgstr "Введите единицу измерения"
 msgid "Enter valid email"
 msgstr "Введите корректный email"
 
-msgid "Enter your email"
-msgstr "Введите ваш email"
-
 msgid "Enter your email address"
 msgstr "Введите адрес электронной почты"
-
-msgid "Enter your email address and we will send a verification code to reset your password."
-msgstr "Введите ваш email адрес, и мы отправим код подтверждения для сброса пароля."
 
 msgid "Enter your full name"
 msgstr "Введите полное имя"
 
+msgid "Enter your phone number and we will send you a verification code."
+msgstr "Введите номер телефона, и мы отправим вам код подтверждения."
+
 msgid "Estimated spend"
 msgstr "Ориентировочные расходы"
-
-msgid "Euro"
-msgstr "Евро"
-
-msgid "European Union"
-msgstr "Европейский союз"
-
-msgid "Exact"
-msgstr "Точная"
 
 msgid "Example: Blue"
 msgstr "Пример: Синий"
@@ -911,9 +683,6 @@ msgstr "Пример: Цвет, Размер"
 msgid "Explore catalog"
 msgstr "Просмотреть каталог"
 
-#~ msgid "Factories and sellers you can order from"
-#~ msgstr "Фабрики и продавцы, у которых можно заказать"
-
 msgid "Factory photos"
 msgstr "Фотографии фабрики"
 
@@ -922,9 +691,6 @@ msgstr "Фотографии фабрики не найдены"
 
 msgid "Failed to add the product to the cart"
 msgstr "Не удалось добавить товар в корзину"
-
-msgid "Failed to complete registration. Please try again."
-msgstr "Не удалось завершить регистрацию. Пожалуйста, попробуйте снова."
 
 msgid "Failed to create attribute."
 msgstr "Не удалось создать атрибут."
@@ -943,9 +709,6 @@ msgstr "Не удалось создать галерею."
 
 msgid "Failed to create member."
 msgstr "Не удалось создать участника."
-
-msgid "Failed to create product variant."
-msgstr "Не удалось создать вариант товара."
 
 msgid "Failed to create product."
 msgstr "Не удалось создать товар."
@@ -974,6 +737,9 @@ msgstr "Не удалось удалить FAQ."
 msgid "Failed to delete gallery."
 msgstr "Не удалось удалить галерею."
 
+msgid "Failed to delete image."
+msgstr "Не удалось удалить изображение."
+
 msgid "Failed to delete product."
 msgstr "Не удалось удалить товар."
 
@@ -989,23 +755,11 @@ msgstr "Не удалось удалить пользователя."
 msgid "Failed to delete value."
 msgstr "Не удалось удалить значение."
 
-msgid "Failed to delete variant."
-msgstr "Не удалось удалить вариант."
-
 msgid "Failed to load document"
 msgstr "Не удалось загрузить документ"
 
-msgid "Failed to register. Please try again"
-msgstr "Не удалось зарегистрироваться. Попробуйте снова"
-
-msgid "Failed to resend code"
-msgstr "Не удалось повторно отправить код"
-
 msgid "Failed to send message."
 msgstr "Не удалось отправить сообщение."
-
-msgid "Failed to send verification code"
-msgstr "Не удалось отправить код подтверждения"
 
 msgid "Failed to update attribute."
 msgstr "Не удалось обновить атрибут."
@@ -1021,12 +775,6 @@ msgstr "Не удалось обновить FAQ."
 
 msgid "Failed to update gallery."
 msgstr "Не удалось обновить галерею."
-
-msgid "Failed to update notifications."
-msgstr "Не удалось обновить уведомления."
-
-msgid "Failed to update product variant."
-msgstr "Не удалось обновить вариант товара."
 
 msgid "Failed to update product."
 msgstr "Не удалось обновить товар."
@@ -1073,6 +821,9 @@ msgstr "Февраль"
 msgid "File size must be less than 50MB"
 msgstr "Размер файла должен быть меньше 50MB"
 
+msgid "Fill in Uzbek. Russian and English default to it until you translate them."
+msgstr "Заполните на узбекском. Русский и английский совпадают с ним, пока вы их не переведёте."
+
 msgid "Filter"
 msgstr "Фильтр"
 
@@ -1085,6 +836,9 @@ msgstr "Фильтруемый"
 msgid "Filters"
 msgstr "Фильтры"
 
+msgid "Final price"
+msgstr "Итоговая цена"
+
 msgid "Find a partner"
 msgstr "Найти партнёра"
 
@@ -1094,11 +848,8 @@ msgstr "Найдите надёжного партнёра для вашего �
 msgid "Footer navigation"
 msgstr "Навигация футера"
 
-msgid "Forget password"
-msgstr "Забыли пароль"
-
-msgid "Forget password?"
-msgstr "Забыли пароль?"
+msgid "For legal clients"
+msgstr "Для юрлиц"
 
 msgid "Format: Any image or video format."
 msgstr "Формат: Любой формат изображения или видео."
@@ -1136,17 +887,8 @@ msgstr "Галерея успешно удалена."
 msgid "Gallery photo"
 msgstr "Фото галереи"
 
-msgid "General"
-msgstr "Общие"
-
-msgid "General information"
-msgstr "Общая информация"
-
-msgid "generated"
-msgstr "создано"
-
-msgid "Get notifications about catalog updates and feature releases."
-msgstr "Получайте уведомления об обновлениях каталога и новых функциях."
+msgid "Get code"
+msgstr "Получить код"
 
 msgid "Go Back"
 msgstr "Назад"
@@ -1157,11 +899,11 @@ msgstr "Перейти на следующую страницу"
 msgid "Go to previous page"
 msgstr "Перейти на предыдущую страницу"
 
+msgid "Hidden"
+msgstr "Скрыт"
+
 msgid "Hide"
 msgstr "Скрыть"
-
-msgid "High-risk actions that impact account access."
-msgstr "Высокорисковые действия, влияющие на доступ к аккаунту."
 
 msgid "Home"
 msgstr "Главная"
@@ -1169,20 +911,20 @@ msgstr "Главная"
 msgid "How SNABER delivers and accepts payment for building materials and tools."
 msgstr "Как SNABER доставляет и принимает оплату за стройматериалы и инструменты."
 
-msgid "Identity, category, pricing, MOQ and lead time."
-msgstr "Идентификация, категория, цена, MOQ и время выполнения."
-
 msgid "Image"
 msgstr "Изображение"
 
 msgid "Image title"
 msgstr "Название изображения"
 
+msgid "Images"
+msgstr "Изображения"
+
+msgid "In stock"
+msgstr "В наличии"
+
 msgid "Inactive"
 msgstr "Неактивный"
-
-msgid "Inactive variant"
-msgstr "Неактивный вариант"
 
 msgid "Industrial B2B marketplace operations background"
 msgstr "Операционный background промышленного B2B маркетплейса"
@@ -1244,47 +986,20 @@ msgstr "Июнь"
 msgid "k"
 msgstr "тыс"
 
-msgid "Keep your account secure with a strong password."
-msgstr "Защитите свой аккаунт надёжным паролем."
-
-msgid "Language"
-msgstr "Язык"
-
 msgid "Last 30 days"
 msgstr "Последние 30 дней"
-
-msgid "Last updated"
-msgstr "Последнее обновление"
 
 msgid "Latest orders from your buyer account."
 msgstr "Последние заказы из аккаунта покупателя."
 
-msgid "Lead max"
-msgstr "Макс. время выполнения"
-
-msgid "Lead min"
-msgstr "Мин. время выполнения"
-
-msgid "Lead time"
-msgstr "Время выполнения"
-
-msgid "Lead Time"
-msgstr "Время выполнения"
-
-msgid "Lead time max must be a positive number"
-msgstr "Максимальное время выполнения должно быть положительным числом"
-
-msgid "Lead time max must be greater than or equal to lead time min"
-msgstr "Максимальное время выполнения заказа должно быть больше или равно минимальному времени выполнения заказа."
-
-msgid "Lead time min must be a positive number"
-msgstr "Минимальное время выполнения должно быть положительным числом"
-
-msgid "Lifecycle events for this product record."
-msgstr "События жизненного цикла для этой записи товара."
+msgid "Legal clients"
+msgstr "Юридические лица"
 
 msgid "Light"
 msgstr "Светлая"
+
+msgid "Link copied"
+msgstr "Ссылка скопирована"
 
 msgid "Load more"
 msgstr "Загрузить ещё"
@@ -1292,23 +1007,14 @@ msgstr "Загрузить ещё"
 msgid "Load older messages"
 msgstr "Загрузить старые сообщения"
 
-msgid "Loading attributes..."
-msgstr "Загрузка атрибутов..."
-
 msgid "Loading content..."
 msgstr "Загрузка контента..."
 
 msgid "Loading countries..."
 msgstr "Загрузка стран..."
 
-msgid "Loading currencies..."
-msgstr "Загрузка валют..."
-
 msgid "Loading image..."
 msgstr "Загрузка изображения..."
-
-msgid "Loading media..."
-msgstr "Загрузка медиа..."
 
 msgid "Loading photo..."
 msgstr "Загрузка фото..."
@@ -1322,32 +1028,23 @@ msgstr "Местоположение"
 msgid "Login"
 msgstr "Вход"
 
+msgid "Login or register"
+msgstr "Вход или регистрация"
+
 msgid "Logo"
 msgstr "Логотип"
 
 msgid "Logout"
 msgstr "Выйти"
 
-msgid "Made to order"
-msgstr "Под заказ"
-
-msgid "Main media"
-msgstr "Основное медиа"
-
-msgid "Make a accept"
-msgstr "Принять"
-
-msgid "Make a reject"
-msgstr "Отклонить"
+msgid "Main characteristics"
+msgstr "Основные характеристики"
 
 msgid "Manage category attributes and reusable values for product variants."
 msgstr "Управляйте атрибутами категорий и повторно используемыми значениями для вариантов товаров."
 
 msgid "Manage reusable values assigned to product attributes."
 msgstr "Управляйте повторно используемыми значениями, назначенными атрибутам товаров."
-
-msgid "Manage SKU, stock, override pricing, media and attributes."
-msgstr "Управляйте SKU, запасом, переопределением цены, медиа и атрибутами."
 
 msgid "Manage values"
 msgstr "Управление значениями"
@@ -1361,23 +1058,11 @@ msgstr "Мар"
 msgid "March"
 msgstr "Март"
 
-msgid "Mark all as read"
-msgstr "Отметить всё как прочитанное"
-
-msgid "Mark as read"
-msgstr "Отметить как прочитанное"
-
-msgid "Mark notification as read"
-msgstr "Отметить уведомление как прочитанное"
-
 msgid "Marketplace command center"
 msgstr "Центр управления маркетплейсом"
 
 msgid "May"
 msgstr "Май"
-
-msgid "Media"
-msgstr "Медиа"
 
 msgid "Member created successfully."
 msgstr "Участник успешно создан."
@@ -1391,29 +1076,11 @@ msgstr "Участники"
 msgid "Message"
 msgstr "Сообщение"
 
-msgid "Message is required"
-msgstr "Сообщение обязательно"
-
-#~ msgid "Min. order"
-#~ msgstr "Мин. заказ"
-
-#~ msgid "Mini site"
-#~ msgstr "Мини-сайт"
-
-msgid "Minimum 8 characters"
-msgstr "Минимум 8 символов"
-
 msgid "mln"
 msgstr "млн"
 
 msgid "mlrd"
 msgstr "млрд"
-
-msgid "Moderation"
-msgstr "Модерация"
-
-msgid "Moderator"
-msgstr "Модератор"
 
 msgid "Moderator description"
 msgstr "Описание модератора"
@@ -1422,44 +1089,15 @@ msgid "Monday"
 msgstr "Понедельник"
 
 msgid ""
-"Monitor B2B marketplace liquidity, supplier quality, RFQ conversion and order flow\n"
+"Monitor B2B marketplace liquidity, supplier quality and order flow\n"
 "              from one operational view."
-msgstr ""
-"Отслеживайте ликвидность B2B маркетплейса, качество поставщиков, конверсию RFQ и поток заказов\n"
-"              из единого операционного представления."
-
-msgid "Monitor revenue momentum, category demand, RFQ pipeline and recent order activity using seller APIs."
-msgstr "Отслеживайте динамику выручки, спросы в категории, воронку продаж по запросам предложений и активность последних заказов."
-
-msgid "Monthly growth"
-msgstr "Ежемесячный рост"
-
-msgid "Monthly revenue, order count and quote volume."
-msgstr "Месячный доход, количество заказов и объём quote."
-
-msgid "MOQ must be a positive number"
-msgstr "MOQ должен быть положительным числом"
-
-msgid "MOQ override"
-msgstr "Переопределение MOQ"
-
-msgid "MOQ unit"
-msgstr "Единица MOQ"
-
-msgid "MOQ unit is required"
-msgstr "Единица MOQ обязательна"
+msgstr "Следите за ликвидностью B2B-маркетплейса, качеством поставщиков и потоком заказов в одном окне."
 
 msgid "More"
 msgstr "Ещё"
 
 msgid "More pages"
 msgstr "Больше страниц"
-
-msgid "Most ordered"
-msgstr "Самые заказываемые"
-
-msgid "Most products"
-msgstr "Больше всего товаров"
 
 msgid "Multi select"
 msgstr "Множественный выбор"
@@ -1470,9 +1108,6 @@ msgstr "Мой аккаунт"
 msgid "My Orders"
 msgstr "Мои заказы"
 
-#~ msgid "N/A"
-#~ msgstr "Н/Д"
-
 msgid "Name"
 msgstr "Название"
 
@@ -1482,20 +1117,17 @@ msgstr "Название обязательно"
 msgid "Navigation"
 msgstr "Навигация"
 
-msgid "Negotiation"
-msgstr "Переговоры"
-
 msgid "New"
 msgstr "Новый"
 
-msgid "New password"
-msgstr "Новый пароль"
+msgid "New orders will appear here."
+msgstr "Новые заказы появятся здесь."
 
 msgid "New user registrations by weekday."
 msgstr "Регистрации новых пользователей по дням недели."
 
-msgid "New variant"
-msgstr "Новый вариант"
+msgid "New users in the last 30 days"
+msgstr "Новые пользователи за последние 30 дней"
 
 msgid "Next"
 msgstr "Следующий"
@@ -1506,23 +1138,11 @@ msgstr "Следующий слайд"
 msgid "No"
 msgstr "Нет"
 
-msgid "No attribute values available."
-msgstr "Значения атрибутов недоступны."
-
-msgid "No attributes added."
-msgstr "Атрибуты не добавлены."
-
-msgid "No attributes available."
-msgstr "Атрибуты недоступны."
-
 msgid "No category selected"
 msgstr "Категория не выбрана"
 
 msgid "No certificates added yet."
 msgstr "Сертификаты ещё не добавлены."
-
-msgid "No characteristics added."
-msgstr "Характеристики не добавлены."
 
 msgid "No characteristics available."
 msgstr "Характеристики недоступны."
@@ -1545,29 +1165,11 @@ msgstr "Функций пока нет."
 msgid "No gallery photos yet"
 msgstr "Фотографий в галерее пока нет"
 
-msgid "No media assets available for this product."
-msgstr "Для этого товара нет медиафайлов."
-
-msgid "No messages found"
-msgstr "Сообщения не найдены"
-
 msgid "No messages yet."
 msgstr "Сообщений пока нет."
 
-msgid "No order selected"
-msgstr "Заказ не выбран"
-
-msgid "No orders found."
-msgstr "Заказы не найдены."
-
-msgid "No product matches this slug. Please return to the products list and open an existing item."
-msgstr "Нет товара, соответствующего этому slug. Вернитесь к списку товаров и откройте существующий элемент."
-
-msgid "No products in this order."
-msgstr "В этом заказе нет товаров."
-
-msgid "No reason provided"
-msgstr "Причина не указана"
+msgid "No orders yet"
+msgstr "Заказов пока нет"
 
 msgid "No results found."
 msgstr "Результаты не найдены."
@@ -1577,27 +1179,6 @@ msgstr "Нет результатов"
 
 msgid "No units yet"
 msgstr "Единиц пока нет"
-
-msgid "No variant selected"
-msgstr "Вариант не выбран"
-
-msgid "No variants added for this product."
-msgstr "Для этого товара варианты не добавлены."
-
-msgid "No, keep it"
-msgstr "Нет, оставить"
-
-msgid "Not assigned"
-msgstr "Не назначено"
-
-msgid "Notification deleted"
-msgstr "Уведомление удалено"
-
-msgid "Notifications"
-msgstr "Уведомления"
-
-msgid "Notifications deleted"
-msgstr "Уведомления удалены"
 
 msgid "Nov"
 msgstr "Ноя"
@@ -1620,20 +1201,11 @@ msgstr "Октябрь"
 msgid "of"
 msgstr "из"
 
-msgid "Office supply"
-msgstr "Офисные принадлежности"
-
 msgid "Okay"
 msgstr "Хорошо"
 
 msgid "Old"
 msgstr "Старый"
-
-msgid "Old password"
-msgstr "Старый пароль"
-
-msgid "On request"
-msgstr "По запросу"
 
 msgid "Only {maxValue} left"
 msgstr "Осталось только {maxValue}"
@@ -1644,9 +1216,6 @@ msgstr "Упс! Страница не найдена!"
 msgid "Oops! Something went wrong"
 msgstr "Упс! Что-то пошло не так"
 
-msgid "Open activity that may still need seller confirmation."
-msgstr "Открытая активность, которая всё ещё может требовать подтверждения продавца."
-
 msgid "Open gallery preview"
 msgstr "Открыть предпросмотр галереи"
 
@@ -1656,77 +1225,29 @@ msgstr "Открыть в новой вкладке"
 msgid "Open panel"
 msgstr "Открыть панель"
 
-msgid "Open RFQs"
-msgstr "Открытые RFQ"
-
-msgid "Option {optionNumber}"
-msgstr "Вариант {optionNumber}"
-
-msgid "options"
-msgstr "варианты"
+msgid "Optional. Helps customers find the product."
+msgstr "Необязательно. Помогает клиентам найти товар."
 
 msgid "Order"
 msgstr "Заказ"
 
-msgid "Order #{activeOrderId}"
-msgstr "Заказ #{activeOrderId}"
-
-#~ msgid "Order #{orderId}"
-#~ msgstr "Заказ #{orderId}"
-
-msgid "Order closed"
-msgstr "Заказ закрыт"
-
-#~ msgid "Order conversation"
-#~ msgstr "Диалог заказа"
-
 msgid "Order count"
 msgstr "Количество заказов"
-
-msgid "Order details"
-msgstr "Детали заказа"
 
 msgid "Order is already completed."
 msgstr "Заказ уже завершён."
 
-#~ msgid "Order is created from the confirmed chat"
-#~ msgstr "Заказ создан из подтверждённого чата"
-
-msgid "Order status mix"
-msgstr "Распределение статусов заказов"
-
 msgid "Order status updated to {nextStatusLabel}."
 msgstr "Статус заказа обновлён до {nextStatusLabel}."
-
-msgid "Order status updated."
-msgstr "Статус заказа обновлён."
 
 msgid "Order Summary"
 msgstr "Сводка заказа"
 
-msgid "Order type split"
-msgstr "Распределение типов заказов"
-
 msgid "Order volume and estimated spend over the last six months."
 msgstr "Объём заказов и ориентировочные расходы за последние шесть месяцев."
 
-#~ msgid "Ordering"
-#~ msgstr "Оформление заказа"
-
 msgid "Orders"
 msgstr "Заказы"
-
-msgid "Orders confirmed by buyers."
-msgstr "Заказы, подтверждённые покупателями."
-
-msgid "Orders in progress"
-msgstr "Заказы в процессе"
-
-msgid "Orders still moving through the workflow."
-msgstr "Заказы, всё ещё проходящие через workflow."
-
-msgid "Other"
-msgstr "Другое"
 
 msgid "Others"
 msgstr "Другие"
@@ -1739,9 +1260,6 @@ msgstr "Общая информация"
 
 msgid "Owner"
 msgstr "Владелец"
-
-msgid "Packaging"
-msgstr "Упаковка"
 
 msgid "Packing"
 msgstr "Упаковка"
@@ -1758,21 +1276,6 @@ msgstr "Пароль"
 msgid "Password is required"
 msgstr "Пароль обязателен"
 
-msgid "Password must be at least 8 characters long"
-msgstr "Пароль должен содержать минимум 8 символов"
-
-msgid "Password update and session controls."
-msgstr "Обновление пароля и управление сессиями."
-
-msgid "Password updated failed"
-msgstr "Не удалось обновить пароль"
-
-msgid "Password updated successfully"
-msgstr "Пароль успешно обновлён"
-
-msgid "Passwords do not match"
-msgstr "Пароли не совпадают"
-
 msgid "Paste iframe or URL..."
 msgstr "Вставьте iframe или URL..."
 
@@ -1782,8 +1285,8 @@ msgstr "Оплата"
 msgid "Payment in cash or by bank transfer for legal entities."
 msgstr "Оплата наличными или банковским переводом для юридических лиц."
 
-#~ msgid "pcs"
-#~ msgstr "шт."
+msgid "Payment terms are agreed when the order is confirmed."
+msgstr "Условия оплаты согласовываются при подтверждении заказа."
 
 msgid "Pending"
 msgstr "В ожидании"
@@ -1800,17 +1303,17 @@ msgstr "Номер телефона"
 msgid "Phone number is required"
 msgstr "Номер телефона обязателен"
 
-msgid "Pick a deadline date"
-msgstr "Выберите дату дедлайна"
+msgid "Phone number verified. Welcome!"
+msgstr "Номер телефона подтверждён. Добро пожаловать!"
 
 msgid "Pickup from warehouse"
 msgstr "Самовывоз со склада"
 
+msgid "Please fill in the required fields."
+msgstr "Заполните обязательные поля."
+
 msgid "Please log in with the appropriate credentials"
 msgstr "Войдите, используя соответствующие учётные данные"
-
-msgid "Preferences"
-msgstr "Настройки"
 
 msgid "Present your services to a wide audience. Find new clients and grow your business through our platform."
 msgstr "Представьте свои услуги широкой аудитории. Находите новых клиентов и развивайте свой бизнес через нашу платформу."
@@ -1824,32 +1327,11 @@ msgstr "Предыдущий слайд"
 msgid "Price"
 msgstr "Цена"
 
-msgid "Price max"
-msgstr "Максимальная цена"
+msgid "Price and stock"
+msgstr "Цена и остатки"
 
-msgid "Price max must be a positive number"
-msgstr "Максимальная цена должна быть положительным числом"
-
-msgid "Price min"
-msgstr "Минимальная цена"
-
-msgid "Price min must be a positive number"
-msgstr "Минимальная цена должна быть положительным числом"
-
-msgid "Price model"
-msgstr "Модель цены"
-
-msgid "Price override"
-msgstr "Переопределение цены"
-
-msgid "Price type"
-msgstr "Тип цены"
-
-msgid "Pricing and fulfillment baseline terms."
-msgstr "Базовые условия ценообразования и fulfillment."
-
-msgid "Primary product identity and classification."
-msgstr "Основная идентификация и классификация товара."
+msgid "Price must be a positive number"
+msgstr "Цена должна быть положительным числом"
 
 msgid "Process"
 msgstr "Процесс"
@@ -1860,50 +1342,23 @@ msgstr "Система закупок для производства нацио
 msgid "Product"
 msgstr "Товар"
 
-msgid "Product checks"
-msgstr "Проверки товара"
+msgid "Product created."
+msgstr "Товар создан."
 
 msgid "Product deleted successfully."
 msgstr "Товар успешно удалён."
 
-msgid "Product detail"
-msgstr "Детали товара"
-
 msgid "Product details"
 msgstr "Детали товара"
-
-msgid "Product ID"
-msgstr "ID товара"
 
 msgid "Product image"
 msgstr "Изображение товара"
 
-msgid "Product not found"
-msgstr "Товар не найден"
-
-msgid "Product performance ranked by confirmed order value."
-msgstr "Эффективность товаров, ранжированная по подтверждённой стоимости заказов."
+msgid "Product is required"
+msgstr "Товар обязателен"
 
 msgid "Product SKU"
 msgstr "SKU товара"
-
-msgid "Product type"
-msgstr "Тип товара"
-
-msgid "Product updates"
-msgstr "Обновления товара"
-
-msgid "Product variant not found"
-msgstr "Вариант товара не найден"
-
-msgid "Product variants"
-msgstr "Варианты товара"
-
-msgid "Product views"
-msgstr "Просмотры товара"
-
-msgid "Product views compared with buyer chat starts."
-msgstr "Сравнение просмотров товара с началом чатов покупателей."
 
 msgid "Products"
 msgstr "Товары"
@@ -1914,9 +1369,6 @@ msgstr "Профиль"
 msgid "Profile image"
 msgstr "Изображение профиля"
 
-msgid "Profile Information"
-msgstr "Информация профиля"
-
 msgid "Profile updated successfully"
 msgstr "Профиль успешно обновлён"
 
@@ -1925,9 +1377,6 @@ msgstr "Опубликовать"
 
 msgid "Purchase momentum"
 msgstr "Динамика покупок"
-
-msgid "Qty:"
-msgstr "Кол-во:"
 
 msgid "Quantity"
 msgstr "Количество"
@@ -1938,17 +1387,11 @@ msgstr "Вопрос"
 msgid "Question and Answer"
 msgstr "Вопрос и Ответ"
 
-msgid "Quote-based purchases and negotiations."
-msgstr "Покупки и переговоры на основе quote."
-
-msgid "Quotes"
-msgstr "Котировки"
-
 msgid "Range"
 msgstr "Диапазон"
 
-msgid "Ranked by orders and quality score."
-msgstr "Ранжировано по заказам и рейтингу качества."
+msgid "Ranked by number of orders."
+msgstr "Отсортировано по числу заказов."
 
 msgid "Rating"
 msgstr "Оценка"
@@ -1959,32 +1402,8 @@ msgstr "Оценка обязательна"
 msgid "Rating must be between 1 and 5"
 msgstr "Оценка должна быть от 1 до 5"
 
-msgid "Read all"
-msgstr "Прочитать всё"
-
-msgid "Read-only status from your user account."
-msgstr "Статус только для чтения из вашего аккаунта."
-
-msgid "Ready"
-msgstr "В наличии"
-
-msgid "Ready-product orders compared with RFQ requests."
-msgstr "Заказы готовой продукции по сравнению с RFQ-запросами."
-
-msgid "Reason"
-msgstr "Причина"
-
-msgid "Receive account health and activity updates by email."
-msgstr "Получайте обновления о состоянии аккаунта и активности по email."
-
-msgid "Recent buyer activity"
-msgstr "Последние действия покупателей"
-
 msgid "Recent buying activity"
 msgstr "Последняя покупательская активность"
-
-msgid "Recent orders"
-msgstr "Последние заказы"
 
 msgid "Recommended banner size: 1200 x 400 px"
 msgstr "Рекомендуемый размер баннера: 1200 × 400 пикселей"
@@ -2004,62 +1423,14 @@ msgstr "Рекомендуемый размер: 1200 × 400 пикселей."
 msgid "Recommended size: 512 x 512 px."
 msgstr "Рекомендуемый размер: 512 × 512 пикселей."
 
-msgid "Record timeline"
-msgstr "Таймлайн записи"
-
 msgid "Region"
 msgstr "Регион"
-
-msgid "Regional and communication preferences."
-msgstr "Региональные и коммуникационные настройки."
-
-msgid "Register"
-msgstr "Регистрация"
-
-#~ msgid "Registered entities"
-#~ msgstr "Зарегистрированные организации"
-
-msgid "Registration completed successfully."
-msgstr "Регистрация успешно завершена."
-
-msgid "Reject"
-msgstr "Отклонить"
-
-msgid "Reject draft product"
-msgstr "Отклонить draft товар"
-
-msgid "Reject order"
-msgstr "Отклонить заказ"
-
-msgid "Rejected"
-msgstr "Отклонено"
-
-msgid "Rejected by buyer"
-msgstr "Отклонено покупателем"
-
-msgid "Rejected by seller"
-msgstr "Отклонено продавцом"
 
 msgid "Remove"
 msgstr "Удалить"
 
 msgid "Remove from favorites"
 msgstr "Удалить из избранного"
-
-msgid "Remove product"
-msgstr "Удалить товар"
-
-msgid "Repeat new password"
-msgstr "Повторите новый пароль"
-
-msgid "Request for Quotation pipeline"
-msgstr "Воронка запросов предложений"
-
-msgid "Request for Quotation win rate"
-msgstr "Доля выигранных запросов предложений"
-
-msgid "Requests moving through your sales flow."
-msgstr "Запросы, проходящие через ваш sales flow."
 
 msgid "Resend code"
 msgstr "Отправить код повторно"
@@ -2073,50 +1444,11 @@ msgstr "Сбросить"
 msgid "Reset filters"
 msgstr "Сбросить фильтры"
 
-msgid "Restricted"
-msgstr "Ограничено"
-
-msgid "Returned for correction"
-msgstr "Возвращено на исправление"
-
 msgid "Revenue"
 msgstr "Доход"
 
-msgid "Revenue momentum"
-msgstr "Динамика дохода"
-
-msgid "Reviewing"
-msgstr "На рассмотрении"
-
-msgid "RFQ"
-msgstr "Под изготовление"
-
-msgid "RFQ orders"
-msgstr "RFQ-заказы"
-
-msgid "RFQ orders by status"
-msgstr "RFQ-заказы по статусам"
-
-msgid "RFQs"
-msgstr "RFQ"
-
 msgid "Role"
 msgstr "Роль"
-
-msgid "Ruble"
-msgstr "Рубль"
-
-msgid "Russia"
-msgstr "Россия"
-
-msgid "Russian"
-msgstr "Русский"
-
-msgid "Russian ruble"
-msgstr "Российский рубль"
-
-msgid "Sales by category"
-msgstr "Продажи по категориям"
 
 msgid "Saturday"
 msgstr "Суббота"
@@ -2145,17 +1477,11 @@ msgstr "Поиск по столбцам..."
 msgid "Search company"
 msgstr "Поиск компании"
 
-msgid "Search notifications"
-msgstr "Поиск уведомлений"
-
 msgid "Search results for"
 msgstr "Результаты поиска для"
 
 msgid "Search..."
 msgstr "Поиск..."
-
-msgid "Security"
-msgstr "Безопасность"
 
 msgid "Select"
 msgstr "Выбрать"
@@ -2166,35 +1492,20 @@ msgstr "Выберите чат, чтобы начать переписку."
 msgid "Select a date"
 msgstr "Выберите дату"
 
-msgid "Select a product to add to the order."
-msgstr "Выберите товар для добавления в заказ."
-
 msgid "Select a region"
 msgstr "Выберите регион"
 
 msgid "Select an attribute"
 msgstr "Выберите атрибут"
 
-msgid "Select an order to view products."
-msgstr "Выберите заказ для просмотра товаров."
-
 msgid "Select attribute"
 msgstr "Выберите атрибут"
-
-msgid "Select attribute values first, then fill quantities for every generated combination."
-msgstr "Сначала выберите значения атрибутов, затем заполните количество для каждой созданной комбинации."
-
-msgid "Select attribute values to generate stock rows."
-msgstr "Выберите значения атрибутов для создания строк запаса."
 
 msgid "Select category"
 msgstr "Выберите категорию"
 
 msgid "Select country"
 msgstr "Выберите страну"
-
-msgid "Select currency"
-msgstr "Выберите валюту"
 
 msgid "Select date"
 msgstr "Выберите дату"
@@ -2208,23 +1519,14 @@ msgstr "Выберите файл"
 msgid "Select image"
 msgstr "Выберите изображение"
 
+msgid "Select images"
+msgstr "Выберите изображения"
+
 msgid "Select industries"
 msgstr "Выберите отрасли"
 
 msgid "Select issued date"
 msgstr "Выберите дату выдачи"
-
-msgid "Select language"
-msgstr "Выберите язык"
-
-msgid "Select media"
-msgstr "Выберите медиа"
-
-msgid "Select price type"
-msgstr "Выберите тип цены"
-
-msgid "Select product type"
-msgstr "Выберите тип товара"
 
 msgid "Select role"
 msgstr "Выберите роль"
@@ -2244,68 +1546,11 @@ msgstr "Выберите тип"
 msgid "Select unit"
 msgstr "Выберите единицу"
 
-msgid "Select value"
-msgstr "Выберите значение"
-
-msgid "Select values"
-msgstr "Выберите значения"
-
-msgid "selected"
-msgstr "выбрано"
-
-msgid "Selected products"
-msgstr "Выбранные товары"
-
-msgid "Selected variant price"
-msgstr "Цена выбранного варианта"
-
-msgid "Selected variant SKU"
-msgstr "SKU выбранного варианта"
+msgid "Selected values are used by the filters in the catalog."
+msgstr "Выбранные значения используются в фильтрах каталога."
 
 msgid "Seller"
 msgstr "Продавец"
-
-msgid "Seller accepted the order, waiting for buyer's response."
-msgstr "Продавец принял заказ, ожидается ответ покупателя."
-
-msgid "Seller accepted the order. Click accept to confirm your acceptance."
-msgstr "Продавец принял заказ. Нажмите «Принять», чтобы подтвердить своё согласие."
-
-msgid "Seller accepted this order. Are you sure you want to accept this order too?"
-msgstr "Продавец принял этот заказ. Вы уверены, что тоже хотите принять этот заказ?"
-
-msgid "Seller accepted this order. Click to accept this order as a buyer."
-msgstr "Продавец принял этот заказ. Нажмите, чтобы принять этот заказ как покупатель."
-
-#~ msgid "Seller confirms selected variant and quantity"
-#~ msgstr "Продавец подтверждает выбранный вариант и количество"
-
-msgid "Seller quality and trust"
-msgstr "Качество и доверие к продавцу"
-
-msgid "Seller rejected the order, waiting for buyer's response."
-msgstr "Продавец отклонил заказ, ожидается ответ покупателя."
-
-msgid "Seller rejected the order. Click reject to confirm your rejection."
-msgstr "Продавец отклонил заказ. Нажмите «Отклонить», чтобы подтвердить отказ."
-
-msgid "Seller rejected this order. Are you sure you want to reject this order?"
-msgstr "Продавец отклонил этот заказ. Вы уверены, что хотите отклонить этот заказ?"
-
-msgid "Seller rejected this order. Click to reject this order as a buyer."
-msgstr "Продавец отклонил этот заказ. Нажмите, чтобы отклонить этот заказ как покупатель."
-
-msgid "Seller revenue from completed order activity."
-msgstr "Доход продавца от завершённых заказов."
-
-msgid "Sellers"
-msgstr "Продавцы"
-
-msgid "Send code"
-msgstr "Отправить код"
-
-msgid "Send to admin"
-msgstr "Отправить администратору"
 
 msgid "Sep"
 msgstr "Сен"
@@ -2322,6 +1567,9 @@ msgstr "Установить оценку"
 msgid "Settings"
 msgstr "Настройки"
 
+msgid "Share"
+msgstr "Поделиться"
+
 msgid "Share of marketplace activity."
 msgstr "Доля активности маркетплейса."
 
@@ -2333,6 +1581,9 @@ msgstr "Поделитесь опытом использования товар�
 
 msgid "Show all characteristics"
 msgstr "Показать все характеристики"
+
+msgid "Show in the catalog"
+msgstr "Показывать в каталоге"
 
 msgid "Show More"
 msgstr "Показать больше"
@@ -2349,15 +1600,6 @@ msgstr "Войти"
 msgid "Sign up"
 msgstr "Регистрация"
 
-msgid "SKU is required"
-msgstr "SKU обязателен"
-
-msgid "SKU, stock, override pricing, media and attributes."
-msgstr "SKU, запас, переопределение цены, медиа и атрибуты."
-
-msgid "SKU:"
-msgstr "Артикул:"
-
 msgid "snaber.uz is a marketplace for building materials and tools — cement, bricks, steel, lumber, roofing, paints, plumbing, electrical goods and equipment from verified suppliers."
 msgstr "snaber.uz — маркетплейс строительных материалов и инструментов: цемент, кирпич, металл, пиломатериалы, кровля, краски, сантехника и электрика от проверенных поставщиков."
 
@@ -2369,9 +1611,6 @@ msgstr "Сум"
 
 msgid "Social links"
 msgstr "Социальные ссылки"
-
-msgid "Som"
-msgstr "Сум"
 
 msgid "Something went wrong!"
 msgstr "Что-то пошло не так!"
@@ -2388,32 +1627,14 @@ msgstr "Расходы"
 msgid "Start procurement"
 msgstr "Начать закупку"
 
-msgid "Start with the base product data, then continue to variants and characteristics."
-msgstr "Начните с базовых данных товара, затем перейдите к вариантам и характеристикам."
-
 msgid "Status"
 msgstr "Статус"
-
-msgid "Step 1. Select values"
-msgstr "Шаг 1. Выберите значения"
-
-msgid "Step 2. Enter quantities"
-msgstr "Шаг 2. Введите количество"
 
 msgid "Stock"
 msgstr "Запас"
 
-msgid "Stock health"
-msgstr "Состояние запаса"
-
-msgid "Stock quantity"
-msgstr "Количество запаса"
-
-msgid "stock rows"
-msgstr "строки запаса"
-
-#~ msgid "Strategic Categories"
-#~ msgstr "Стратегические категории"
+msgid "Stock must be a positive number"
+msgstr "Остаток должен быть положительным числом"
 
 msgid "Submit"
 msgstr "Отправить"
@@ -2436,9 +1657,6 @@ msgstr "Компания успешно удалена"
 msgid "Successfully deleted product."
 msgstr "Товар успешно удалён."
 
-msgid "Successfully deleted variant."
-msgstr "Вариант успешно удалён."
-
 msgid "Successfully deleted."
 msgstr "Успешно удалено."
 
@@ -2457,15 +1675,6 @@ msgstr "Успешно обновлено."
 msgid "Sunday"
 msgstr "Воскресенье"
 
-msgid "Super admin"
-msgstr "Супер администратор"
-
-msgid "Supplier"
-msgstr "Поставщик"
-
-msgid "System"
-msgstr "Система"
-
 msgid "Tashkent"
 msgstr "Ташкент"
 
@@ -2481,14 +1690,8 @@ msgstr "Текст обязателен"
 msgid "Text is too long"
 msgstr "Текст слишком длинный"
 
-msgid "Textiles"
-msgstr "Текстиль"
-
-msgid "The old password you entered is incorrect. Please try again."
-msgstr "Введённый старый пароль неверный. Попробуйте снова."
-
-msgid "The order is closed, you can't edit it anymore."
-msgstr "Заказ закрыт, вы больше не можете его редактировать."
+msgid "The first image is the cover shown in the catalog."
+msgstr "Первое изображение — обложка, которая показывается в каталоге."
 
 msgid "The pickup address is available to the manager after the order is confirmed."
 msgstr "Адрес самовывоза предоставляет менеджер после подтверждения заказа."
@@ -2504,9 +1707,6 @@ msgstr "Эти действия являются чувствительными 
 
 msgid "This action cannot be undone. This will permanently delete your account and remove your data from our servers."
 msgstr "Это действие нельзя отменить. Ваш аккаунт будет навсегда удалён, а данные стёрты с наших серверов."
-
-msgid "This field has to be filled"
-msgstr "Это поле должно быть заполнено"
 
 msgid "This field has to be filled."
 msgstr "Это поле должно быть заполнено."
@@ -2541,26 +1741,14 @@ msgstr "Сегодня"
 msgid "Toggle columns"
 msgstr "Переключить столбцы"
 
-msgid "Toggle email notifications"
-msgstr "Переключить email-уведомления"
-
-msgid "Toggle product updates"
-msgstr "Переключить обновления товара"
-
 msgid "Toggle Sidebar"
 msgstr "Переключить боковую панель"
 
 msgid "Toggle theme"
 msgstr "Переключить тему"
 
-#~ msgid "Top companies"
-#~ msgstr "Топ компании"
-
 msgid "Top products"
 msgstr "Топ товары"
-
-msgid "Top seller performance"
-msgstr "Эффективность топ-продавцов"
 
 msgid "Topic"
 msgstr "Тема"
@@ -2568,41 +1756,23 @@ msgstr "Тема"
 msgid "Total"
 msgstr "Всего"
 
-#~ msgid "Total companies"
-#~ msgstr "Всего компаний"
-
-msgid "total messages"
-msgstr "всего сообщений"
-
 msgid "Total orders"
 msgstr "Всего заказов"
 
 msgid "Total price"
 msgstr "Общая цена"
 
-#~ msgid "Total product"
-#~ msgstr "Всего товаров"
-
 msgid "Total revenue by month for the current year."
 msgstr "Общий доход по месяцам за текущий год."
-
-#~ msgid "Total stock"
-#~ msgstr "Общий запас"
 
 msgid "Total users"
 msgstr "Всего пользователей"
 
-msgid "Track quotes, buyer chats and dispatch pressure from one seller dashboard."
-msgstr "Отслеживайте предложения, переписку с покупателями и загруженность службой доставки с помощью единой панели управления продавца."
-
-msgid "Track your order activity, RFQ flow, purchase value and recent buying signals."
-msgstr "Отслеживайте активность заказов, RFQ flow, стоимость покупок и последние сигналы покупок."
-
-msgid "Try adjusting your search or switch tabs to browse other notifications."
-msgstr "Попробуйте изменить поиск или переключить вкладки для просмотра других уведомлений."
+msgid "Track your order activity, purchase value and recent buying signals."
+msgstr "Отслеживайте заказы, стоимость покупок и недавнюю активность."
 
 msgid "Try again in {resendCooldown}s"
-msgstr "Попробуйте снова через {resendCooldown}с"
+msgstr "Через {resendCooldown} с"
 
 msgid "Tuesday"
 msgstr "Вторник"
@@ -2637,23 +1807,8 @@ msgstr "Единица измерения обязательна"
 msgid "Unit of Measures"
 msgstr "Единицы измерения"
 
-msgid "United States"
-msgstr "Соединённые Штаты"
-
 msgid "Units"
 msgstr "Единицы"
-
-msgid "unread"
-msgstr "непрочитано"
-
-msgid "Unread"
-msgstr "Непрочитанные"
-
-msgid "Unread buyer chats"
-msgstr "Непрочитанные чаты покупателей"
-
-msgid "Unverified"
-msgstr "Неподтверждённый"
 
 msgid "Update"
 msgstr "Обновить"
@@ -2673,12 +1828,6 @@ msgstr "Обновить FAQ"
 msgid "Update gallery"
 msgstr "Обновить галерею"
 
-msgid "Update password"
-msgstr "Обновить пароль"
-
-msgid "Update product"
-msgstr "Обновить товар"
-
 msgid "Update unit"
 msgstr "Обновить единицу"
 
@@ -2688,20 +1837,11 @@ msgstr "Обновить пользователя"
 msgid "Update value"
 msgstr "Обновить значение"
 
-msgid "Update variant"
-msgstr "Обновить вариант"
-
 msgid "Updated"
 msgstr "Обновлено"
 
-msgid "US dollar"
-msgstr "Доллар США"
-
 msgid "Use as catalog filter"
 msgstr "Использовать как фильтр каталога"
-
-msgid "Use RFQs when ready-made inventory does not match your needs."
-msgstr "Используйте RFQ, когда готовый inventory не соответствует вашим потребностям."
 
 msgid "Use the actions menu in the attributes table to manage values for a specific attribute."
 msgstr "Используйте меню действий в таблице атрибутов для управления значениями конкретного атрибута."
@@ -2721,15 +1861,6 @@ msgstr "Управление пользователями"
 msgid "Users"
 msgstr "Пользователи"
 
-msgid "Uzbek"
-msgstr "Узбекский"
-
-msgid "Uzbek som"
-msgstr "Узбекский сум"
-
-msgid "Uzbekistan"
-msgstr "Узбекистан"
-
 msgid "Value"
 msgstr "Значение"
 
@@ -2742,36 +1873,6 @@ msgstr "Значение обязательно"
 msgid "Values for"
 msgstr "Значения для"
 
-msgid "values selected"
-msgstr "значений выбрано"
-
-msgid "Variant fields"
-msgstr "Поля варианта"
-
-msgid "Variant ID"
-msgstr "ID варианта"
-
-msgid "Variant is required"
-msgstr "Вариант обязателен"
-
-msgid "Variant MOQ"
-msgstr "MOQ варианта"
-
-msgid "Variant price"
-msgstr "Цена варианта"
-
-msgid "Variant SKU"
-msgstr "SKU варианта"
-
-#~ msgid "Variant stock"
-#~ msgstr "Запас варианта"
-
-msgid "Variants"
-msgstr "Варианты"
-
-msgid "Verification"
-msgstr "Верификация"
-
 msgid "Verification code sent"
 msgstr "Код подтверждения отправлен"
 
@@ -2781,17 +1882,8 @@ msgstr "Подтверждён"
 msgid "Verified industrial marketplace"
 msgstr "Подтверждённый промышленный маркетплейс"
 
-msgid "Verified sellers"
-msgstr "Подтверждённые продавцы"
-
 msgid "Verify"
 msgstr "Подтвердить"
-
-msgid "Verify and finish"
-msgstr "Подтвердить и завершить"
-
-msgid "Video"
-msgstr "Видео"
 
 msgid "View"
 msgstr "Просмотр"
@@ -2826,32 +1918,23 @@ msgstr "Среда"
 msgid "Weekly joined users"
 msgstr "Еженедельно присоединившиеся пользователи"
 
-#~ msgid "What happens next"
-#~ msgstr "Что будет дальше"
+msgid "Weight"
+msgstr "Вес"
 
 msgid "What would you like to discuss?"
 msgstr "Что бы вы хотели обсудить?"
 
-msgid "Where current buyer demand comes from."
-msgstr "Откуда поступает текущий спрос покупателей."
-
-msgid "Workspace"
-msgstr "Рабочее пространство"
+msgid "Where the product is shown in the catalog."
+msgstr "Где товар отображается в каталоге."
 
 msgid "Write a short company description"
 msgstr "Напишите краткое описание компании"
-
-msgid "Write the message that will be shown to the seller."
-msgstr "Напишите сообщение, которое будет показано продавцу."
 
 msgid "Yearly revenue"
 msgstr "Годовой доход"
 
 msgid "Yes"
 msgstr "Да"
-
-msgid "Yes, close it"
-msgstr "Да, закрыть"
 
 msgid "You are not allowed to submit a comment for this product. You should make a purchase first."
 msgstr "Вы не можете оставить комментарий к этому товару. Сначала необходимо совершить покупку."
@@ -2868,14 +1951,8 @@ msgstr "У вас нет прав для выполнения этого дей�
 msgid "You don't have necessary permission"
 msgstr "У вас нет необходимых прав"
 
-msgid "You have reached the maximum number of OTP requests. Please try again later."
-msgstr "Вы достигли максимального количества OTP-запросов. Попробуйте позже."
-
 msgid "You need to save the company information first to access this section."
 msgstr "Сначала необходимо сохранить информацию о компании, чтобы получить доступ к этому разделу."
-
-msgid "You rejected the order, the order is canceled."
-msgstr "Вы отклонили заказ, заказ отменён."
 
 msgid "Your cart is empty"
 msgstr "Ваша корзина пуста"
@@ -2883,11 +1960,5 @@ msgstr "Ваша корзина пуста"
 msgid "Your comment has been submitted"
 msgstr "Ваш комментарий отправлен"
 
-msgid "Your email is not registered. Please complete the registration to continue."
-msgstr "Ваш email не зарегистрирован. Пожалуйста, завершите регистрацию, чтобы продолжить."
-
 msgid "Your request has been sent successfully!"
 msgstr "Ваш запрос успешно отправлен!"
-
-msgid "Yuan"
-msgstr "Юань"

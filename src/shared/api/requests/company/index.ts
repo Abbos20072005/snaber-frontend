@@ -21,12 +21,11 @@ export interface GetCompanyDraftsRequest {
   params?: Partial<{
     search: string;
     sort: SortType;
-    status: ProductDraftStatus;
+    status: Status;
     page: number;
     page_size: number;
     region: number;
     industry: number;
-    product_type: ProductType;
   }>;
 }
 

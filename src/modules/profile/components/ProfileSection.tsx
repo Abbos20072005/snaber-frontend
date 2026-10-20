@@ -51,9 +51,7 @@ export const ProfileSection = () => {
             profileMutation.mutate({
               data: toFormData({
                 full_name: value.full_name,
-                phone_number: value.phone_number,
                 country: value.country,
-                currency: value.currency,
                 image: value.image[0]
               })
             });

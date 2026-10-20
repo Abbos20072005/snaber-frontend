@@ -3,21 +3,19 @@ import { useSuspenseQuery } from '@tanstack/react-query';
 import { createFileRoute } from '@tanstack/react-router';
 
 import {
-  BuyerSellerActivityChart,
   CategoryDemandChart,
   getAdminLast30DaysStatisticsQueryOptions,
   getAdminMonthlyRevenueQueryOptions,
   getAdminOrdersByCategoryQueryOptions,
-  getAdminRFQOrdersByStatusQueryOptions,
   getAdminTodayOrdersQueryOptions,
-  getAdminTopCompaniesQueryOptions,
+  getAdminTopProductsQueryOptions,
   getAdminUserCountsQueryOptions,
   getAdminWeeklyJoinedUsersQueryOptions,
   MetricsCards,
   RevenueOrderMomentumChart,
-  RfqOrdersByStatusChart,
-  SellerVerificationChart,
-  TopSellers
+  TopProducts,
+  UserDistributionChart,
+  WeeklyJoinedUsersChart
 } from '@/modules/dashboard/admin';
 import { Badge } from '@/shared/ui/badge';
 import { PageContent } from '@/shared/ui/page';
@@ -25,8 +23,7 @@ import { PageContent } from '@/shared/ui/page';
 const AdminDashboard = () => {
   const { t } = useLingui();
 
-  const { orders_count, rfq_orders_count } = useSuspenseQuery(getAdminTodayOrdersQueryOptions())
-    .data.data;
+  const { orders_count } = useSuspenseQuery(getAdminTodayOrdersQueryOptions()).data.data;
 
   return (
     <PageContent className='bg-muted/20'>
@@ -38,18 +35,14 @@ const AdminDashboard = () => {
             </Badge>
             <h1 className='text-3xl font-semibold tracking-tight'>{t`Admin dashboard`}</h1>
             <p className='text-muted-foreground mt-2 max-w-2xl text-sm'>
-              {t`Monitor B2B marketplace liquidity, supplier quality, RFQ conversion and order flow
+              {t`Monitor B2B marketplace liquidity, supplier quality and order flow
               from one operational view.`}
             </p>
           </div>
-          <div className='bg-background grid grid-cols-2 gap-2 rounded-lg border p-2 text-center'>
+          <div className='bg-background grid gap-2 rounded-lg border p-2 text-center'>
             <div className='px-4 py-2'>
               <p className='text-muted-foreground text-xs'>{t`Today`}</p>
               <p className='font-semibold'>{t`${orders_count} orders`}</p>
-            </div>
-            <div className='border-l px-4 py-2'>
-              <p className='text-muted-foreground text-xs'>{t`Open RFQs`}</p>
-              <p className='font-semibold'>{rfq_orders_count}</p>
             </div>
           </div>
         </div>
@@ -58,17 +51,14 @@ const AdminDashboard = () => {
 
         <div className='grid gap-4 xl:grid-cols-[minmax(0,1.45fr)_minmax(360px,0.55fr)]'>
           <RevenueOrderMomentumChart />
-          <SellerVerificationChart />
+          <UserDistributionChart />
         </div>
 
-        <div className='grid gap-4 xl:grid-cols-3'>
-          <RfqOrdersByStatusChart />
-          <CategoryDemandChart />
-        </div>
+        <CategoryDemandChart />
 
         <div className='grid gap-4 xl:grid-cols-[minmax(0,1.45fr)_minmax(360px,0.55fr)]'>
-          <BuyerSellerActivityChart />
-          <TopSellers />
+          <WeeklyJoinedUsersChart />
+          <TopProducts />
         </div>
       </div>
     </PageContent>
@@ -82,9 +72,8 @@ export const Route = createFileRoute('/admin/dashboard/')({
       queryClient.prefetchQuery(getAdminLast30DaysStatisticsQueryOptions()),
       queryClient.prefetchQuery(getAdminMonthlyRevenueQueryOptions()),
       queryClient.prefetchQuery(getAdminOrdersByCategoryQueryOptions()),
-      queryClient.prefetchQuery(getAdminRFQOrdersByStatusQueryOptions()),
       queryClient.prefetchQuery(getAdminTodayOrdersQueryOptions()),
-      queryClient.prefetchQuery(getAdminTopCompaniesQueryOptions()),
+      queryClient.prefetchQuery(getAdminTopProductsQueryOptions()),
       queryClient.prefetchQuery(getAdminUserCountsQueryOptions()),
       queryClient.prefetchQuery(getAdminWeeklyJoinedUsersQueryOptions())
     ])

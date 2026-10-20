@@ -16,9 +16,6 @@ msgstr ""
 msgid "{orders_count} orders"
 msgstr "{orders_count} orders"
 
-msgid "{ordersCount} active buyer conversations"
-msgstr "{ordersCount} active buyer conversations"
-
 msgid "{selectedSize} selected"
 msgstr "{selectedSize} selected"
 
@@ -40,41 +37,8 @@ msgstr "About us"
 msgid "About Us"
 msgstr "About Us"
 
-msgid "Accept"
-msgstr "Accept"
-
-msgid "Accept order"
-msgstr "Accept order"
-
-msgid "Acceptance rate"
-msgstr "Acceptance rate"
-
-msgid "Accepted"
-msgstr "Accepted"
-
-msgid "Accepted by buyer"
-msgstr "Accepted by buyer"
-
-msgid "Accepted by seller"
-msgstr "Accepted by seller"
-
-msgid "Accepted orders compared with all loaded orders."
-msgstr "Accepted orders compared with all loaded orders."
-
-msgid "Accepted RFQs compared with seller RFQ flow."
-msgstr "Accepted RFQs compared with seller RFQ flow."
-
 msgid "Access Forbidden"
 msgstr "Access Forbidden"
-
-msgid "Account id"
-msgstr "Account id"
-
-msgid "Account Status"
-msgstr "Account Status"
-
-msgid "Across active sellers"
-msgstr "Across active sellers"
 
 msgid "Actions"
 msgstr "Actions"
@@ -82,20 +46,14 @@ msgstr "Actions"
 msgid "Active"
 msgstr "Active"
 
-msgid "Active orders"
-msgstr "Active orders"
-
-msgid "Active variant"
-msgstr "Active variant"
-
-msgid "Activity"
-msgstr "Activity"
-
 msgid "Add"
 msgstr "Add"
 
 msgid "Add certificate"
 msgstr "Add certificate"
+
+msgid "Add characteristic"
+msgstr "Add characteristic"
 
 msgid "Add comment"
 msgstr "Add comment"
@@ -103,14 +61,17 @@ msgstr "Add comment"
 msgid "Add company certificates, compliance documents, and awards for buyers to review."
 msgstr "Add company certificates, compliance documents, and awards for buyers to review."
 
+msgid "Add images"
+msgstr "Add images"
+
 msgid "Add photo"
 msgstr "Add photo"
 
 msgid "Add photos that represent your company, production, and workspace."
 msgstr "Add photos that represent your company, production, and workspace."
 
-msgid "Add product to order"
-msgstr "Add product to order"
+msgid "Add products, set prices and keep the stock up to date."
+msgstr "Add products, set prices and keep the stock up to date."
 
 msgid "Add to cart"
 msgstr "Add to cart"
@@ -120,9 +81,6 @@ msgstr "Add to favorites"
 
 msgid "Add value"
 msgstr "Add value"
-
-msgid "Add variant"
-msgstr "Add variant"
 
 msgid "Add your first certificate so buyers can review your company credentials."
 msgstr "Add your first certificate so buyers can review your company credentials."
@@ -148,17 +106,17 @@ msgstr "Admin"
 msgid "Admin dashboard"
 msgstr "Admin dashboard"
 
-msgid "All"
-msgstr "All"
+msgid "Admins"
+msgstr "Admins"
 
 msgid "All categories"
 msgstr "All categories"
 
+msgid "All characteristics"
+msgstr "All characteristics"
+
 msgid "All messages"
 msgstr "All messages"
-
-msgid "All orders"
-msgstr "All orders"
 
 msgid "All orders loaded for this buyer profile."
 msgstr "All orders loaded for this buyer profile."
@@ -187,20 +145,11 @@ msgstr "Are you a company?"
 msgid "Are you a service provider?"
 msgstr "Are you a service provider?"
 
-msgid "Are you sure to delete all notifications."
-msgstr "Are you sure to delete all notifications."
-
 msgid "Are you sure to delete this member."
 msgstr "Are you sure to delete this member."
 
-msgid "Are you sure to delete this notification."
-msgstr "Are you sure to delete this notification."
-
 msgid "Are you sure to logout?"
 msgstr "Are you sure to logout?"
-
-msgid "Are you sure you want to close this order? This action cannot be undone."
-msgstr "Are you sure you want to close this order? This action cannot be undone."
 
 msgid "Are you sure you want to delete this {itemName}? This action cannot be undone."
 msgstr "Are you sure you want to delete this {itemName}? This action cannot be undone."
@@ -229,9 +178,6 @@ msgstr "Are you sure you want to delete this user? This action cannot be undone.
 msgid "Are you sure you want to delete this value? This action cannot be undone."
 msgstr "Are you sure you want to delete this value? This action cannot be undone."
 
-msgid "Are you sure you want to delete this variant? This action cannot be undone."
-msgstr "Are you sure you want to delete this variant? This action cannot be undone."
-
 msgid "Asc"
 msgstr "Asc"
 
@@ -243,9 +189,6 @@ msgstr "Attribute deleted successfully."
 
 msgid "Attribute is required"
 msgstr "Attribute is required"
-
-msgid "Attribute stock"
-msgstr "Attribute stock"
 
 msgid "Attribute values"
 msgstr "Attribute values"
@@ -265,9 +208,6 @@ msgstr "Average delivery time"
 msgid "Average response time"
 msgstr "Average response time"
 
-#~ msgid "B2B connects verified companies, product catalogs, RFQs, orders, and supplier communication in one practical marketplace for industrial trade."
-#~ msgstr "B2B connects verified companies, product catalogs, RFQs, orders, and supplier communication in one practical marketplace for industrial trade."
-
 msgid "Back"
 msgstr "Back"
 
@@ -280,14 +220,8 @@ msgstr "Back to Login"
 msgid "Banner"
 msgstr "Banner"
 
-msgid "Base fields"
-msgstr "Base fields"
-
-msgid "Base product created."
-msgstr "Base product created."
-
-msgid "Base range"
-msgstr "Base range"
+msgid "Basic information"
+msgstr "Basic information"
 
 msgid "Be the first buyer to comment on this product."
 msgstr "Be the first buyer to comment on this product."
@@ -295,32 +229,11 @@ msgstr "Be the first buyer to comment on this product."
 msgid "Block reason"
 msgstr "Block reason"
 
-msgid "Block status"
-msgstr "Block status"
-
 msgid "Blocked"
 msgstr "Blocked"
 
 msgid "Boolean"
 msgstr "Boolean"
-
-msgid "Both"
-msgstr "Both"
-
-msgid "Both accepted"
-msgstr "Both accepted"
-
-msgid "Both accepted, the order is completed."
-msgstr "Both accepted, the order is completed."
-
-msgid "Both rejected"
-msgstr "Both rejected"
-
-msgid "Both rejected, the order is canceled."
-msgstr "Both rejected, the order is canceled."
-
-#~ msgid "Both sides agree delivery and documents"
-#~ msgstr "Both sides agree delivery and documents"
 
 msgid "Brand files"
 msgstr "Brand files"
@@ -328,32 +241,11 @@ msgstr "Brand files"
 msgid "Browse the catalog and add items to get started."
 msgstr "Browse the catalog and add items to get started."
 
-#~ msgid "Building materials"
-#~ msgstr "Building materials"
-
 msgid "Buyer"
 msgstr "Buyer"
 
-msgid "Buyer accepted the order."
-msgstr "Buyer accepted the order."
-
-msgid "Buyer and seller growth"
-msgstr "Buyer and seller growth"
-
-msgid "Buyer and seller share across all marketplace users."
-msgstr "Buyer and seller share across all marketplace users."
-
 msgid "Buyer dashboard"
 msgstr "Buyer dashboard"
-
-msgid "Buyer engagement"
-msgstr "Buyer engagement"
-
-msgid "Buyer rejected the order too, the order is canceled."
-msgstr "Buyer rejected the order too, the order is canceled."
-
-#~ msgid "Buyer starts a chat from this product"
-#~ msgstr "Buyer starts a chat from this product"
 
 msgid "Buyer workspace"
 msgstr "Buyer workspace"
@@ -361,8 +253,8 @@ msgstr "Buyer workspace"
 msgid "Buyers"
 msgstr "Buyers"
 
-msgid "Calculated from quantity and variant price."
-msgstr "Calculated from quantity and variant price."
+msgid "Calculated from product prices and quantities."
+msgstr "Calculated from product prices and quantities."
 
 msgid "Cancel"
 msgstr "Cancel"
@@ -415,32 +307,14 @@ msgstr "Change photo"
 msgid "Characteristics"
 msgstr "Characteristics"
 
-msgid "Chat"
-msgstr "Chat"
-
-#~ msgid "Chat based purchase"
-#~ msgstr "Chat based purchase"
-
 msgid "Chat is not connected yet."
 msgstr "Chat is not connected yet."
-
-msgid "Chats"
-msgstr "Chats"
-
-msgid "China"
-msgstr "China"
-
-msgid "Chinese yuan"
-msgstr "Chinese yuan"
 
 msgid "Choose a category"
 msgstr "Choose a category"
 
-msgid "Choose every value that can be stocked for this variant."
-msgstr "Choose every value that can be stocked for this variant."
-
-msgid "Choose variant"
-msgstr "Choose variant"
+msgid "Choose the last-level category, the one that lists products."
+msgstr "Choose the last-level category, the one that lists products."
 
 msgid "Clear"
 msgstr "Clear"
@@ -466,14 +340,17 @@ msgstr "Clear filters"
 msgid "Click the ♡ icon on items you usually order or want to buy later."
 msgstr "Click the ♡ icon on items you usually order or want to buy later."
 
+msgid "Client"
+msgstr "Client"
+
+msgid "Clients"
+msgstr "Clients"
+
+msgid "Clients and admins among all users."
+msgstr "Clients and admins among all users."
+
 msgid "Close"
 msgstr "Close"
-
-msgid "Close order"
-msgstr "Close order"
-
-msgid "Closed"
-msgstr "Closed"
 
 msgid "Code"
 msgstr "Code"
@@ -487,17 +364,11 @@ msgstr "Code resent successfully"
 msgid "Code sent to"
 msgstr "Code sent to"
 
-msgid "Combination"
-msgstr "Combination"
-
 msgid "Comment"
 msgstr "Comment"
 
 msgid "Comments will appear here after buyers review this product."
 msgstr "Comments will appear here after buyers review this product."
-
-msgid "Commercial terms"
-msgstr "Commercial terms"
 
 msgid "Companies"
 msgstr "Companies"
@@ -529,23 +400,11 @@ msgstr "Company names"
 msgid "Company profile"
 msgstr "Company profile"
 
-#~ msgid "Company profile available"
-#~ msgstr "Company profile available"
-
-msgid "Complete"
-msgstr "Complete"
-
 msgid "Completed"
 msgstr "Completed"
 
-msgid "Confirm new password"
-msgstr "Confirm new password"
-
-msgid "Confirmed orders"
-msgstr "Confirmed orders"
-
-msgid "Connect verified manufacturers, supplier catalogs, RFQs, and institutional purchasing in one operational B2B market system."
-msgstr "Connect verified manufacturers, supplier catalogs, RFQs, and institutional purchasing in one operational B2B market system."
+msgid "Connect verified manufacturers, supplier catalogs, and institutional purchasing in one operational B2B market system."
+msgstr "Connect verified manufacturers, supplier catalogs, and institutional purchasing in one operational B2B market system."
 
 msgid "Contact"
 msgstr "Contact"
@@ -553,23 +412,23 @@ msgstr "Contact"
 msgid "Contact information"
 msgstr "Contact information"
 
+msgid "Content"
+msgstr "Content"
+
 msgid "Contents"
 msgstr "Contents"
 
-msgid "Continue"
-msgstr "Continue"
-
-msgid "Continue with Google"
-msgstr "Continue with Google"
-
-#~ msgid "Copyright {year} B2B Marketplace. Industrial trade infrastructure."
-#~ msgstr "Copyright {year} B2B Marketplace. Industrial trade infrastructure."
+msgid "Copy code"
+msgstr "Copy code"
 
 msgid "Copyright {year} snaber.uz. Building materials and tools marketplace."
 msgstr "Copyright {year} snaber.uz. Building materials and tools marketplace."
 
 msgid "Country"
 msgstr "Country"
+
+msgid "Cover"
+msgstr "Cover"
 
 msgid "Create"
 msgstr "Create"
@@ -610,38 +469,17 @@ msgstr "Create unit"
 msgid "Create value"
 msgstr "Create value"
 
-msgid "Create variant"
-msgstr "Create variant"
-
 msgid "Created"
 msgstr "Created"
 
-msgid "Created at"
-msgstr "Created at"
-
-msgid "Currency"
-msgstr "Currency"
-
-msgid "Current distribution across buyer order statuses."
-msgstr "Current distribution across buyer order statuses."
-
-msgid "Current password"
-msgstr "Current password"
-
-msgid "Current RFQ order distribution across workflow statuses."
-msgstr "Current RFQ order distribution across workflow statuses."
-
-msgid "Custom requests"
-msgstr "Custom requests"
+msgid "Current images"
+msgstr "Current images"
 
 msgid "Customer comments"
 msgstr "Customer comments"
 
 msgid "Danger zone"
 msgstr "Danger zone"
-
-msgid "Danger Zone"
-msgstr "Danger Zone"
 
 msgid "Dark"
 msgstr "Dark"
@@ -655,12 +493,6 @@ msgstr "Data not found"
 msgid "Date"
 msgstr "Date"
 
-msgid "days"
-msgstr "days"
-
-msgid "Deadline"
-msgstr "Deadline"
-
 msgid "Dec"
 msgstr "Dec"
 
@@ -673,9 +505,6 @@ msgstr "Delete"
 msgid "Delete {itemName}"
 msgstr "Delete {itemName}"
 
-msgid "Delete all"
-msgstr "Delete all"
-
 msgid "Delete attribute"
 msgstr "Delete attribute"
 
@@ -685,8 +514,8 @@ msgstr "Delete certificate"
 msgid "Delete gallery"
 msgstr "Delete gallery"
 
-msgid "Delete notifications"
-msgstr "Delete notifications"
+msgid "Delete image"
+msgstr "Delete image"
 
 msgid "Delete product"
 msgstr "Delete product"
@@ -712,9 +541,6 @@ msgstr "Delete unit"
 msgid "Delete value"
 msgstr "Delete value"
 
-msgid "Delete variant"
-msgstr "Delete variant"
-
 msgid "Delivering"
 msgstr "Delivering"
 
@@ -723,6 +549,9 @@ msgstr "Delivery"
 
 msgid "Delivery and payment"
 msgstr "Delivery and payment"
+
+msgid "Delivery terms are agreed when the order is confirmed."
+msgstr "Delivery terms are agreed when the order is confirmed."
 
 msgid "Delivery to other regions is available for orders above a certain amount."
 msgstr "Delivery to other regions is available for orders above a certain amount."
@@ -742,14 +571,11 @@ msgstr "Description is required"
 msgid "Description moderator"
 msgstr "Description moderator"
 
-#~ msgid "Details"
-#~ msgstr "Details"
+msgid "Discount (%)"
+msgstr "Discount (%)"
 
-msgid "Dispatch due today"
-msgstr "Dispatch due today"
-
-msgid "Displayed price"
-msgstr "Displayed price"
+msgid "Discount must be between 0 and 100"
+msgstr "Discount must be between 0 and 100"
 
 msgid "Displays the mobile sidebar."
 msgstr "Displays the mobile sidebar."
@@ -757,26 +583,14 @@ msgstr "Displays the mobile sidebar."
 msgid "does not exist or might have been removed."
 msgstr "does not exist or might have been removed."
 
-msgid "Dollar"
-msgstr "Dollar"
-
-#~ msgid "Download"
-#~ msgstr "Download"
-
 msgid "Draft"
 msgstr "Draft"
-
-msgid "Draft products"
-msgstr "Draft products"
 
 msgid "Drop a file here or choose one"
 msgstr "Drop a file here or choose one"
 
 msgid "Drop a new image here or choose a clear square photo."
 msgstr "Drop a new image here or choose a clear square photo."
-
-msgid "Each generated pair becomes one attribute stock."
-msgstr "Each generated pair becomes one attribute stock."
 
 msgid "Edit"
 msgstr "Edit"
@@ -790,35 +604,17 @@ msgstr "Edit company"
 msgid "Edit gallery"
 msgstr "Edit gallery"
 
-msgid "Editable identity and contact information."
-msgstr "Editable identity and contact information."
-
-msgid "Electronics"
-msgstr "Electronics"
-
 msgid "Email"
 msgstr "Email"
-
-msgid "Email already registered"
-msgstr "Email already registered"
 
 msgid "Email is required"
 msgstr "Email is required"
 
-msgid "Email not found"
-msgstr "Email not found"
-
-msgid "Email notifications"
-msgstr "Email notifications"
-
-msgid "Email verified successfully. Welcome!"
-msgstr "Email verified successfully. Welcome!"
-
 msgid "Employees"
 msgstr "Employees"
 
-msgid "English"
-msgstr "English"
+msgid "Enter a valid phone number"
+msgstr "Enter a valid phone number"
 
 msgid "Enter block reason"
 msgstr "Enter block reason"
@@ -841,12 +637,6 @@ msgstr "Enter company INN"
 msgid "Enter company name"
 msgstr "Enter company name"
 
-msgid "Enter current password"
-msgstr "Enter current password"
-
-msgid "Enter custom value…"
-msgstr "Enter custom value…"
-
 msgid "Enter Description"
 msgstr "Enter Description"
 
@@ -856,17 +646,11 @@ msgstr "Enter email"
 msgid "Enter full name"
 msgstr "Enter full name"
 
-msgid "Enter message"
-msgstr "Enter message"
-
 msgid "Enter password"
 msgstr "Enter password"
 
 msgid "Enter phone number"
 msgstr "Enter phone number"
-
-msgid "Enter quantities"
-msgstr "Enter quantities"
 
 msgid "Enter the 6-digit verification code"
 msgstr "Enter the 6-digit verification code"
@@ -877,29 +661,17 @@ msgstr "Enter unit of measure"
 msgid "Enter valid email"
 msgstr "Enter valid email"
 
-msgid "Enter your email"
-msgstr "Enter your email"
-
 msgid "Enter your email address"
 msgstr "Enter your email address"
-
-msgid "Enter your email address and we will send a verification code to reset your password."
-msgstr "Enter your email address and we will send a verification code to reset your password."
 
 msgid "Enter your full name"
 msgstr "Enter your full name"
 
+msgid "Enter your phone number and we will send you a verification code."
+msgstr "Enter your phone number and we will send you a verification code."
+
 msgid "Estimated spend"
 msgstr "Estimated spend"
-
-msgid "Euro"
-msgstr "Euro"
-
-msgid "European Union"
-msgstr "European Union"
-
-msgid "Exact"
-msgstr "Exact"
 
 msgid "Example: Blue"
 msgstr "Example: Blue"
@@ -910,9 +682,6 @@ msgstr "Example: Color, Size"
 msgid "Explore catalog"
 msgstr "Explore catalog"
 
-#~ msgid "Factories and sellers you can order from"
-#~ msgstr "Factories and sellers you can order from"
-
 msgid "Factory photos"
 msgstr "Factory photos"
 
@@ -921,9 +690,6 @@ msgstr "Factory photos not found"
 
 msgid "Failed to add the product to the cart"
 msgstr "Failed to add the product to the cart"
-
-msgid "Failed to complete registration. Please try again."
-msgstr "Failed to complete registration. Please try again."
 
 msgid "Failed to create attribute."
 msgstr "Failed to create attribute."
@@ -942,9 +708,6 @@ msgstr "Failed to create gallery."
 
 msgid "Failed to create member."
 msgstr "Failed to create member."
-
-msgid "Failed to create product variant."
-msgstr "Failed to create product variant."
 
 msgid "Failed to create product."
 msgstr "Failed to create product."
@@ -973,6 +736,9 @@ msgstr "Failed to delete FAQ."
 msgid "Failed to delete gallery."
 msgstr "Failed to delete gallery."
 
+msgid "Failed to delete image."
+msgstr "Failed to delete image."
+
 msgid "Failed to delete product."
 msgstr "Failed to delete product."
 
@@ -988,23 +754,11 @@ msgstr "Failed to delete user."
 msgid "Failed to delete value."
 msgstr "Failed to delete value."
 
-msgid "Failed to delete variant."
-msgstr "Failed to delete variant."
-
 msgid "Failed to load document"
 msgstr "Failed to load document"
 
-msgid "Failed to register. Please try again"
-msgstr "Failed to register. Please try again"
-
-msgid "Failed to resend code"
-msgstr "Failed to resend code"
-
 msgid "Failed to send message."
 msgstr "Failed to send message."
-
-msgid "Failed to send verification code"
-msgstr "Failed to send verification code"
 
 msgid "Failed to update attribute."
 msgstr "Failed to update attribute."
@@ -1020,12 +774,6 @@ msgstr "Failed to update FAQ."
 
 msgid "Failed to update gallery."
 msgstr "Failed to update gallery."
-
-msgid "Failed to update notifications."
-msgstr "Failed to update notifications."
-
-msgid "Failed to update product variant."
-msgstr "Failed to update product variant."
 
 msgid "Failed to update product."
 msgstr "Failed to update product."
@@ -1072,6 +820,9 @@ msgstr "February"
 msgid "File size must be less than 50MB"
 msgstr "File size must be less than 50MB"
 
+msgid "Fill in Uzbek. Russian and English default to it until you translate them."
+msgstr "Fill in Uzbek. Russian and English default to it until you translate them."
+
 msgid "Filter"
 msgstr "Filter"
 
@@ -1084,6 +835,9 @@ msgstr "Filterable"
 msgid "Filters"
 msgstr "Filters"
 
+msgid "Final price"
+msgstr "Final price"
+
 msgid "Find a partner"
 msgstr "Find a partner"
 
@@ -1093,11 +847,8 @@ msgstr "Find a reliable partner for your business. Quickly and effectively colla
 msgid "Footer navigation"
 msgstr "Footer navigation"
 
-msgid "Forget password"
-msgstr "Forget password"
-
-msgid "Forget password?"
-msgstr "Forget password?"
+msgid "For legal clients"
+msgstr "For legal clients"
 
 msgid "Format: Any image or video format."
 msgstr "Format: Any image or video format."
@@ -1135,17 +886,8 @@ msgstr "Gallery deleted successfully."
 msgid "Gallery photo"
 msgstr "Gallery photo"
 
-msgid "General"
-msgstr "General"
-
-msgid "General information"
-msgstr "General information"
-
-msgid "generated"
-msgstr "generated"
-
-msgid "Get notifications about catalog updates and feature releases."
-msgstr "Get notifications about catalog updates and feature releases."
+msgid "Get code"
+msgstr "Get code"
 
 msgid "Go Back"
 msgstr "Go Back"
@@ -1156,11 +898,11 @@ msgstr "Go to next page"
 msgid "Go to previous page"
 msgstr "Go to previous page"
 
+msgid "Hidden"
+msgstr "Hidden"
+
 msgid "Hide"
 msgstr "Hide"
-
-msgid "High-risk actions that impact account access."
-msgstr "High-risk actions that impact account access."
 
 msgid "Home"
 msgstr "Home"
@@ -1168,20 +910,20 @@ msgstr "Home"
 msgid "How SNABER delivers and accepts payment for building materials and tools."
 msgstr "How SNABER delivers and accepts payment for building materials and tools."
 
-msgid "Identity, category, pricing, MOQ and lead time."
-msgstr "Identity, category, pricing, MOQ and lead time."
-
 msgid "Image"
 msgstr "Image"
 
 msgid "Image title"
 msgstr "Image title"
 
+msgid "Images"
+msgstr "Images"
+
+msgid "In stock"
+msgstr "In stock"
+
 msgid "Inactive"
 msgstr "Inactive"
-
-msgid "Inactive variant"
-msgstr "Inactive variant"
 
 msgid "Industrial B2B marketplace operations background"
 msgstr "Industrial B2B marketplace operations background"
@@ -1243,47 +985,20 @@ msgstr "June"
 msgid "k"
 msgstr "k"
 
-msgid "Keep your account secure with a strong password."
-msgstr "Keep your account secure with a strong password."
-
-msgid "Language"
-msgstr "Language"
-
 msgid "Last 30 days"
 msgstr "Last 30 days"
-
-msgid "Last updated"
-msgstr "Last updated"
 
 msgid "Latest orders from your buyer account."
 msgstr "Latest orders from your buyer account."
 
-msgid "Lead max"
-msgstr "Lead max"
-
-msgid "Lead min"
-msgstr "Lead min"
-
-msgid "Lead time"
-msgstr "Lead time"
-
-msgid "Lead Time"
-msgstr "Lead Time"
-
-msgid "Lead time max must be a positive number"
-msgstr "Lead time max must be a positive number"
-
-msgid "Lead time max must be greater than or equal to lead time min"
-msgstr "Lead time max must be greater than or equal to lead time min"
-
-msgid "Lead time min must be a positive number"
-msgstr "Lead time min must be a positive number"
-
-msgid "Lifecycle events for this product record."
-msgstr "Lifecycle events for this product record."
+msgid "Legal clients"
+msgstr "Legal clients"
 
 msgid "Light"
 msgstr "Light"
+
+msgid "Link copied"
+msgstr "Link copied"
 
 msgid "Load more"
 msgstr "Load more"
@@ -1291,23 +1006,14 @@ msgstr "Load more"
 msgid "Load older messages"
 msgstr "Load older messages"
 
-msgid "Loading attributes..."
-msgstr "Loading attributes..."
-
 msgid "Loading content..."
 msgstr "Loading content..."
 
 msgid "Loading countries..."
 msgstr "Loading countries..."
 
-msgid "Loading currencies..."
-msgstr "Loading currencies..."
-
 msgid "Loading image..."
 msgstr "Loading image..."
-
-msgid "Loading media..."
-msgstr "Loading media..."
 
 msgid "Loading photo..."
 msgstr "Loading photo..."
@@ -1321,32 +1027,23 @@ msgstr "Location"
 msgid "Login"
 msgstr "Login"
 
+msgid "Login or register"
+msgstr "Login or register"
+
 msgid "Logo"
 msgstr "Logo"
 
 msgid "Logout"
 msgstr "Logout"
 
-msgid "Made to order"
-msgstr "Made to order"
-
-msgid "Main media"
-msgstr "Main media"
-
-msgid "Make a accept"
-msgstr "Make a accept"
-
-msgid "Make a reject"
-msgstr "Make a reject"
+msgid "Main characteristics"
+msgstr "Main characteristics"
 
 msgid "Manage category attributes and reusable values for product variants."
 msgstr "Manage category attributes and reusable values for product variants."
 
 msgid "Manage reusable values assigned to product attributes."
 msgstr "Manage reusable values assigned to product attributes."
-
-msgid "Manage SKU, stock, override pricing, media and attributes."
-msgstr "Manage SKU, stock, override pricing, media and attributes."
 
 msgid "Manage values"
 msgstr "Manage values"
@@ -1360,23 +1057,11 @@ msgstr "Mar"
 msgid "March"
 msgstr "March"
 
-msgid "Mark all as read"
-msgstr "Mark all as read"
-
-msgid "Mark as read"
-msgstr "Mark as read"
-
-msgid "Mark notification as read"
-msgstr "Mark notification as read"
-
 msgid "Marketplace command center"
 msgstr "Marketplace command center"
 
 msgid "May"
 msgstr "May"
-
-msgid "Media"
-msgstr "Media"
 
 msgid "Member created successfully."
 msgstr "Member created successfully."
@@ -1390,29 +1075,11 @@ msgstr "Members"
 msgid "Message"
 msgstr "Message"
 
-msgid "Message is required"
-msgstr "Message is required"
-
-#~ msgid "Min. order"
-#~ msgstr "Min. order"
-
-#~ msgid "Mini site"
-#~ msgstr "Mini site"
-
-msgid "Minimum 8 characters"
-msgstr "Minimum 8 characters"
-
 msgid "mln"
 msgstr "mln"
 
 msgid "mlrd"
 msgstr "mlrd"
-
-msgid "Moderation"
-msgstr "Moderation"
-
-msgid "Moderator"
-msgstr "Moderator"
 
 msgid "Moderator description"
 msgstr "Moderator description"
@@ -1421,44 +1088,17 @@ msgid "Monday"
 msgstr "Monday"
 
 msgid ""
-"Monitor B2B marketplace liquidity, supplier quality, RFQ conversion and order flow\n"
+"Monitor B2B marketplace liquidity, supplier quality and order flow\n"
 "              from one operational view."
 msgstr ""
-"Monitor B2B marketplace liquidity, supplier quality, RFQ conversion and order flow\n"
+"Monitor B2B marketplace liquidity, supplier quality and order flow\n"
 "              from one operational view."
-
-msgid "Monitor revenue momentum, category demand, RFQ pipeline and recent order activity using seller APIs."
-msgstr "Monitor revenue momentum, category demand, RFQ pipeline and recent order activity using seller APIs."
-
-msgid "Monthly growth"
-msgstr "Monthly growth"
-
-msgid "Monthly revenue, order count and quote volume."
-msgstr "Monthly revenue, order count and quote volume."
-
-msgid "MOQ must be a positive number"
-msgstr "MOQ must be a positive number"
-
-msgid "MOQ override"
-msgstr "MOQ override"
-
-msgid "MOQ unit"
-msgstr "MOQ unit"
-
-msgid "MOQ unit is required"
-msgstr "MOQ unit is required"
 
 msgid "More"
 msgstr "More"
 
 msgid "More pages"
 msgstr "More pages"
-
-msgid "Most ordered"
-msgstr "Most ordered"
-
-msgid "Most products"
-msgstr "Most products"
 
 msgid "Multi select"
 msgstr "Multi select"
@@ -1469,9 +1109,6 @@ msgstr "My Account"
 msgid "My Orders"
 msgstr "My Orders"
 
-#~ msgid "N/A"
-#~ msgstr "N/A"
-
 msgid "Name"
 msgstr "Name"
 
@@ -1481,20 +1118,17 @@ msgstr "Name is required"
 msgid "Navigation"
 msgstr "Navigation"
 
-msgid "Negotiation"
-msgstr "Negotiation"
-
 msgid "New"
 msgstr "New"
 
-msgid "New password"
-msgstr "New password"
+msgid "New orders will appear here."
+msgstr "New orders will appear here."
 
 msgid "New user registrations by weekday."
 msgstr "New user registrations by weekday."
 
-msgid "New variant"
-msgstr "New variant"
+msgid "New users in the last 30 days"
+msgstr "New users in the last 30 days"
 
 msgid "Next"
 msgstr "Next"
@@ -1505,23 +1139,11 @@ msgstr "Next slide"
 msgid "No"
 msgstr "No"
 
-msgid "No attribute values available."
-msgstr "No attribute values available."
-
-msgid "No attributes added."
-msgstr "No attributes added."
-
-msgid "No attributes available."
-msgstr "No attributes available."
-
 msgid "No category selected"
 msgstr "No category selected"
 
 msgid "No certificates added yet."
 msgstr "No certificates added yet."
-
-msgid "No characteristics added."
-msgstr "No characteristics added."
 
 msgid "No characteristics available."
 msgstr "No characteristics available."
@@ -1544,29 +1166,11 @@ msgstr "No features yet."
 msgid "No gallery photos yet"
 msgstr "No gallery photos yet"
 
-msgid "No media assets available for this product."
-msgstr "No media assets available for this product."
-
-msgid "No messages found"
-msgstr "No messages found"
-
 msgid "No messages yet."
 msgstr "No messages yet."
 
-msgid "No order selected"
-msgstr "No order selected"
-
-msgid "No orders found."
-msgstr "No orders found."
-
-msgid "No product matches this slug. Please return to the products list and open an existing item."
-msgstr "No product matches this slug. Please return to the products list and open an existing item."
-
-msgid "No products in this order."
-msgstr "No products in this order."
-
-msgid "No reason provided"
-msgstr "No reason provided"
+msgid "No orders yet"
+msgstr "No orders yet"
 
 msgid "No results found."
 msgstr "No results found."
@@ -1576,27 +1180,6 @@ msgstr "No results."
 
 msgid "No units yet"
 msgstr "No units yet"
-
-msgid "No variant selected"
-msgstr "No variant selected"
-
-msgid "No variants added for this product."
-msgstr "No variants added for this product."
-
-msgid "No, keep it"
-msgstr "No, keep it"
-
-msgid "Not assigned"
-msgstr "Not assigned"
-
-msgid "Notification deleted"
-msgstr "Notification deleted"
-
-msgid "Notifications"
-msgstr "Notifications"
-
-msgid "Notifications deleted"
-msgstr "Notifications deleted"
 
 msgid "Nov"
 msgstr "Nov"
@@ -1619,20 +1202,11 @@ msgstr "October"
 msgid "of"
 msgstr "of"
 
-msgid "Office supply"
-msgstr "Office supply"
-
 msgid "Okay"
 msgstr "Okay"
 
 msgid "Old"
 msgstr "Old"
-
-msgid "Old password"
-msgstr "Old password"
-
-msgid "On request"
-msgstr "On request"
 
 msgid "Only {maxValue} left"
 msgstr "Only {maxValue} left"
@@ -1643,9 +1217,6 @@ msgstr "Oops! Page Not Found!"
 msgid "Oops! Something went wrong"
 msgstr "Oops! Something went wrong"
 
-msgid "Open activity that may still need seller confirmation."
-msgstr "Open activity that may still need seller confirmation."
-
 msgid "Open gallery preview"
 msgstr "Open gallery preview"
 
@@ -1655,77 +1226,29 @@ msgstr "Open in new tab"
 msgid "Open panel"
 msgstr "Open panel"
 
-msgid "Open RFQs"
-msgstr "Open RFQs"
-
-msgid "Option {optionNumber}"
-msgstr "Option {optionNumber}"
-
-msgid "options"
-msgstr "options"
+msgid "Optional. Helps customers find the product."
+msgstr "Optional. Helps customers find the product."
 
 msgid "Order"
 msgstr "Order"
 
-msgid "Order #{activeOrderId}"
-msgstr "Order #{activeOrderId}"
-
-#~ msgid "Order #{orderId}"
-#~ msgstr "Order #{orderId}"
-
-msgid "Order closed"
-msgstr "Order closed"
-
-#~ msgid "Order conversation"
-#~ msgstr "Order conversation"
-
 msgid "Order count"
 msgstr "Order count"
-
-msgid "Order details"
-msgstr "Order details"
 
 msgid "Order is already completed."
 msgstr "Order is already completed."
 
-#~ msgid "Order is created from the confirmed chat"
-#~ msgstr "Order is created from the confirmed chat"
-
-msgid "Order status mix"
-msgstr "Order status mix"
-
 msgid "Order status updated to {nextStatusLabel}."
 msgstr "Order status updated to {nextStatusLabel}."
-
-msgid "Order status updated."
-msgstr "Order status updated."
 
 msgid "Order Summary"
 msgstr "Order Summary"
 
-msgid "Order type split"
-msgstr "Order type split"
-
 msgid "Order volume and estimated spend over the last six months."
 msgstr "Order volume and estimated spend over the last six months."
 
-#~ msgid "Ordering"
-#~ msgstr "Ordering"
-
 msgid "Orders"
 msgstr "Orders"
-
-msgid "Orders confirmed by buyers."
-msgstr "Orders confirmed by buyers."
-
-msgid "Orders in progress"
-msgstr "Orders in progress"
-
-msgid "Orders still moving through the workflow."
-msgstr "Orders still moving through the workflow."
-
-msgid "Other"
-msgstr "Other"
 
 msgid "Others"
 msgstr "Others"
@@ -1738,9 +1261,6 @@ msgstr "Overview"
 
 msgid "Owner"
 msgstr "Owner"
-
-msgid "Packaging"
-msgstr "Packaging"
 
 msgid "Packing"
 msgstr "Packing"
@@ -1757,21 +1277,6 @@ msgstr "Password"
 msgid "Password is required"
 msgstr "Password is required"
 
-msgid "Password must be at least 8 characters long"
-msgstr "Password must be at least 8 characters long"
-
-msgid "Password update and session controls."
-msgstr "Password update and session controls."
-
-msgid "Password updated failed"
-msgstr "Password updated failed"
-
-msgid "Password updated successfully"
-msgstr "Password updated successfully"
-
-msgid "Passwords do not match"
-msgstr "Passwords do not match"
-
 msgid "Paste iframe or URL..."
 msgstr "Paste iframe or URL..."
 
@@ -1781,8 +1286,8 @@ msgstr "Payment"
 msgid "Payment in cash or by bank transfer for legal entities."
 msgstr "Payment in cash or by bank transfer for legal entities."
 
-#~ msgid "pcs"
-#~ msgstr "pcs"
+msgid "Payment terms are agreed when the order is confirmed."
+msgstr "Payment terms are agreed when the order is confirmed."
 
 msgid "Pending"
 msgstr "Pending"
@@ -1799,17 +1304,17 @@ msgstr "Phone number"
 msgid "Phone number is required"
 msgstr "Phone number is required"
 
-msgid "Pick a deadline date"
-msgstr "Pick a deadline date"
+msgid "Phone number verified. Welcome!"
+msgstr "Phone number verified. Welcome!"
 
 msgid "Pickup from warehouse"
 msgstr "Pickup from warehouse"
 
+msgid "Please fill in the required fields."
+msgstr "Please fill in the required fields."
+
 msgid "Please log in with the appropriate credentials"
 msgstr "Please log in with the appropriate credentials"
-
-msgid "Preferences"
-msgstr "Preferences"
 
 msgid "Present your services to a wide audience. Find new clients and grow your business through our platform."
 msgstr "Present your services to a wide audience. Find new clients and grow your business through our platform."
@@ -1823,32 +1328,11 @@ msgstr "Previous slide"
 msgid "Price"
 msgstr "Price"
 
-msgid "Price max"
-msgstr "Price max"
+msgid "Price and stock"
+msgstr "Price and stock"
 
-msgid "Price max must be a positive number"
-msgstr "Price max must be a positive number"
-
-msgid "Price min"
-msgstr "Price min"
-
-msgid "Price min must be a positive number"
-msgstr "Price min must be a positive number"
-
-msgid "Price model"
-msgstr "Price model"
-
-msgid "Price override"
-msgstr "Price override"
-
-msgid "Price type"
-msgstr "Price type"
-
-msgid "Pricing and fulfillment baseline terms."
-msgstr "Pricing and fulfillment baseline terms."
-
-msgid "Primary product identity and classification."
-msgstr "Primary product identity and classification."
+msgid "Price must be a positive number"
+msgstr "Price must be a positive number"
 
 msgid "Process"
 msgstr "Process"
@@ -1859,50 +1343,23 @@ msgstr "Procurement built for national-scale production."
 msgid "Product"
 msgstr "Product"
 
-msgid "Product checks"
-msgstr "Product checks"
+msgid "Product created."
+msgstr "Product created."
 
 msgid "Product deleted successfully."
 msgstr "Product deleted successfully."
 
-msgid "Product detail"
-msgstr "Product detail"
-
 msgid "Product details"
 msgstr "Product details"
-
-msgid "Product ID"
-msgstr "Product ID"
 
 msgid "Product image"
 msgstr "Product image"
 
-msgid "Product not found"
-msgstr "Product not found"
-
-msgid "Product performance ranked by confirmed order value."
-msgstr "Product performance ranked by confirmed order value."
+msgid "Product is required"
+msgstr "Product is required"
 
 msgid "Product SKU"
 msgstr "Product SKU"
-
-msgid "Product type"
-msgstr "Product type"
-
-msgid "Product updates"
-msgstr "Product updates"
-
-msgid "Product variant not found"
-msgstr "Product variant not found"
-
-msgid "Product variants"
-msgstr "Product variants"
-
-msgid "Product views"
-msgstr "Product views"
-
-msgid "Product views compared with buyer chat starts."
-msgstr "Product views compared with buyer chat starts."
 
 msgid "Products"
 msgstr "Products"
@@ -1913,9 +1370,6 @@ msgstr "Profile"
 msgid "Profile image"
 msgstr "Profile image"
 
-msgid "Profile Information"
-msgstr "Profile Information"
-
 msgid "Profile updated successfully"
 msgstr "Profile updated successfully"
 
@@ -1924,9 +1378,6 @@ msgstr "Publish"
 
 msgid "Purchase momentum"
 msgstr "Purchase momentum"
-
-msgid "Qty:"
-msgstr "Qty:"
 
 msgid "Quantity"
 msgstr "Quantity"
@@ -1937,17 +1388,11 @@ msgstr "Question"
 msgid "Question and Answer"
 msgstr "Question and Answer"
 
-msgid "Quote-based purchases and negotiations."
-msgstr "Quote-based purchases and negotiations."
-
-msgid "Quotes"
-msgstr "Quotes"
-
 msgid "Range"
 msgstr "Range"
 
-msgid "Ranked by orders and quality score."
-msgstr "Ranked by orders and quality score."
+msgid "Ranked by number of orders."
+msgstr "Ranked by number of orders."
 
 msgid "Rating"
 msgstr "Rating"
@@ -1958,32 +1403,8 @@ msgstr "Rating is required"
 msgid "Rating must be between 1 and 5"
 msgstr "Rating must be between 1 and 5"
 
-msgid "Read all"
-msgstr "Read all"
-
-msgid "Read-only status from your user account."
-msgstr "Read-only status from your user account."
-
-msgid "Ready"
-msgstr "Ready"
-
-msgid "Ready-product orders compared with RFQ requests."
-msgstr "Ready-product orders compared with RFQ requests."
-
-msgid "Reason"
-msgstr "Reason"
-
-msgid "Receive account health and activity updates by email."
-msgstr "Receive account health and activity updates by email."
-
-msgid "Recent buyer activity"
-msgstr "Recent buyer activity"
-
 msgid "Recent buying activity"
 msgstr "Recent buying activity"
-
-msgid "Recent orders"
-msgstr "Recent orders"
 
 msgid "Recommended banner size: 1200 x 400 px"
 msgstr "Recommended banner size: 1200 x 400 px"
@@ -2003,62 +1424,14 @@ msgstr "Recommended size: 1200 x 400 px."
 msgid "Recommended size: 512 x 512 px."
 msgstr "Recommended size: 512 x 512 px."
 
-msgid "Record timeline"
-msgstr "Record timeline"
-
 msgid "Region"
 msgstr "Region"
-
-msgid "Regional and communication preferences."
-msgstr "Regional and communication preferences."
-
-msgid "Register"
-msgstr "Register"
-
-#~ msgid "Registered entities"
-#~ msgstr "Registered entities"
-
-msgid "Registration completed successfully."
-msgstr "Registration completed successfully."
-
-msgid "Reject"
-msgstr "Reject"
-
-msgid "Reject draft product"
-msgstr "Reject draft product"
-
-msgid "Reject order"
-msgstr "Reject order"
-
-msgid "Rejected"
-msgstr "Rejected"
-
-msgid "Rejected by buyer"
-msgstr "Rejected by buyer"
-
-msgid "Rejected by seller"
-msgstr "Rejected by seller"
 
 msgid "Remove"
 msgstr "Remove"
 
 msgid "Remove from favorites"
 msgstr "Remove from favorites"
-
-msgid "Remove product"
-msgstr "Remove product"
-
-msgid "Repeat new password"
-msgstr "Repeat new password"
-
-msgid "Request for Quotation pipeline"
-msgstr "Request for Quotation pipeline"
-
-msgid "Request for Quotation win rate"
-msgstr "Request for Quotation win rate"
-
-msgid "Requests moving through your sales flow."
-msgstr "Requests moving through your sales flow."
 
 msgid "Resend code"
 msgstr "Resend code"
@@ -2072,50 +1445,11 @@ msgstr "Reset"
 msgid "Reset filters"
 msgstr "Reset filters"
 
-msgid "Restricted"
-msgstr "Restricted"
-
-msgid "Returned for correction"
-msgstr "Returned for correction"
-
 msgid "Revenue"
 msgstr "Revenue"
 
-msgid "Revenue momentum"
-msgstr "Revenue momentum"
-
-msgid "Reviewing"
-msgstr "Reviewing"
-
-msgid "RFQ"
-msgstr "RFQ"
-
-msgid "RFQ orders"
-msgstr "RFQ orders"
-
-msgid "RFQ orders by status"
-msgstr "RFQ orders by status"
-
-msgid "RFQs"
-msgstr "RFQs"
-
 msgid "Role"
 msgstr "Role"
-
-msgid "Ruble"
-msgstr "Ruble"
-
-msgid "Russia"
-msgstr "Russia"
-
-msgid "Russian"
-msgstr "Russian"
-
-msgid "Russian ruble"
-msgstr "Russian ruble"
-
-msgid "Sales by category"
-msgstr "Sales by category"
 
 msgid "Saturday"
 msgstr "Saturday"
@@ -2144,17 +1478,11 @@ msgstr "Search columns..."
 msgid "Search company"
 msgstr "Search company"
 
-msgid "Search notifications"
-msgstr "Search notifications"
-
 msgid "Search results for"
 msgstr "Search results for"
 
 msgid "Search..."
 msgstr "Search..."
-
-msgid "Security"
-msgstr "Security"
 
 msgid "Select"
 msgstr "Select"
@@ -2165,35 +1493,20 @@ msgstr "Select a chat to start messaging."
 msgid "Select a date"
 msgstr "Select a date"
 
-msgid "Select a product to add to the order."
-msgstr "Select a product to add to the order."
-
 msgid "Select a region"
 msgstr "Select a region"
 
 msgid "Select an attribute"
 msgstr "Select an attribute"
 
-msgid "Select an order to view products."
-msgstr "Select an order to view products."
-
 msgid "Select attribute"
 msgstr "Select attribute"
-
-msgid "Select attribute values first, then fill quantities for every generated combination."
-msgstr "Select attribute values first, then fill quantities for every generated combination."
-
-msgid "Select attribute values to generate stock rows."
-msgstr "Select attribute values to generate stock rows."
 
 msgid "Select category"
 msgstr "Select category"
 
 msgid "Select country"
 msgstr "Select country"
-
-msgid "Select currency"
-msgstr "Select currency"
 
 msgid "Select date"
 msgstr "Select date"
@@ -2207,23 +1520,14 @@ msgstr "Select file"
 msgid "Select image"
 msgstr "Select image"
 
+msgid "Select images"
+msgstr "Select images"
+
 msgid "Select industries"
 msgstr "Select industries"
 
 msgid "Select issued date"
 msgstr "Select issued date"
-
-msgid "Select language"
-msgstr "Select language"
-
-msgid "Select media"
-msgstr "Select media"
-
-msgid "Select price type"
-msgstr "Select price type"
-
-msgid "Select product type"
-msgstr "Select product type"
 
 msgid "Select role"
 msgstr "Select role"
@@ -2243,68 +1547,11 @@ msgstr "Select type"
 msgid "Select unit"
 msgstr "Select unit"
 
-msgid "Select value"
-msgstr "Select value"
-
-msgid "Select values"
-msgstr "Select values"
-
-msgid "selected"
-msgstr "selected"
-
-msgid "Selected products"
-msgstr "Selected products"
-
-msgid "Selected variant price"
-msgstr "Selected variant price"
-
-msgid "Selected variant SKU"
-msgstr "Selected variant SKU"
+msgid "Selected values are used by the filters in the catalog."
+msgstr "Selected values are used by the filters in the catalog."
 
 msgid "Seller"
 msgstr "Seller"
-
-msgid "Seller accepted the order, waiting for buyer's response."
-msgstr "Seller accepted the order, waiting for buyer's response."
-
-msgid "Seller accepted the order. Click accept to confirm your acceptance."
-msgstr "Seller accepted the order. Click accept to confirm your acceptance."
-
-msgid "Seller accepted this order. Are you sure you want to accept this order too?"
-msgstr "Seller accepted this order. Are you sure you want to accept this order too?"
-
-msgid "Seller accepted this order. Click to accept this order as a buyer."
-msgstr "Seller accepted this order. Click to accept this order as a buyer."
-
-#~ msgid "Seller confirms selected variant and quantity"
-#~ msgstr "Seller confirms selected variant and quantity"
-
-msgid "Seller quality and trust"
-msgstr "Seller quality and trust"
-
-msgid "Seller rejected the order, waiting for buyer's response."
-msgstr "Seller rejected the order, waiting for buyer's response."
-
-msgid "Seller rejected the order. Click reject to confirm your rejection."
-msgstr "Seller rejected the order. Click reject to confirm your rejection."
-
-msgid "Seller rejected this order. Are you sure you want to reject this order?"
-msgstr "Seller rejected this order. Are you sure you want to reject this order?"
-
-msgid "Seller rejected this order. Click to reject this order as a buyer."
-msgstr "Seller rejected this order. Click to reject this order as a buyer."
-
-msgid "Seller revenue from completed order activity."
-msgstr "Seller revenue from completed order activity."
-
-msgid "Sellers"
-msgstr "Sellers"
-
-msgid "Send code"
-msgstr "Send code"
-
-msgid "Send to admin"
-msgstr "Send to admin"
 
 msgid "Sep"
 msgstr "Sep"
@@ -2321,6 +1568,9 @@ msgstr "Set rating"
 msgid "Settings"
 msgstr "Settings"
 
+msgid "Share"
+msgstr "Share"
+
 msgid "Share of marketplace activity."
 msgstr "Share of marketplace activity."
 
@@ -2332,6 +1582,9 @@ msgstr "Share your product experience with other buyers."
 
 msgid "Show all characteristics"
 msgstr "Show all characteristics"
+
+msgid "Show in the catalog"
+msgstr "Show in the catalog"
 
 msgid "Show More"
 msgstr "Show More"
@@ -2348,15 +1601,6 @@ msgstr "Sign in"
 msgid "Sign up"
 msgstr "Sign up"
 
-msgid "SKU is required"
-msgstr "SKU is required"
-
-msgid "SKU, stock, override pricing, media and attributes."
-msgstr "SKU, stock, override pricing, media and attributes."
-
-msgid "SKU:"
-msgstr "SKU:"
-
 msgid "snaber.uz is a marketplace for building materials and tools — cement, bricks, steel, lumber, roofing, paints, plumbing, electrical goods and equipment from verified suppliers."
 msgstr "snaber.uz is a marketplace for building materials and tools — cement, bricks, steel, lumber, roofing, paints, plumbing, electrical goods and equipment from verified suppliers."
 
@@ -2368,9 +1612,6 @@ msgstr "So'm"
 
 msgid "Social links"
 msgstr "Social links"
-
-msgid "Som"
-msgstr "Som"
 
 msgid "Something went wrong!"
 msgstr "Something went wrong!"
@@ -2387,32 +1628,14 @@ msgstr "Spend"
 msgid "Start procurement"
 msgstr "Start procurement"
 
-msgid "Start with the base product data, then continue to variants and characteristics."
-msgstr "Start with the base product data, then continue to variants and characteristics."
-
 msgid "Status"
 msgstr "Status"
-
-msgid "Step 1. Select values"
-msgstr "Step 1. Select values"
-
-msgid "Step 2. Enter quantities"
-msgstr "Step 2. Enter quantities"
 
 msgid "Stock"
 msgstr "Stock"
 
-msgid "Stock health"
-msgstr "Stock health"
-
-msgid "Stock quantity"
-msgstr "Stock quantity"
-
-msgid "stock rows"
-msgstr "stock rows"
-
-#~ msgid "Strategic Categories"
-#~ msgstr "Strategic Categories"
+msgid "Stock must be a positive number"
+msgstr "Stock must be a positive number"
 
 msgid "Submit"
 msgstr "Submit"
@@ -2435,9 +1658,6 @@ msgstr "Successfully deleted company"
 msgid "Successfully deleted product."
 msgstr "Successfully deleted product."
 
-msgid "Successfully deleted variant."
-msgstr "Successfully deleted variant."
-
 msgid "Successfully deleted."
 msgstr "Successfully deleted."
 
@@ -2456,15 +1676,6 @@ msgstr "Successfully updated."
 msgid "Sunday"
 msgstr "Sunday"
 
-msgid "Super admin"
-msgstr "Super admin"
-
-msgid "Supplier"
-msgstr "Supplier"
-
-msgid "System"
-msgstr "System"
-
 msgid "Tashkent"
 msgstr "Tashkent"
 
@@ -2480,14 +1691,8 @@ msgstr "Text is required"
 msgid "Text is too long"
 msgstr "Text is too long"
 
-msgid "Textiles"
-msgstr "Textiles"
-
-msgid "The old password you entered is incorrect. Please try again."
-msgstr "The old password you entered is incorrect. Please try again."
-
-msgid "The order is closed, you can't edit it anymore."
-msgstr "The order is closed, you can't edit it anymore."
+msgid "The first image is the cover shown in the catalog."
+msgstr "The first image is the cover shown in the catalog."
 
 msgid "The pickup address is available to the manager after the order is confirmed."
 msgstr "The pickup address is available to the manager after the order is confirmed."
@@ -2503,9 +1708,6 @@ msgstr "These actions are sensitive and may permanently affect your account."
 
 msgid "This action cannot be undone. This will permanently delete your account and remove your data from our servers."
 msgstr "This action cannot be undone. This will permanently delete your account and remove your data from our servers."
-
-msgid "This field has to be filled"
-msgstr "This field has to be filled"
 
 msgid "This field has to be filled."
 msgstr "This field has to be filled."
@@ -2540,26 +1742,14 @@ msgstr "Today"
 msgid "Toggle columns"
 msgstr "Toggle columns"
 
-msgid "Toggle email notifications"
-msgstr "Toggle email notifications"
-
-msgid "Toggle product updates"
-msgstr "Toggle product updates"
-
 msgid "Toggle Sidebar"
 msgstr "Toggle Sidebar"
 
 msgid "Toggle theme"
 msgstr "Toggle theme"
 
-#~ msgid "Top companies"
-#~ msgstr "Top companies"
-
 msgid "Top products"
 msgstr "Top products"
-
-msgid "Top seller performance"
-msgstr "Top seller performance"
 
 msgid "Topic"
 msgstr "Topic"
@@ -2567,38 +1757,20 @@ msgstr "Topic"
 msgid "Total"
 msgstr "Total"
 
-#~ msgid "Total companies"
-#~ msgstr "Total companies"
-
-msgid "total messages"
-msgstr "total messages"
-
 msgid "Total orders"
 msgstr "Total orders"
 
 msgid "Total price"
 msgstr "Total price"
 
-#~ msgid "Total product"
-#~ msgstr "Total product"
-
 msgid "Total revenue by month for the current year."
 msgstr "Total revenue by month for the current year."
-
-#~ msgid "Total stock"
-#~ msgstr "Total stock"
 
 msgid "Total users"
 msgstr "Total users"
 
-msgid "Track quotes, buyer chats and dispatch pressure from one seller dashboard."
-msgstr "Track quotes, buyer chats and dispatch pressure from one seller dashboard."
-
-msgid "Track your order activity, RFQ flow, purchase value and recent buying signals."
-msgstr "Track your order activity, RFQ flow, purchase value and recent buying signals."
-
-msgid "Try adjusting your search or switch tabs to browse other notifications."
-msgstr "Try adjusting your search or switch tabs to browse other notifications."
+msgid "Track your order activity, purchase value and recent buying signals."
+msgstr "Track your order activity, purchase value and recent buying signals."
 
 msgid "Try again in {resendCooldown}s"
 msgstr "Try again in {resendCooldown}s"
@@ -2636,23 +1808,8 @@ msgstr "Unit of measure is required"
 msgid "Unit of Measures"
 msgstr "Unit of Measures"
 
-msgid "United States"
-msgstr "United States"
-
 msgid "Units"
 msgstr "Units"
-
-msgid "unread"
-msgstr "unread"
-
-msgid "Unread"
-msgstr "Unread"
-
-msgid "Unread buyer chats"
-msgstr "Unread buyer chats"
-
-msgid "Unverified"
-msgstr "Unverified"
 
 msgid "Update"
 msgstr "Update"
@@ -2672,12 +1829,6 @@ msgstr "Update FAQ"
 msgid "Update gallery"
 msgstr "Update gallery"
 
-msgid "Update password"
-msgstr "Update password"
-
-msgid "Update product"
-msgstr "Update product"
-
 msgid "Update unit"
 msgstr "Update unit"
 
@@ -2687,20 +1838,11 @@ msgstr "Update user"
 msgid "Update value"
 msgstr "Update value"
 
-msgid "Update variant"
-msgstr "Update variant"
-
 msgid "Updated"
 msgstr "Updated"
 
-msgid "US dollar"
-msgstr "US dollar"
-
 msgid "Use as catalog filter"
 msgstr "Use as catalog filter"
-
-msgid "Use RFQs when ready-made inventory does not match your needs."
-msgstr "Use RFQs when ready-made inventory does not match your needs."
 
 msgid "Use the actions menu in the attributes table to manage values for a specific attribute."
 msgstr "Use the actions menu in the attributes table to manage values for a specific attribute."
@@ -2720,15 +1862,6 @@ msgstr "User Management"
 msgid "Users"
 msgstr "Users"
 
-msgid "Uzbek"
-msgstr "Uzbek"
-
-msgid "Uzbek som"
-msgstr "Uzbek som"
-
-msgid "Uzbekistan"
-msgstr "Uzbekistan"
-
 msgid "Value"
 msgstr "Value"
 
@@ -2741,36 +1874,6 @@ msgstr "Value is required"
 msgid "Values for"
 msgstr "Values for"
 
-msgid "values selected"
-msgstr "values selected"
-
-msgid "Variant fields"
-msgstr "Variant fields"
-
-msgid "Variant ID"
-msgstr "Variant ID"
-
-msgid "Variant is required"
-msgstr "Variant is required"
-
-msgid "Variant MOQ"
-msgstr "Variant MOQ"
-
-msgid "Variant price"
-msgstr "Variant price"
-
-msgid "Variant SKU"
-msgstr "Variant SKU"
-
-#~ msgid "Variant stock"
-#~ msgstr "Variant stock"
-
-msgid "Variants"
-msgstr "Variants"
-
-msgid "Verification"
-msgstr "Verification"
-
 msgid "Verification code sent"
 msgstr "Verification code sent"
 
@@ -2780,17 +1883,8 @@ msgstr "Verified"
 msgid "Verified industrial marketplace"
 msgstr "Verified industrial marketplace"
 
-msgid "Verified sellers"
-msgstr "Verified sellers"
-
 msgid "Verify"
 msgstr "Verify"
-
-msgid "Verify and finish"
-msgstr "Verify and finish"
-
-msgid "Video"
-msgstr "Video"
 
 msgid "View"
 msgstr "View"
@@ -2825,32 +1919,23 @@ msgstr "Wednesday"
 msgid "Weekly joined users"
 msgstr "Weekly joined users"
 
-#~ msgid "What happens next"
-#~ msgstr "What happens next"
+msgid "Weight"
+msgstr "Weight"
 
 msgid "What would you like to discuss?"
 msgstr "What would you like to discuss?"
 
-msgid "Where current buyer demand comes from."
-msgstr "Where current buyer demand comes from."
-
-msgid "Workspace"
-msgstr "Workspace"
+msgid "Where the product is shown in the catalog."
+msgstr "Where the product is shown in the catalog."
 
 msgid "Write a short company description"
 msgstr "Write a short company description"
-
-msgid "Write the message that will be shown to the seller."
-msgstr "Write the message that will be shown to the seller."
 
 msgid "Yearly revenue"
 msgstr "Yearly revenue"
 
 msgid "Yes"
 msgstr "Yes"
-
-msgid "Yes, close it"
-msgstr "Yes, close it"
 
 msgid "You are not allowed to submit a comment for this product. You should make a purchase first."
 msgstr "You are not allowed to submit a comment for this product. You should make a purchase first."
@@ -2867,14 +1952,8 @@ msgstr "You do not have permission to perform this action."
 msgid "You don't have necessary permission"
 msgstr "You don't have necessary permission"
 
-msgid "You have reached the maximum number of OTP requests. Please try again later."
-msgstr "You have reached the maximum number of OTP requests. Please try again later."
-
 msgid "You need to save the company information first to access this section."
 msgstr "You need to save the company information first to access this section."
-
-msgid "You rejected the order, the order is canceled."
-msgstr "You rejected the order, the order is canceled."
 
 msgid "Your cart is empty"
 msgstr "Your cart is empty"
@@ -2882,11 +1961,5 @@ msgstr "Your cart is empty"
 msgid "Your comment has been submitted"
 msgstr "Your comment has been submitted"
 
-msgid "Your email is not registered. Please complete the registration to continue."
-msgstr "Your email is not registered. Please complete the registration to continue."
-
 msgid "Your request has been sent successfully!"
 msgstr "Your request has been sent successfully!"
-
-msgid "Yuan"
-msgstr "Yuan"

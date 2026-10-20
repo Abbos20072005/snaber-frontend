@@ -2,7 +2,7 @@ import type { ReactNode } from 'react';
 
 import { useLingui } from '@lingui/react/macro';
 import { Link } from '@tanstack/react-router';
-import { HeartIcon, PackageIcon, ShoppingCartIcon } from 'lucide-react';
+import { BriefcaseBusinessIcon, HeartIcon, PackageIcon, ShoppingCartIcon } from 'lucide-react';
 
 import { useAuth } from '@/modules/auth';
 import { GlobalSearch } from '@/modules/global-search';
@@ -47,9 +47,8 @@ export const Header = () => {
   const cartItemsLength = useCartStore((state) => state.cartItemsLength);
   const favoritesCount = useFavoritesStore((state) => state.favorites.length);
 
-  const isAdmin = user?.role === 'admin' || user?.role === 'super_admin';
-  const ordersPath =
-    user?.role === 'seller' ? '/seller/orders' : isAdmin ? '/admin/orders' : '/profile/orders';
+  const isAdmin = user?.role === 'admin';
+  const ordersPath = isAdmin ? '/admin/orders' : '/profile/orders';
 
   return (
     <header className='sticky top-0 z-50 w-full border-b-[3px] border-yellow-400'>
@@ -64,11 +63,11 @@ export const Header = () => {
             <SiteLogo />
           </Link>
 
-          <div className='flex flex-1 items-center justify-center gap-1 sm:gap-2'>
+          <div className='flex flex-1 items-center gap-1 sm:gap-2'>
             <GlobalSearch className='max-w-xl' />
-            <LangSwitcher />
+            <LangSwitcher className='md:hidden' />
 
-            <div className='ml-1 flex items-center gap-5'>
+            <div className='ml-auto flex items-center gap-5'>
               {!isAdmin && (
                 <>
                   <HeaderLink
@@ -86,6 +85,12 @@ export const Header = () => {
                 </>
               )}
 
+              <HeaderLink
+                label={t`For legal clients`}
+                icon={<BriefcaseBusinessIcon className='size-5' />}
+                to='/legal'
+              />
+
               {user && (
                 <HeaderLink
                   label={t`Orders`}
@@ -98,7 +103,7 @@ export const Header = () => {
                 <AccountDropDown />
               ) : (
                 <Button
-                  className='ml-1 rounded-full px-5'
+                  className='ml-1 rounded-md px-6'
                   variant='secondary'
                   onClick={() => setIsOpen(true)}
                 >

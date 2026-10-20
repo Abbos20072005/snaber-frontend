@@ -14,7 +14,7 @@ export const BuyerDashboardHero = () => {
             {t`Buyer dashboard`}
           </h1>
           <p className='text-muted-foreground mt-2 max-w-2xl text-sm'>
-            {t`Track your order activity, RFQ flow, purchase value and recent buying signals.`}
+            {t`Track your order activity, purchase value and recent buying signals.`}
           </p>
         </div>
       </div>

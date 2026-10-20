@@ -6,7 +6,6 @@ export interface GetMiniSiteProductsRequest {
     search?: string;
     type?: string;
     category?: number | string;
-    product_type?: string;
     min_price?: string;
     max_price?: string;
     page?: number;
@@ -15,4 +14,4 @@ export interface GetMiniSiteProductsRequest {
 }
 
 export const getMiniSiteProducts = ({ id, params }: GetMiniSiteProductsRequest) =>
-  api.get<MiniSiteProductPreviewsResponse>(`company/${id}/product/`, { params });
+  api.get<ProductPreviewsResponse>(`company/${id}/product/`, { params });

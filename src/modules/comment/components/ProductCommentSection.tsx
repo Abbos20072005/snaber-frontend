@@ -29,10 +29,10 @@ import {
 } from '@/shared/ui/dialog';
 
 interface Props {
-  currentVariant: ProductVariant;
+  currentProduct: Pick<ProductBase, 'id'>;
 }
 
-export const ProductCommentSection = ({ currentVariant }: Props) => {
+export const ProductCommentSection = ({ currentProduct }: Props) => {
   const { t } = useLingui();
   const queryClient = useQueryClient();
   const [commentDialogOpen, setCommentDialogOpen] = useState(false);
@@ -40,19 +40,19 @@ export const ProductCommentSection = ({ currentVariant }: Props) => {
   const commentsRequest = useMemo(
     () => ({
       params: {
-        variant: currentVariant.id,
+        product: currentProduct.id,
         page_size: 20
       }
     }),
-    [currentVariant.id]
+    [currentProduct.id]
   );
   const statusRequest = useMemo(
     () => ({
       params: {
-        variant: currentVariant.id
+        product: currentProduct.id
       }
     }),
-    [currentVariant.id]
+    [currentProduct.id]
   );
 
   const commentStatusSuspenseQuery = useSuspenseQuery(
@@ -93,9 +93,9 @@ export const ProductCommentSection = ({ currentVariant }: Props) => {
               <DialogDescription>{t`Share your product experience with other buyers.`}</DialogDescription>
             </DialogHeader>
             <CommentForm
-              variantId={currentVariant.id}
               formId={formId}
               onSuccess={handleCommentSuccess}
+              productId={currentProduct.id}
             />
             <DialogFooter>
               <DialogClose render={<Button variant='outline'>{t`Cancel`}</Button>} />

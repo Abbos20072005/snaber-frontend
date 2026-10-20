@@ -4,7 +4,6 @@ import { parseAsArrayOf, parseAsInteger, parseAsStringLiteral, useQueryState } f
 import { useState } from 'react';
 
 import {
-  CompanyBadgeSelect,
   CompanyIndustryCombobox,
   CompanyRegionsCombobox,
   CompanySortSelect
@@ -29,20 +28,12 @@ export const CompanyFilterSection = () => {
     parseAsArrayOf(parseAsInteger).withDefault([])
   );
   const [region, setRegion] = useQueryState('region', parseAsInteger);
-  const [sort, setSort] = useQueryState(
-    'sort',
-    parseAsStringLiteral<SortType>(['new', 'most_ordered', 'old', 'most_products'])
-  );
-  const [badge, setBadge] = useQueryState(
-    'product_type',
-    parseAsStringLiteral<ProductType>(['both', 'made_to_order', 'ready'])
-  );
+  const [sort, setSort] = useQueryState('sort', parseAsStringLiteral<SortType>(['new', 'old']));
 
-  const activeFiltersCount = [industry.length > 0, region, badge, sort].filter(Boolean).length;
+  const activeFiltersCount = [industry.length > 0, region, sort].filter(Boolean).length;
   const isClear = activeFiltersCount > 0;
 
   const handleClear = () => {
-    void setBadge(null);
     void setIndustry(null);
     void setRegion(null);
     void setSort(null);
@@ -85,7 +76,6 @@ export const CompanyFilterSection = () => {
                   value={region ? { label: '', value: String(region) } : null}
                   onValueChange={(option) => setRegion(option ? Number(option.value) : null)}
                 />
-                <CompanyBadgeSelect badge={badge} onBadgeChange={setBadge} />
                 <CompanySortSelect setSort={setSort} sort={sort} />
                 <div className='flex items-center justify-between'>
                   <DrawerClose
@@ -136,7 +126,6 @@ export const CompanyFilterSection = () => {
                 value={region ? { label: '', value: String(region) } : null}
                 onValueChange={(option) => setRegion(option ? Number(option.value) : null)}
               />
-              <CompanyBadgeSelect badge={badge} onBadgeChange={setBadge} />
               <CompanySortSelect setSort={setSort} sort={sort} />
               <div className='flex items-center justify-between'>
                 <Button

@@ -5,7 +5,7 @@ import { GeneralError, NotFoundError } from '@/shared/ui/errors';
 import { PageLoading } from '@/shared/ui/page';
 
 const AdminOrdersPage = () => {
-  return <OrdersPage mode='admin' />;
+  return <OrdersPage />;
 };
 
 export const Route = createFileRoute('/admin/orders/')({

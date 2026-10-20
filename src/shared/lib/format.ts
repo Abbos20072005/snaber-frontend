@@ -15,8 +15,14 @@ import { isomorphicCookie } from '@/shared/lib/isomorphic-cookie.ts';
 export const formatPhoneNumber = (phoneNumber: string) =>
   phoneNumber.replace(/(\d{3})(\d{2})(\d{3})(\d{2})(\d{2})/, '$1 ($2) $3 $4 $5');
 
-export const formatPrice = (price: number | string) =>
-  price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+export const formatPrice = (price: number | string) => {
+  const amount = Number(price);
+  if (Number.isNaN(amount)) return price.toString();
+
+  // The API sends decimals as "1550000.00"; whole amounts read better without the cents.
+  const [integer, fraction] = amount.toFixed(2).split('.');
+  return `${integer.replace(/\B(?=(\d{3})+(?!\d))/g, ' ')}${fraction === '00' ? '' : `.${fraction}`}`;
+};
 
 export const formatCompactNumber = (
   value: number,

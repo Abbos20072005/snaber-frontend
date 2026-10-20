@@ -38,12 +38,11 @@ interface Company {
   member_counts?: string;
   name: string;
   order_counts?: string;
-  product_badges?: ProductType | null;
   region: CompanyRegion;
   view_count: number;
 }
 
-type SortType = 'most_ordered' | 'most_products' | 'new' | 'old';
+type SortType = 'new' | 'old';
 type Status = 'active' | 'blocked' | 'draft' | 'inactive';
 
 interface CompanyDraft extends Company {

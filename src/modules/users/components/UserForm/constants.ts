@@ -5,12 +5,9 @@ export const userFormSchema = () =>
   z
     .object({
       full_name: z.string().min(1, t`This field is required.`),
-      email: z
-        .string()
-        .min(1, t`This field is required.`)
-        .email(t`This is not a valid email.`),
+      email: z.union([z.literal(''), z.string().email(t`This is not a valid email.`)]),
       phone_number: z.string().min(1, t`This field is required.`),
-      role: z.enum(['admin', 'buyer', 'moderator', 'seller', 'super_admin']),
+      role: z.enum(['admin', 'buyer']),
       is_active: z.boolean(),
       is_blocked: z.boolean().optional(),
       block_reason: z.string().optional()

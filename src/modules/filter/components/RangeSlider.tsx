@@ -84,7 +84,7 @@ export const RangeSlider = ({ min, max }: { min: number; max: number }) => {
     <div className='w-full space-y-2'>
       <h3 className='text-xs font-medium'>{t`Price`}</h3>
 
-      <div className='grid grid-cols-2 mb-4 gap-2'>
+      <div className='mb-4 grid grid-cols-2 gap-2'>
         <p className='text-muted-foreground text-sm'>{t`from`}:</p>
         <p className='text-muted-foreground text-sm'>{t`to`}:</p>
         <InputGroup>

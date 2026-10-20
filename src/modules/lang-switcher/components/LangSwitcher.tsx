@@ -1,9 +1,11 @@
 import { useQueryClient } from '@tanstack/react-query';
+import { ChevronDownIcon, LanguagesIcon } from 'lucide-react';
 
 import type { Locale } from '@/shared/i18n/config';
 
 import { dynamicActivate, getLocale } from '@/shared/i18n';
-import { localeFlagOptions, localeImageMap, localeLabelMap } from '@/shared/i18n/constants';
+import { localeFlagOptions, localeShortLabelMap } from '@/shared/i18n/constants';
+import { cn } from '@/shared/lib/utils';
 import { Button } from '@/shared/ui/button';
 import {
   DropdownMenu,
@@ -28,9 +30,10 @@ export const LangSwitcher = ({ className, ...props }: Props) => {
     <DropdownMenu {...props}>
       <DropdownMenuTrigger
         render={
-          <Button variant='outline'>
-            <span className={`fi text-sm uppercase fi-${localeImageMap[currentLocale]}`} />
-            <span>{localeLabelMap[currentLocale]}</span>
+          <Button className={cn('gap-1 px-2 font-semibold', className)} variant='ghost'>
+            <LanguagesIcon className='size-5' />
+            <span>{localeShortLabelMap[currentLocale]}</span>
+            <ChevronDownIcon className='size-4' />
           </Button>
         }
       />

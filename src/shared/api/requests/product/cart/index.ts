@@ -7,7 +7,6 @@ interface PostCartRequest {
   data: CartItemDto;
 }
 
-export const postCart = ({ data }: PostCartRequest) => api.post<Cart>('/product/cart/', data);
+export const postCart = ({ data }: PostCartRequest) => api.post<CartItem>('/product/cart/', data);
 
-export const postCartCheckout = (companyId: number) =>
-  api.post('/product/cart/checkout/', { company: companyId });
+export const postCartCheckout = () => api.post<Order>('/product/cart/checkout/');

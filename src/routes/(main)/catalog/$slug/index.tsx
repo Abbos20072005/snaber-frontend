@@ -1,9 +1,10 @@
 import { useLingui } from '@lingui/react/macro';
 import { useInfiniteQuery, useSuspenseQuery } from '@tanstack/react-query';
-import { createFileRoute, Link, useParams, useSearch } from '@tanstack/react-router';
+import { createFileRoute, useParams, useSearch } from '@tanstack/react-router';
 
 import {
   CategoryBreadcrumb,
+  CategoryChildrenGrid,
   getCategoryBreadcrumbByIdOptions,
   getPublicCategoryByIdOptions
 } from '@/modules/category';
@@ -29,15 +30,19 @@ const RouteComponent = () => {
   const categoriesQuery = useSuspenseQuery(getPublicCategoryByIdOptions({ id }));
   const categories = categoriesQuery.data;
 
-  const productsQuery = useInfiniteQuery(
-    getPublicProductsInfiniteOptions({
+  // Only the last level of the tree lists products; every level above it drills down.
+  const hasChildren = !categories.is_leaf && categories.children.length > 0;
+
+  const productsQuery = useInfiniteQuery({
+    ...getPublicProductsInfiniteOptions({
       params: {
         category: id,
         page_size: 12,
         ...params
       }
-    })
-  );
+    }),
+    enabled: !hasChildren
+  });
   const products = productsQuery.data?.pages.flatMap((page) => page.results ?? []);
 
   return (
@@ -45,57 +50,47 @@ const RouteComponent = () => {
       <SectionWrapper title={categories.name}>
         <CategoryBreadcrumb id={id} />
 
-        {(categories.children ?? []).length > 0 && (
-          <ul className='columns-1 gap-6 sm:columns-2 lg:columns-3'>
-            {(categories.children ?? []).map((child) => (
-              <li key={child.id} className='break-inside-avoid py-1'>
-                <Link
-                  className='text-primary text-[15px] font-medium hover:underline'
-                  params={{ slug: generateSlugId(child.id, child.name) }}
-                  to='/catalog/$slug'
-                >
-                  {child.name}
-                </Link>
-              </li>
-            ))}
-          </ul>
+        {hasChildren ? (
+          <CategoryChildrenGrid categories={categories.children} />
+        ) : (
+          <>
+            <div className='flex w-full items-center justify-between md:hidden'>
+              <h2 className='text-muted-foreground text-lg font-semibold'>{t`Filter`}</h2>
+              <MobileFilter category={id} />
+            </div>
+            <div className='relative flex items-start gap-4'>
+              <FilterSection
+                className='no-scrollbar sticky top-27 hidden max-h-[calc(100vh-6.75rem)] max-w-70 shrink-0 overflow-y-auto md:block'
+                category={id}
+              />
+
+              {productsQuery.isPending && (
+                <ProductListSkeleton className='w-full flex-1' view='grid' count={12} />
+              )}
+              {!productsQuery.isPending && products && products.length > 0 && (
+                <div className='flex flex-1 flex-col gap-8'>
+                  <ProductList className='flex-1' view='grid' products={products} />
+                  <div className='flex items-center justify-center'>
+                    {productsQuery.hasNextPage && (
+                      <Button
+                        loading={productsQuery.isFetchingNextPage}
+                        onClick={() => productsQuery.fetchNextPage()}
+                      >
+                        {t`Show More`}
+                      </Button>
+                    )}
+                  </div>
+                </div>
+              )}
+
+              {products?.length === 0 && !productsQuery.isPending && (
+                <div className='flex min-h-[60svh] flex-1 items-center justify-center'>
+                  <p className='text-2xl font-medium'>{t`Data not found`}</p>
+                </div>
+              )}
+            </div>
+          </>
         )}
-
-        <div className='flex w-full items-center justify-between md:hidden'>
-          <h2 className='text-muted-foreground text-lg font-semibold'>{t`Filter`}</h2>
-          <MobileFilter category={id} />
-        </div>
-        <div className='relative flex items-start gap-4'>
-          <FilterSection
-            className='no-scrollbar sticky top-27 hidden max-h-[calc(100vh-6.75rem)] max-w-70 shrink-0 overflow-y-auto md:block'
-            category={id}
-          />
-
-          {productsQuery.isPending && (
-            <ProductListSkeleton className='w-full flex-1' view='grid' count={12} />
-          )}
-          {!productsQuery.isPending && products && products.length > 0 && (
-            <div className='flex flex-1 flex-col gap-8'>
-              <ProductList className='flex-1' view='grid' products={products} />
-              <div className='flex items-center justify-center'>
-                {productsQuery.hasNextPage && (
-                  <Button
-                    loading={productsQuery.isFetchingNextPage}
-                    onClick={() => productsQuery.fetchNextPage()}
-                  >
-                    {t`Show More`}
-                  </Button>
-                )}
-              </div>
-            </div>
-          )}
-
-          {products?.length === 0 && !productsQuery.isPending && (
-            <div className='flex min-h-[60svh] flex-1 items-center justify-center'>
-              <p className='text-2xl font-medium'>{t`Data not found`}</p>
-            </div>
-          )}
-        </div>
       </SectionWrapper>
     </div>
   );
@@ -154,7 +149,8 @@ export const Route = createFileRoute('/(main)/catalog/$slug/')({
       ...createSeoMeta({
         title: categoryName,
         description: `Browse ${categoryName} building materials and tools with filters on snaber.uz.`,
-        image: category.image || (siteUrl ? `${siteUrl}${DEFAULT_OG_IMAGE.url}` : DEFAULT_OG_IMAGE.url),
+        image:
+          category.image || (siteUrl ? `${siteUrl}${DEFAULT_OG_IMAGE.url}` : DEFAULT_OG_IMAGE.url),
         imageWidth: category.image ? undefined : DEFAULT_OG_IMAGE.width,
         imageHeight: category.image ? undefined : DEFAULT_OG_IMAGE.height,
         url: canonicalUrl,

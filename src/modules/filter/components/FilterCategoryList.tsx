@@ -42,10 +42,8 @@ export const FilterCategoryList = ({ resetRef, category }: Props) => {
   }, [resetRef]);
 
   const allCategoriesQuery = useQuery(getPublicAllCategoriesOptions());
-  // FEATURE DISABLED: Group level (level 0) is not shown in the storefront.
-  // Only main categories (sections) are listed, like on the main page.
   const allCategories: Category[] = useMemo(
-    () => (allCategoriesQuery.data ?? []).flatMap((group) => group.children ?? []),
+    () => allCategoriesQuery.data ?? [],
     [allCategoriesQuery.data]
   );
   const expandedCategoryIds = useMemo(
@@ -138,7 +136,11 @@ export const FilterCategoryList = ({ resetRef, category }: Props) => {
             )}
           >
             {cat.image ? (
-              <img alt={cat.name} className='size-6 shrink-0 rounded-xs border object-cover' src={cat.image} />
+              <img
+                alt={cat.name}
+                className='size-6 shrink-0 rounded-xs border object-cover'
+                src={cat.image}
+              />
             ) : (
               <span className='bg-muted/60 flex size-6 shrink-0 items-center justify-center rounded-xs border'>
                 <ImageIcon className='text-muted-foreground/60 size-3.5' />
@@ -157,13 +159,13 @@ export const FilterCategoryList = ({ resetRef, category }: Props) => {
         {hasChildren && (
           <CollapsibleContent className='duration-200 ease-[cubic-bezier(0.22,1,0.36,1)] data-ending-style:opacity-0 data-starting-style:opacity-0'>
             {isLoadingChildren ? (
-              <div className='ml-3 space-y-2 pb-1 pt-1'>
+              <div className='ml-3 space-y-2 pt-1 pb-1'>
                 {Array.from({ length: 3 }).map((_, i) => (
                   <Skeleton key={i} className='h-5 w-full' />
                 ))}
               </div>
             ) : (
-              <div className='ml-2 pb-1 pt-1'>
+              <div className='ml-2 pt-1 pb-1'>
                 {children.map((child) => renderCategory(child, depth + 1))}
               </div>
             )}

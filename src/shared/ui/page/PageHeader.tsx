@@ -8,14 +8,7 @@ interface AppHeaderProps extends React.ComponentProps<'header'> {
 
 export const PageHeader = ({ ref, className, children, ...props }: AppHeaderProps) => {
   return (
-    <header
-      ref={ref}
-      className={cn(
-        'flex h-18 items-center gap-2 px-6',
-        className
-      )}
-      {...props}
-    >
+    <header ref={ref} className={cn('flex h-18 items-center gap-2 px-6', className)} {...props}>
       {children}
     </header>
   );

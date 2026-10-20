@@ -65,7 +65,7 @@ const CategoryLevelSelect = ({
     <SelectTrigger className='w-full'>
       <SelectValue placeholder={placeholder}>{selectedLabel}</SelectValue>
     </SelectTrigger>
-    <SelectContent>
+    <SelectContent className='w-auto max-w-[min(26rem,90vw)] min-w-(--anchor-width)'>
       <SelectGroup>
         {options.map((category) => (
           <SelectItem key={category.value} value={category.value}>
@@ -120,7 +120,8 @@ export const CategoryNestedSelect = ({ disabled, value, onValueChange }: Props) 
   const shouldShowNextLevel =
     !!visiblePath.length && (currentCategoryQuery?.isPending || nextLevelOptions.length > 0);
 
-  const getPlaceholder = (index: number) => (index === 0 ? t`Select category` : t`Select subcategory`);
+  const getPlaceholder = (index: number) =>
+    index === 0 ? t`Select category` : t`Select subcategory`;
 
   const handleValueChange = (levelIndex: number, categoryId: string) => {
     const options = levelOptions[levelIndex] ?? nextLevelOptions;
@@ -193,7 +194,7 @@ export const CategoryNestedSelect = ({ disabled, value, onValueChange }: Props) 
         )}
       </div>
 
-      <div className='grid grid-cols-4 gap-2'>
+      <div className='grid gap-2 sm:grid-cols-2 xl:grid-cols-4'>
         {selectLevels.map((level, index) => (
           <CategoryLevelSelect key={`category-level-${index}`} {...level} />
         ))}

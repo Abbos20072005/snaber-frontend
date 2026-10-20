@@ -4,6 +4,7 @@ import { LogOutIcon, PanelLeftOpenIcon, SettingsIcon } from 'lucide-react';
 import * as React from 'react';
 
 import { AlertLogoutDialog } from '@/modules/auth/components';
+import { SiteLogo } from '@/routes/(main)/-components/SiteLogo';
 import {
   Sidebar,
   SidebarContent,
@@ -34,16 +35,7 @@ export const AppSidebar = ({ ...props }: React.ComponentProps<typeof Sidebar>) =
               className='hover:bg-sidebar w-fit justify-start px-2 group-data-[collapsible=icon]:p-1!'
               render={<Link to='/' />}
             >
-              {open ? (
-                <img alt='Logo' className='size-10 shrink-0' src='/images/b2b-market-icon.svg' />
-              ) : (
-                <img
-                  alt='Logo'
-                  className='max-size-10 shrink-0'
-                  src='/images/b2b-market-icon.svg'
-                />
-              )}
-              <span className='text-xl font-semibold'>B2B</span>
+              <SiteLogo iconOnly={!open} />
             </SidebarMenuButton>
             {open && (
               <SidebarTrigger

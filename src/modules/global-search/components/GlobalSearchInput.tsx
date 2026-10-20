@@ -16,7 +16,7 @@ export const GlobalSearchInput = ({ search, setSearch, handleSubmit, setIsFocuse
 
   return (
     <form className='flex-1' onSubmit={handleSubmit}>
-      <div className='bg-yellow-400 flex h-11 items-center gap-1.5 rounded-xl p-1'>
+      <div className='flex h-10 items-center gap-1 rounded-xl bg-yellow-400 p-0.5'>
         <Input
           aria-label='Search'
           className='bg-background h-full flex-1 rounded-lg border-0 px-3.5 text-sm shadow-none focus-visible:ring-2'
@@ -30,7 +30,7 @@ export const GlobalSearchInput = ({ search, setSearch, handleSubmit, setIsFocuse
         />
         <Button
           aria-label={t`Search`}
-          className='bg-yellow-400 size-9 shrink-0 rounded-full text-black hover:bg-yellow-300'
+          className='size-9 shrink-0 rounded-full bg-yellow-400 text-black hover:bg-yellow-300'
           size='icon-lg'
           type='submit'
         >

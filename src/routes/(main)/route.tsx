@@ -1,10 +1,8 @@
 import { useSuspenseQuery } from '@tanstack/react-query';
 import { createFileRoute, Outlet } from '@tanstack/react-router';
-import { useQueryState } from 'nuqs';
 import { useEffect } from 'react';
 
 import { getAuthMeQueryOptions } from '@/modules/auth';
-import { OAuthRegister } from '@/modules/oauth';
 import { getCartListQueryOptions, getFavoritesQueryOptions } from '@/modules/products';
 import { Footer, Header, MobileBottomBar } from '@/routes/(main)/-components';
 import { COOKIES } from '@/shared/constants';
@@ -13,8 +11,6 @@ import { CartProvider, FavoritesProvider, useCartStore, useFavoritesStore } from
 import { Spinner } from '@/shared/ui/spinner.tsx';
 
 const SiteLayout = () => {
-  const [oAuthCode] = useQueryState('code');
-
   return (
     <div className='flex min-h-dvh flex-col'>
       <Header />
@@ -23,13 +19,12 @@ const SiteLayout = () => {
       </main>
       <Footer />
       <MobileBottomBar />
-      {oAuthCode && <OAuthRegister oAuthCode={oAuthCode} />}
     </div>
   );
 };
 
 // Keeps the client stores in sync with the server state (login, add to cart, favorites).
-const StoreSync = ({ cart, favorites }: { cart: Cart[]; favorites: ProductPreview[] }) => {
+const StoreSync = ({ cart, favorites }: { cart: CartItem[]; favorites: ProductPreview[] }) => {
   const { syncCart } = useCartStore();
   const { setFavorites } = useFavoritesStore();
 
@@ -49,7 +44,7 @@ const StoreData = ({ children }: { children: React.ReactNode }) => {
   const cartQuery = useSuspenseQuery(getCartListQueryOptions());
 
   const favorites = (favoritesQuery.data ?? []).map((item) => item.product);
-  const cart = cartQuery.data?.groups ?? [];
+  const cart = cartQuery.data?.items ?? [];
 
   return (
     <FavoritesProvider initialFavorites={favorites}>

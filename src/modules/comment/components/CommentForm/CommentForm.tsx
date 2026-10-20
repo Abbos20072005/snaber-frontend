@@ -17,11 +17,11 @@ import { commentFormSchema } from './constants';
 
 interface CommentFormProps {
   formId: string;
-  variantId: number;
+  productId: number;
   onSuccess?: () => void;
 }
 
-export const CommentForm = ({ formId, onSuccess, variantId }: CommentFormProps) => {
+export const CommentForm = ({ formId, onSuccess, productId }: CommentFormProps) => {
   const { t } = useLingui();
 
   const postCommentMutation = useMutation({
@@ -51,7 +51,7 @@ export const CommentForm = ({ formId, onSuccess, variantId }: CommentFormProps) 
       onChange: commentFormSchema()
     },
     defaultValues: {
-      variant: String(variantId),
+      product: String(productId),
       text: '',
       rating: 5,
       images: []
@@ -59,7 +59,7 @@ export const CommentForm = ({ formId, onSuccess, variantId }: CommentFormProps) 
     onSubmit: ({ value }) => {
       postCommentMutation.mutate({
         data: {
-          variant: Number(value.variant),
+          product: Number(value.product),
           text: value.text,
           rating: value.rating,
           images: value.images

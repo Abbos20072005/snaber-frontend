@@ -17,29 +17,15 @@ const shouldDragProductsCarousel = (_api: unknown, event: MouseEvent | TouchEven
 type Props = ComponentProps<'div'> & {
   view?: 'carousel' | 'grid';
   products: ProductPreview[];
-  isShowCompany?: boolean;
 };
 
-export const ProductList = ({
-  view = 'carousel',
-  products,
-  isShowCompany,
-  className,
-  ...props
-}: Props) => {
+export const ProductList = ({ view = 'carousel', products, className, ...props }: Props) => {
   return (
     <>
       {view === 'grid' && (
-        <div
-          className={cn(
-            'flex flex-col gap-3 md:gap-4',
-            className
-          )}
-          {...props}
-        >
+        <div className={cn('flex flex-col gap-3 md:gap-4', className)} {...props}>
           {products.map((product) => {
-            const productId = product.product_id ?? product.id;
-            return <ProductCard key={productId} isShowCompany={isShowCompany} product={product} />;
+            return <ProductCard key={product.id} product={product} />;
           })}
         </div>
       )}
@@ -48,14 +34,8 @@ export const ProductList = ({
           <div className={cn('relative overflow-x-auto py-4 md:hidden', className)} {...props}>
             <div className='flex gap-3'>
               {products.map((product) => {
-                const productId = product.product_id ?? product.id;
                 return (
-                  <ProductCard
-                    key={productId}
-                    className='shrink-0 basis-57.5'
-                    isShowCompany={isShowCompany}
-                    product={product}
-                  />
+                  <ProductCard key={product.id} className='shrink-0 basis-57.5' product={product} />
                 );
               })}
             </div>
@@ -66,14 +46,9 @@ export const ProductList = ({
           >
             <CarouselContent className={cn('py-4', className)} {...props}>
               {products.map((product) => {
-                const productId = product.product_id ?? product.id;
                 return (
-                  <CarouselItem key={productId} className='basis-1/3 lg:basis-1/4 xl:basis-1/5'>
-                    <ProductCard
-                      className='h-full'
-                      isShowCompany={isShowCompany}
-                      product={product}
-                    />
+                  <CarouselItem key={product.id} className='basis-1/3 lg:basis-1/4 xl:basis-1/5'>
+                    <ProductCard className='h-full' product={product} />
                   </CarouselItem>
                 );
               })}

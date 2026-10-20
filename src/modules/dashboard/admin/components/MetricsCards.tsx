@@ -3,7 +3,7 @@ import type { ComponentProps } from 'react';
 
 import { useLingui } from '@lingui/react/macro';
 import { useSuspenseQuery } from '@tanstack/react-query';
-import { Building2, CircleDollarSign, MessageSquare, ShoppingCart } from 'lucide-react';
+import { CircleDollarSign, MessageSquare, ShoppingCart } from 'lucide-react';
 
 import { getAdminLast30DaysStatisticsQueryOptions } from '@/modules/dashboard/admin';
 import { formatPrice } from '@/shared/lib/format.ts';
@@ -15,7 +15,7 @@ type Props = ComponentProps<'div'>;
 export const MetricsCards = ({ className, ...props }: Props) => {
   const { t } = useLingui();
 
-  const { orders_count, verified_sellers_count, total_users_count, total_spent } = useSuspenseQuery(
+  const { orders_count, total_users_count, total_spent } = useSuspenseQuery(
     getAdminLast30DaysStatisticsQueryOptions()
   ).data.data;
 
@@ -30,19 +30,13 @@ export const MetricsCards = ({ className, ...props }: Props) => {
       <MetricCard
         label={t`Orders`}
         value={orders_count.toString()}
-        description={t`Across active sellers`}
+        description={t`Last 30 days`}
         icon={ShoppingCart}
-      />
-      <MetricCard
-        label={t`Verified sellers`}
-        value={verified_sellers_count.toString()}
-        description={t`Seller quality and trust`}
-        icon={Building2}
       />
       <MetricCard
         label={t`Total users`}
         value={total_users_count.toString()}
-        description={t`Buyer and seller growth`}
+        description={t`New users in the last 30 days`}
         icon={MessageSquare}
       />
     </div>

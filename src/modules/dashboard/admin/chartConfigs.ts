@@ -5,6 +5,5 @@ import type { ChartConfig } from '@/shared/ui/chart';
 export const getHealthConfig = () =>
   ({
     buyers: { label: t`Buyers`, color: 'var(--chart-1)' },
-    sellers: { label: t`Sellers`, color: 'var(--chart-2)' },
     users: { label: t`Users`, color: 'var(--chart-1)' }
   }) satisfies ChartConfig;

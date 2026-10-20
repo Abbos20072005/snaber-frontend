@@ -6,11 +6,8 @@ import {
   BuyerDashboardSkeleton,
   BuyerStatisticsDashboard,
   getBuyerKPIsQueryOptions,
-  getBuyerOrderTypeSplitQueryOptions,
   getBuyerPurchaseMomentumQueryOptions,
-  getBuyerRecentBuyingActivityQueryOptions,
-  getBuyerStatusMixQueryOptions,
-  getBuyerSummaryQueryOptions
+  getBuyerRecentBuyingActivityQueryOptions
 } from '@/modules/dashboard/buyer';
 import { GeneralError, NotFoundError } from '@/shared/ui/errors';
 import { SectionWrapper } from '@/shared/ui/section-wrapper';
@@ -51,11 +48,8 @@ export const Route = createFileRoute('/(main)/profile/dashboard')({
     if (typeof window === 'undefined') return;
     return Promise.all([
       queryClient.prefetchQuery(getBuyerKPIsQueryOptions()),
-      queryClient.prefetchQuery(getBuyerOrderTypeSplitQueryOptions()),
       queryClient.prefetchQuery(getBuyerPurchaseMomentumQueryOptions()),
-      queryClient.prefetchQuery(getBuyerRecentBuyingActivityQueryOptions()),
-      queryClient.prefetchQuery(getBuyerStatusMixQueryOptions()),
-      queryClient.prefetchQuery(getBuyerSummaryQueryOptions())
+      queryClient.prefetchQuery(getBuyerRecentBuyingActivityQueryOptions())
     ]);
   }
 });

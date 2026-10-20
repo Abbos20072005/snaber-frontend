@@ -2,6 +2,8 @@ import { useLingui } from '@lingui/react/macro';
 import { Link } from '@tanstack/react-router';
 import { MapPinIcon, PhoneIcon } from 'lucide-react';
 
+import { LangSwitcher } from '@/modules/lang-switcher';
+
 import { headerLinks } from './constants';
 
 export const HeaderTopBar = () => {
@@ -27,13 +29,16 @@ export const HeaderTopBar = () => {
           ))}
         </nav>
 
-        <a
-          href='tel:+998712037772'
-          className='text-foreground/80 hover:text-foreground flex items-center gap-1.5 text-xs font-semibold whitespace-nowrap transition-colors hover:underline'
-        >
-          <PhoneIcon className='size-3.5' />
-          +998 71 203 77 72
-        </a>
+        <div className='flex items-center gap-4'>
+          <LangSwitcher className='h-6 text-xs' />
+          <a
+            href='tel:+998712037772'
+            className='text-foreground/80 hover:text-foreground flex items-center gap-1.5 text-xs font-semibold whitespace-nowrap transition-colors hover:underline'
+          >
+            <PhoneIcon className='size-3.5' />
+            +998 71 203 77 72
+          </a>
+        </div>
       </div>
     </div>
   );

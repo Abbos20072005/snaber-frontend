@@ -3,7 +3,6 @@ import { useQuery } from '@tanstack/react-query';
 import { useQueryStates } from 'nuqs';
 
 import { getPublicFilterQueryOptions } from '@/modules/attributes';
-import { ProductTypeFilter } from '@/modules/filter';
 import { cn } from '@/shared/lib/utils';
 import { Button } from '@/shared/ui/button';
 import { Skeleton } from '@/shared/ui/skeleton';
@@ -32,7 +31,6 @@ export const MiniSiteFilterSection = ({ className, category, categories, ...prop
     void setQueryStates({
       type: null,
       category: null,
-      product_type: null,
       price_max: null,
       price_min: null,
       values: null
@@ -76,7 +74,6 @@ export const MiniSiteFilterSection = ({ className, category, categories, ...prop
           {t`Clear all`}
         </button>
       </div>
-      <ProductTypeFilter />
       {isCategoriesLoading ? (
         <div className='space-y-2'>
           {Array.from({ length: 3 }).map((_, idx) => (

@@ -1,8 +1,9 @@
+type WeekDay = 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday';
+
 interface AdminLast30DaysStatistics {
   orders_count: number;
   total_spent: number;
   total_users_count: number;
-  verified_sellers_count: number;
 }
 
 interface AdminMonthlyRevenueItem {
@@ -19,31 +20,21 @@ interface AdminOrdersByCategoryItem {
 
 type AdminOrdersByCategory = AdminOrdersByCategoryItem[];
 
-interface AdminRFQOrdersByStatus {
-  accepted: number;
-  closed: number;
-  negotiation: number;
-  new: number;
-  pending: number;
-  rejected: number;
-}
-
 interface AdminTodayOrders {
   orders_count: number;
-  rfq_orders_count: number;
 }
 
-interface AdminTopCompanyItem {
-  company_name: string;
+interface AdminTopProductItem {
+  product_name: string;
   orders_count: number;
   orders_total: string;
 }
 
-type AdminTopCompany = AdminTopCompanyItem[];
+type AdminTopProduct = AdminTopProductItem[];
 
 interface AdminUserCounts {
+  admins: number;
   buyers: number;
-  sellers: number;
   total_users: number;
 }
 

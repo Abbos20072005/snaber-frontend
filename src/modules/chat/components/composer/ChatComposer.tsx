@@ -40,7 +40,7 @@ export const ChatComposer = ({
     !!conversationId && (!!newMessage.trim() || uploadedFiles.length > 0) && !isSending;
 
   const { user } = useAuthed();
-  const shouldDisable = !(user.role === 'buyer' || user.role === 'seller');
+  const shouldDisable = !(user.role === 'buyer' || user.role === 'admin');
 
   return (
     <div className='w-full border-t p-4'>

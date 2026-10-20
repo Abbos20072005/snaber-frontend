@@ -2,32 +2,19 @@ import type { ComponentProps } from 'react';
 
 import { useLingui } from '@lingui/react/macro';
 import { Link } from '@tanstack/react-router';
-import { format } from 'date-fns';
 
-import { useAuthed } from '@/modules/auth';
-import { currencySymbolMap } from '@/modules/currency';
-import { generateSlugId } from '@/shared/constants';
+import { CURRENCY_SYMBOL, generateSlugId } from '@/shared/constants';
 import { formatPrice } from '@/shared/lib/format';
-import { Badge } from '@/shared/ui/badge';
 import { Card, CardContent } from '@/shared/ui/card';
 
 type Props = ComponentProps<'div'> & {
   item: Order['items'][number];
-  company: ProductCompany;
 };
 
 export const OrderProductItem = ({ item }: Props) => {
   const { t } = useLingui();
 
-  const image =
-    item.variant.medias?.find((m) => m.product_media_type === 'photo')?.file ??
-    item.product.image ??
-    '';
-
-  const slug = generateSlugId(item.product.product_id ?? item.product.id, item.product.name);
-  const unitPrice = item.variant.price_override;
-
-  const { user } = useAuthed();
+  const slug = generateSlugId(item.product.id, item.product.name);
 
   return (
     <Card size='sm'>
@@ -36,7 +23,7 @@ export const OrderProductItem = ({ item }: Props) => {
           <img
             alt={item.product.name}
             className='ring-foreground/10 size-20 rounded-lg object-contain ring-1'
-            src={image}
+            src={item.product.image ?? undefined}
           />
         </Link>
 
@@ -49,40 +36,19 @@ export const OrderProductItem = ({ item }: Props) => {
             >
               {item.product.name}
             </Link>
-            <p className='text-muted-foreground text-xs'>SKU: {item.variant.sku_variant}</p>
-            <div className='flex flex-wrap items-center gap-2'>
-              {item.attribute_stock?.attribute_values.map((item) => (
-                <Badge key={item.id} variant='secondary'>
-                  {item.value}
-                </Badge>
-              ))}
-              {item.attributes?.map((item) => (
-                <Badge key={item.attribute} variant='secondary'>
-                  {item.value_option?.value ?? item.value}
-                </Badge>
-              ))}
-            </div>
-            <div className='mt-2'>
-              {item.attribute_stock ? (
-                <Badge>{t`Ready`}</Badge>
-              ) : (
-                <>
-                  <Badge>{t`RFQ`}</Badge> {t`Deadline`}:{' '}
-                  {format(item.deadline ?? new Date(), 'dd.MM.yyyy')}
-                </>
-              )}
-            </div>
+            {item.product.sku && (
+              <p className='text-muted-foreground text-xs'>SKU: {item.product.sku}</p>
+            )}
           </div>
           <div className='flex items-center gap-1'>
             <p className='text-sm font-semibold'>
-              {formatPrice(item.total_price)} {user.currency && currencySymbolMap[user.currency]}
+              {formatPrice(item.total_price)} {CURRENCY_SYMBOL}
             </p>
             {item.quantity > 1 && (
               <>
                 <span>/</span>
                 <p className='text-muted-foreground text-xs'>
-                  {formatPrice(unitPrice)} {user.currency && currencySymbolMap[user.currency]}{' '}
-                  {t`unit`}
+                  {formatPrice(item.price)} {CURRENCY_SYMBOL} {t`unit`}
                 </p>
               </>
             )}

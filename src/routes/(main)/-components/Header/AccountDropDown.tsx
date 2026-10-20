@@ -25,7 +25,11 @@ export const AccountDropDown = () => {
         <Avatar>
           <AvatarImage src={AVATAR_IMAGE} />
           <AvatarFallback>
-            <span className='text-primary font-medium uppercase'>{user?.full_name?.[0]}</span>
+            {user?.full_name ? (
+              <span className='text-primary font-medium uppercase'>{user.full_name[0]}</span>
+            ) : (
+              <User className='text-primary size-4' />
+            )}
           </AvatarFallback>
         </Avatar>
       </DropdownMenuTrigger>
@@ -34,31 +38,12 @@ export const AccountDropDown = () => {
         <DropdownMenuItem className={'flex-col items-start gap-0.5'}>
           <p className='text-foreground font-bold'>{user?.full_name ?? t`User`}</p>
           <p className='text-muted-foreground max-w-full truncate text-xs'>
-            {user?.email ?? t`User email`}
+            {user?.phone_number ?? user?.email}
           </p>
         </DropdownMenuItem>
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
-          {user?.role === 'seller' ? (
-            <>
-              <DropdownMenuItem
-                render={
-                  <Link to='/seller'>
-                    <LayoutDashboardIcon />
-                    {t`Dashboard`}
-                  </Link>
-                }
-              />
-              <DropdownMenuItem
-                render={
-                  <Link to='/seller/profile'>
-                    <User />
-                    {t`My Account`}
-                  </Link>
-                }
-              />
-            </>
-          ) : user?.role === 'buyer' ? (
+          {user?.role === 'buyer' ? (
             <>
               <DropdownMenuItem
                 render={

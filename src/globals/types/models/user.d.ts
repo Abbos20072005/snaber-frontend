@@ -1,10 +1,9 @@
-type UserRole = 'admin' | 'buyer' | 'moderator' | 'seller' | 'super_admin';
+type UserRole = 'admin' | 'buyer';
 
 interface User {
   block_reason: string;
   country?: string;
-  currency?: CurrencyCode;
-  email: string;
+  email: string | null;
   full_name: string;
   id: number;
   image?: string;
@@ -12,7 +11,7 @@ interface User {
   is_blocked: boolean;
   is_staff: boolean;
   is_verified: boolean;
-  phone_number: string;
+  phone_number: string | null;
   role: UserRole;
 }
 

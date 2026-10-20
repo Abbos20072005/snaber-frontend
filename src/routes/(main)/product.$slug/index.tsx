@@ -1,16 +1,13 @@
 import { useLingui } from '@lingui/react/macro';
 import { useSuspenseQuery } from '@tanstack/react-query';
 import { createFileRoute, Link, useParams } from '@tanstack/react-router';
-import { parseAsInteger, useQueryState } from 'nuqs';
 import { useState } from 'react';
 // FEATURE DISABLED: Product comments (auth-gated).
 // import { Suspense } from 'react';
 
 // import { ProductCommentSection, ProductCommentSectionSkeleton } from '@/modules/comment';
-import { currencySymbolMap } from '@/modules/currency';
 import {
   getGallery,
-  getLeadTimeLabel,
   getPublicProductByIdQueryOptions,
   PublicProductAside,
   PublicProductDetailSkeleton,
@@ -48,32 +45,13 @@ const PublicProductDetailPage = () => {
   const [activeTab, setActiveTab] = useState('info');
 
   const product = productQuery.data;
-  const defaultVariantId = product.variants[0]?.id ?? 0;
-  const [selectedVariantId, setSelectedVariantId] = useQueryState(
-    'variant',
-    parseAsInteger.withDefault(defaultVariantId)
-  );
+  const gallery = getGallery(product);
 
-  const selectedVariant = product.variants.find((variant) => variant.id === selectedVariantId);
-  const gallery = getGallery(product, selectedVariant);
-
-  const basePrice = `${formatPrice(product.price_min)}-${formatPrice(product.price_max)}${currencySymbolMap[product.currency]}`;
-  const selectedPrice = selectedVariant
-    ? `${formatPrice(selectedVariant.price_override)}${currencySymbolMap[product.currency]}`
-    : '';
-  const totalStock = product.variants.reduce((sum, variant) => sum + variant.stock_quantity, 0);
-  const leadTime = getLeadTimeLabel(product);
   const handleShowAllCharacteristics = () => {
     setActiveTab('characteristics');
     document
       .getElementById('product-full-characteristics')
       ?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  };
-  const handleVariantChange = (variant: ProductVariant) => {
-    const nextVariant = product.variants.find((v) => v.id === variant.id) || product.variants[0];
-
-    void setSelectedVariantId(variant.id);
-    setActiveImageSrc(getGallery(product, nextVariant)[0]?.src);
   };
 
   return (
@@ -94,99 +72,59 @@ const PublicProductDetailPage = () => {
         </BreadcrumbList>
       </Breadcrumb>
 
-      <h1 className='text-primary text-2xl leading-tight font-bold'>{product.name}</h1>
-
-      <div className='grid items-start gap-6 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,0.75fr)_300px]'>
+      <div className='grid items-start gap-6 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)_340px]'>
         <PublicProductGallery
-          key={selectedVariant?.id ?? product.product_id}
           activeImageSrc={activeImageSrc}
           gallery={gallery}
           onActiveImageChange={setActiveImageSrc}
         />
-        <PublicProductSummary
-          selectedVariant={selectedVariant}
-          onShowAll={handleShowAllCharacteristics}
-        />
-        <PublicProductAside
-          basePrice={basePrice}
-          leadTime={leadTime}
-          selectedPrice={selectedPrice}
-          selectedVariant={selectedVariant}
-          onVariantChange={handleVariantChange}
-          product={product}
-          totalStock={totalStock}
-        />
+        <PublicProductSummary onShowAll={handleShowAllCharacteristics} product={product} />
+        <PublicProductAside product={product} />
       </div>
 
       <div className='space-y-6'>
         {/* FEATURE DISABLED: Product comments (auth-gated). */}
         {/* <Suspense fallback={<ProductCommentSectionSkeleton />}> */}
-        {/*   {selectedVariant && <ProductCommentSection currentVariant={selectedVariant} />} */}
+        {/*   <ProductCommentSection currentProduct={product} /> */}
         {/* </Suspense> */}
-        <PublicProductTabs
-          activeTab={activeTab}
-          selectedVariant={selectedVariant}
-          onTabChange={setActiveTab}
-          product={product}
-        />
+        <PublicProductTabs activeTab={activeTab} onTabChange={setActiveTab} product={product} />
       </div>
     </div>
   );
 };
 
-const getSeoVariant = (product: PublicProduct, variantId?: number) =>
-  product.variants.find((variant) => variant.id === variantId) ?? product.variants[0];
-
 export const Route = createFileRoute('/(main)/product/$slug/')({
-  loader: ({ context: { queryClient }, params: { slug }, location: { search } }) => {
+  loader: ({ context: { queryClient }, params: { slug } }) => {
     const id = extractSlugId(slug);
 
-    const variant = (
-      search as {
-        variant: number | undefined;
-      }
-    ).variant;
-
-    const variantPromise = new Promise((resolve) => {
-      resolve(variant ?? undefined);
-    });
-
-    return Promise.all([
-      queryClient.ensureQueryData(getPublicProductByIdQueryOptions({ id })),
-      variantPromise
-    ]);
+    return queryClient.ensureQueryData(getPublicProductByIdQueryOptions({ id }));
   },
-  head: ({ loaderData, match }) => {
-    const product = loaderData?.[0];
-    const variantId = loaderData?.[1] as number | undefined;
+  head: ({ loaderData: product, match }) => {
     const siteUrl = import.meta.env.VITE_SITE_URL || '';
 
     if (!product) {
       return {
         ...createSeoMeta({
           title: 'Product details',
-          description:
-            'View product details, prices, variants, supplier information, and order terms.',
+          description: 'View product details, prices and availability on snaber.uz.',
           locale: getLocale()
         })
       };
     }
 
     const productName = product.name;
-    const companyName = product.company.name;
     const categoryName = product.category.name;
-    const seoVariant = getSeoVariant(product, variantId);
-    const variantDescription = seoVariant?.description;
-    const fallbackDescription = `Find ${productName} from ${companyName} in ${categoryName} on snaber.uz — building materials and tools.`;
-    const seoImage = getGallery(product, seoVariant)[0]?.src;
+    const description =
+      product.specifications.map(({ name, value }) => `${name}: ${value}`).join(', ') ||
+      `Buy ${productName} in ${categoryName} on snaber.uz — building materials and tools.`;
+    const seoImage = getGallery(product)[0]?.src;
     const canonicalUrl = siteUrl ? `${siteUrl}${match.pathname}` : undefined;
-    const priceRange = `${formatPrice(product.price_min)}-${formatPrice(product.price_max)}`;
     const categoryUrl = `${siteUrl}/catalog/${generateSlugId(product.category.id, categoryName)}`;
 
     return {
       ...createSeoMeta({
         title: productName,
-        description: variantDescription || fallbackDescription,
+        description,
         image: seoImage || (siteUrl ? `${siteUrl}${DEFAULT_OG_IMAGE.url}` : DEFAULT_OG_IMAGE.url),
         imageWidth: seoImage ? undefined : DEFAULT_OG_IMAGE.width,
         imageHeight: seoImage ? undefined : DEFAULT_OG_IMAGE.height,
@@ -197,14 +135,16 @@ export const Route = createFileRoute('/(main)/product/$slug/')({
       scripts: [
         ...createProductJsonLd({
           name: productName,
-          description: variantDescription || fallbackDescription,
+          description,
           image: seoImage,
-          sku: seoVariant?.sku_variant,
-          brand: companyName,
+          sku: product.sku,
           offers: {
-            price: priceRange,
-            priceCurrency: product.currency,
-            availability: 'https://schema.org/InStock'
+            price: formatPrice(product.final_price),
+            priceCurrency: 'UZS',
+            availability:
+              product.stock_quantity > 0
+                ? 'https://schema.org/InStock'
+                : 'https://schema.org/OutOfStock'
           }
         }).scripts,
         ...createBreadcrumbJsonLd([

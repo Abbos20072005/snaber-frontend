@@ -1,13 +1,12 @@
 import { useLingui } from '@lingui/react/macro';
-import { useIsFetching, useIsMutating, useQuery } from '@tanstack/react-query';
+import { useIsFetching, useIsMutating } from '@tanstack/react-query';
 import { Link } from '@tanstack/react-router';
-import { BellIcon, LogOutIcon, SlidersHorizontalIcon, UserPenIcon } from 'lucide-react';
+import { LogOutIcon, SlidersHorizontalIcon, UserPenIcon } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
 import { useAuth } from '@/modules/auth';
 import { AlertLogoutDialog } from '@/modules/auth/components';
 import { LangSwitcher } from '@/modules/lang-switcher';
-import { getUnreadNotificationCountQueryOptions, NotificationCard } from '@/modules/notifications';
 import { cn } from '@/shared/lib/utils';
 import { Avatar, AvatarFallback, AvatarImage } from '@/shared/ui/avatar';
 import { Button } from '@/shared/ui/button';
@@ -18,7 +17,6 @@ import {
   DropdownMenuTrigger
 } from '@/shared/ui/dropdown-menu';
 import { LoadingLine } from '@/shared/ui/loading-line';
-import { Popover, PopoverContent, PopoverTrigger } from '@/shared/ui/popover';
 
 export const AdminHeader = () => {
   const { user } = useAuth();
@@ -33,13 +31,6 @@ export const AdminHeader = () => {
   const isGlobalPending = isFetching > 0 || isMutating > 0;
   const [visible, setVisible] = useState<boolean>(false);
 
-  const unreadNotificationsQuery = useQuery({
-    ...getUnreadNotificationCountQueryOptions(),
-    enabled: Boolean(user)
-  });
-
-  const hasUnreadNotifications = Boolean(unreadNotificationsQuery.data?.data.unread_count);
-
   useEffect(() => {
     if (isGlobalPending) {
       const t = setTimeout(setVisible, 200, true);
@@ -52,28 +43,6 @@ export const AdminHeader = () => {
       <div className='flex items-center gap-4'>
         <div className='flex items-center gap-4 border-r py-1 pr-4'>
           <LangSwitcher />
-          <Popover>
-            <PopoverTrigger
-              render={
-                <Button
-                  aria-label='Notifications'
-                  className='relative cursor-pointer'
-                  variant='ghost'
-                >
-                  <BellIcon />
-                  {hasUnreadNotifications && (
-                    <span className='absolute flex size-2'>
-                      <span className='absolute -top-1.5 -right-1 inline-flex h-full w-full animate-ping rounded-full bg-red-500 opacity-75'></span>
-                      <span className='relative -top-1.5 -right-1 inline-flex size-2 rounded-full bg-red-700'></span>
-                    </span>
-                  )}
-                </Button>
-              }
-            />
-            <PopoverContent align='center' className='w-90!'>
-              <NotificationCard />
-            </PopoverContent>
-          </Popover>
           <Link hash='settings' to='/admin/profile'>
             <Button aria-label='Settings' className='cursor-pointer p-2' variant='ghost'>
               <SlidersHorizontalIcon />

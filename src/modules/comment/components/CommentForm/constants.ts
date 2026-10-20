@@ -5,7 +5,7 @@ import { createFileArraySchema } from '@/shared/constants/helperSchemas';
 
 export const commentFormSchema = () =>
   z.object({
-    variant: z.string().min(1, msg`Variant is required`),
+    product: z.string().min(1, msg`Product is required`),
     text: z
       .string()
       .trim()

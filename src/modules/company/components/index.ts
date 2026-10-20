@@ -1,5 +1,4 @@
 export { CompaniesTable } from './CompaniesTable';
-export { CompanyBadgeSelect } from './CompanyBadgeSelect';
 export { CompanyCard } from './CompanyCard';
 export { CompanyCardSkeleton } from './CompanyCardSkeleton';
 export { CompanyFilterSection } from './CompanyFilterSection';

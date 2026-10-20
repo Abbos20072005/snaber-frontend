@@ -1,9 +1,5 @@
 import { msg } from '@lingui/core/macro';
 import {
-  BellRingIcon,
-  // FEATURE DISABLED: Admin — company drafts moderation.
-  // Building2Icon,
-  CircleCheckBigIcon,
   GalleryVerticalEndIcon,
   LayoutDashboardIcon,
   PackageCheckIcon,
@@ -43,11 +39,6 @@ export const useSidebarData = () => {
             icon: PackageIcon
           },
           {
-            title: msg`Product checks`,
-            url: '/admin/product-checks',
-            icon: CircleCheckBigIcon
-          },
-          {
             title: msg`Orders`,
             url: '/admin/orders',
             icon: PackageCheckIcon
@@ -63,11 +54,6 @@ export const useSidebarData = () => {
           //   title: msg`Companies`,
           //   url: '/admin/companies'
           // },
-          {
-            icon: BellRingIcon,
-            title: msg`Notifications`,
-            url: '/admin/notifications'
-          },
           {
             title: msg`Attributes`,
             icon: SpaceIcon,
@@ -89,6 +75,10 @@ export const useSidebarData = () => {
               {
                 title: msg`About`,
                 url: '/admin/contents/about'
+              },
+              {
+                title: msg`Legal clients`,
+                url: '/admin/contents/legal'
               }
             ]
           }

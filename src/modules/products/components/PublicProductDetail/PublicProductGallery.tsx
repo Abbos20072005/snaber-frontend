@@ -84,11 +84,11 @@ export const PublicProductGallery = ({
   return (
     <div className='grid gap-3 md:grid-cols-[80px_minmax(0,1fr)] md:items-start'>
       <Carousel
-        className='hidden md:block md:max-h-125h w-full'
+        className='md:max-h-125h hidden w-full md:block'
         opts={{ align: 'start', loop: gallery.length > 5 }}
         orientation={isMobile ? 'horizontal' : 'vertical'}
       >
-        <CarouselContent className='max-h-100 md:h-100 xl:max-h-125 xl:h-125'>
+        <CarouselContent className='max-h-100 md:h-100 xl:h-125 xl:max-h-125'>
           {gallery.map((image, index) => {
             const galleryIndex = index % gallery.length;
             return (

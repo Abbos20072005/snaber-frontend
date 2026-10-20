@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
-import { useSearch } from '@tanstack/react-router';
+import { useMatch } from '@tanstack/react-router';
 
 import type { GetAttributeValuesRequest } from '@/shared/api';
 
@@ -17,7 +17,8 @@ interface AttributeValuesTableProps {
 export const AttributeValuesTable = ({ enabled = true, request }: AttributeValuesTableProps) => {
   const columns = useAttributeValueTableColumns();
 
-  const params = useSearch({ from: '/admin/attribute-values/' });
+  // The table is also rendered inside the attributes page sheet, where this route isn't active.
+  const params = useMatch({ from: '/admin/attribute-values/', shouldThrow: false })?.search ?? {};
 
   const valuesQuery = useQuery({
     ...getAttributeValuesQueryOptions({

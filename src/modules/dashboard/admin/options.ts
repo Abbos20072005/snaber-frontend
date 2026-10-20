@@ -4,9 +4,8 @@ import {
   getAdminLast30DaysStatistics,
   getAdminMonthlyRevenue,
   getAdminOrdersByCategory,
-  getAdminRFQOrdersByStatus,
   getAdminTodayOrders,
-  getAdminTopCompanies,
+  getAdminTopProducts,
   getAdminUserCounts,
   getAdminWeeklyJoinedUsers
 } from '@/shared/api/requests/dashboard';
@@ -17,9 +16,8 @@ export const ADMIN_DASHBOARD_QUERY_KEYS = {
     [...ADMIN_DASHBOARD_QUERY_KEYS.base(), 'last-30-days-statistics'] as const,
   monthlyRevenue: () => [...ADMIN_DASHBOARD_QUERY_KEYS.base(), 'monthly-revenue'] as const,
   ordersByCategory: () => [...ADMIN_DASHBOARD_QUERY_KEYS.base(), 'orders-by-category'] as const,
-  rfqOrdersByStatus: () => [...ADMIN_DASHBOARD_QUERY_KEYS.base(), 'rfq-orders-by-status'] as const,
   todayOrders: () => [...ADMIN_DASHBOARD_QUERY_KEYS.base(), 'today-orders'] as const,
-  topCompanies: () => [...ADMIN_DASHBOARD_QUERY_KEYS.base(), 'top-companies'] as const,
+  topProducts: () => [...ADMIN_DASHBOARD_QUERY_KEYS.base(), 'top-products'] as const,
   userCounts: () => [...ADMIN_DASHBOARD_QUERY_KEYS.base(), 'user-counts'] as const,
   weeklyJoinedUsers: () => [...ADMIN_DASHBOARD_QUERY_KEYS.base(), 'weekly-joined-users'] as const
 } as const;
@@ -42,22 +40,16 @@ export const getAdminOrdersByCategoryQueryOptions = () =>
     queryFn: getAdminOrdersByCategory
   });
 
-export const getAdminRFQOrdersByStatusQueryOptions = () =>
-  queryOptions({
-    queryKey: ADMIN_DASHBOARD_QUERY_KEYS.rfqOrdersByStatus(),
-    queryFn: getAdminRFQOrdersByStatus
-  });
-
 export const getAdminTodayOrdersQueryOptions = () =>
   queryOptions({
     queryKey: ADMIN_DASHBOARD_QUERY_KEYS.todayOrders(),
     queryFn: getAdminTodayOrders
   });
 
-export const getAdminTopCompaniesQueryOptions = () =>
+export const getAdminTopProductsQueryOptions = () =>
   queryOptions({
-    queryKey: ADMIN_DASHBOARD_QUERY_KEYS.topCompanies(),
-    queryFn: getAdminTopCompanies
+    queryKey: ADMIN_DASHBOARD_QUERY_KEYS.topProducts(),
+    queryFn: getAdminTopProducts
   });
 
 export const getAdminUserCountsQueryOptions = () =>

@@ -15,7 +15,7 @@ export const TopCategoriesSection = () => {
   const { t } = useLingui();
   const getPublicAllCategoriesQuery = useSuspenseQuery(getPublicAllCategoriesOptions());
   const sections = useMemo(
-    () => (getPublicAllCategoriesQuery.data ?? []).flatMap((group) => group.children ?? []),
+    () => getPublicAllCategoriesQuery.data ?? [],
     [getPublicAllCategoriesQuery.data]
   );
   const [selectedId, setSelectedId] = useState<number | undefined>(undefined);

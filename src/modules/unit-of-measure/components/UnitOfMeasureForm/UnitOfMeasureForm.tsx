@@ -19,7 +19,9 @@ export const UnitOfMeasureForm = ({ defaultValues, onSubmit }: UnitOfMeasureForm
       onChange: unitOfMeasureSchema()
     },
     defaultValues: {
-      unit: defaultValues?.unit ?? ''
+      unit_en: defaultValues?.unit_en ?? '',
+      unit_ru: defaultValues?.unit_ru ?? '',
+      unit_uz: defaultValues?.unit_uz ?? ''
     } satisfies UnitOfMeasureSchema,
     onSubmit: ({ value }) => {
       onSubmit(value);
@@ -37,14 +39,20 @@ export const UnitOfMeasureForm = ({ defaultValues, onSubmit }: UnitOfMeasureForm
           void form.handleSubmit();
         }}
       >
-        <form.AppField name='unit'>
+        <form.AppField name='unit_uz'>
           {(field) => (
             <field.Input
               isRequired
-              label={t`Unit`}
+              label={`${t`Unit`} (UZ)`}
               placeholder={t`Enter unit of measure`}
             />
           )}
+        </form.AppField>
+        <form.AppField name='unit_ru'>
+          {(field) => <field.Input label={`${t`Unit`} (RU)`} />}
+        </form.AppField>
+        <form.AppField name='unit_en'>
+          {(field) => <field.Input label={`${t`Unit`} (EN)`} />}
         </form.AppField>
       </form>
     </form.AppForm>

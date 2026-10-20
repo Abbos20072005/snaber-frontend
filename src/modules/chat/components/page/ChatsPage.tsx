@@ -42,7 +42,6 @@ export const ChatsPage = ({ contentHeightClassName = 'h-[calc(100vh-64px)]' }: P
   const handleLoadMore = useCallback(() => {
     if (hasNextPage && !isFetchingNextPage) fetchNextPage();
   }, [fetchNextPage, hasNextPage, isFetchingNextPage]);
-  
 
   return (
     <PageContent className='p-0'>

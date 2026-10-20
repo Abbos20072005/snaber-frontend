@@ -4,70 +4,46 @@ import { Link } from '@tanstack/react-router';
 import { ChevronRightIcon, HeartIcon, ShoppingCartIcon } from 'lucide-react';
 import { toast } from 'sonner';
 
-import { currencySymbolMap } from '@/modules/currency';
-import { getPublicProductById, postFavouriteProduct } from '@/shared/api';
 import { postCart } from '@/shared/api/requests/product/cart';
-import { generateSlugId } from '@/shared/constants';
+import { CURRENCY_SYMBOL, generateSlugId } from '@/shared/constants';
 import { formatPrice } from '@/shared/lib/format';
 import { cn } from '@/shared/lib/utils';
-import { useFavoritesStore } from '@/shared/store';
-import { Badge } from '@/shared/ui/badge';
 import { Button } from '@/shared/ui/button';
 import { Card } from '@/shared/ui/card';
 import { Carousel, CarouselContent, CarouselItem } from '@/shared/ui/carousel';
 
-import { productTypeColorMap, productTypeLabelMap } from '../constants';
+import { useProductFavorite } from '../hooks/useProductFavorite';
 import { PRODUCT_QUERY_KEYS } from '../options';
 import { ProductImageIndicators } from './ProductImageIndicators';
 
 interface Props {
   className?: string;
-  isShowCompany?: boolean;
   product: ProductPreview;
 }
 
-export const ProductCard = ({ product, isShowCompany = true, className }: Props) => {
+export const ProductCard = ({ product, className }: Props) => {
   const { t } = useLingui();
-  const { isFavorite, toggleFavorite } = useFavoritesStore();
-  const productId = product.product_id ?? product.id;
-  const images = product.images ?? [];
+  const { isFavorite: isFav, onToggleFavorite } = useProductFavorite(product);
+  const productId = product.id;
+  const images = product.images;
 
-  const isFav = isFavorite(productId);
-
-  const postFavoriteMutation = useMutation({
-    mutationFn: postFavouriteProduct,
-    meta: {
-      invalidatesQuery: PRODUCT_QUERY_KEYS.getFavorites()
-    }
-  });
-
-  const onToggleFavorite = () => {
-    const wasFavorite = isFav;
-
-    toggleFavorite(product);
-
-    if (!wasFavorite) toast(t`Added to favorites`);
-    postFavoriteMutation.mutate(
-      { data: { product_id: productId, is_favourite: !wasFavorite } },
-      { onError: () => toggleFavorite(product) }
-    );
-  };
+  // Products without filled-in characteristics still show the basics instead of an empty card.
+  const specifications =
+    product.specifications.length > 0
+      ? product.specifications
+      : [
+          ...(product.sku ? [{ name: t`Code`, value: product.sku }] : []),
+          {
+            name: t`In stock`,
+            value:
+              product.stock_quantity > 0
+                ? `${formatPrice(product.stock_quantity)} ${product.unit?.unit ?? ''}`.trim()
+                : t`Out of stock`
+          }
+        ];
 
   const addToCartMutation = useMutation({
-    mutationFn: async () => {
-      const { data: detail } = await getPublicProductById({ id: productId });
-      const variant = detail.variants[0];
-
-      if (!variant) throw new Error(t`Product variant not found`);
-
-      await postCart({
-        data: {
-          product: variant.id,
-          quantity: 1,
-          attribute_stock: variant.attribute_stocks[0]?.id
-        }
-      });
-    },
+    mutationFn: () => postCart({ data: { product: productId, quantity: 1 } }),
     meta: {
       invalidatesQuery: PRODUCT_QUERY_KEYS.getCartList()
     },
@@ -110,34 +86,6 @@ export const ProductCard = ({ product, isShowCompany = true, className }: Props)
           </Button>
         </div>
         <div className='min-w-0 flex-1'>
-          <div className='flex flex-wrap gap-1'>
-            {product.product_type === 'both' ? (
-              <>
-                <Badge
-                  style={{
-                    backgroundColor: productTypeColorMap.ready
-                  }}
-                >
-                  {t(productTypeLabelMap.ready)}
-                </Badge>
-                <Badge
-                  style={{
-                    backgroundColor: productTypeColorMap.made_to_order
-                  }}
-                >
-                  {t(productTypeLabelMap.made_to_order)}
-                </Badge>
-              </>
-            ) : (
-              <Badge
-                style={{
-                  backgroundColor: productTypeColorMap[product.product_type]
-                }}
-              >
-                {t(productTypeLabelMap[product.product_type])}
-              </Badge>
-            )}
-          </div>
           <Link
             className='mt-2 line-clamp-3 text-base leading-6 font-semibold hover:underline lg:text-lg'
             params={{ slug: generateSlugId(productId, product.name) }}
@@ -145,27 +93,14 @@ export const ProductCard = ({ product, isShowCompany = true, className }: Props)
           >
             {product.name}
           </Link>
-          {isShowCompany && (
-            /* FEATURE DISABLED: Company mini-site link. */
-            // <Link
-            //   className='text-success text-xs hover:underline'
-            //   params={{ slug: generateSlugId(product.company.id, product.company.name) }}
-            //   to='/companies/$slug'
-            // >
-            //   {product.company.name}
-            // </Link>
-            <p className='text-success mt-1 truncate text-sm'>{product.company.name}</p>
-          )}
-          {(product.specifications ?? []).length > 0 && (
-            <dl className='mt-3 space-y-1.5'>
-              {(product.specifications ?? []).slice(0, 6).map((spec) => (
-                <div key={`${spec.name}-${spec.value}`} className='flex gap-1 text-sm leading-6'>
-                  <dt className='text-muted-foreground shrink-0'>{spec.name}:</dt>
-                  <dd className='min-w-0 truncate font-medium'>{spec.value}</dd>
-                </div>
-              ))}
-            </dl>
-          )}
+          <dl className='mt-3 space-y-1.5'>
+            {specifications.map((spec) => (
+              <div key={`${spec.name}-${spec.value}`} className='flex gap-1 text-sm leading-6'>
+                <dt className='text-muted-foreground shrink-0'>{spec.name}:</dt>
+                <dd className='min-w-0 truncate font-medium'>{spec.value}</dd>
+              </div>
+            ))}
+          </dl>
           <Link
             className='text-primary mt-3 inline-flex items-center gap-1 text-sm font-semibold hover:underline'
             params={{ slug: generateSlugId(productId, product.name) }}
@@ -177,47 +112,30 @@ export const ProductCard = ({ product, isShowCompany = true, className }: Props)
         </div>
         <div className='flex shrink-0 flex-row items-center justify-between gap-3 border-t pt-3 sm:w-52 sm:flex-col sm:items-stretch sm:justify-start sm:border-t-0 sm:border-l sm:pt-0 sm:pl-6 lg:w-60'>
           <div>
+            {product.discount_percent > 0 && (
+              <p className='text-muted-foreground text-xs whitespace-nowrap line-through'>
+                {formatPrice(product.price)} {CURRENCY_SYMBOL}
+              </p>
+            )}
             <p className='text-xl leading-tight font-extrabold whitespace-nowrap lg:text-2xl'>
-              {formatPrice(product.price_min)}
-              {currencySymbolMap[product.currency]}
+              {formatPrice(product.final_price)} {CURRENCY_SYMBOL}
             </p>
-            <p className='text-muted-foreground mt-1 text-xs capitalize'>
-              / {product.moq_unit.unit}
-            </p>
+            {product.unit && (
+              <p className='text-muted-foreground mt-1 text-xs capitalize'>/ {product.unit.unit}</p>
+            )}
           </div>
           <Button
             className='shrink-0 bg-yellow-400 font-bold text-black hover:bg-yellow-300 sm:mt-3 sm:w-full'
-            disabled={addToCartMutation.isPending}
+            disabled={addToCartMutation.isPending || product.stock_quantity === 0}
             variant='secondary'
             loading={addToCartMutation.isPending}
             onClick={() => addToCartMutation.mutate()}
           >
             <ShoppingCartIcon />
-            {t`Add to cart`}
+            {product.stock_quantity === 0 ? t`Out of stock` : t`Add to cart`}
           </Button>
         </div>
       </div>
-      {/* FEATURE DISABLED: Min order / lead time info. */}
-      {/* <div className='flex justify-between gap-2'> */}
-      {/*   <div> */}
-      {/*     <p className='text-muted-foreground text-xs font-semibold'>{t`Min. order`}</p> */}
-      {/*     <p className='text-sm font-medium'> */}
-      {/*       {product.moq} {product.moq_unit.unit} */}
-      {/*     </p> */}
-      {/*   </div> */}
-      {/*   <div> */}
-      {/*     <p className='text-muted-foreground text-xs font-semibold'>{t`Lead time`}</p> */}
-      {/*     <p className='text-sm font-medium'> */}
-      {/*       {(() => { */}
-      {/*         if (product.lead_time_min && product.lead_time_max) */}
-      {/*           return `${product.lead_time_min}-${product.lead_time_max} ${t`days`}`; */}
-      {/*         else if (product.lead_time_min) return `${product.lead_time_min}+ ${t`days`}`; */}
-      {/*         else if (product.lead_time_max) return `Up to ${product.lead_time_max} ${t`days`}`; */}
-      {/*         return t`N/A`; */}
-      {/*       })()} */}
-      {/*     </p> */}
-      {/*   </div> */}
-      {/* </div> */}
     </Card>
   );
 };

@@ -6,7 +6,6 @@ import { useLingui } from '@lingui/react/macro';
 import { createFileRoute, Link, redirect } from '@tanstack/react-router';
 import {
   BarChart3Icon,
-  BellIcon,
   // FEATURE DISABLED: Companies list page.
   // Building2Icon,
   ChevronRightIcon,
@@ -40,12 +39,6 @@ const sections: {
     label: msg`Orders`,
     to: '/profile/orders',
     icon: PackageIcon,
-    exact: false
-  },
-  {
-    label: msg`Notifications`,
-    to: '/profile/notifications',
-    icon: BellIcon,
     exact: false
   },
   {
@@ -139,11 +132,9 @@ const MobileProfile = () => {
 export const Route = createFileRoute('/(main)/profile/')({
   component: MobileProfile,
   loader: async ({ context }) => {
-    const user = await context.queryClient
-      .ensureQueryData(getAuthMeQueryOptions())
-      .catch(() => {
-        throw redirect({ to: '/' });
-      });
+    const user = await context.queryClient.ensureQueryData(getAuthMeQueryOptions()).catch(() => {
+      throw redirect({ to: '/' });
+    });
     if (user.role !== 'buyer') throw redirect({ to: '/' });
   }
 });
