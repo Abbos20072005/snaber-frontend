@@ -16,7 +16,7 @@ export const GlobalSearchInput = ({ search, setSearch, handleSubmit, setIsFocuse
 
   return (
     <form className='flex-1' onSubmit={handleSubmit}>
-      <InputGroup className='h-12 w-full rounded-full bg-card py-1 pr-1 pl-3 shadow-xs'>
+      <InputGroup className='h-12 w-full rounded-full border-2 bg-card py-1 pr-1 pl-3 shadow-xs'>
         <InputGroupInput
           aria-label='Search'
           className='h-full text-base'

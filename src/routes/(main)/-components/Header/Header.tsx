@@ -58,7 +58,7 @@ export const Header = () => {
         <div className='container flex h-16 items-center gap-x-6 gap-y-3'>
           <Link
             aria-label='snaber.uz'
-            className='flex h-11 items-center justify-center rounded-lg px-1'
+            className='border-input flex h-11 items-center justify-center border-b-2 rounded-lg px-1'
             to='/'
           >
             <SiteLogo />
