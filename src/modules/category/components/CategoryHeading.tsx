@@ -14,6 +14,6 @@ export const CategoryHeading = ({ className, title }: Props) => (
       className
     )}
   >
-    <h2 className='text-foreground truncate text-lg font-bold md:text-xl'>{title}</h2>
+    <h2 className='text-foreground truncate text-base font-bold md:text-lg'>{title}</h2>
   </div>
 );
