@@ -152,8 +152,8 @@ msgstr "Admin paneli"
 msgid "All"
 msgstr "Barchasi"
 
-#~ msgid "All categories"
-#~ msgstr "Barcha kategoriyalar"
+msgid "All categories"
+msgstr "Barcha kategoriyalar"
 
 msgid "All messages"
 msgstr "Barcha xabarlar"

@@ -2,6 +2,8 @@ import { useLingui } from '@lingui/react/macro';
 
 import { cn } from '@/shared/lib/utils';
 
+import { CategoryHeading } from './CategoryHeading';
+
 interface CategorySidebarProps {
   roots: Category[];
   selectedId?: number;
@@ -12,8 +14,8 @@ export const CategorySidebar = ({ roots, selectedId, onSelect }: CategorySidebar
   const { t } = useLingui();
 
   return (
-    <aside className='shrink-0 self-start md:sticky md:top-27 md:max-h-[calc(100vh-6.75rem)] md:w-55 md:overflow-y-auto'>
-      <p className='border-b pb-2 text-[15px] font-semibold'>{t`Choose a category`}</p>
+    <aside className='shrink-0 self-start md:sticky md:top-29 md:max-h-[calc(100vh-7.25rem)] md:w-55 md:overflow-y-auto'>
+      <CategoryHeading title={t`Choose a category`} />
       <ul className='mt-1 flex gap-1 overflow-x-auto py-1 md:flex-col md:overflow-visible'>
         {roots.map((root) => (
           <li key={root.id} className='shrink-0'>

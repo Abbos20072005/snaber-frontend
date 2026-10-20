@@ -151,8 +151,8 @@ msgstr "Admin dashboard"
 msgid "All"
 msgstr "All"
 
-#~ msgid "All categories"
-#~ msgstr "All categories"
+msgid "All categories"
+msgstr "All categories"
 
 msgid "All messages"
 msgstr "All messages"

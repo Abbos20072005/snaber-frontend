@@ -1,8 +1,10 @@
+import { useLingui } from '@lingui/react/macro';
 import { useSuspenseQuery } from '@tanstack/react-query';
 import { Link } from '@tanstack/react-router';
 import { useMemo, useState } from 'react';
 
 import {
+  CategoryHeading,
   CategorySidebar,
   CategoryTile,
   getPublicAllCategoriesOptions
@@ -10,6 +12,7 @@ import {
 import { generateSlugId } from '@/shared/constants';
 
 export const TopCategoriesSection = () => {
+  const { t } = useLingui();
   const getPublicAllCategoriesQuery = useSuspenseQuery(getPublicAllCategoriesOptions());
   const sections = useMemo(
     () => (getPublicAllCategoriesQuery.data ?? []).flatMap((group) => group.children ?? []),
@@ -22,26 +25,28 @@ export const TopCategoriesSection = () => {
 
   return (
     <div className='flex flex-col gap-6 md:flex-row'>
-      <CategorySidebar roots={sections} selectedId={selectedId} onSelect={setSelectedId} />
+      <CategorySidebar selectedId={selectedId} onSelect={setSelectedId} roots={sections} />
       <div className='min-w-0 flex-1 space-y-8'>
+        <CategoryHeading title={t`All categories`} />
+
         {visibleSections.map((section) => {
           const subcategories = section.children ?? [];
 
           if (subcategories.length === 0) return null;
 
           return (
-          <section key={section.id}>
-            <div className='border-t-2 border-yellow-400 pt-2'>
-              <h2 className='text-foreground text-xl font-bold md:text-2xl'>
-                <Link
-                  className='hover:underline'
-                  params={{ slug: generateSlugId(section.id, section.name) }}
-                  to='/catalog/$slug'
-                >
-                  {section.name}
-                </Link>
-              </h2>
-            </div>
+            <section key={section.id}>
+              <div className='border-b pb-2'>
+                <h2 className='text-foreground text-lg font-bold md:text-xl'>
+                  <Link
+                    className='hover:underline'
+                    params={{ slug: generateSlugId(section.id, section.name) }}
+                    to='/catalog/$slug'
+                  >
+                    {section.name}
+                  </Link>
+                </h2>
+              </div>
               <div className='mt-3 grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6'>
                 {subcategories.map((sub) => (
                   <CategoryTile key={sub.id} category={sub} />
