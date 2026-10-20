@@ -52,13 +52,13 @@ export const Header = () => {
     user?.role === 'seller' ? '/seller/orders' : isAdmin ? '/admin/orders' : '/profile/orders';
 
   return (
-    <header className='sticky top-0 z-50 w-full border-b'>
+    <header className='sticky top-0 z-50 w-full border-b-2'>
       <HeaderTopBar />
       <div className='border-border/60 bg-background'>
         <div className='container flex h-16 items-center gap-x-6 gap-y-3'>
           <Link
             aria-label='snaber.uz'
-            className='border-input flex h-11 items-center justify-center border-b-2 rounded-lg px-1'
+            className='flex h-11 items-center justify-center rounded-lg px-1'
             to='/'
           >
             <SiteLogo />
