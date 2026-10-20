@@ -24,13 +24,13 @@ interface HeaderLinkProps {
 
 const HeaderLink = ({ badge, icon, label, to }: HeaderLinkProps) => (
   <Link
-    className='text-muted-foreground hover:text-foreground hidden flex-col items-center gap-1 text-sm font-semibold whitespace-nowrap transition-colors md:flex'
+    className='text-muted-foreground hover:text-foreground hidden flex-col items-center gap-0.5 text-xs font-medium whitespace-nowrap transition-colors md:flex'
     to={to}
   >
     <span className='relative'>
       {icon}
       {badge != null && badge > 0 && (
-        <span className='bg-primary text-primary-foreground absolute -top-2 -right-2.5 flex h-4.5 min-w-4.5 items-center justify-center rounded-full px-1 text-[11px] leading-none font-bold'>
+        <span className='bg-primary text-primary-foreground absolute -top-1.5 -right-2 flex h-4 min-w-4 items-center justify-center rounded-full px-0.5 text-[10px] leading-none font-medium'>
           {badge > 99 ? '99+' : badge}
         </span>
       )}
@@ -74,13 +74,13 @@ export const Header = () => {
                   <HeaderLink
                     badge={favoritesCount}
                     label={t`Favorites`}
-                    icon={<HeartIcon className='size-6' strokeWidth={2.2} />}
+                    icon={<HeartIcon className='size-5' />}
                     to='/favorites'
                   />
                   <HeaderLink
                     badge={cartItemsLength}
                     label={t`Cart`}
-                    icon={<ShoppingCartIcon className='size-6' strokeWidth={2.2} />}
+                    icon={<ShoppingCartIcon className='size-5' />}
                     to='/cart'
                   />
                 </>
@@ -89,7 +89,7 @@ export const Header = () => {
               {user && (
                 <HeaderLink
                   label={t`Orders`}
-                  icon={<PackageIcon className='size-6' strokeWidth={2.2} />}
+                  icon={<PackageIcon className='size-5' />}
                   to={ordersPath}
                 />
               )}
@@ -98,8 +98,7 @@ export const Header = () => {
                 <AccountDropDown />
               ) : (
                 <Button
-                  className='ml-1 h-10 rounded-full px-6 font-bold'
-                  size='lg'
+                  className='ml-1 rounded-full px-5'
                   variant='secondary'
                   onClick={() => setIsOpen(true)}
                 >

@@ -28,7 +28,7 @@ export const LangSwitcher = ({ className, ...props }: Props) => {
     <DropdownMenu {...props}>
       <DropdownMenuTrigger
         render={
-          <Button className='font-semibold' size='lg' variant='outline'>
+          <Button variant='outline'>
             <span className={`fi text-sm uppercase fi-${localeImageMap[currentLocale]}`} />
             <span>{localeLabelMap[currentLocale]}</span>
           </Button>
