@@ -26,7 +26,7 @@ export const TopCategoriesSection = () => {
   return (
     <div className='flex flex-col gap-6 md:flex-row'>
       <CategorySidebar selectedId={selectedId} onSelect={setSelectedId} roots={sections} />
-      <div className='min-w-0 flex-1 space-y-6'>
+      <div className='min-w-0 flex-1 space-y-4'>
         <CategoryHeading title={t`All categories`} />
 
         {visibleSections.map((section) => {
@@ -47,7 +47,7 @@ export const TopCategoriesSection = () => {
                   </Link>
                 </h2>
               </div>
-              <div className='mt-3 grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6'>
+              <div className='mt-2 grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6'>
                 {subcategories.map((sub) => (
                   <CategoryTile key={sub.id} category={sub} />
                 ))}
