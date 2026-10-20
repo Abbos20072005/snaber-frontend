@@ -1,6 +1,7 @@
+import { getRequestHeader } from '@tanstack/react-start/server';
 import axios from 'axios';
 
-import { COOKIES } from '@/shared/constants';
+import { COOKIES, CROSS_SITE_COOKIE_OPTIONS } from '@/shared/constants';
 import { isomorphicCookie } from '@/shared/lib/isomorphic-cookie.ts';
 
 const api = axios.create({
@@ -13,9 +14,25 @@ const apiWithoutAuth = axios.create({
   baseURL: import.meta.env.VITE_API_URL
 });
 
+// During SSR the browser cookies (guest session, auth token) are not sent automatically —
+// they have to be forwarded to the API, otherwise the guest cart and favorites are lost.
+const getServerCookieHeader = () => {
+  if (typeof window !== 'undefined') return undefined;
+
+  try {
+    return getRequestHeader('cookie');
+  } catch {
+    return undefined;
+  }
+};
+
 apiWithoutAuth.interceptors.request.use((config) => {
   const locale = isomorphicCookie.get(COOKIES.LOCALE);
   if (locale) config.headers['Accept-Language'] = locale;
+
+  const cookie = getServerCookieHeader();
+  if (cookie) config.headers.Cookie = cookie;
+
   // FEATURE DISABLED: Guest currency choice (prices show in UZS only).
   // const currency = isomorphicCookie.get(COOKIES.CURRENCY);
   // if (currency) {
@@ -29,6 +46,10 @@ api.interceptors.request.use((config) => {
   const locale = isomorphicCookie.get(COOKIES.LOCALE);
   if (token) config.headers.Authorization = `Bearer ${token}`;
   if (locale) config.headers['Accept-Language'] = locale;
+
+  const cookie = getServerCookieHeader();
+  if (cookie) config.headers.Cookie = cookie;
+
   return config;
 });
 
@@ -50,8 +71,16 @@ api.interceptors.response.use(
               refresh_token: refreshToken
             })
             .then((res) => res.data);
-          isomorphicCookie.set(COOKIES.ACCESS_TOKEN, res.result.access_token, { expires: 7 });
-          isomorphicCookie.set(COOKIES.REFRESH_TOKEN, res.result.refresh_token, { expires: 7 });
+          isomorphicCookie.set(
+            COOKIES.ACCESS_TOKEN,
+            res.result.access_token,
+            CROSS_SITE_COOKIE_OPTIONS
+          );
+          isomorphicCookie.set(
+            COOKIES.REFRESH_TOKEN,
+            res.result.refresh_token,
+            CROSS_SITE_COOKIE_OPTIONS
+          );
           return api.request(originalRequest);
         } catch {
           // Token refresh failed — fall through to session cleanup.

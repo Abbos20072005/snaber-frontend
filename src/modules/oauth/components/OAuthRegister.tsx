@@ -10,7 +10,7 @@ import type { OAuthVerifyFormSchema } from '@/modules/oauth';
 import { AUTH_QUERY_KEYS } from '@/modules/auth';
 import { OAuthVerifyForm } from '@/modules/oauth';
 import { patchAuthMe, postOAuthGoogle } from '@/shared/api';
-import { COOKIES } from '@/shared/constants';
+import { COOKIES, CROSS_SITE_COOKIE_OPTIONS } from '@/shared/constants';
 import { toFormData } from '@/shared/lib/form-data.ts';
 import { Dialog, DialogContent } from '@/shared/ui/dialog';
 import { Spinner } from '@/shared/ui/spinner';
@@ -57,8 +57,8 @@ export const OAuthRegister = ({ oAuthCode }: Props) => {
   const initOAuthMutation = useMutation({
     mutationFn: postOAuthGoogle,
     onSuccess: (data) => {
-      Cookies.set(COOKIES.ACCESS_TOKEN, data.data.access, { expires: 7 });
-      Cookies.set(COOKIES.REFRESH_TOKEN, data.data.refresh, { expires: 7 });
+      Cookies.set(COOKIES.ACCESS_TOKEN, data.data.access, CROSS_SITE_COOKIE_OPTIONS);
+      Cookies.set(COOKIES.REFRESH_TOKEN, data.data.refresh, CROSS_SITE_COOKIE_OPTIONS);
       refreshSession();
 
       if (!data.data.needs_setup) {

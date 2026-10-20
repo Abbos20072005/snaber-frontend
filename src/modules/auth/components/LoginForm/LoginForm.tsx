@@ -5,7 +5,7 @@ import Cookies from 'js-cookie';
 
 import { AUTH_QUERY_KEYS } from '@/modules/auth';
 import { postLogin } from '@/shared/api';
-import { COOKIES } from '@/shared/constants';
+import { COOKIES, CROSS_SITE_COOKIE_OPTIONS } from '@/shared/constants';
 import { OAUTH_URL } from '@/shared/constants/oAuth';
 import { useAuthContext } from '@/shared/context';
 import { Button } from '@/shared/ui/button';
@@ -37,8 +37,8 @@ export const LoginForm = () => {
         result: { access_token, refresh_token }
       }
     }) => {
-      Cookies.set(COOKIES.ACCESS_TOKEN, access_token, { expires: 7 });
-      Cookies.set(COOKIES.REFRESH_TOKEN, refresh_token, { expires: 7 });
+      Cookies.set(COOKIES.ACCESS_TOKEN, access_token, CROSS_SITE_COOKIE_OPTIONS);
+      Cookies.set(COOKIES.REFRESH_TOKEN, refresh_token, CROSS_SITE_COOKIE_OPTIONS);
       setIsOpen(false);
       void queryClient.invalidateQueries({ queryKey: AUTH_QUERY_KEYS.me() });
       void router.invalidate();

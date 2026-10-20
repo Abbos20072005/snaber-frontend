@@ -9,7 +9,7 @@ import { toast } from 'sonner';
 
 import { AUTH_QUERY_KEYS } from '@/modules/auth';
 import { postOtpResend, postVerifyOtp } from '@/shared/api';
-import { COOKIES } from '@/shared/constants';
+import { COOKIES, CROSS_SITE_COOKIE_OPTIONS } from '@/shared/constants';
 import { useAuthContext } from '@/shared/context';
 import { Button } from '@/shared/ui/button';
 import { InputOTP, InputOTPGroup, InputOTPSlot } from '@/shared/ui/input-otp';
@@ -40,8 +40,12 @@ export const VerifyForm = () => {
         }
       }),
     onSuccess: (data) => {
-      Cookies.set(COOKIES.ACCESS_TOKEN, data.data.result.access_token, { expires: 7 });
-      Cookies.set(COOKIES.REFRESH_TOKEN, data.data.result.refresh_token, { expires: 7 });
+      Cookies.set(COOKIES.ACCESS_TOKEN, data.data.result.access_token, CROSS_SITE_COOKIE_OPTIONS);
+      Cookies.set(
+        COOKIES.REFRESH_TOKEN,
+        data.data.result.refresh_token,
+        CROSS_SITE_COOKIE_OPTIONS
+      );
       toast.success(t`Email verified successfully. Welcome!`);
       setIsOpen(false);
       void queryClient.invalidateQueries({ queryKey: AUTH_QUERY_KEYS.me() });
