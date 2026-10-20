@@ -37,7 +37,7 @@ const RouteComponent = () => {
       </div>
       <div className='relative flex items-start gap-4'>
         <FilterSection
-          className='no-scrollbar sticky top-29 hidden max-h-[calc(100vh-7.25rem)] max-w-70 shrink-0 overflow-y-auto md:block'
+          className='no-scrollbar sticky top-27 hidden max-h-[calc(100vh-6.75rem)] max-w-70 shrink-0 overflow-y-auto md:block'
           category={params?.category}
         />
         {getAllProductsQuery.isPending && (
