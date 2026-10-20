@@ -30,32 +30,36 @@ export const SectionWrapper = ({
   ...props
 }: Props) => {
   const { t } = useLingui();
+  const hasHeader = Boolean(title || description || content || props.to);
+
   return (
     <div className={cn('container space-y-4 py-4 lg:space-y-8 lg:py-8', className)}>
-      <div className={cn(titleCenter ? 'text-center' : 'flex items-center gap-4')}>
-        <div className='flex-1 space-y-2'>
-          {title && (
-            <h2
-              className={cn(
-                'text-primary text-xl font-bold md:text-2xl lg:text-3xl',
-                titleCenter && 'text-center'
-              )}
-            >
-              {title}
-            </h2>
-          )}
-          {description && <p className='text-lg'>{description}</p>}
-          {content}
+      {hasHeader && (
+        <div className={cn(titleCenter ? 'text-center' : 'flex items-center gap-4')}>
+          <div className='flex-1 space-y-2'>
+            {title && (
+              <h2
+                className={cn(
+                  'text-primary text-xl font-bold md:text-2xl lg:text-3xl',
+                  titleCenter && 'text-center'
+                )}
+              >
+                {title}
+              </h2>
+            )}
+            {description && <p className='text-lg'>{description}</p>}
+            {content}
+          </div>
+          <div className='flex justify-end'>
+            {props.to && (
+              <Link className={cn('!text-xs md:text-base', buttonVariants())} {...props}>
+                {t`View all`}
+                <ArrowRightIcon />
+              </Link>
+            )}
+          </div>
         </div>
-        <div className='flex justify-end'>
-          {props.to && (
-            <Link className={cn('!text-xs md:text-base', buttonVariants())} {...props}>
-              {t`View all`}
-              <ArrowRightIcon />
-            </Link>
-          )}
-        </div>
-      </div>
+      )}
       {children}
     </div>
   );
