@@ -131,6 +131,9 @@ msgstr "Xaridorlar kompaniyangiz ma’lumotlarini ko‘rib chiqishi uchun birinc
 msgid "Add your first company photo to show buyers your production and workspace."
 msgstr "Xaridorlarga ishlab chiqarish va ish joyingizni ko‘rsatish uchun kompaniyangizning birinchi rasmini qo‘shing."
 
+msgid "Added to cart"
+msgstr "Savatga qo‘shildi"
+
 msgid "Added to favorites"
 msgstr "Sevimlilarga qo‘shildi"
 
@@ -740,8 +743,8 @@ msgstr "Tavsif majburiy"
 msgid "Description moderator"
 msgstr "Tavsif moderatori"
 
-msgid "Details"
-msgstr "Batafsil"
+#~ msgid "Details"
+#~ msgstr "Batafsil"
 
 msgid "Dispatch due today"
 msgstr "Bugun jo‘natilishi kerak"
@@ -916,6 +919,9 @@ msgstr "Fabrika rasmlari"
 
 msgid "Factory photos not found"
 msgstr "Fabrika rasmlari topilmadi"
+
+msgid "Failed to add the product to the cart"
+msgstr "Tovarni savatga qo‘shib bo‘lmadi"
 
 msgid "Failed to complete registration. Please try again."
 msgstr "Ro‘yxatdan o‘tishni yakunlash amalga oshmadi. Qayta urinib ko‘ring."
@@ -1886,6 +1892,9 @@ msgstr "Mahsulot turi"
 
 msgid "Product updates"
 msgstr "Mahsulot yangilanishlari"
+
+msgid "Product variant not found"
+msgstr "Tovar varianti topilmadi"
 
 msgid "Product variants"
 msgstr "Mahsulot variantlari"

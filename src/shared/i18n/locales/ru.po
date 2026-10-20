@@ -131,6 +131,9 @@ msgstr "Добавьте свой первый сертификат, чтобы 
 msgid "Add your first company photo to show buyers your production and workspace."
 msgstr "Добавьте первое фото компании, чтобы показать покупателям ваше производство и рабочее пространство."
 
+msgid "Added to cart"
+msgstr "Добавлено в корзину"
+
 msgid "Added to favorites"
 msgstr "Добавлено в избранное"
 
@@ -740,8 +743,8 @@ msgstr "Описание обязательно"
 msgid "Description moderator"
 msgstr "Модератор описания"
 
-msgid "Details"
-msgstr "Подробнее"
+#~ msgid "Details"
+#~ msgstr "Подробнее"
 
 msgid "Dispatch due today"
 msgstr "Отправка запланирована на сегодня"
@@ -916,6 +919,9 @@ msgstr "Фотографии фабрики"
 
 msgid "Factory photos not found"
 msgstr "Фотографии фабрики не найдены"
+
+msgid "Failed to add the product to the cart"
+msgstr "Не удалось добавить товар в корзину"
 
 msgid "Failed to complete registration. Please try again."
 msgstr "Не удалось завершить регистрацию. Пожалуйста, попробуйте снова."
@@ -1886,6 +1892,9 @@ msgstr "Тип товара"
 
 msgid "Product updates"
 msgstr "Обновления товара"
+
+msgid "Product variant not found"
+msgstr "Вариант товара не найден"
 
 msgid "Product variants"
 msgstr "Варианты товара"

@@ -8,7 +8,6 @@ import { OAuthRegister } from '@/modules/oauth';
 import { getCartListQueryOptions, getFavoritesQueryOptions } from '@/modules/products';
 import { Footer, Header, MobileBottomBar } from '@/routes/(main)/-components';
 import { COOKIES } from '@/shared/constants';
-import { AuthProvider } from '@/shared/context';
 import { isomorphicCookie } from '@/shared/lib/isomorphic-cookie';
 import { CartProvider, FavoritesProvider, useCartStore, useFavoritesStore } from '@/shared/store';
 import { Spinner } from '@/shared/ui/spinner.tsx';
@@ -64,11 +63,9 @@ const StoreData = ({ children }: { children: React.ReactNode }) => {
 
 const RouteComponent = () => {
   return (
-    <AuthProvider>
-      <StoreData>
-        <SiteLayout />
-      </StoreData>
-    </AuthProvider>
+    <StoreData>
+      <SiteLayout />
+    </StoreData>
   );
 };
 

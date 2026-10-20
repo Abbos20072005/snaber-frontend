@@ -6,6 +6,7 @@ import { createRootRouteWithContext, HeadContent, Scripts } from '@tanstack/reac
 import { NuqsAdapter } from 'nuqs/adapters/tanstack-router';
 import { Toaster } from 'sonner';
 
+import { AuthProvider } from '@/shared/context';
 import { dynamicActivate, getLocale } from '@/shared/i18n';
 import { createJsonLdScript, createWebsiteJsonLd } from '@/shared/lib/seo';
 import { TooltipProvider } from '@/shared/ui/tooltip';
@@ -24,7 +25,9 @@ const RootDocument = ({ children }: { children: React.ReactNode }) => (
     <body suppressHydrationWarning>
       <I18nProvider i18n={i18n}>
         <NuqsAdapter>
-          <TooltipProvider>{children}</TooltipProvider>
+          <AuthProvider>
+            <TooltipProvider>{children}</TooltipProvider>
+          </AuthProvider>
         </NuqsAdapter>
       </I18nProvider>
       <Toaster position='top-center' />

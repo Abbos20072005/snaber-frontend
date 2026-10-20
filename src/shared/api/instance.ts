@@ -4,14 +4,16 @@ import axios from 'axios';
 import { COOKIES, CROSS_SITE_COOKIE_OPTIONS } from '@/shared/constants';
 import { isomorphicCookie } from '@/shared/lib/isomorphic-cookie.ts';
 
+const API_URL = import.meta.env.VITE_API_URL;
+
 const api = axios.create({
   withCredentials: true,
-  baseURL: import.meta.env.VITE_API_URL
+  baseURL: API_URL
 });
 
 const apiWithoutAuth = axios.create({
   withCredentials: true,
-  baseURL: import.meta.env.VITE_API_URL
+  baseURL: API_URL
 });
 
 // During SSR the browser cookies (guest session, auth token) are not sent automatically —

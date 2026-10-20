@@ -2,7 +2,7 @@ import { useLingui } from '@lingui/react/macro';
 import { SearchIcon } from 'lucide-react';
 
 import { Button } from '@/shared/ui/button';
-import { InputGroup, InputGroupInput } from '@/shared/ui/input-group.tsx';
+import { Input } from '@/shared/ui/input';
 
 interface Props {
   search: string;
@@ -16,10 +16,10 @@ export const GlobalSearchInput = ({ search, setSearch, handleSubmit, setIsFocuse
 
   return (
     <form className='flex-1' onSubmit={handleSubmit}>
-      <InputGroup className='h-12 w-full rounded-full bg-card py-1 pr-1 pl-3 shadow-xs'>
-        <InputGroupInput
+      <div className='bg-primary flex h-14 items-center gap-2 rounded-xl p-1.5'>
+        <Input
           aria-label='Search'
-          className='h-full text-base'
+          className='bg-background h-full flex-1 rounded-lg border-0 px-4 text-base shadow-none focus-visible:ring-2'
           type='search'
           value={search}
           autoComplete='off'
@@ -30,13 +30,13 @@ export const GlobalSearchInput = ({ search, setSearch, handleSubmit, setIsFocuse
         />
         <Button
           aria-label={t`Search`}
-          className='size-10 shrink-0 rounded-full'
+          className='bg-primary size-11 shrink-0 rounded-full text-white hover:bg-primary/90'
           size='icon-lg'
           type='submit'
         >
           <SearchIcon className='size-5' />
         </Button>
-      </InputGroup>
+      </div>
     </form>
   );
 };

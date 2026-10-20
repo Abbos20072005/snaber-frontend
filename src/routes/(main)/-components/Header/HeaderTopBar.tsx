@@ -8,7 +8,7 @@ export const HeaderTopBar = () => {
   const { t } = useLingui();
 
   return (
-    <div className='border-border/60 bg-muted/40 hidden border-b md:block'>
+    <div className='border-border/60 bg-transparent hidden border-b md:block'>
       <div className='container flex h-8 items-center justify-between gap-6'>
         <span className='text-muted-foreground flex items-center gap-1.5 text-xs font-medium'>
           <MapPinIcon className='size-3.5' />

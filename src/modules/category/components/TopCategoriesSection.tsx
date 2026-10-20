@@ -42,7 +42,7 @@ export const TopCategoriesSection = () => {
                 </Link>
               </h2>
             </div>
-              <div className='mt-3 grid grid-cols-5 gap-x-1.5 gap-y-4 sm:grid-cols-7 lg:grid-cols-10'>
+              <div className='mt-3 grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6'>
                 {subcategories.map((sub) => (
                   <CategoryTile key={sub.id} category={sub} />
                 ))}

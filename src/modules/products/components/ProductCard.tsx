@@ -1,11 +1,12 @@
 import { useLingui } from '@lingui/react/macro';
 import { useMutation } from '@tanstack/react-query';
 import { Link } from '@tanstack/react-router';
-import { ArrowRightIcon, ChevronRightIcon, HeartIcon } from 'lucide-react';
+import { ChevronRightIcon, HeartIcon, ShoppingCartIcon } from 'lucide-react';
 import { toast } from 'sonner';
 
 import { currencySymbolMap } from '@/modules/currency';
-import { postFavouriteProduct } from '@/shared/api';
+import { getPublicProductById, postFavouriteProduct } from '@/shared/api';
+import { postCart } from '@/shared/api/requests/product/cart';
 import { generateSlugId } from '@/shared/constants';
 import { formatPrice } from '@/shared/lib/format';
 import { cn } from '@/shared/lib/utils';
@@ -51,6 +52,28 @@ export const ProductCard = ({ product, isShowCompany = true, className }: Props)
       { onError: () => toggleFavorite(product) }
     );
   };
+
+  const addToCartMutation = useMutation({
+    mutationFn: async () => {
+      const { data: detail } = await getPublicProductById({ id: productId });
+      const variant = detail.variants[0];
+
+      if (!variant) throw new Error(t`Product variant not found`);
+
+      await postCart({
+        data: {
+          product: variant.id,
+          quantity: 1,
+          attribute_stock: variant.attribute_stocks[0]?.id
+        }
+      });
+    },
+    meta: {
+      invalidatesQuery: PRODUCT_QUERY_KEYS.getCartList()
+    },
+    onSuccess: () => toast.success(t`Added to cart`),
+    onError: () => toast.error(t`Failed to add the product to the cart`)
+  });
 
   return (
     <Card className={cn('p-3 sm:p-5', className)} size='sm'>
@@ -163,18 +186,15 @@ export const ProductCard = ({ product, isShowCompany = true, className }: Props)
             </p>
           </div>
           <Button
-            render={
-              <Link
-                params={{ slug: generateSlugId(productId, product.name) }}
-                to='/product/$slug'
-              >
-                {t`Details`}
-                <ArrowRightIcon />
-              </Link>
-            }
             className='shrink-0 bg-yellow-400 font-bold text-black hover:bg-yellow-300 sm:mt-3 sm:w-full'
+            disabled={addToCartMutation.isPending}
             variant='secondary'
-          />
+            loading={addToCartMutation.isPending}
+            onClick={() => addToCartMutation.mutate()}
+          >
+            <ShoppingCartIcon />
+            {t`Add to cart`}
+          </Button>
         </div>
       </div>
       {/* FEATURE DISABLED: Min order / lead time info. */}

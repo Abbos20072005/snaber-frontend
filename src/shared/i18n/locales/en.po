@@ -130,6 +130,9 @@ msgstr "Add your first certificate so buyers can review your company credentials
 msgid "Add your first company photo to show buyers your production and workspace."
 msgstr "Add your first company photo to show buyers your production and workspace."
 
+msgid "Added to cart"
+msgstr "Added to cart"
+
 msgid "Added to favorites"
 msgstr "Added to favorites"
 
@@ -739,8 +742,8 @@ msgstr "Description is required"
 msgid "Description moderator"
 msgstr "Description moderator"
 
-msgid "Details"
-msgstr "Details"
+#~ msgid "Details"
+#~ msgstr "Details"
 
 msgid "Dispatch due today"
 msgstr "Dispatch due today"
@@ -915,6 +918,9 @@ msgstr "Factory photos"
 
 msgid "Factory photos not found"
 msgstr "Factory photos not found"
+
+msgid "Failed to add the product to the cart"
+msgstr "Failed to add the product to the cart"
 
 msgid "Failed to complete registration. Please try again."
 msgstr "Failed to complete registration. Please try again."
@@ -1885,6 +1891,9 @@ msgstr "Product type"
 
 msgid "Product updates"
 msgstr "Product updates"
+
+msgid "Product variant not found"
+msgstr "Product variant not found"
 
 msgid "Product variants"
 msgstr "Product variants"
