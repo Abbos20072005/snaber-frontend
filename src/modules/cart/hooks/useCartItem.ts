@@ -1,5 +1,4 @@
 import { useMutation } from '@tanstack/react-query';
-import { useLocation } from '@tanstack/react-router';
 
 import { PRODUCT_QUERY_KEYS } from '@/modules/products';
 import { postCart } from '@/shared/api/requests/product/cart';
@@ -32,13 +31,10 @@ export const useCartItem = (
     setCustomAttributesQuantity
   } = useCartStore();
 
-  const pathname = useLocation().pathname;
-  const shouldRefetchCart = pathname === '/cart';
-
   const postCartMutation = useMutation({
     mutationFn: postCart,
     meta: {
-      invalidatesQuery: shouldRefetchCart ? PRODUCT_QUERY_KEYS.getCartList() : undefined
+      invalidatesQuery: PRODUCT_QUERY_KEYS.getCartList()
     }
   });
 

@@ -1,11 +1,13 @@
 import { useLingui } from '@lingui/react/macro';
-import { useMutation } from '@tanstack/react-query';
+import { useMutation, useQueryClient } from '@tanstack/react-query';
+import { useRouter } from '@tanstack/react-router';
 import { AxiosError } from 'axios';
 import Cookies from 'js-cookie';
 import { ChevronLeftIcon } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { toast } from 'sonner';
 
+import { AUTH_QUERY_KEYS } from '@/modules/auth';
 import { postOtpResend, postVerifyOtp } from '@/shared/api';
 import { COOKIES } from '@/shared/constants';
 import { useAuthContext } from '@/shared/context';
@@ -14,6 +16,8 @@ import { InputOTP, InputOTPGroup, InputOTPSlot } from '@/shared/ui/input-otp';
 
 export const VerifyForm = () => {
   const { t } = useLingui();
+  const queryClient = useQueryClient();
+  const router = useRouter();
   const { setStep, email, setIsOpen } = useAuthContext();
   const [otpError, setOtpError] = useState<string | null>(null);
   const [otpCode, setOtpCode] = useState<string>('');
@@ -40,6 +44,8 @@ export const VerifyForm = () => {
       Cookies.set(COOKIES.REFRESH_TOKEN, data.data.result.refresh_token, { expires: 7 });
       toast.success(t`Email verified successfully. Welcome!`);
       setIsOpen(false);
+      void queryClient.invalidateQueries({ queryKey: AUTH_QUERY_KEYS.me() });
+      void router.invalidate();
     },
     meta: {
       withoutToastOnError: true

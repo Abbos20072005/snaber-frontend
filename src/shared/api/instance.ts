@@ -61,6 +61,20 @@ api.interceptors.response.use(
       isomorphicCookie.delete(COOKIES.ACCESS_TOKEN);
       isomorphicCookie.delete(COOKIES.REFRESH_TOKEN);
       isomorphicCookie.delete(COOKIES.CURRENT_USER);
+
+      // The session is gone — retry the request as a guest so public data still loads.
+      if (originalRequest.headers) {
+        const headers = originalRequest.headers as {
+          delete?: (name: string) => void;
+          Authorization?: string;
+        };
+        if (typeof headers.delete === 'function') headers.delete('Authorization');
+        else delete headers.Authorization;
+
+        originalRequest._isGuestRetry = true;
+        return api.request(originalRequest);
+      }
+
       if (
         accessToken &&
         typeof window !== 'undefined' &&

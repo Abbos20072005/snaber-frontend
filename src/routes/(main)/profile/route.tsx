@@ -4,10 +4,10 @@ import type React from 'react';
 
 import { msg } from '@lingui/core/macro';
 import { useLingui } from '@lingui/react/macro';
-import { createFileRoute, Link, Outlet } from '@tanstack/react-router';
+import { createFileRoute, Link, Outlet, redirect } from '@tanstack/react-router';
 import { BarChart3Icon, BellIcon, PackageIcon, SettingsIcon } from 'lucide-react';
 
-import { useAuthed } from '@/modules/auth';
+import { getAuthMeQueryOptions, useAuthed } from '@/modules/auth';
 import { Avatar, AvatarFallback, AvatarImage } from '@/shared/ui/avatar';
 import { Card, CardContent, CardHeader, CardTitle } from '@/shared/ui/card';
 import { GeneralError, NotFoundError } from '@/shared/ui/errors';
@@ -99,5 +99,17 @@ export const Route = createFileRoute('/(main)/profile')({
   component: ProfileLayout,
   pendingComponent: PageLoading,
   notFoundComponent: NotFoundError,
-  errorComponent: GeneralError
+  errorComponent: GeneralError,
+  loader: async ({ context: { queryClient } }) => {
+    const user = await queryClient.ensureQueryData(getAuthMeQueryOptions()).catch(() => {
+      throw redirect({ to: '/' });
+    });
+
+    if (user.role === 'admin' || user.role === 'super_admin')
+      throw redirect({ to: '/admin/dashboard' });
+
+    if (user.role !== 'buyer') throw redirect({ to: '/' });
+
+    return { user };
+  }
 });

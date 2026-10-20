@@ -1,24 +1,22 @@
 import { useLingui } from '@lingui/react/macro';
+import { useMutation } from '@tanstack/react-query';
 import { Link } from '@tanstack/react-router';
-import { ArrowRightIcon, ChevronRightIcon } from 'lucide-react';
-// FEATURE DISABLED: Favorites toggle.
-// import { useMutation } from '@tanstack/react-query';
-// import { HeartIcon } from 'lucide-react';
-// import { toast } from 'sonner';
+import { ArrowRightIcon, ChevronRightIcon, HeartIcon } from 'lucide-react';
+import { toast } from 'sonner';
 
 import { currencySymbolMap } from '@/modules/currency';
-// FEATURE DISABLED: Favorites API + store.
-// import { postFavouriteProduct } from '@/shared/api';
+import { postFavouriteProduct } from '@/shared/api';
 import { generateSlugId } from '@/shared/constants';
 import { formatPrice } from '@/shared/lib/format';
 import { cn } from '@/shared/lib/utils';
-// import { useFavoritesStore } from '@/shared/store';
+import { useFavoritesStore } from '@/shared/store';
 import { Badge } from '@/shared/ui/badge';
 import { Button } from '@/shared/ui/button';
 import { Card } from '@/shared/ui/card';
 import { Carousel, CarouselContent, CarouselItem } from '@/shared/ui/carousel';
 
 import { productTypeColorMap, productTypeLabelMap } from '../constants';
+import { PRODUCT_QUERY_KEYS } from '../options';
 import { ProductImageIndicators } from './ProductImageIndicators';
 
 interface Props {
@@ -29,28 +27,30 @@ interface Props {
 
 export const ProductCard = ({ product, isShowCompany = true, className }: Props) => {
   const { t } = useLingui();
-  // FEATURE DISABLED: Favorites toggle.
-  // const { isFavorite, toggleFavorite } = useFavoritesStore();
+  const { isFavorite, toggleFavorite } = useFavoritesStore();
   const productId = product.product_id ?? product.id;
   const images = product.images ?? [];
 
-  // const isFav = isFavorite(productId);
+  const isFav = isFavorite(productId);
 
-  // const postFavoriteMutation = useMutation({
-  //   mutationFn: postFavouriteProduct,
-  //   onError: () => {
-  //     toggleFavorite(product);
-  //   }
-  // });
+  const postFavoriteMutation = useMutation({
+    mutationFn: postFavouriteProduct,
+    meta: {
+      invalidatesQuery: PRODUCT_QUERY_KEYS.getFavorites()
+    }
+  });
 
-  // const onToggleFavorite = () => {
-  //   const wasFavorite = isFav;
+  const onToggleFavorite = () => {
+    const wasFavorite = isFav;
 
-  //   toggleFavorite(product);
+    toggleFavorite(product);
 
-  //   if (!wasFavorite) toast(t`Added to favorites`);
-  //   postFavoriteMutation.mutate({ data: { product_id: productId, is_favourite: !wasFavorite } });
-  // };
+    if (!wasFavorite) toast(t`Added to favorites`);
+    postFavoriteMutation.mutate(
+      { data: { product_id: productId, is_favourite: !wasFavorite } },
+      { onError: () => toggleFavorite(product) }
+    );
+  };
 
   return (
     <Card className={cn('p-3 sm:p-5', className)} size='sm'>
@@ -76,14 +76,15 @@ export const ProductCard = ({ product, isShowCompany = true, className }: Props)
               <ProductImageIndicators images={images} />
             </Carousel>
           </Link>
-          {/* FEATURE DISABLED: Favorites toggle. */}
-          {/* <Button */}
-          {/*   className='size-5 cursor-pointer rounded-full p-4' */}
-          {/*   variant='destructive' */}
-          {/*   onClick={onToggleFavorite} */}
-          {/* > */}
-          {/*   <HeartIcon className={isFav ? 'fill-red-500' : ''} /> */}
-          {/* </Button> */}
+          <Button
+            aria-label={isFav ? t`Remove from favorites` : t`Add to favorites`}
+            className='absolute top-2 right-2 size-9 rounded-full bg-white/90 text-black shadow-sm backdrop-blur hover:bg-white'
+            size='icon'
+            variant='ghost'
+            onClick={onToggleFavorite}
+          >
+            <HeartIcon className={cn('size-5', isFav && 'fill-red-500 text-red-500')} />
+          </Button>
         </div>
         <div className='min-w-0 flex-1'>
           <div className='flex flex-wrap gap-1'>
@@ -162,7 +163,6 @@ export const ProductCard = ({ product, isShowCompany = true, className }: Props)
             </p>
           </div>
           <Button
-            className='shrink-0 bg-yellow-400 font-bold text-black hover:bg-yellow-300 sm:mt-3 sm:w-full'
             render={
               <Link
                 params={{ slug: generateSlugId(productId, product.name) }}
@@ -172,6 +172,7 @@ export const ProductCard = ({ product, isShowCompany = true, className }: Props)
                 <ArrowRightIcon />
               </Link>
             }
+            className='shrink-0 bg-yellow-400 font-bold text-black hover:bg-yellow-300 sm:mt-3 sm:w-full'
             variant='secondary'
           />
         </div>

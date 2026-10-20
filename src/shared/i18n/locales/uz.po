@@ -116,6 +116,9 @@ msgstr "Buyurtmaga mahsulot qo‘shish"
 msgid "Add to cart"
 msgstr "Savatga qo‘shish"
 
+msgid "Add to favorites"
+msgstr "Sevimlilarga qo‘shish"
+
 msgid "Add value"
 msgstr "Qiymat qo‘shish"
 
@@ -128,8 +131,8 @@ msgstr "Xaridorlar kompaniyangiz ma’lumotlarini ko‘rib chiqishi uchun birinc
 msgid "Add your first company photo to show buyers your production and workspace."
 msgstr "Xaridorlarga ishlab chiqarish va ish joyingizni ko‘rsatish uchun kompaniyangizning birinchi rasmini qo‘shing."
 
-#~ msgid "Added to favorites"
-#~ msgstr "Sevimlilarga qo‘shildi"
+msgid "Added to favorites"
+msgstr "Sevimlilarga qo‘shildi"
 
 msgid "Address"
 msgstr "Manzil"
@@ -2031,6 +2034,9 @@ msgstr "Sotuvchi tomonidan rad etilgan"
 msgid "Remove"
 msgstr "Olib tashlash"
 
+msgid "Remove from favorites"
+msgstr "Sevimlilardan olib tashlash"
+
 msgid "Remove product"
 msgstr "Mahsulotni olib tashlash"
 
@@ -2328,8 +2334,8 @@ msgstr "Ko‘rsatilmoqda"
 msgid "Sidebar"
 msgstr "Yon panel"
 
-#~ msgid "Sign in"
-#~ msgstr "Kirish"
+msgid "Sign in"
+msgstr "Kirish"
 
 msgid "Sign up"
 msgstr "Ro‘yxatdan o‘tish"

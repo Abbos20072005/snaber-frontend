@@ -70,13 +70,13 @@ const sections: {
   {
     label: msg`Cart`,
     to: '/cart',
-    icon: HeartIcon,
+    icon: ShoppingCartIcon,
     exact: false
   },
   {
     label: msg`Favorites`,
     to: '/favorites',
-    icon: ShoppingCartIcon,
+    icon: HeartIcon,
     exact: false
   },
   {
@@ -139,7 +139,11 @@ const MobileProfile = () => {
 export const Route = createFileRoute('/(main)/profile/')({
   component: MobileProfile,
   loader: async ({ context }) => {
-    const user = await context.queryClient.ensureQueryData(getAuthMeQueryOptions());
+    const user = await context.queryClient
+      .ensureQueryData(getAuthMeQueryOptions())
+      .catch(() => {
+        throw redirect({ to: '/' });
+      });
     if (user.role !== 'buyer') throw redirect({ to: '/' });
   }
 });

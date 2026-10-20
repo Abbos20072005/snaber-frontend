@@ -1,6 +1,6 @@
 import { useLingui } from '@lingui/react/macro';
-import { useMutation } from '@tanstack/react-query';
-import { useNavigate } from '@tanstack/react-router';
+import { useMutation, useQueryClient } from '@tanstack/react-query';
+import { useNavigate, useRouter } from '@tanstack/react-router';
 import Cookies from 'js-cookie';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { toast } from 'sonner';
@@ -26,8 +26,15 @@ export const OAuthRegister = ({ oAuthCode }: Props) => {
   const exchangedCodeRef = useRef<string | null>(null);
 
   const navigate = useNavigate();
+  const router = useRouter();
+  const queryClient = useQueryClient();
 
   const { t } = useLingui();
+
+  const refreshSession = () => {
+    void queryClient.invalidateQueries({ queryKey: AUTH_QUERY_KEYS.me() });
+    void router.invalidate();
+  };
 
   useEffect(() => {
     if (step !== 'init') return;
@@ -52,6 +59,7 @@ export const OAuthRegister = ({ oAuthCode }: Props) => {
     onSuccess: (data) => {
       Cookies.set(COOKIES.ACCESS_TOKEN, data.data.access, { expires: 7 });
       Cookies.set(COOKIES.REFRESH_TOKEN, data.data.refresh, { expires: 7 });
+      refreshSession();
 
       if (!data.data.needs_setup) {
         clearAllSearchParams();

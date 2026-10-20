@@ -15,8 +15,7 @@ import {
 
 export const AccountDropDown = () => {
   const { t } = useLingui();
-  const { user } = useAuth();
-  const { onLogout } = useAuth();
+  const { user, onLogout } = useAuth();
 
   const AVATAR_IMAGE = user?.image;
 
@@ -26,7 +25,7 @@ export const AccountDropDown = () => {
         <Avatar>
           <AvatarImage src={AVATAR_IMAGE} />
           <AvatarFallback>
-            <span className='text-primary font-medium uppercase'>{user?.full_name[0]}</span>
+            <span className='text-primary font-medium uppercase'>{user?.full_name?.[0]}</span>
           </AvatarFallback>
         </Avatar>
       </DropdownMenuTrigger>

@@ -37,6 +37,7 @@ interface CartItemDto {
 
 interface FullCart {
   companies: number;
+  currency?: CurrencyCode;
   groups: Cart[];
   products: number;
   total_amount: string;

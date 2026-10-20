@@ -1,16 +1,8 @@
-import type { MessageDescriptor } from '@lingui/core';
-import type { LinkProps } from '@tanstack/react-router';
-
-import { msg } from '@lingui/core/macro';
 import { useLingui } from '@lingui/react/macro';
 import { Link } from '@tanstack/react-router';
 import { MapPinIcon, PhoneIcon } from 'lucide-react';
 
-export const topBarLinks: { label: MessageDescriptor; to: LinkProps['to'] }[] = [
-  { label: msg`Delivery and payment`, to: '/delivery' },
-  { label: msg`Service and support`, to: '/support' },
-  { label: msg`About us`, to: '/about' }
-];
+import { headerLinks } from './constants';
 
 export const HeaderTopBar = () => {
   const { t } = useLingui();
@@ -24,7 +16,7 @@ export const HeaderTopBar = () => {
         </span>
 
         <nav className='hidden items-center gap-5 lg:flex'>
-          {topBarLinks.map((item) => (
+          {headerLinks.map((item) => (
             <Link
               key={item.to}
               className='text-foreground/80 hover:text-foreground text-xs font-medium transition-colors hover:underline'

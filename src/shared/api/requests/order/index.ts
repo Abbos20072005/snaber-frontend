@@ -19,7 +19,7 @@ export interface GetOrderRequest {
   id: number;
 }
 
-export const getOrder = ({ id }: GetOrderRequest) => api.get<Order>(`order/${id}`);
+export const getOrder = ({ id }: GetOrderRequest) => api.get<Order>(`order/${id}/`);
 
 interface PostOrderRequest {
   data: {

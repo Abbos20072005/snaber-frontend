@@ -1,7 +1,7 @@
 import { useLingui } from '@lingui/react/macro';
 import { Link } from '@tanstack/react-router';
 
-import { links } from '@/routes/(main)/-components/Header/Header';
+import { footerLinks } from '@/routes/(main)/-components/Header/constants';
 import { SiteLogo } from '@/routes/(main)/-components/SiteLogo';
 import { Separator } from '@/shared/ui/separator';
 
@@ -37,7 +37,7 @@ export const Footer = () => {
               {t`Navigation`}
             </p>
             <ul className='space-y-2'>
-              {links.map((item) => (
+              {footerLinks.map((item) => (
                 <li key={item.to}>
                   <Link
                     className='text-sm text-white/72 transition-colors hover:text-yellow-400'

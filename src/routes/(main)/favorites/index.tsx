@@ -4,7 +4,6 @@ import { createFileRoute, Link } from '@tanstack/react-router';
 import { HeartIcon } from 'lucide-react';
 
 import { getFavoritesQueryOptions, ProductCard, ProductCardSkeleton } from '@/modules/products';
-import { useFavoritesStore } from '@/shared/store';
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -18,8 +17,9 @@ import { SectionWrapper } from '@/shared/ui/section-wrapper';
 
 const RouteComponent = () => {
   const { t } = useLingui();
-  const favorites = useFavoritesStore((s) => s.favorites);
-  const { isPending } = useQuery(getFavoritesQueryOptions());
+  const favoritesQuery = useQuery(getFavoritesQueryOptions());
+  const favorites = (favoritesQuery.data ?? []).map((item) => item.product);
+  const { isPending } = favoritesQuery;
   return (
     <div>
       <SectionWrapper title={t`Favorites`}>

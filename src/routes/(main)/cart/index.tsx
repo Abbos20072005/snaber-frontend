@@ -32,6 +32,7 @@ const RouteComponent = () => {
   const carts = cartQuery.data;
 
   const { user } = useAuth();
+  const currency = user?.currency ?? carts?.currency ?? 'UZS';
 
   return (
     <SectionWrapper title={t`Cart`}>
@@ -61,8 +62,7 @@ const RouteComponent = () => {
         <Button variant='outline'>
           <span className='text-muted-foreground text-xs'>{t`Total`}:</span>
           <span className='text-primary text-sm font-bold'>
-            {formatPrice(carts?.total_amount || 0)}{' '}
-            {user?.currency && currencySymbolMap[user?.currency]}
+            {formatPrice(carts?.total_amount || 0)} {currencySymbolMap[currency]}
           </span>
         </Button>
       </div>
@@ -145,8 +145,7 @@ const RouteComponent = () => {
                     <div className='min-w-0'>
                       <p className='truncate text-sm font-semibold'>{cart.company.name}</p>
                       <p className='text-muted-foreground text-[11px] leading-4'>
-                        {formatPrice(cart.total_price)}{' '}
-                        {user?.currency && currencySymbolMap[user?.currency]}
+                        {formatPrice(cart.total_price)} {currencySymbolMap[currency]}
                       </p>
                     </div>
                   </div>

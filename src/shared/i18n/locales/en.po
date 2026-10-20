@@ -115,6 +115,9 @@ msgstr "Add product to order"
 msgid "Add to cart"
 msgstr "Add to cart"
 
+msgid "Add to favorites"
+msgstr "Add to favorites"
+
 msgid "Add value"
 msgstr "Add value"
 
@@ -127,8 +130,8 @@ msgstr "Add your first certificate so buyers can review your company credentials
 msgid "Add your first company photo to show buyers your production and workspace."
 msgstr "Add your first company photo to show buyers your production and workspace."
 
-#~ msgid "Added to favorites"
-#~ msgstr "Added to favorites"
+msgid "Added to favorites"
+msgstr "Added to favorites"
 
 msgid "Address"
 msgstr "Address"
@@ -2030,6 +2033,9 @@ msgstr "Rejected by seller"
 msgid "Remove"
 msgstr "Remove"
 
+msgid "Remove from favorites"
+msgstr "Remove from favorites"
+
 msgid "Remove product"
 msgstr "Remove product"
 
@@ -2327,8 +2333,8 @@ msgstr "Showing"
 msgid "Sidebar"
 msgstr "Sidebar"
 
-#~ msgid "Sign in"
-#~ msgstr "Sign in"
+msgid "Sign in"
+msgstr "Sign in"
 
 msgid "Sign up"
 msgstr "Sign up"

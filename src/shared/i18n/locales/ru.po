@@ -116,6 +116,9 @@ msgstr "Добавить товар в заказ"
 msgid "Add to cart"
 msgstr "Добавить в корзину"
 
+msgid "Add to favorites"
+msgstr "Добавить в избранное"
+
 msgid "Add value"
 msgstr "Добавить значение"
 
@@ -128,8 +131,8 @@ msgstr "Добавьте свой первый сертификат, чтобы 
 msgid "Add your first company photo to show buyers your production and workspace."
 msgstr "Добавьте первое фото компании, чтобы показать покупателям ваше производство и рабочее пространство."
 
-#~ msgid "Added to favorites"
-#~ msgstr "Добавлено в избранное"
+msgid "Added to favorites"
+msgstr "Добавлено в избранное"
 
 msgid "Address"
 msgstr "Адрес"
@@ -2031,6 +2034,9 @@ msgstr "Отклонено продавцом"
 msgid "Remove"
 msgstr "Удалить"
 
+msgid "Remove from favorites"
+msgstr "Удалить из избранного"
+
 msgid "Remove product"
 msgstr "Удалить товар"
 
@@ -2328,8 +2334,8 @@ msgstr "Показано"
 msgid "Sidebar"
 msgstr "Боковая панель"
 
-#~ msgid "Sign in"
-#~ msgstr "Войти"
+msgid "Sign in"
+msgstr "Войти"
 
 msgid "Sign up"
 msgstr "Регистрация"

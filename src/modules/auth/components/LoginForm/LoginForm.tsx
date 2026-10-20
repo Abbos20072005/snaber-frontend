@@ -1,7 +1,9 @@
 import { useLingui } from '@lingui/react/macro';
-import { useMutation } from '@tanstack/react-query';
+import { useMutation, useQueryClient } from '@tanstack/react-query';
+import { useRouter } from '@tanstack/react-router';
 import Cookies from 'js-cookie';
 
+import { AUTH_QUERY_KEYS } from '@/modules/auth';
 import { postLogin } from '@/shared/api';
 import { COOKIES } from '@/shared/constants';
 import { OAUTH_URL } from '@/shared/constants/oAuth';
@@ -13,6 +15,8 @@ import { loginFormschema } from './constants';
 
 export const LoginForm = () => {
   const { t } = useLingui();
+  const queryClient = useQueryClient();
+  const router = useRouter();
 
   const { setIsOpen, setStep } = useAuthContext();
   const form = useAppForm({
@@ -36,6 +40,8 @@ export const LoginForm = () => {
       Cookies.set(COOKIES.ACCESS_TOKEN, access_token, { expires: 7 });
       Cookies.set(COOKIES.REFRESH_TOKEN, refresh_token, { expires: 7 });
       setIsOpen(false);
+      void queryClient.invalidateQueries({ queryKey: AUTH_QUERY_KEYS.me() });
+      void router.invalidate();
     }
   });
 

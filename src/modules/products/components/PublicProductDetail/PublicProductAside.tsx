@@ -24,9 +24,8 @@ import {
 } from 'lucide-react';
 import { useState } from 'react';
 
-// FEATURE DISABLED: Cart actions.
-// import { ReadyCartButtons } from '@/modules/cart/components/ReadyCartButtons';
-// import { RfqCartButton } from '@/modules/cart/components/RfqCartButton';
+import { ReadyCartButtons } from '@/modules/cart/components/ReadyCartButtons';
+import { RfqCartButton } from '@/modules/cart/components/RfqCartButton';
 import {
   AttributeStockSelector,
   productTypeColorMap,
@@ -38,11 +37,9 @@ import { useFormatCount } from '@/shared/lib/format';
 // FEATURE DISABLED: Stock info lines.
 // import { formatPrice } from '@/shared/lib/format';
 import { cn } from '@/shared/lib/utils';
-// FEATURE DISABLED: Cart store.
-// import { useCartStore } from '@/shared/store';
+import { useCartStore } from '@/shared/store';
 import { Badge } from '@/shared/ui/badge';
-// FEATURE DISABLED: Cart actions.
-// import { Button } from '@/shared/ui/button.tsx';
+import { Button } from '@/shared/ui/button.tsx';
 // FEATURE DISABLED: Seller card.
 import { Card, CardContent } from '@/shared/ui/card';
 // import { CardHeader, CardTitle } from '@/shared/ui/card';
@@ -59,8 +56,7 @@ import { getVariantTitle } from './helpers';
 
 interface VariantImageOptionProps {
   fallbackImage: string;
-  // FEATURE DISABLED: Cart indicator.
-  // isInCart?: boolean;
+  isInCart?: boolean;
   isSelected: boolean;
   variant: ProductVariant;
   onSelect: (variant: ProductVariant) => void;
@@ -94,11 +90,10 @@ const getVariantPreviewImage = (variant: ProductVariant, fallbackImage: string) 
 
 export const VariantImageOption = ({
   fallbackImage,
+  isInCart,
   isSelected,
   variant,
   onSelect
-  // FEATURE DISABLED: Cart indicator.
-  // isInCart
 }: VariantImageOptionProps) => (
   <button
     className={cn(
@@ -114,10 +109,9 @@ export const VariantImageOption = ({
       className='size-full object-cover transition group-hover:scale-105'
       src={getVariantPreviewImage(variant, fallbackImage)}
     />
-    {/* FEATURE DISABLED: Cart indicator. */}
-    {/* {isInCart && ( */}
-    {/*   <div className='bg-primary absolute top-1 right-1 size-2 rounded-full ring-1 ring-white' /> */}
-    {/* )} */}
+    {isInCart && (
+      <div className='bg-primary absolute top-1 right-1 size-2 rounded-full ring-1 ring-white' />
+    )}
   </button>
 );
 
@@ -132,27 +126,25 @@ export const PublicProductAside = ({
   onVariantChange
 }: Props) => {
   const { t } = useLingui();
-  // FEATURE DISABLED: Cart store.
-  // const { cartMap } = useCartStore();
+  const { cartMap } = useCartStore();
   const [selectedAttributeStock, setSelectedAttributeStock] = useState<
     ProductVariantAttributeStock | undefined
   >(selectedVariant?.attribute_stocks[0]);
 
-  // FEATURE DISABLED: Cart state.
-  // const companyCart = cartMap[product.company.id] || {};
+  const companyCart = cartMap[product.company.id] || {};
 
-  // const isVariantInCart = (variant: ProductVariant) => {
-  //   const hasRfq = Object.values(companyCart).some(
-  //     (entry) => entry.type === 'rfq' && entry.variant === variant.id
-  //   );
-  //   if (hasRfq) return true;
+  const isVariantInCart = (variant: ProductVariant) => {
+    const hasRfq = Object.values(companyCart).some(
+      (entry) => entry.type === 'rfq' && entry.variant === variant.id
+    );
+    if (hasRfq) return true;
 
-  //   return variant.attribute_stocks.some((stock) =>
-  //     Object.values(companyCart).some(
-  //       (entry) => entry.type === 'ready' && entry.attributeStockId === stock.id
-  //     )
-  //   );
-  // };
+    return variant.attribute_stocks.some((stock) =>
+      Object.values(companyCart).some(
+        (entry) => entry.type === 'ready' && entry.attributeStockId === stock.id
+      )
+    );
+  };
 
   const selectedVariantPrice = selectedVariant ? selectedPrice : t`No variant selected`;
   // FEATURE DISABLED: Stock info lines.
@@ -230,8 +222,7 @@ export const PublicProductAside = ({
                 <VariantImageOption
                   key={variant.id}
                   fallbackImage={product.image}
-                  // FEATURE DISABLED: Cart indicator.
-                  // isInCart={isVariantInCart(variant)}
+                  isInCart={isVariantInCart(variant)}
                   isSelected={variant.id === selectedVariant?.id}
                   variant={variant}
                   onSelect={handleVariantChange}
@@ -254,21 +245,20 @@ export const PublicProductAside = ({
           {/*   <InfoLine label={t`Total stock`} value={`${formatPrice(totalStock)}pcs`} icon={Tag} /> */}
           {/* </div> */}
 
-          {/* FEATURE DISABLED: Cart actions (ready / RFQ). */}
-          {/* {selectedVariant && */}
-          {/*   (selectedAttributeStock ? ( */}
-          {/*     <ReadyCartButtons */}
-          {/*       company={product.company} */}
-          {/*       productVariant={selectedVariant} */}
-          {/*       stock={selectedAttributeStock} */}
-          {/*     /> */}
-          {/*   ) : ( */}
-          {/*     <Button disabled className='w-full'> */}
-          {/*       {t`Out of stock`} */}
-          {/*     </Button> */}
-          {/*   ))} */}
+          {selectedVariant &&
+            (selectedAttributeStock ? (
+              <ReadyCartButtons
+                company={product.company}
+                productVariant={selectedVariant}
+                stock={selectedAttributeStock}
+              />
+            ) : (
+              <Button disabled className='w-full'>
+                {t`Out of stock`}
+              </Button>
+            ))}
 
-          {/* {product.product_type !== 'ready' && <RfqCartButton product={product} />} */}
+          {product.product_type !== 'ready' && <RfqCartButton product={product} />}
         </CardContent>
       </Card>
 

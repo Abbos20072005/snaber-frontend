@@ -11,27 +11,31 @@ interface FavoritesStore {
   toggleFavorite: (product: ProductPreview) => void;
 }
 
+const getFavoriteId = (product: ProductPreview) => product.product_id ?? product.id;
+
 const createFavoritesStore = (initialFavorites: ProductPreview[] = []) => {
   const initialMap: Record<number, ProductPreview> = {};
-  initialFavorites.forEach((f) => (initialMap[f.id] = f));
+  initialFavorites.forEach((f) => (initialMap[getFavoriteId(f)] = f));
 
   return create<FavoritesStore>()((set, get) => ({
     favorites: initialFavorites,
     favoritesMap: initialMap,
 
-    isFavorite: (productId) => productId in get().favoritesMap,
+    isFavorite: (productId) => Boolean(get().favoritesMap[productId]),
 
     toggleFavorite: (product) => {
+      const productId = getFavoriteId(product);
+
       set((state) => {
-        if (state.favoritesMap[product.id]) {
-          const { [product.id]: _, ...rest } = state.favoritesMap;
+        if (state.favoritesMap[productId]) {
+          const { [productId]: _, ...rest } = state.favoritesMap;
           return {
             favoritesMap: rest,
-            favorites: state.favorites.filter((f) => f.id !== product.id)
+            favorites: state.favorites.filter((f) => getFavoriteId(f) !== productId)
           };
         }
         return {
-          favoritesMap: { ...state.favoritesMap, [product.id]: product },
+          favoritesMap: { ...state.favoritesMap, [productId]: product },
           favorites: [...state.favorites, product]
         };
       });
@@ -43,7 +47,7 @@ const createFavoritesStore = (initialFavorites: ProductPreview[] = []) => {
         return;
       }
       const map: Record<number, ProductPreview> = {};
-      favorites.forEach((f) => (map[f.id] = f));
+      favorites.forEach((f) => (map[getFavoriteId(f)] = f));
       set({ favoritesMap: map, favorites });
     }
   }));
