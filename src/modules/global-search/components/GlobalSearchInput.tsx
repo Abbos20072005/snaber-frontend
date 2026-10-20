@@ -16,10 +16,10 @@ export const GlobalSearchInput = ({ search, setSearch, handleSubmit, setIsFocuse
 
   return (
     <form className='flex-1' onSubmit={handleSubmit}>
-      <InputGroup className='h-12 w-full rounded-full bg-card py-1 pr-1 pl-3 shadow-xs'>
+      <InputGroup className='h-13 w-full rounded-full bg-card py-1 pr-1 pl-3.5 shadow-xs'>
         <InputGroupInput
           aria-label='Search'
-          className='h-full text-base'
+          className='h-full text-[17px]!'
           type='search'
           value={search}
           autoComplete='off'
@@ -30,11 +30,11 @@ export const GlobalSearchInput = ({ search, setSearch, handleSubmit, setIsFocuse
         />
         <Button
           aria-label={t`Search`}
-          className='size-10 shrink-0 rounded-full'
+          className='size-11 shrink-0 rounded-full'
           size='icon-lg'
           type='submit'
         >
-          <SearchIcon className='size-5' />
+          <SearchIcon className='size-5.5' strokeWidth={2.4} />
         </Button>
       </InputGroup>
     </form>
