@@ -1,3 +1,4 @@
+import { createIsomorphicFn } from '@tanstack/react-start';
 import { getRequestHeader } from '@tanstack/react-start/server';
 import axios from 'axios';
 
@@ -18,15 +19,15 @@ const apiWithoutAuth = axios.create({
 
 // During SSR the browser cookies (guest session, auth token) are not sent automatically —
 // they have to be forwarded to the API, otherwise the guest cart and favorites are lost.
-const getServerCookieHeader = () => {
-  if (typeof window !== 'undefined') return undefined;
-
-  try {
-    return getRequestHeader('cookie');
-  } catch {
-    return undefined;
-  }
-};
+const getServerCookieHeader = createIsomorphicFn()
+  .server(() => {
+    try {
+      return getRequestHeader('cookie');
+    } catch {
+      return undefined;
+    }
+  })
+  .client(() => undefined);
 
 apiWithoutAuth.interceptors.request.use((config) => {
   const locale = isomorphicCookie.get(COOKIES.LOCALE);
