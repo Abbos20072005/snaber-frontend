@@ -93,7 +93,7 @@ export const ProductsSection = () => {
 
   return (
     <section className='grid relative gap-4 md:grid-cols-[230px_minmax(0,1fr)]'>
-      <MiniSiteFilterSection className='hidden md:block top-19 sticky' categories={miniSiteCategories} />
+      <MiniSiteFilterSection className='hidden md:block top-29 sticky' categories={miniSiteCategories} />
       <div className='space-y-4'>
         <div className='ring-muted flex justify-between gap-4 rounded-2xl bg-white p-3 shadow-sm ring-1 md:grid-cols-[minmax(0,1fr)_140px_140px]'>
           <label>

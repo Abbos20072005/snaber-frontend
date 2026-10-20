@@ -35,6 +35,9 @@ msgstr "2 soat"
 msgid "About"
 msgstr "Biz haqimizda"
 
+msgid "About us"
+msgstr "Biz haqimizda"
+
 msgid "About Us"
 msgstr "Biz haqimizda"
 
@@ -154,6 +157,9 @@ msgstr "Barcha buyurtmalar"
 
 msgid "All orders loaded for this buyer profile."
 msgstr "Ushbu xaridor profili uchun barcha buyurtmalar yuklangan."
+
+msgid "All prices on the site are indicated in UZS."
+msgstr "Saytdagi barcha narxlar UZS ko'rinishida belgilangan."
 
 msgid "Amount"
 msgstr "Miqdor"
@@ -317,8 +323,8 @@ msgstr "Brend fayllari"
 msgid "Browse the catalog and add items to get started."
 msgstr "Boshlash uchun katalogni ko‘rib chiqing va mahsulotlarni qo‘shing."
 
-msgid "Building materials"
-msgstr "Qurilish materiallari"
+#~ msgid "Building materials"
+#~ msgstr "Qurilish materiallari"
 
 msgid "Buyer"
 msgstr "Xaridor"
@@ -706,6 +712,18 @@ msgstr "Variantni o‘chirish"
 
 msgid "Delivering"
 msgstr "Yetkazilmoqda"
+
+msgid "Delivery"
+msgstr "Yetkazib berish"
+
+msgid "Delivery and payment"
+msgstr "Yetkazib berish va to'lov"
+
+msgid "Delivery to other regions is available for orders above a certain amount."
+msgstr "Boshqa hududlarga yetkazib berish ma'lum miqdorda buyurtma bo'lganda amalga oshiriladi."
+
+msgid "Delivery to Tashkent is carried out by our own transport."
+msgstr "Toshkent bo'ylab yetkazib berish bizning transportimiz orqali amalga oshiriladi."
 
 msgid "Desc"
 msgstr "Kamayish bo‘yicha"
@@ -1138,6 +1156,9 @@ msgstr "Hisobga kirishga ta’sir qiluvchi yuqori xavfli amallar."
 
 msgid "Home"
 msgstr "Bosh sahifa"
+
+msgid "How SNABER delivers and accepts payment for building materials and tools."
+msgstr "SNABER qurilish materiallari va asboblar uchun yetkazib berish va to'lovni qabul qilish tartibi."
 
 msgid "Identity, category, pricing, MOQ and lead time."
 msgstr "Identifikatsiya, kategoriya, narx, MOQ va bajarish vaqti."
@@ -1746,6 +1767,12 @@ msgstr "Parollar mos kelmadi"
 msgid "Paste iframe or URL..."
 msgstr "Iframe yoki URL joylashtiring..."
 
+msgid "Payment"
+msgstr "To'lov"
+
+msgid "Payment in cash or by bank transfer for legal entities."
+msgstr "Yuridik shaxslar uchun naqd pul yoki bank o'tkazmasi orqali to'lov."
+
 #~ msgid "pcs"
 #~ msgstr "dona"
 
@@ -1766,6 +1793,9 @@ msgstr "Telefon raqami majburiy"
 
 msgid "Pick a deadline date"
 msgstr "Muddat sanasini tanlang"
+
+msgid "Pickup from warehouse"
+msgstr "Omboridan olish"
 
 msgid "Please log in with the appropriate credentials"
 msgstr "Tegishli hisob ma’lumotlari bilan tizimga kiring"
@@ -2268,6 +2298,9 @@ msgstr "Sen"
 msgid "September"
 msgstr "Sentabr"
 
+msgid "Service and support"
+msgstr "Xizmat va qo'llab-quvvatlash"
+
 msgid "Set rating"
 msgstr "Bahoni belgilang"
 
@@ -2418,6 +2451,9 @@ msgstr "Yetkazib beruvchi"
 msgid "System"
 msgstr "Tizim"
 
+msgid "Tashkent"
+msgstr "Toshkent"
+
 msgid "Tell us about your production, sourcing, or partnership needs"
 msgstr "Ishlab chiqarish, ta’minot yoki hamkorlik ehtiyojlaringiz haqida yozing"
 
@@ -2438,6 +2474,9 @@ msgstr "Kiritilgan eski parol noto‘g‘ri. Qayta urinib ko‘ring."
 
 msgid "The order is closed, you can't edit it anymore."
 msgstr "Buyurtma yopilgan, uni endi tahrirlay olmaysiz."
+
+msgid "The pickup address is available to the manager after the order is confirmed."
+msgstr "Buyurtma tasdiqlangandan so'ng olib ketish manzili menejer tomonidan beriladi."
 
 msgid "Theme"
 msgstr "Mavzu"
@@ -2801,6 +2840,9 @@ msgstr "Ha, yopish"
 
 msgid "You are not allowed to submit a comment for this product. You should make a purchase first."
 msgstr "Ushbu mahsulot uchun izoh qoldira olmaysiz. Avval mahsulotni xarid qilishingiz kerak."
+
+msgid "You can pick up the order yourself from our warehouse in Tashkent."
+msgstr "Buyurtmani Toshkentdagi omborimizdan o'zingiz olib ketishingiz mumkin."
 
 msgid "You can resend now"
 msgstr "Endi qayta yuborishingiz mumkin"

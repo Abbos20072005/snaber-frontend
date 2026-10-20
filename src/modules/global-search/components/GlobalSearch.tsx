@@ -54,7 +54,7 @@ export const GlobalSearch = ({ className, ...props }: Props) => {
 
   return (
     <div className={cn('flex flex-1 justify-end', className)} {...props}>
-      <div className='relative hidden max-w-100 flex-1 lg:block'>
+      <div className='relative hidden max-w-150 flex-1 lg:block'>
         <GlobalSearchInput
           handleSubmit={handleSubmit}
           search={search}
@@ -63,7 +63,7 @@ export const GlobalSearch = ({ className, ...props }: Props) => {
         />
         <div
           className={cn(
-            'bg-background absolute top-[calc(100%+0.5rem)] z-50 h-auto max-h-[calc(60svh)] w-full max-w-120 overflow-y-auto rounded-lg border px-2 py-4 shadow-md transition-all',
+            'bg-background absolute top-[calc(100%+0.5rem)] z-50 h-auto max-h-[calc(60svh)] w-full overflow-y-auto rounded-lg border px-2 py-4 shadow-md transition-all',
             isFocused && search && globalSearch ? 'visible opacity-100' : 'invisible opacity-0'
           )}
         >

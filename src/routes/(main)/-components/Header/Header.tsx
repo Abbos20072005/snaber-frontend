@@ -3,7 +3,8 @@ import type { LinkProps } from '@tanstack/react-router';
 
 import { msg } from '@lingui/core/macro';
 import { Link } from '@tanstack/react-router';
-import { PhoneIcon } from 'lucide-react';
+// FEATURE DISABLED: Phone icon (moved to the top utility bar).
+// import { PhoneIcon } from 'lucide-react';
 // FEATURE DISABLED: Cart/favorites/notifications icons.
 // import { BellIcon, HeartIcon, ShoppingCartIcon } from 'lucide-react';
 
@@ -22,6 +23,8 @@ import { SiteLogo } from '@/routes/(main)/-components/SiteLogo';
 // import { useCartStore, useFavoritesStore } from '@/shared/store';
 // import { Button, buttonVariants } from '@/shared/ui/button';
 // import { Popover, PopoverContent, PopoverTrigger } from '@/shared/ui/popover';
+
+import { HeaderTopBar } from './HeaderTopBar';
 
 // FEATURE DISABLED: Old B2B logo image (rebranded to snaber.uz text logo).
 // import HB2bImage from '../../../../../public/images/HB2bImage.png';
@@ -51,6 +54,7 @@ export const Header = () => {
 
   return (
     <header className='sticky top-0 z-50 w-full border-b'>
+      <HeaderTopBar />
       <div className='border-border/60 bg-background'>
         <div className='container flex h-16 items-center gap-x-6 gap-y-3'>
           <Link
@@ -90,13 +94,14 @@ export const Header = () => {
             {/* FEATURE DISABLED: Currency switcher (auth-gated). */}
             {/* {!!user && <CurrencySwitcher />} */}
             <LangSwitcher />
-            <a
+            {/* FEATURE DISABLED: Phone moved to the top utility bar. */}
+            {/* <a
               className='hidden items-center gap-1.5 text-sm font-semibold whitespace-nowrap hover:underline md:flex'
               href='tel:+998712037772'
             >
               <PhoneIcon className='size-4' />
               +998 71 203 77 72
-            </a>
+            </a> */}
             {/* FEATURE DISABLED: Favorites shortcut. */}
             {/* {user?.role !== 'admin' && ( */}
             {/*   <> */}

@@ -37,9 +37,11 @@ import { Route as AdminChatsIndexRouteImport } from './routes/admin/chats/index'
 import { Route as AdminCategoryIndexRouteImport } from './routes/admin/category/index'
 import { Route as AdminAttributesIndexRouteImport } from './routes/admin/attributes/index'
 import { Route as AdminAttributeValuesIndexRouteImport } from './routes/admin/attribute-values/index'
+import { Route as mainSupportIndexRouteImport } from './routes/(main)/support/index'
 import { Route as mainProfileIndexRouteImport } from './routes/(main)/profile/index'
 import { Route as mainProductsIndexRouteImport } from './routes/(main)/products/index'
 import { Route as mainFavoritesIndexRouteImport } from './routes/(main)/favorites/index'
+import { Route as mainDeliveryIndexRouteImport } from './routes/(main)/delivery/index'
 import { Route as mainCompaniesIndexRouteImport } from './routes/(main)/companies/index'
 import { Route as mainCatalogIndexRouteImport } from './routes/(main)/catalog/index'
 import { Route as mainCartIndexRouteImport } from './routes/(main)/cart/index'
@@ -209,6 +211,11 @@ const AdminAttributeValuesIndexRoute =
     path: '/attribute-values/',
     getParentRoute: () => AdminRouteRoute,
   } as any)
+const mainSupportIndexRoute = mainSupportIndexRouteImport.update({
+  id: '/support/',
+  path: '/support/',
+  getParentRoute: () => mainRouteRoute,
+} as any)
 const mainProfileIndexRoute = mainProfileIndexRouteImport.update({
   id: '/',
   path: '/',
@@ -222,6 +229,11 @@ const mainProductsIndexRoute = mainProductsIndexRouteImport.update({
 const mainFavoritesIndexRoute = mainFavoritesIndexRouteImport.update({
   id: '/favorites/',
   path: '/favorites/',
+  getParentRoute: () => mainRouteRoute,
+} as any)
+const mainDeliveryIndexRoute = mainDeliveryIndexRouteImport.update({
+  id: '/delivery/',
+  path: '/delivery/',
   getParentRoute: () => mainRouteRoute,
 } as any)
 const mainCompaniesIndexRoute = mainCompaniesIndexRouteImport.update({
@@ -383,9 +395,11 @@ export interface FileRoutesByFullPath {
   '/cart/': typeof mainCartIndexRoute
   '/catalog/': typeof mainCatalogIndexRoute
   '/companies/': typeof mainCompaniesIndexRoute
+  '/delivery/': typeof mainDeliveryIndexRoute
   '/favorites/': typeof mainFavoritesIndexRoute
   '/products/': typeof mainProductsIndexRoute
   '/profile/': typeof mainProfileIndexRoute
+  '/support/': typeof mainSupportIndexRoute
   '/admin/attribute-values/': typeof AdminAttributeValuesIndexRoute
   '/admin/attributes/': typeof AdminAttributesIndexRoute
   '/admin/category/': typeof AdminCategoryIndexRoute
@@ -438,9 +452,11 @@ export interface FileRoutesByTo {
   '/cart': typeof mainCartIndexRoute
   '/catalog': typeof mainCatalogIndexRoute
   '/companies': typeof mainCompaniesIndexRoute
+  '/delivery': typeof mainDeliveryIndexRoute
   '/favorites': typeof mainFavoritesIndexRoute
   '/products': typeof mainProductsIndexRoute
   '/profile': typeof mainProfileIndexRoute
+  '/support': typeof mainSupportIndexRoute
   '/admin/attribute-values': typeof AdminAttributeValuesIndexRoute
   '/admin/attributes': typeof AdminAttributesIndexRoute
   '/admin/category': typeof AdminCategoryIndexRoute
@@ -498,9 +514,11 @@ export interface FileRoutesById {
   '/(main)/cart/': typeof mainCartIndexRoute
   '/(main)/catalog/': typeof mainCatalogIndexRoute
   '/(main)/companies/': typeof mainCompaniesIndexRoute
+  '/(main)/delivery/': typeof mainDeliveryIndexRoute
   '/(main)/favorites/': typeof mainFavoritesIndexRoute
   '/(main)/products/': typeof mainProductsIndexRoute
   '/(main)/profile/': typeof mainProfileIndexRoute
+  '/(main)/support/': typeof mainSupportIndexRoute
   '/admin/attribute-values/': typeof AdminAttributeValuesIndexRoute
   '/admin/attributes/': typeof AdminAttributesIndexRoute
   '/admin/category/': typeof AdminCategoryIndexRoute
@@ -558,9 +576,11 @@ export interface FileRouteTypes {
     | '/cart/'
     | '/catalog/'
     | '/companies/'
+    | '/delivery/'
     | '/favorites/'
     | '/products/'
     | '/profile/'
+    | '/support/'
     | '/admin/attribute-values/'
     | '/admin/attributes/'
     | '/admin/category/'
@@ -613,9 +633,11 @@ export interface FileRouteTypes {
     | '/cart'
     | '/catalog'
     | '/companies'
+    | '/delivery'
     | '/favorites'
     | '/products'
     | '/profile'
+    | '/support'
     | '/admin/attribute-values'
     | '/admin/attributes'
     | '/admin/category'
@@ -672,9 +694,11 @@ export interface FileRouteTypes {
     | '/(main)/cart/'
     | '/(main)/catalog/'
     | '/(main)/companies/'
+    | '/(main)/delivery/'
     | '/(main)/favorites/'
     | '/(main)/products/'
     | '/(main)/profile/'
+    | '/(main)/support/'
     | '/admin/attribute-values/'
     | '/admin/attributes/'
     | '/admin/category/'
@@ -917,6 +941,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AdminAttributeValuesIndexRouteImport
       parentRoute: typeof AdminRouteRoute
     }
+    '/(main)/support/': {
+      id: '/(main)/support/'
+      path: '/support'
+      fullPath: '/support/'
+      preLoaderRoute: typeof mainSupportIndexRouteImport
+      parentRoute: typeof mainRouteRoute
+    }
     '/(main)/profile/': {
       id: '/(main)/profile/'
       path: '/'
@@ -936,6 +967,13 @@ declare module '@tanstack/react-router' {
       path: '/favorites'
       fullPath: '/favorites/'
       preLoaderRoute: typeof mainFavoritesIndexRouteImport
+      parentRoute: typeof mainRouteRoute
+    }
+    '/(main)/delivery/': {
+      id: '/(main)/delivery/'
+      path: '/delivery'
+      fullPath: '/delivery/'
+      preLoaderRoute: typeof mainDeliveryIndexRouteImport
       parentRoute: typeof mainRouteRoute
     }
     '/(main)/companies/': {
@@ -1152,8 +1190,10 @@ interface mainRouteRouteChildren {
   mainCartIndexRoute: typeof mainCartIndexRoute
   mainCatalogIndexRoute: typeof mainCatalogIndexRoute
   mainCompaniesIndexRoute: typeof mainCompaniesIndexRoute
+  mainDeliveryIndexRoute: typeof mainDeliveryIndexRoute
   mainFavoritesIndexRoute: typeof mainFavoritesIndexRoute
   mainProductsIndexRoute: typeof mainProductsIndexRoute
+  mainSupportIndexRoute: typeof mainSupportIndexRoute
   mainCatalogSlugIndexRoute: typeof mainCatalogSlugIndexRoute
   mainProductSlugIndexRoute: typeof mainProductSlugIndexRoute
 }
@@ -1166,8 +1206,10 @@ const mainRouteRouteChildren: mainRouteRouteChildren = {
   mainCartIndexRoute: mainCartIndexRoute,
   mainCatalogIndexRoute: mainCatalogIndexRoute,
   mainCompaniesIndexRoute: mainCompaniesIndexRoute,
+  mainDeliveryIndexRoute: mainDeliveryIndexRoute,
   mainFavoritesIndexRoute: mainFavoritesIndexRoute,
   mainProductsIndexRoute: mainProductsIndexRoute,
+  mainSupportIndexRoute: mainSupportIndexRoute,
   mainCatalogSlugIndexRoute: mainCatalogSlugIndexRoute,
   mainProductSlugIndexRoute: mainProductSlugIndexRoute,
 }

@@ -34,6 +34,9 @@ msgstr "2 hours"
 msgid "About"
 msgstr "About"
 
+msgid "About us"
+msgstr "About us"
+
 msgid "About Us"
 msgstr "About Us"
 
@@ -153,6 +156,9 @@ msgstr "All orders"
 
 msgid "All orders loaded for this buyer profile."
 msgstr "All orders loaded for this buyer profile."
+
+msgid "All prices on the site are indicated in UZS."
+msgstr "All prices on the site are indicated in UZS."
 
 msgid "Amount"
 msgstr "Amount"
@@ -316,8 +322,8 @@ msgstr "Brand files"
 msgid "Browse the catalog and add items to get started."
 msgstr "Browse the catalog and add items to get started."
 
-msgid "Building materials"
-msgstr "Building materials"
+#~ msgid "Building materials"
+#~ msgstr "Building materials"
 
 msgid "Buyer"
 msgstr "Buyer"
@@ -705,6 +711,18 @@ msgstr "Delete variant"
 
 msgid "Delivering"
 msgstr "Delivering"
+
+msgid "Delivery"
+msgstr "Delivery"
+
+msgid "Delivery and payment"
+msgstr "Delivery and payment"
+
+msgid "Delivery to other regions is available for orders above a certain amount."
+msgstr "Delivery to other regions is available for orders above a certain amount."
+
+msgid "Delivery to Tashkent is carried out by our own transport."
+msgstr "Delivery to Tashkent is carried out by our own transport."
 
 msgid "Desc"
 msgstr "Desc"
@@ -1137,6 +1155,9 @@ msgstr "High-risk actions that impact account access."
 
 msgid "Home"
 msgstr "Home"
+
+msgid "How SNABER delivers and accepts payment for building materials and tools."
+msgstr "How SNABER delivers and accepts payment for building materials and tools."
 
 msgid "Identity, category, pricing, MOQ and lead time."
 msgstr "Identity, category, pricing, MOQ and lead time."
@@ -1745,6 +1766,12 @@ msgstr "Passwords do not match"
 msgid "Paste iframe or URL..."
 msgstr "Paste iframe or URL..."
 
+msgid "Payment"
+msgstr "Payment"
+
+msgid "Payment in cash or by bank transfer for legal entities."
+msgstr "Payment in cash or by bank transfer for legal entities."
+
 #~ msgid "pcs"
 #~ msgstr "pcs"
 
@@ -1765,6 +1792,9 @@ msgstr "Phone number is required"
 
 msgid "Pick a deadline date"
 msgstr "Pick a deadline date"
+
+msgid "Pickup from warehouse"
+msgstr "Pickup from warehouse"
 
 msgid "Please log in with the appropriate credentials"
 msgstr "Please log in with the appropriate credentials"
@@ -2267,6 +2297,9 @@ msgstr "Sep"
 msgid "September"
 msgstr "September"
 
+msgid "Service and support"
+msgstr "Service and support"
+
 msgid "Set rating"
 msgstr "Set rating"
 
@@ -2417,6 +2450,9 @@ msgstr "Supplier"
 msgid "System"
 msgstr "System"
 
+msgid "Tashkent"
+msgstr "Tashkent"
+
 msgid "Tell us about your production, sourcing, or partnership needs"
 msgstr "Tell us about your production, sourcing, or partnership needs"
 
@@ -2437,6 +2473,9 @@ msgstr "The old password you entered is incorrect. Please try again."
 
 msgid "The order is closed, you can't edit it anymore."
 msgstr "The order is closed, you can't edit it anymore."
+
+msgid "The pickup address is available to the manager after the order is confirmed."
+msgstr "The pickup address is available to the manager after the order is confirmed."
 
 msgid "Theme"
 msgstr "Theme"
@@ -2800,6 +2839,9 @@ msgstr "Yes, close it"
 
 msgid "You are not allowed to submit a comment for this product. You should make a purchase first."
 msgstr "You are not allowed to submit a comment for this product. You should make a purchase first."
+
+msgid "You can pick up the order yourself from our warehouse in Tashkent."
+msgstr "You can pick up the order yourself from our warehouse in Tashkent."
 
 msgid "You can resend now"
 msgstr "You can resend now"

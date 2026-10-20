@@ -35,6 +35,9 @@ msgstr "2 часа"
 msgid "About"
 msgstr "О нас"
 
+msgid "About us"
+msgstr "О нас"
+
 msgid "About Us"
 msgstr "О нас"
 
@@ -154,6 +157,9 @@ msgstr "Все заказы"
 
 msgid "All orders loaded for this buyer profile."
 msgstr "Все заказы загружены для этого профиля покупателя."
+
+msgid "All prices on the site are indicated in UZS."
+msgstr "Все цены на сайте указаны в сумах."
 
 msgid "Amount"
 msgstr "Сумма"
@@ -317,8 +323,8 @@ msgstr "Файлы бренда"
 msgid "Browse the catalog and add items to get started."
 msgstr "Просмотрите каталог и добавьте товары, чтобы начать."
 
-msgid "Building materials"
-msgstr "Стройматериалы"
+#~ msgid "Building materials"
+#~ msgstr "Стройматериалы"
 
 msgid "Buyer"
 msgstr "Покупатель"
@@ -706,6 +712,18 @@ msgstr "Удалить вариант"
 
 msgid "Delivering"
 msgstr "Доставляется"
+
+msgid "Delivery"
+msgstr "Доставка"
+
+msgid "Delivery and payment"
+msgstr "Получение и оплата"
+
+msgid "Delivery to other regions is available for orders above a certain amount."
+msgstr "Доставка в другие регионы доступна при заказе от определенной суммы."
+
+msgid "Delivery to Tashkent is carried out by our own transport."
+msgstr "Доставка по Ташкенту осуществляется нашим транспортом."
 
 msgid "Desc"
 msgstr "По убыванию"
@@ -1138,6 +1156,9 @@ msgstr "Высокорисковые действия, влияющие на д�
 
 msgid "Home"
 msgstr "Главная"
+
+msgid "How SNABER delivers and accepts payment for building materials and tools."
+msgstr "Как SNABER доставляет и принимает оплату за стройматериалы и инструменты."
 
 msgid "Identity, category, pricing, MOQ and lead time."
 msgstr "Идентификация, категория, цена, MOQ и время выполнения."
@@ -1746,6 +1767,12 @@ msgstr "Пароли не совпадают"
 msgid "Paste iframe or URL..."
 msgstr "Вставьте iframe или URL..."
 
+msgid "Payment"
+msgstr "Оплата"
+
+msgid "Payment in cash or by bank transfer for legal entities."
+msgstr "Оплата наличными или банковским переводом для юридических лиц."
+
 #~ msgid "pcs"
 #~ msgstr "шт."
 
@@ -1766,6 +1793,9 @@ msgstr "Номер телефона обязателен"
 
 msgid "Pick a deadline date"
 msgstr "Выберите дату дедлайна"
+
+msgid "Pickup from warehouse"
+msgstr "Самовывоз со склада"
 
 msgid "Please log in with the appropriate credentials"
 msgstr "Войдите, используя соответствующие учётные данные"
@@ -2268,6 +2298,9 @@ msgstr "Сен"
 msgid "September"
 msgstr "Сентябрь"
 
+msgid "Service and support"
+msgstr "Сервис и поддержка"
+
 msgid "Set rating"
 msgstr "Установить оценку"
 
@@ -2418,6 +2451,9 @@ msgstr "Поставщик"
 msgid "System"
 msgstr "Система"
 
+msgid "Tashkent"
+msgstr "Ташкент"
+
 msgid "Tell us about your production, sourcing, or partnership needs"
 msgstr "Расскажите о ваших потребностях в производстве, поставках или партнерстве"
 
@@ -2438,6 +2474,9 @@ msgstr "Введённый старый пароль неверный. Попр�
 
 msgid "The order is closed, you can't edit it anymore."
 msgstr "Заказ закрыт, вы больше не можете его редактировать."
+
+msgid "The pickup address is available to the manager after the order is confirmed."
+msgstr "Адрес самовывоза предоставляет менеджер после подтверждения заказа."
 
 msgid "Theme"
 msgstr "Тема"
@@ -2801,6 +2840,9 @@ msgstr "Да, закрыть"
 
 msgid "You are not allowed to submit a comment for this product. You should make a purchase first."
 msgstr "Вы не можете оставить комментарий к этому товару. Сначала необходимо совершить покупку."
+
+msgid "You can pick up the order yourself from our warehouse in Tashkent."
+msgstr "Вы можете забрать заказ самостоятельно с нашего склада в Ташкенте."
 
 msgid "You can resend now"
 msgstr "Теперь можно отправить повторно"
