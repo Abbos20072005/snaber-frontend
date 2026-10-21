@@ -422,8 +422,8 @@ msgstr "Содержимое"
 msgid "Copy code"
 msgstr "Копировать код"
 
-msgid "Copyright {year} snaber.uz. Building materials and tools marketplace."
-msgstr "Copyright {year} snaber.uz. Маркетплейс строительных материалов и инструментов."
+#~ msgid "Copyright {year} snaber.uz. Building materials and tools marketplace."
+#~ msgstr "Copyright {year} snaber.uz. Маркетплейс строительных материалов и инструментов."
 
 msgid "Country"
 msgstr "Страна"
@@ -1465,8 +1465,8 @@ msgstr "Сохранить профиль"
 msgid "Search"
 msgstr "Поиск"
 
-msgid "Search building materials"
-msgstr "Поиск стройматериалов"
+#~ msgid "Search building materials"
+#~ msgstr "Поиск стройматериалов"
 
 msgid "Search chats"
 msgstr "Поиск чатов"
@@ -1476,6 +1476,9 @@ msgstr "Поиск по столбцам..."
 
 msgid "Search company"
 msgstr "Поиск компании"
+
+msgid "Search products and spare parts"
+msgstr "Поиск товаров и запчастей"
 
 msgid "Search results for"
 msgstr "Результаты поиска для"
@@ -1599,6 +1602,9 @@ msgstr "Войти"
 
 msgid "Sign up"
 msgstr "Регистрация"
+
+msgid "SNABER — B2B supply of industrial tools and components for enterprises"
+msgstr "SNABER — B2B-поставки промышленного инструмента и комплектующих для предприятий"
 
 msgid "snaber.uz is a marketplace for building materials and tools — cement, bricks, steel, lumber, roofing, paints, plumbing, electrical goods and equipment from verified suppliers."
 msgstr "SNABER — промышленное снабжение для предприятий. Подшипники, уплотнения, смазки, приводы, фильтры, крепёж, инструмент, СИЗ, электрика и такелаж. Отправьте заявку списком — подберём позиции и пришлём коммерческое предложение."

@@ -422,8 +422,8 @@ msgstr "Kontent"
 msgid "Copy code"
 msgstr "Kodni nusxalash"
 
-msgid "Copyright {year} snaber.uz. Building materials and tools marketplace."
-msgstr "Copyright {year} snaber.uz. Qurilish materiallari va asboblari marketpleysi."
+#~ msgid "Copyright {year} snaber.uz. Building materials and tools marketplace."
+#~ msgstr "Copyright {year} snaber.uz. Qurilish materiallari va asboblari marketpleysi."
 
 msgid "Country"
 msgstr "Mamlakat"
@@ -1465,8 +1465,8 @@ msgstr "Profilni saqlash"
 msgid "Search"
 msgstr "Qidirish"
 
-msgid "Search building materials"
-msgstr "Qurilish materiallarini qidirish"
+#~ msgid "Search building materials"
+#~ msgstr "Qurilish materiallarini qidirish"
 
 msgid "Search chats"
 msgstr "Chatlarni qidirish"
@@ -1476,6 +1476,9 @@ msgstr "Ustunlardan qidirish..."
 
 msgid "Search company"
 msgstr "Kompaniyani qidirish"
+
+msgid "Search products and spare parts"
+msgstr "Mahsulot va ehtiyot qismlarni qidirish"
 
 msgid "Search results for"
 msgstr "Qidiruv natijalari"
@@ -1600,8 +1603,11 @@ msgstr "Kirish"
 msgid "Sign up"
 msgstr "Ro‘yxatdan o‘tish"
 
+msgid "SNABER — B2B supply of industrial tools and components for enterprises"
+msgstr "SNABER — korxonalar uchun sanoat asboblari va komplektlovchilarining B2B yetkazib berilishi"
+
 msgid "snaber.uz is a marketplace for building materials and tools — cement, bricks, steel, lumber, roofing, paints, plumbing, electrical goods and equipment from verified suppliers."
-msgstr "snaber.uz — qurilish materiallari va asboblari marketpleysi: sement, g'isht, metall, yog'och, tom, bo'yoqlar, santexnika va elektr jihozlari tasdiqlangan yetkazib beruvchilardan."
+msgstr "SNABER — korxonalar uchun sanoat ta'minoti. Podshipniklar, zichlagichlar, moylar, yuritmalar, filtrlar, mahkamlagichlar, asboblar, SIZ, elektr jihozlari va yuk ko'tarish jihozlari. Ro'yxat bilan ariza yuboring — mos pozitsiyalarni tanlab, tijorat taklifini yuboramiz."
 
 msgid "so'm"
 msgstr "so‘m"

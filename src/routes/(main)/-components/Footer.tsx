@@ -11,7 +11,6 @@ import { contactsLabelMap } from './constants';
 
 export const Footer = () => {
   const { t } = useLingui();
-  const year = new Date().getFullYear();
 
   return (
     <footer className='mt-15 hidden border-t-4 border-yellow-400 bg-[#141414] text-white md:mt-20 md:block lg:mt-25'>
@@ -86,8 +85,7 @@ export const Footer = () => {
         <Separator className='my-8 bg-white/12' />
 
         <div className='flex flex-col justify-between gap-3 text-sm text-white/60 md:flex-row md:items-center'>
-          <p className='max-w-xl'>{t`Copyright ${year} snaber.uz. Building materials and tools marketplace.`}</p>
-          <span className='font-semibold text-white md:text-lg lg:text-2xl'>Buildex System</span>
+          <p className='max-w-xl'>{t`SNABER — B2B supply of industrial tools and components for enterprises`}</p>
         </div>
       </div>
     </footer>

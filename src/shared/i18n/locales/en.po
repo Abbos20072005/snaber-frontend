@@ -421,8 +421,8 @@ msgstr "Contents"
 msgid "Copy code"
 msgstr "Copy code"
 
-msgid "Copyright {year} snaber.uz. Building materials and tools marketplace."
-msgstr "Copyright {year} snaber.uz. Building materials and tools marketplace."
+#~ msgid "Copyright {year} snaber.uz. Building materials and tools marketplace."
+#~ msgstr "Copyright {year} snaber.uz. Building materials and tools marketplace."
 
 msgid "Country"
 msgstr "Country"
@@ -1466,8 +1466,8 @@ msgstr "Save profile"
 msgid "Search"
 msgstr "Search"
 
-msgid "Search building materials"
-msgstr "Search building materials"
+#~ msgid "Search building materials"
+#~ msgstr "Search building materials"
 
 msgid "Search chats"
 msgstr "Search chats"
@@ -1477,6 +1477,9 @@ msgstr "Search columns..."
 
 msgid "Search company"
 msgstr "Search company"
+
+msgid "Search products and spare parts"
+msgstr "Search products and spare parts"
 
 msgid "Search results for"
 msgstr "Search results for"
@@ -1601,8 +1604,11 @@ msgstr "Sign in"
 msgid "Sign up"
 msgstr "Sign up"
 
+msgid "SNABER — B2B supply of industrial tools and components for enterprises"
+msgstr "SNABER — B2B supply of industrial tools and components for enterprises"
+
 msgid "snaber.uz is a marketplace for building materials and tools — cement, bricks, steel, lumber, roofing, paints, plumbing, electrical goods and equipment from verified suppliers."
-msgstr "snaber.uz is a marketplace for building materials and tools — cement, bricks, steel, lumber, roofing, paints, plumbing, electrical goods and equipment from verified suppliers."
+msgstr "SNABER — industrial supply for enterprises. Bearings, seals, lubricants, drives, filters, fasteners, tools, PPE, electrical goods and rigging. Send us a list of items — we will select the right positions and send a commercial offer."
 
 msgid "so'm"
 msgstr "so'm"

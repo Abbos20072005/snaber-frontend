@@ -1,4 +1,5 @@
-import { useLingui } from '@lingui/react/macro';
+// FEATURE DISABLED: Top products section on the home page.
+// import { useLingui } from '@lingui/react/macro';
 import { createFileRoute } from '@tanstack/react-router';
 import { Suspense } from 'react';
 
@@ -9,13 +10,15 @@ import { TopCategoriesSection, TopCategoriesSkeleton } from '@/modules/category'
 // import { ContactSection } from '@/modules/contact';
 // FEATURE DISABLED: FAQs section.
 // import { Faqs, FaqsSkeleton } from '@/modules/faqs';
-import { ProductListSkeleton } from '@/modules/products';
+// FEATURE DISABLED: Top products section on the home page.
+// import { ProductListSkeleton } from '@/modules/products';
 import { getLocale } from '@/shared/i18n';
 import { createSeoMeta, DEFAULT_OG_IMAGE } from '@/shared/lib/seo';
 import { GeneralError, NotFoundError } from '@/shared/ui/errors';
 import { SectionWrapper } from '@/shared/ui/section-wrapper.tsx';
 
-import { TopProductsList } from './-components';
+// FEATURE DISABLED: Top products section on the home page.
+// import { TopProductsList } from './-components';
 // FEATURE DISABLED: Hero banner on the home page.
 // import { HeroSection } from './-components';
 
@@ -24,14 +27,10 @@ const HomePending = () => (
     <SectionWrapper className='pt-4 lg:pt-5'>
       <TopCategoriesSkeleton />
     </SectionWrapper>
-    <SectionWrapper>
-      <ProductListSkeleton view='grid' />
-    </SectionWrapper>
   </>
 );
 
 const App = () => {
-  const { t } = useLingui();
   return (
     <>
       {/* FEATURE DISABLED: Hero banner on the home page. */}
@@ -41,11 +40,12 @@ const App = () => {
           <TopCategoriesSection />
         </Suspense>
       </SectionWrapper>
-      <SectionWrapper search={{ is_popular: 'true' }} title={t`Top products`} to='/products'>
-        <Suspense fallback={<ProductListSkeleton view='grid' />}>
-          <TopProductsList />
-        </Suspense>
-      </SectionWrapper>
+      {/* FEATURE DISABLED: Top products section on the home page. */}
+      {/* <SectionWrapper search={{ is_popular: 'true' }} title={t`Top products`} to='/products'> */}
+      {/*   <Suspense fallback={<ProductListSkeleton view='grid' />}> */}
+      {/*     <TopProductsList /> */}
+      {/*   </Suspense> */}
+      {/* </SectionWrapper> */}
       {/* FEATURE DISABLED: Top companies section on the home page. */}
       {/* <SectionWrapper title={t`Top companies`} to='/companies'> */}
       {/*   <Suspense */}

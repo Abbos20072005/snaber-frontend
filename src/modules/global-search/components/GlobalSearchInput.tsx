@@ -26,7 +26,7 @@ export const GlobalSearchInput = ({ search, setSearch, handleSubmit, setIsFocuse
           onBlur={() => setIsFocused(false)}
           onChange={(e) => setSearch(e.target.value)}
           onFocus={() => setIsFocused(true)}
-          placeholder={t`Search building materials`}
+          placeholder={t`Search products and spare parts`}
         />
         <Button
           aria-label={t`Search`}
