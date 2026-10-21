@@ -1601,7 +1601,7 @@ msgid "Sign up"
 msgstr "Регистрация"
 
 msgid "snaber.uz is a marketplace for building materials and tools — cement, bricks, steel, lumber, roofing, paints, plumbing, electrical goods and equipment from verified suppliers."
-msgstr "snaber.uz — маркетплейс строительных материалов и инструментов: цемент, кирпич, металл, пиломатериалы, кровля, краски, сантехника и электрика от проверенных поставщиков."
+msgstr "SNABER — промышленное снабжение для предприятий. Подшипники, уплотнения, смазки, приводы, фильтры, крепёж, инструмент, СИЗ, электрика и такелаж. Отправьте заявку списком — подберём позиции и пришлём коммерческое предложение."
 
 msgid "so'm"
 msgstr "сум"
