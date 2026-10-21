@@ -1,13 +1,17 @@
 import DOMPurify from 'dompurify';
-import { useMemo } from 'react';
+import { useEffect, useState } from 'react';
 
 interface Props {
   html?: string;
 }
 
 export const BackendContent = ({ html }: Props) => {
-  const cleanHtml = useMemo(
-    () =>
+  // DOMPurify needs a DOM, so it only runs in the browser. The server renders an empty
+  // container and the sanitized HTML is filled in after mount, which also avoids hydration mismatches.
+  const [cleanHtml, setCleanHtml] = useState('');
+
+  useEffect(() => {
+    setCleanHtml(
       DOMPurify.sanitize(html ?? '', {
         ADD_ATTR: [
           'allow',
@@ -22,9 +26,9 @@ export const BackendContent = ({ html }: Props) => {
           'width'
         ],
         ADD_TAGS: ['iframe']
-      }),
-    [html]
-  );
+      })
+    );
+  }, [html]);
 
   return (
     <div
