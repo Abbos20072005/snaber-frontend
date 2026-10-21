@@ -30,9 +30,11 @@ export const TopCategoriesSkeleton = () => (
           </div>
           <div className='mt-2 grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6'>
             {Array.from({ length: TILES_PER_SECTION }).map((_, tile) => (
-              <div key={tile} className='bg-muted/70 flex items-center gap-2 rounded-lg p-2'>
-                <Skeleton className='size-9 shrink-0 rounded-md' />
-                <Skeleton className='h-3 w-2/3' />
+              <div key={tile} className='bg-muted/70 flex flex-col overflow-hidden rounded-lg'>
+                <Skeleton className='aspect-square w-full rounded-none' />
+                <div className='p-2'>
+                  <Skeleton className='h-3 w-2/3' />
+                </div>
               </div>
             ))}
           </div>
