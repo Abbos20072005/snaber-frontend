@@ -15,8 +15,8 @@ export const contactsLabelMap: ContactOption[] = [
   {
     icon: PhoneIcon,
     label: msg`Phone`,
-    value: '+998712037772',
-    href: 'tel:+998712037772'
+    value: '+998979005005',
+    href: 'tel:+998979005005'
   },
   {
     icon: MailIcon,

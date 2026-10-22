@@ -32,11 +32,11 @@ export const HeaderTopBar = () => {
         <div className='flex items-center gap-4'>
           <LangSwitcher className='h-6 text-xs' />
           <a
-            href='tel:+998712037772'
+            href='tel:+998979005005'
             className='text-foreground/80 hover:text-foreground flex items-center gap-1.5 text-xs font-semibold whitespace-nowrap transition-colors hover:underline'
           >
             <PhoneIcon className='size-3.5' />
-            +998 71 203 77 72
+            +998 97 900 50 05
           </a>
         </div>
       </div>

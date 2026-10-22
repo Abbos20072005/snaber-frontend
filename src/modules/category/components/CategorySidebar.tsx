@@ -16,12 +16,12 @@ export const CategorySidebar = ({ roots, selectedId, onSelect }: CategorySidebar
   return (
     <aside className='shrink-0 self-start md:sticky md:top-29 md:max-h-[calc(100vh-7.25rem)] md:w-55 md:overflow-y-auto'>
       <CategoryHeading title={t`Choose a category`} />
-      <ul className='mt-1 flex gap-1 overflow-x-auto py-1 md:flex-col md:overflow-visible'>
+      <ul className='mt-1 flex gap-1 overflow-x-auto py-1 md:flex-col md:gap-0 md:overflow-visible'>
         {roots.map((root) => (
           <li key={root.id} className='shrink-0'>
             <button
               className={cn(
-                'w-full rounded-sm px-2 py-1.5 text-left text-sm whitespace-nowrap transition-colors md:whitespace-normal',
+                'w-full rounded-sm px-2 py-1 text-left text-sm leading-snug whitespace-nowrap transition-colors md:whitespace-normal',
                 root.id === selectedId
                   ? 'bg-yellow-400 font-semibold text-black'
                   : 'text-foreground/80 hover:bg-yellow-400/20 hover:text-black'
