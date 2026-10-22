@@ -11,7 +11,7 @@ export { CategoryNestedSelect } from './components/CategoryNestedSelect';
 export { CategoryPendingComponent } from './components/CategoryPendingComponent';
 export { CategorySidebar } from './components/CategorySidebar';
 export { CategorySkeleton } from './components/CategorySkeleton';
-export { CategoryTile } from './components/CategoryTile';
+export { CATEGORY_TILE_GRID, CategoryTile } from './components/CategoryTile';
 export { TopCategoriesSection } from './components/TopCategoriesSection';
 export { TopCategoriesSkeleton } from './components/TopCategoriesSkeleton';
 export { useCategoryTableColumns } from './hooks/useCategoryTableColumns';

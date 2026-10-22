@@ -22,27 +22,20 @@ import { SectionWrapper } from '@/shared/ui/section-wrapper.tsx';
 // FEATURE DISABLED: Hero banner on the home page.
 // import { HeroSection } from './-components';
 
-// Category tile design on the home page: ?design=a (default, image beside the name) or ?design=b (image on top).
-const HomePending = () => {
-  const { design } = Route.useSearch();
-
-  return (
-    <SectionWrapper className='pt-4 lg:pt-5'>
-      <TopCategoriesSkeleton design={design} />
-    </SectionWrapper>
-  );
-};
+const HomePending = () => (
+  <SectionWrapper className='pt-4 lg:pt-5'>
+    <TopCategoriesSkeleton />
+  </SectionWrapper>
+);
 
 const App = () => {
-  const { design } = Route.useSearch();
-
   return (
     <>
       {/* FEATURE DISABLED: Hero banner on the home page. */}
       {/* <HeroSection /> */}
       <SectionWrapper className='pt-4 lg:pt-5'>
-        <Suspense fallback={<TopCategoriesSkeleton design={design} />}>
-          <TopCategoriesSection design={design} />
+        <Suspense fallback={<TopCategoriesSkeleton />}>
+          <TopCategoriesSection />
         </Suspense>
       </SectionWrapper>
       {/* FEATURE DISABLED: Top products section on the home page. */}
@@ -81,9 +74,6 @@ const App = () => {
 
 export const Route = createFileRoute('/(main)/')({
   component: App,
-  validateSearch: (search: Record<string, unknown>): { design?: 'a' | 'b' } => ({
-    design: search.design === 'b' ? 'b' : undefined
-  }),
   pendingComponent: HomePending,
   notFoundComponent: NotFoundError,
   errorComponent: GeneralError,
