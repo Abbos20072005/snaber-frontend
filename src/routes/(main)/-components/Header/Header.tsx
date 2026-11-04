@@ -64,7 +64,7 @@ export const Header = () => {
           </Link>
 
           <div className='flex flex-1 items-center gap-1 sm:gap-2'>
-            <GlobalSearch className='max-w-xl' />
+            <GlobalSearch />
             <LangSwitcher className='md:hidden' />
 
             <div className='ml-auto flex items-center gap-5'>

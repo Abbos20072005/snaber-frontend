@@ -54,7 +54,7 @@ export const GlobalSearch = ({ className, ...props }: Props) => {
 
   return (
     <div className={cn('flex flex-1 justify-end', className)} {...props}>
-      <div className='relative hidden max-w-150 flex-1 lg:block'>
+      <div className='relative hidden flex-1 lg:block'>
         <GlobalSearchInput
           handleSubmit={handleSubmit}
           search={search}
