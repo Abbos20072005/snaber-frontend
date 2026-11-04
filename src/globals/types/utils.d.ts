@@ -1,9 +1,3 @@
-interface MultiLan {
-  en: string;
-  ru: string;
-  uz: string;
-}
-
 interface Pagination<T> {
   count: number;
   next: string | null;

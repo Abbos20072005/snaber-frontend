@@ -10,16 +10,16 @@ interface Comment {
       image: string;
     }
   ];
-  user: {
-    id: number;
-    full_name: string;
-    image: string;
-  };
   product: {
     average_rating: string;
     id: number;
     image: string | null;
     name: string;
+  };
+  user: {
+    id: number;
+    full_name: string;
+    image: string;
   };
 }
 

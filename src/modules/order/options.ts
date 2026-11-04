@@ -4,7 +4,7 @@ import type { GetOrderRequest, GetOrdersRequest } from '@/shared/api';
 
 import { getOrder, getOrders } from '@/shared/api';
 
-export const ORDER_QUERY_KEYS = {
+const ORDER_QUERY_KEYS = {
   base: () => ['orders'] as const,
   getAll: (request?: GetOrdersRequest) => [...ORDER_QUERY_KEYS.base(), request] as const,
   getById: (request: GetOrderRequest) => [...ORDER_QUERY_KEYS.base(), 'detail', request] as const

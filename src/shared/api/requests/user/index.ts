@@ -15,9 +15,6 @@ export interface GetUserByIdRequest {
   id: number;
 }
 
-export const getUserById = ({ id }: GetUserByIdRequest) =>
-  api.get<User>(`authentication/users/${id}/`);
-
 interface PatchUsersRequest {
   data: PatchUserDto;
   id: number;

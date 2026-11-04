@@ -14,6 +14,22 @@ interface MonthlyRevenueChartItem {
   revenue: number;
 }
 
+// The API names months in English, so they are matched by position, not by the translated label.
+const ENGLISH_MONTHS = [
+  'January',
+  'February',
+  'March',
+  'April',
+  'May',
+  'June',
+  'July',
+  'August',
+  'September',
+  'October',
+  'November',
+  'December'
+];
+
 const normalizeMonth = (month: string) => month.trim().toLowerCase();
 
 export const RevenueOrderMomentumChart = () => {
@@ -27,9 +43,9 @@ export const RevenueOrderMomentumChart = () => {
 
   const revenueByMonth = new Map(data.map((item) => [normalizeMonth(item.month), item]));
 
-  const chartData: MonthlyRevenueChartItem[] = MONTHS.map((month) => {
+  const chartData: MonthlyRevenueChartItem[] = MONTHS.map((month, index) => {
     const monthLabel = t(month);
-    const item = revenueByMonth.get(normalizeMonth(monthLabel));
+    const item = revenueByMonth.get(normalizeMonth(ENGLISH_MONTHS[index]));
 
     return {
       month: monthLabel.substring(0, 3),

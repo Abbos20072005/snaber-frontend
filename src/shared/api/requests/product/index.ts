@@ -90,5 +90,5 @@ export const deleteProductImage = ({ id, imageId }: DeleteProductImageRequest) =
 
 export * from './attribute';
 export * from './attribute-value';
-export * from './comment';
+export * from './family';
 export * from './unit-of-measure';

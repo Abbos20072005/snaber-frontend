@@ -4,7 +4,7 @@ import type { GlobalSearchRequest } from '@/shared/api/requests/global-search';
 
 import { getGlobalSearch } from '@/shared/api/requests/global-search';
 
-export const GLOBAL_SEARCH_QUERY_KEYS = {
+const GLOBAL_SEARCH_QUERY_KEYS = {
   base: () => ['global-search'] as const,
   all: (request: GlobalSearchRequest) => [...GLOBAL_SEARCH_QUERY_KEYS.base(), request] as const
 } as const;

@@ -54,7 +54,7 @@ export const Header = () => {
     <header className='sticky top-0 z-50 w-full border-b-[3px] border-yellow-400'>
       <HeaderTopBar />
       <div className='border-border/60 bg-background'>
-        <div className='container flex h-16 items-center gap-x-6 gap-y-3'>
+        <div className='container flex h-16 items-center gap-x-2 gap-y-3 sm:gap-x-6'>
           <Link
             aria-label='snaber.uz'
             className='flex h-11 items-center justify-center rounded-lg px-1'
@@ -103,7 +103,7 @@ export const Header = () => {
                 <AccountDropDown />
               ) : (
                 <Button
-                  className='ml-1 rounded-md px-6'
+                  className='ml-1 rounded-md px-4 sm:px-6'
                   variant='secondary'
                   onClick={() => setIsOpen(true)}
                 >

@@ -6,6 +6,6 @@ export { PublicProductDetailRow } from './PublicProductDetailRow';
 export { PublicProductDetailSkeleton } from './PublicProductDetailSkeleton';
 export { PublicProductGallery } from './PublicProductGallery';
 export { PublicProductInfoTab } from './PublicProductInfoTab';
-export { PublicProductKeyValueList } from './PublicProductKeyValueList';
 export { PublicProductSummary } from './PublicProductSummary';
 export { PublicProductTabs } from './PublicProductTabs';
+export { PublicProductVariants } from './PublicProductVariants';

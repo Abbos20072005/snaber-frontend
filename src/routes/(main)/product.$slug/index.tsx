@@ -13,7 +13,8 @@ import {
   PublicProductDetailSkeleton,
   PublicProductGallery,
   PublicProductSummary,
-  PublicProductTabs
+  PublicProductTabs,
+  PublicProductVariants
 } from '@/modules/products';
 import { extractSlugId, generateSlugId } from '@/shared/constants';
 import { getLocale } from '@/shared/i18n';
@@ -81,6 +82,8 @@ const PublicProductDetailPage = () => {
         <PublicProductSummary onShowAll={handleShowAllCharacteristics} product={product} />
         <PublicProductAside product={product} />
       </div>
+
+      <PublicProductVariants product={product} />
 
       <div className='space-y-6'>
         {/* FEATURE DISABLED: Product comments (auth-gated). */}

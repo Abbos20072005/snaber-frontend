@@ -21,30 +21,27 @@ const CATEGORY_COLORS = [
   'var(--color-others)'
 ] as const;
 
-const MAX_VISIBLE_CATEGORIES = 3;
+// The API already sends the top categories plus one "Others" row that sums up the rest.
+const OTHERS_KEY = 'Others';
 
 const getCategoryDemandData = (
   categories: AdminOrdersByCategoryItem[],
   othersLabel: string
 ): CategoryDemandChartItem[] => {
-  const sortedCategories = [...categories].sort((firstCategory, secondCategory) => {
-    return secondCategory.orders_count - firstCategory.orders_count;
-  });
+  const named = categories.filter((category) => category.category_name !== OTHERS_KEY);
+  const others = categories.find((category) => category.category_name === OTHERS_KEY);
 
-  const visibleCategories = sortedCategories.slice(0, MAX_VISIBLE_CATEGORIES);
-  const otherCategories = sortedCategories.slice(MAX_VISIBLE_CATEGORIES);
-
-  const chartData = visibleCategories.map((category, index) => ({
+  const chartData = named.map((category, index) => ({
     category: category.category_name,
     fill: CATEGORY_COLORS[index],
     value: category.orders_count
   }));
 
-  if (otherCategories.length) {
+  if (others) {
     chartData.push({
       category: othersLabel,
       fill: CATEGORY_COLORS[3],
-      value: otherCategories.reduce((total, category) => total + category.orders_count, 0)
+      value: others.orders_count
     });
   }
 

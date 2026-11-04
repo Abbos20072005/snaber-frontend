@@ -35,7 +35,7 @@ const normalizeDescription = (value: string) =>
     .replace(/\s+/g, ' ')
     .trim();
 
-export const truncateSeoDescription = (value: string, maxLength = DESCRIPTION_MAX_LENGTH) => {
+const truncateSeoDescription = (value: string, maxLength = DESCRIPTION_MAX_LENGTH) => {
   const normalizedValue = normalizeDescription(value);
 
   if (normalizedValue.length <= maxLength) return normalizedValue;
@@ -43,7 +43,7 @@ export const truncateSeoDescription = (value: string, maxLength = DESCRIPTION_MA
   return `${normalizedValue.slice(0, maxLength - 1).trim()}...`;
 };
 
-export const formatSeoTitle = (title: string) => `${title} | ${SITE_NAME}`;
+const formatSeoTitle = (title: string) => `${title} | ${SITE_NAME}`;
 
 export const createSeoMeta = ({
   description,
@@ -143,32 +143,6 @@ export const createWebsiteJsonLd = ({
       'query-input': 'required name=search_term_string'
     };
   }
-
-  return { scripts: [createJsonLdScript(schema)] };
-};
-
-interface OrganizationJsonLdOptions {
-  description?: string;
-  logo?: string;
-  name: string;
-  url?: string;
-}
-
-export const createOrganizationJsonLd = ({
-  description,
-  logo,
-  name,
-  url
-}: OrganizationJsonLdOptions) => {
-  const schema: Record<string, unknown> = {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name
-  };
-
-  if (url) schema.url = url;
-  if (logo) schema.logo = logo;
-  if (description) schema.description = description;
 
   return { scripts: [createJsonLdScript(schema)] };
 };

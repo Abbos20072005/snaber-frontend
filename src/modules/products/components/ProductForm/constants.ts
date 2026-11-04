@@ -48,7 +48,7 @@ export const productSchemaForm = () =>
 
 export type ProductSchemaForm = z.infer<ReturnType<typeof productSchemaForm>>;
 
-export type ProductCharacteristicForm = ProductSchemaForm['characteristics'][number];
+type ProductCharacteristicForm = ProductSchemaForm['characteristics'][number];
 
 export const emptyCharacteristic = (): ProductCharacteristicForm => ({
   name_en: '',

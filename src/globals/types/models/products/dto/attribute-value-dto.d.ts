@@ -1,6 +1,6 @@
 interface AttributeValueDto {
   attribute: number;
-  image: File;
+  image?: File;
   value_en: string;
   value_ru: string;
   value_uz: string;

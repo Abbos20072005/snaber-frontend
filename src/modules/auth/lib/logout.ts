@@ -3,13 +3,13 @@ import type { QueryClient } from '@tanstack/react-query';
 import { COOKIES } from '@/shared/constants';
 import { isomorphicCookie } from '@/shared/lib/isomorphic-cookie.ts';
 
-export const clearAuthCookies = () => {
+const clearAuthCookies = () => {
   isomorphicCookie.delete(COOKIES.ACCESS_TOKEN);
   isomorphicCookie.delete(COOKIES.REFRESH_TOKEN);
   isomorphicCookie.delete(COOKIES.CURRENT_USER);
 };
 
-export const redirectToHomeWithReload = () => {
+const redirectToHomeWithReload = () => {
   if (typeof window === 'undefined') return;
 
   if (window.location.pathname === '/' && !window.location.search && !window.location.hash) {

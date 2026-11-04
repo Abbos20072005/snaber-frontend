@@ -29,6 +29,7 @@ export const ProductCard = ({ product, className }: Props) => {
   // Admins manage the catalog, they have no cart or favorites.
   const isAdmin = user?.role === 'admin';
   const productId = product.id;
+  const variantsCount = product.variants_count;
   const images = product.images;
 
   // Products without filled-in characteristics still show the basics instead of an empty card.
@@ -99,6 +100,9 @@ export const ProductCard = ({ product, className }: Props) => {
           >
             {product.name}
           </Link>
+          {variantsCount > 1 && (
+            <p className='text-primary mt-1 text-sm font-medium'>{t`${variantsCount} variants`}</p>
+          )}
           <dl className='mt-3 space-y-1.5'>
             {specifications.map((spec) => (
               <div key={`${spec.name}-${spec.value}`} className='flex gap-1 text-sm leading-6'>

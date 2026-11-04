@@ -34,7 +34,7 @@ export const WeeklyJoinedUsersChart = () => {
 
     return {
       day: dayLabel.substring(0, 3),
-      users: joinedUsersByDay.get(normalizeDay(dayLabel)) ?? 0
+      users: joinedUsersByDay.get(normalizeDay(day.value)) ?? 0
     };
   });
 

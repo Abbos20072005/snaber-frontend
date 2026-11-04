@@ -1,8 +1,8 @@
 interface CommentDto {
   images: File[];
+  product: number;
   rating: number;
   text: string;
-  product: number;
 }
 
 type PostCommentDto = CommentDto;

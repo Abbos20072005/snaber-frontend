@@ -10,6 +10,7 @@ import type { ProductSchemaForm } from '@/modules/products';
 import {
   getProductByIdQueryOptions,
   PRODUCT_QUERY_KEYS,
+  ProductFamilySection,
   ProductForm,
   productFormToDto
 } from '@/modules/products';
@@ -91,6 +92,7 @@ export const ProductEdit = ({ id }: Props) => {
           onSubmit={(values) => productPatchMutation.mutate(values)}
           product={product}
         />
+        <ProductFamilySection key={product.family?.id ?? 'none'} product={product} />
         <DeleteAlertDialog
           itemName={product.name}
           title={t`Delete product`}

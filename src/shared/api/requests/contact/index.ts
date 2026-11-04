@@ -1,6 +1,6 @@
 import { apiWithoutAuth } from '@/shared/api';
 
-export interface ContactRequest {
+interface ContactRequest {
   data: ContactDTO;
 }
 

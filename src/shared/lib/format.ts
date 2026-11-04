@@ -1,7 +1,6 @@
 import type { DateArg, Locale as DateFnsLocale } from 'date-fns';
 import type { FormatOptions } from 'date-fns/format';
 
-import { useLingui } from '@lingui/react/macro';
 import { format } from 'date-fns';
 import { ru } from 'date-fns/locale/ru';
 import { uz } from 'date-fns/locale/uz';
@@ -54,10 +53,6 @@ export function formatDateToString(date: Date) {
   return format(date, 'yyyy-MM-dd');
 }
 
-export function formatDateTimeToString(date: Date) {
-  return format(date, "yyyy-MM-dd'T'HH:mm:ss");
-}
-
 export function formatDate(
   date: number | string | Date | undefined,
   opts: Intl.DateTimeFormatOptions = {}
@@ -75,23 +70,4 @@ export function formatDate(
     console.error(_err);
     return '';
   }
-}
-
-export const formatFileSize = (size: number) => {
-  if (size < 1024) return `${size} B`;
-  if (size < 1024 * 1024) return `${(size / 1024).toFixed(2)} KB`;
-  if (size < 1024 * 1024 * 1024) return `${(size / (1024 * 1024)).toFixed(2)} MB`;
-  return `${(size / (1024 * 1024 * 1024)).toFixed(2)} GB`;
-};
-
-export function useFormatCount() {
-  const { t } = useLingui();
-
-  return (num: number): string => {
-    if (num >= 1_000_000_000)
-      return `${(num / 1_000_000_000).toFixed(1).replace(/\.0$/, '')} ${t`mlrd`}`;
-    if (num >= 1_000_000) return `${(num / 1_000_000).toFixed(1).replace(/\.0$/, '')} ${t`mln`}`;
-    if (num >= 1_000) return `${(num / 1_000).toFixed(1).replace(/\.0$/, '')} ${t`k`}`;
-    return num.toString();
-  };
 }

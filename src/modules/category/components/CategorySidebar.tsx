@@ -14,7 +14,7 @@ export const CategorySidebar = ({ roots, selectedId, onSelect }: CategorySidebar
   const { t } = useLingui();
 
   return (
-    <aside className='shrink-0 self-start md:sticky md:top-29 md:max-h-[calc(100vh-7.25rem)] md:w-55 md:overflow-y-auto'>
+    <aside className='max-w-full shrink-0 self-start md:sticky md:top-29 md:max-h-[calc(100vh-7.25rem)] md:w-55 md:overflow-y-auto'>
       <CategoryHeading title={t`Choose a category`} />
       <ul className='mt-1 flex gap-1 overflow-x-auto py-1 md:flex-col md:gap-0 md:overflow-visible'>
         {roots.map((root) => (

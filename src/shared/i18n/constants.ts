@@ -1,6 +1,6 @@
 import type { Locale } from '@/shared/i18n/config.ts';
 
-export const localeLabelMap: Record<Locale, string> = {
+const localeLabelMap: Record<Locale, string> = {
   uz: "O'zbek",
   ru: 'Русский',
   en: 'English'
@@ -12,7 +12,7 @@ export const localeShortLabelMap: Record<Locale, string> = {
   en: 'En'
 };
 
-export const localeImageMap: Record<Locale, string> = {
+const localeImageMap: Record<Locale, string> = {
   uz: 'uz',
   ru: 'ru',
   en: 'us'

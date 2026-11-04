@@ -20,14 +20,32 @@ msgstr "{orders_count} ta buyurtma"
 msgid "{selectedSize} selected"
 msgstr "{selectedSize} ta tanlandi"
 
+msgid "{threshold} or fewer left in stock."
+msgstr "Omborda {threshold} yoki undan kam qolgan."
+
 msgid "{title} slider"
 msgstr "{title} slayderi"
 
-msgid "15-20 days"
-msgstr "15-20 kun"
+msgid "{variantsCount} variants"
+msgstr "{variantsCount} ta variant"
 
-msgid "2 hours"
-msgstr "2 soat"
+msgid "1 year"
+msgstr "1 yil"
+
+msgid "30 days"
+msgstr "30 kun"
+
+msgid "7 days"
+msgstr "7 kun"
+
+msgid "90 days"
+msgstr "90 kun"
+
+msgid "A variant with these options already exists."
+msgstr "Bunday parametrli variant allaqachon mavjud."
+
+msgid "Abandoned carts"
+msgstr "Tashlab ketilgan savatlar"
 
 msgid "About"
 msgstr "Biz haqimizda"
@@ -47,29 +65,26 @@ msgstr "Amallar"
 msgid "Active"
 msgstr "Faol"
 
+msgid "Active buyers"
+msgstr "Faol xaridorlar"
+
+msgid "Active products with no stock left."
+msgstr "Qoldig‘i tugagan faol mahsulotlar."
+
 msgid "Add"
 msgstr "Qo‘shish"
-
-msgid "Add certificate"
-msgstr "Sertifikat qo‘shish"
 
 msgid "Add characteristic"
 msgstr "Xususiyat qo'shish"
 
-msgid "Add comment"
-msgstr "Izoh qoldirish"
-
-msgid "Add company certificates, compliance documents, and awards for buyers to review."
-msgstr "Xaridorlar ko‘rib chiqishi uchun kompaniya sertifikatlari, muvofiqlik hujjatlari va mukofotlarini qo‘shing."
+msgid "Add existing product"
+msgstr "Mavjud mahsulotni qo'shish"
 
 msgid "Add images"
 msgstr "Rasm qo'shish"
 
-msgid "Add photo"
-msgstr "Rasm qo‘shish"
-
-msgid "Add photos that represent your company, production, and workspace."
-msgstr "Kompaniyangiz, ishlab chiqarish va ish jarayoningizni aks ettiruvchi rasmlarni qo‘shing."
+msgid "Add option"
+msgstr "Parametr qo'shish"
 
 msgid "Add products, set prices and keep the stock up to date."
 msgstr "Mahsulot qo'shing, narxlarni belgilang va ombor qoldig'ini yangilab turing."
@@ -83,11 +98,8 @@ msgstr "Sevimlilarga qo‘shish"
 msgid "Add value"
 msgstr "Qiymat qo‘shish"
 
-msgid "Add your first certificate so buyers can review your company credentials."
-msgstr "Xaridorlar kompaniyangiz ma’lumotlarini ko‘rib chiqishi uchun birinchi sertifikatingizni qo‘shing."
-
-msgid "Add your first company photo to show buyers your production and workspace."
-msgstr "Xaridorlarga ishlab chiqarish va ish joyingizni ko‘rsatish uchun kompaniyangizning birinchi rasmini qo‘shing."
+msgid "Add variants"
+msgstr "Variantlar qo'shish"
 
 msgid "Added to cart"
 msgstr "Savatga qo‘shildi"
@@ -97,9 +109,6 @@ msgstr "Sevimlilarga qo‘shildi"
 
 msgid "Address"
 msgstr "Manzil"
-
-msgid "Address copied"
-msgstr "Manzil nusxalandi"
 
 msgid "Admin"
 msgstr "Admin"
@@ -116,8 +125,8 @@ msgstr "Barcha kategoriyalar"
 msgid "All characteristics"
 msgstr "Barcha xususiyatlar"
 
-msgid "All messages"
-msgstr "Barcha xabarlar"
+msgid "All of these combinations already exist."
+msgstr "Bu kombinatsiyalarning hammasi allaqachon mavjud."
 
 msgid "All orders loaded for this buyer profile."
 msgstr "Ushbu xaridor profili uchun barcha buyurtmalar yuklangan."
@@ -125,11 +134,11 @@ msgstr "Ushbu xaridor profili uchun barcha buyurtmalar yuklangan."
 msgid "All prices on the site are indicated in UZS."
 msgstr "Saytdagi barcha narxlar UZS ko'rinishida belgilangan."
 
+msgid "All variants"
+msgstr "Barcha variantlar"
+
 msgid "Amount"
 msgstr "Miqdor"
-
-msgid "An error occurred while submitting your comment"
-msgstr "Izohingizni yuborishda xatolik yuz berdi"
 
 msgid "Answer"
 msgstr "Javob"
@@ -139,15 +148,6 @@ msgstr "Apr"
 
 msgid "April"
 msgstr "Aprel"
-
-msgid "Are you a company?"
-msgstr "Siz kompaniyamisiz?"
-
-msgid "Are you a service provider?"
-msgstr "Siz xizmat ko‘rsatuvchimisiz?"
-
-msgid "Are you sure to delete this member."
-msgstr "Haqiqatan ham ushbu a’zoni o‘chirmoqchimisiz?"
 
 msgid "Are you sure to logout?"
 msgstr "Haqiqatan ham tizimdan chiqmoqchimisiz?"
@@ -160,9 +160,6 @@ msgstr "Haqiqatan ham ushbu atributni o‘chirmoqchimisiz? Bu amalni ortga qayta
 
 msgid "Are you sure you want to delete this category? This action cannot be undone."
 msgstr "Haqiqatan ham ushbu kategoriyani o‘chirmoqchimisiz? Bu amalni ortga qaytarib bo‘lmaydi."
-
-msgid "Are you sure you want to delete this company? This action cannot be undone."
-msgstr "Haqiqatan ham ushbu kompaniyani o‘chirmoqchimisiz? Bu amalni ortga qaytarib bo‘lmaydi."
 
 msgid "Are you sure you want to delete this FAQ? This action cannot be undone."
 msgstr "Haqiqatan ham ushbu FAQni o‘chirmoqchimisiz? Bu amalni ortga qaytarib bo‘lmaydi."
@@ -203,11 +200,11 @@ msgstr "Avg"
 msgid "August"
 msgstr "Avgust"
 
-msgid "Average delivery time"
-msgstr "O‘rtacha yetkazib berish vaqti"
+msgid "Average order value"
+msgstr "O‘rtacha buyurtma summasi"
 
-msgid "Average response time"
-msgstr "O‘rtacha javob vaqti"
+msgid "Average revenue per day"
+msgstr "Kunlik o‘rtacha daromad"
 
 msgid "Back"
 msgstr "Orqaga"
@@ -218,14 +215,11 @@ msgstr "Bosh sahifaga"
 msgid "Back to Login"
 msgstr "Kirishga qaytish"
 
-msgid "Banner"
-msgstr "Banner"
-
 msgid "Basic information"
 msgstr "Asosiy ma'lumotlar"
 
-msgid "Be the first buyer to comment on this product."
-msgstr "Ushbu mahsulotga birinchi bo‘lib izoh qoldiring."
+msgid "before: {previousDisplay}"
+msgstr "oldin: {previousDisplay}"
 
 msgid "Block reason"
 msgstr "Bloklash sababi"
@@ -236,14 +230,8 @@ msgstr "Bloklangan"
 msgid "Boolean"
 msgstr "Boolean"
 
-msgid "Brand files"
-msgstr "Brend fayllari"
-
 msgid "Browse the catalog and add items to get started."
 msgstr "Boshlash uchun katalogni ko‘rib chiqing va mahsulotlarni qo‘shing."
-
-msgid "Buyer"
-msgstr "Xaridor"
 
 msgid "Buyer dashboard"
 msgstr "Xaridor dashboard’i"
@@ -262,6 +250,9 @@ msgstr "Bekor qilish"
 
 msgid "Cart"
 msgstr "Savat"
+
+msgid "Carts"
+msgstr "Savatlar"
 
 msgid "Catalog"
 msgstr "Katalog"
@@ -284,32 +275,11 @@ msgstr "Kategoriya talabi"
 msgid "Category is required"
 msgstr "Kategoriya majburiy"
 
-msgid "Certificate deleted successfully."
-msgstr "Sertifikat muvaffaqiyatli o‘chirildi."
-
-msgid "Certificate file"
-msgstr "Sertifikat fayli"
-
-msgid "Certificate name"
-msgstr "Sertifikat nomi"
-
-msgid "Certificate No"
-msgstr "Sertifikat raqami"
-
-msgid "Certificates"
-msgstr "Sertifikatlar"
-
-msgid "Certificates not found"
-msgstr "Sertifikatlar topilmadi"
-
 msgid "Change photo"
 msgstr "Rasmni o‘zgartirish"
 
 msgid "Characteristics"
 msgstr "Xususiyatlar"
-
-msgid "Chat is not connected yet."
-msgstr "Chat hali ulanmagan."
 
 msgid "Choose a category"
 msgstr "Kategoriyani tanlang"
@@ -328,12 +298,6 @@ msgstr "Barchasini tozalash"
 
 msgid "Clear category"
 msgstr "Kategoriyani tozalash"
-
-msgid "Clear date"
-msgstr "Sanani tozalash"
-
-msgid "Clear dates"
-msgstr "Sanalarni tozalash"
 
 msgid "Clear filters"
 msgstr "Filtrlarni tozalash"
@@ -365,53 +329,14 @@ msgstr "Kod qayta yuborildi"
 msgid "Code sent to"
 msgstr "Kod yuborildi"
 
-msgid "Comment"
-msgstr "Izoh"
+msgid "Compared with the previous {days} days"
+msgstr "Oldingi {days} kun bilan solishtirilganda"
 
-msgid "Comments will appear here after buyers review this product."
-msgstr "Xaridorlar ushbu mahsulotni baholagandan so‘ng izohlar shu yerda ko‘rinadi."
-
-msgid "Companies"
-msgstr "Kompaniyalar"
-
-msgid "Company"
-msgstr "Kompaniya"
-
-msgid "Company descriptions"
-msgstr "Kompaniya tavsiflari"
-
-msgid "Company features"
-msgstr "Kompaniya xususiyatlari"
-
-msgid "Company Filters"
-msgstr "Kompaniya filtrlari"
-
-msgid "Company images"
-msgstr "Kompaniya rasmlari"
-
-msgid "Company industries"
-msgstr "Kompaniya sohalari"
-
-msgid "Company logo"
-msgstr "Kompaniya logosi"
-
-msgid "Company names"
-msgstr "Kompaniya nomlari"
-
-msgid "Company profile"
-msgstr "Kompaniya profili"
-
-msgid "Completed"
-msgstr "Yakunlangan"
-
-msgid "Connect verified manufacturers, supplier catalogs, and institutional purchasing in one operational B2B market system."
-msgstr "Tasdiqlangan ishlab chiqaruvchilar, yetkazib beruvchilar katalogi va korporativ xaridlarni yagona B2B tizimda birlashtiring."
+msgid "Compared with the previous period"
+msgstr "Oldingi davr bilan solishtirilganda"
 
 msgid "Contact"
 msgstr "Aloqa"
-
-msgid "Contact information"
-msgstr "Kontakt ma’lumotlari"
 
 msgid "Content"
 msgstr "Kontent"
@@ -421,9 +346,6 @@ msgstr "Kontent"
 
 msgid "Copy code"
 msgstr "Kodni nusxalash"
-
-#~ msgid "Copyright {year} snaber.uz. Building materials and tools marketplace."
-#~ msgstr "Copyright {year} snaber.uz. Qurilish materiallari va asboblari marketpleysi."
 
 msgid "Country"
 msgstr "Mamlakat"
@@ -446,17 +368,8 @@ msgstr "Atribut yaratish"
 msgid "Create category"
 msgstr "Kategoriya yaratish"
 
-msgid "Create certificate"
-msgstr "Sertifikat yaratish"
-
 msgid "Create FAQ"
 msgstr "FAQ yaratish"
-
-msgid "Create gallery"
-msgstr "Galereya yaratish"
-
-msgid "Create member"
-msgstr "A’zo yaratish"
 
 msgid "Create order"
 msgstr "Buyurtma yaratish"
@@ -470,14 +383,26 @@ msgstr "Birlik yaratish"
 msgid "Create value"
 msgstr "Qiymat yaratish"
 
+msgid "Create variants"
+msgstr "Variantlar yaratish"
+
 msgid "Created"
 msgstr "Yaratilgan"
+
+msgid "Current"
+msgstr "Joriy"
 
 msgid "Current images"
 msgstr "Joriy rasmlar"
 
-msgid "Customer comments"
-msgstr "Mijozlar izohlari"
+msgid "Customer"
+msgstr "Mijoz"
+
+msgid "Customers who placed an order"
+msgstr "Buyurtma bergan mijozlar"
+
+msgid "Daily figures for the selected period."
+msgstr "Tanlangan davr uchun kunlik ko‘rsatkichlar."
 
 msgid "Danger zone"
 msgstr "Xavfli zona"
@@ -509,12 +434,6 @@ msgstr "{itemName}ni o‘chirish"
 msgid "Delete attribute"
 msgstr "Atributni o‘chirish"
 
-msgid "Delete certificate"
-msgstr "Sertifikatni o‘chirish"
-
-msgid "Delete gallery"
-msgstr "Galereyani o‘chirish"
-
 msgid "Delete image"
 msgstr "Rasmni o'chirish"
 
@@ -523,9 +442,6 @@ msgstr "Mahsulotni o‘chirish"
 
 msgid "Delete this category?"
 msgstr "Ushbu kategoriyani o‘chirasizmi?"
-
-msgid "Delete this company?"
-msgstr "Ushbu kompaniyani o‘chirasizmi?"
 
 msgid "Delete this FAQ?"
 msgstr "Ushbu FAQni o‘chirasizmi?"
@@ -542,8 +458,8 @@ msgstr "Birlikni o‘chirish"
 msgid "Delete value"
 msgstr "Qiymatni o‘chirish"
 
-msgid "Delivering"
-msgstr "Yetkazilmoqda"
+msgid "Delete variants group"
+msgstr "Variantlar guruhini o'chirish"
 
 msgid "Delivery"
 msgstr "Yetkazib berish"
@@ -566,12 +482,6 @@ msgstr "Kamayish bo‘yicha"
 msgid "Description"
 msgstr "Tavsif"
 
-msgid "Description is required"
-msgstr "Tavsif majburiy"
-
-msgid "Description moderator"
-msgstr "Tavsif moderatori"
-
 msgid "Discount (%)"
 msgstr "Chegirma (%)"
 
@@ -584,9 +494,6 @@ msgstr "Mobil yon panelni ko‘rsatadi."
 msgid "does not exist or might have been removed."
 msgstr "mavjud emas yoki o‘chirilgan bo‘lishi mumkin."
 
-msgid "Draft"
-msgstr "Qoralama"
-
 msgid "Drop a file here or choose one"
 msgstr "Faylni shu yerga tashlang yoki tanlang"
 
@@ -596,23 +503,11 @@ msgstr "Yangi rasmni shu yerga tashlang yoki aniq kvadrat rasm tanlang."
 msgid "Edit"
 msgstr "Tahrirlash"
 
-msgid "Edit certificate"
-msgstr "Sertifikatni tahrirlash"
-
-msgid "Edit company"
-msgstr "Kompaniyani tahrirlash"
-
-msgid "Edit gallery"
-msgstr "Galereyani tahrirlash"
+msgid "Edit variants"
+msgstr "Variantlarni tahrirlash"
 
 msgid "Email"
 msgstr "Email"
-
-msgid "Email is required"
-msgstr "Email majburiy"
-
-msgid "Employees"
-msgstr "Xodimlar"
 
 msgid "Enter a valid phone number"
 msgstr "To'g'ri telefon raqamini kiriting"
@@ -626,29 +521,11 @@ msgstr "Kategoriya kodini kiriting"
 msgid "Enter category name"
 msgstr "Kategoriya nomini kiriting"
 
-msgid "Enter certificate name"
-msgstr "Sertifikat nomini kiriting"
-
-msgid "Enter company address"
-msgstr "Kompaniya manzilini kiriting"
-
-msgid "Enter company INN"
-msgstr "Kompaniya INNisini kiriting"
-
-msgid "Enter company name"
-msgstr "Kompaniya nomini kiriting"
-
-msgid "Enter Description"
-msgstr "Tavsif kiriting"
-
 msgid "Enter email"
 msgstr "Email kiriting"
 
 msgid "Enter full name"
 msgstr "To‘liq ismni kiriting"
-
-msgid "Enter password"
-msgstr "Parolni kiriting"
 
 msgid "Enter phone number"
 msgstr "Telefon raqamini kiriting"
@@ -680,15 +557,6 @@ msgstr "Misol: Ko‘k"
 msgid "Example: Color, Size"
 msgstr "Misol: Rang, O‘lcham"
 
-msgid "Explore catalog"
-msgstr "Katalogni ko‘rish"
-
-msgid "Factory photos"
-msgstr "Fabrika rasmlari"
-
-msgid "Factory photos not found"
-msgstr "Fabrika rasmlari topilmadi"
-
 msgid "Failed to add the product to the cart"
 msgstr "Tovarni savatga qo‘shib bo‘lmadi"
 
@@ -698,23 +566,14 @@ msgstr "Atribut yaratilmadi."
 msgid "Failed to create category."
 msgstr "Kategoriya yaratilmadi."
 
-msgid "Failed to create certificate."
-msgstr "Sertifikat yaratilmadi."
-
 msgid "Failed to create FAQ."
 msgstr "FAQ yaratilmadi."
-
-msgid "Failed to create gallery."
-msgstr "Galereya yaratilmadi."
-
-msgid "Failed to create member."
-msgstr "A’zo yaratilmadi."
 
 msgid "Failed to create product."
 msgstr "Mahsulot yaratilmadi."
 
-msgid "Failed to create the mini site. Please try again."
-msgstr "Mini sayt yaratilmadi. Qayta urinib ko‘ring."
+msgid "Failed to create the option."
+msgstr "Parametrni yaratib bo'lmadi."
 
 msgid "Failed to create unit."
 msgstr "Birlik yaratilmadi."
@@ -728,14 +587,8 @@ msgstr "Atributni o‘chirish amalga oshmadi."
 msgid "Failed to delete category."
 msgstr "Kategoriyani o‘chirish amalga oshmadi."
 
-msgid "Failed to delete certificate."
-msgstr "Sertifikatni o‘chirish amalga oshmadi."
-
 msgid "Failed to delete FAQ."
 msgstr "FAQni o‘chirish amalga oshmadi."
-
-msgid "Failed to delete gallery."
-msgstr "Galereyani o‘chirish amalga oshmadi."
 
 msgid "Failed to delete image."
 msgstr "Rasmni o'chirib bo'lmadi."
@@ -755,35 +608,20 @@ msgstr "Foydalanuvchini o‘chirish amalga oshmadi."
 msgid "Failed to delete value."
 msgstr "Qiymatni o‘chirish amalga oshmadi."
 
-msgid "Failed to load document"
-msgstr "Hujjatni yuklash amalga oshmadi"
-
-msgid "Failed to send message."
-msgstr "Xabar yuborilmadi."
-
 msgid "Failed to update attribute."
 msgstr "Atributni yangilash amalga oshmadi."
 
 msgid "Failed to update category."
 msgstr "Kategoriyani yangilash amalga oshmadi."
 
-msgid "Failed to update certificate."
-msgstr "Sertifikatni yangilash amalga oshmadi."
-
 msgid "Failed to update FAQ."
 msgstr "FAQni yangilash amalga oshmadi."
-
-msgid "Failed to update gallery."
-msgstr "Galereyani yangilash amalga oshmadi."
 
 msgid "Failed to update product."
 msgstr "Mahsulotni yangilash amalga oshmadi."
 
 msgid "Failed to update profile"
 msgstr "Profilni yangilash amalga oshmadi"
-
-msgid "Failed to update the mini site. Please try again."
-msgstr "Mini saytni yangilash amalga oshmadi. Qayta urinib ko‘ring."
 
 msgid "Failed to update unit."
 msgstr "Birlikni yangilash amalga oshmadi."
@@ -802,15 +640,6 @@ msgstr "FAQlar"
 
 msgid "Favorites"
 msgstr "Sevimlilar"
-
-msgid "Feature"
-msgstr "Funksiya"
-
-msgid "Feature name"
-msgstr "Funksiya nomi"
-
-msgid "Features"
-msgstr "Funksiyalar"
 
 msgid "Feb"
 msgstr "Fev"
@@ -839,23 +668,11 @@ msgstr "Filtrlar"
 msgid "Final price"
 msgstr "Yakuniy narx"
 
-msgid "Find a partner"
-msgstr "Hamkor toping"
-
-msgid "Find a reliable partner for your business. Quickly and effectively collaborate with verified companies, services, and specialists through our platform."
-msgstr "Biznesingiz uchun ishonchli hamkor toping. Platformamiz orqali tasdiqlangan kompaniyalar, xizmatlar va mutaxassislar bilan tez va samarali hamkorlik qiling."
-
 msgid "Footer navigation"
 msgstr "Footer navigatsiyasi"
 
 msgid "For legal clients"
 msgstr "Yuridik mijozlar uchun"
-
-msgid "Format: Any image or video format."
-msgstr "Format: Istalgan rasm yoki video formati."
-
-msgid "Format: PNG or JPEG."
-msgstr "Format: PNG yoki JPEG."
 
 msgid "Frequently Asked Questions"
 msgstr "Ko‘p so‘raladigan savollar"
@@ -872,21 +689,6 @@ msgstr "Dan"
 msgid "Full name"
 msgstr "To‘liq ism"
 
-msgid "Full Name"
-msgstr "To‘liq ism"
-
-msgid "Full name is required"
-msgstr "To‘liq ism majburiy"
-
-msgid "Gallery"
-msgstr "Galereya"
-
-msgid "Gallery deleted successfully."
-msgstr "Galereya muvaffaqiyatli o‘chirildi."
-
-msgid "Gallery photo"
-msgstr "Galereya rasmi"
-
 msgid "Get code"
 msgstr "Kodni olish"
 
@@ -898,6 +700,9 @@ msgstr "Keyingi sahifaga o‘tish"
 
 msgid "Go to previous page"
 msgstr "Oldingi sahifaga o‘tish"
+
+msgid "Guest"
+msgstr "Mehmon"
 
 msgid "Hidden"
 msgstr "Yashirin"
@@ -914,38 +719,23 @@ msgstr "SNABER qurilish materiallari va asboblar uchun yetkazib berish va to'lov
 msgid "Image"
 msgstr "Rasm"
 
-msgid "Image title"
-msgstr "Rasm nomi"
-
 msgid "Images"
 msgstr "Rasmlar"
 
 msgid "In stock"
 msgstr "Omborda"
 
+msgid "In stock but not ordered for {days} days."
+msgstr "Omborda bor, lekin {days} kun davomida buyurtma qilinmagan."
+
 msgid "Inactive"
 msgstr "Nofaol"
-
-msgid "Industrial B2B marketplace operations background"
-msgstr "Sanoat B2B marketplace operatsion background’i"
-
-msgid "Industries"
-msgstr "Sohalar"
 
 msgid "Info"
 msgstr "Ma’lumot"
 
-msgid "INN"
-msgstr "INN"
-
 msgid "Insert iframe"
 msgstr "Iframe qo‘shish"
-
-msgid "Invalid email address"
-msgstr "Noto‘g‘ri email manzili"
-
-msgid "Invalid URL"
-msgstr "Noto‘g‘ri URL"
 
 msgid "Invalid verification code"
 msgstr "Noto‘g‘ri tasdiqlash kodi"
@@ -956,20 +746,26 @@ msgstr "Faol"
 msgid "Is blocked"
 msgstr "Bloklangan"
 
-msgid "Issued at"
-msgstr "Berilgan sana"
+msgid "Is this product sold in several sizes or types? Group them so shoppers see all variants in one table."
+msgstr "Bu mahsulot bir necha o'lcham yoki turda sotiladimi? Ularni guruhlang, xaridorlar barcha variantlarni bitta jadvalda ko'radi."
 
 msgid "It seems like the page you're looking for"
 msgstr "Siz qidirayotgan sahifa"
+
+msgid "Items"
+msgstr "Mahsulotlar"
+
+msgid "Items left in the cart for more than {hours} hours."
+msgstr "{hours} soatdan ortiq savatda qolib ketgan mahsulotlar."
+
+msgid "Items sold"
+msgstr "Sotilgan mahsulotlar"
 
 msgid "Jan"
 msgstr "Yan"
 
 msgid "January"
 msgstr "Yanvar"
-
-msgid "Join Us"
-msgstr "Bizga qo‘shiling"
 
 msgid "Jul"
 msgstr "Iyul"
@@ -983,11 +779,11 @@ msgstr "Iyun"
 msgid "June"
 msgstr "Iyun"
 
-msgid "k"
-msgstr "k"
+msgid "Key indicators"
+msgstr "Asosiy ko‘rsatkichlar (KPI)"
 
-msgid "Last 30 days"
-msgstr "So‘nggi 30 kun"
+msgid "Last activity"
+msgstr "Oxirgi harakat"
 
 msgid "Latest orders from your buyer account."
 msgstr "Xaridor hisobingizdagi oxirgi buyurtmalar."
@@ -1004,12 +800,6 @@ msgstr "Havola nusxalandi"
 msgid "Load more"
 msgstr "Yana yuklash"
 
-msgid "Load older messages"
-msgstr "Eski xabarlarni yuklash"
-
-msgid "Loading content..."
-msgstr "Kontent yuklanmoqda..."
-
 msgid "Loading countries..."
 msgstr "Mamlakatlar yuklanmoqda..."
 
@@ -1022,20 +812,17 @@ msgstr "Rasm yuklanmoqda..."
 msgid "Loading..."
 msgstr "Yuklanmoqda..."
 
-msgid "Location"
-msgstr "Joylashuv"
-
 msgid "Login"
 msgstr "Kirish"
 
 msgid "Login or register"
 msgstr "Kirish yoki ro'yxatdan o'tish"
 
-msgid "Logo"
-msgstr "Logo"
-
 msgid "Logout"
 msgstr "Chiqish"
+
+msgid "Low stock"
+msgstr "Qoldig‘i kam"
 
 msgid "Main characteristics"
 msgstr "Asosiy xususiyatlar"
@@ -1064,29 +851,14 @@ msgstr "Marketplace boshqaruv markazi"
 msgid "May"
 msgstr "May"
 
-msgid "Member created successfully."
-msgstr "A’zo muvaffaqiyatli yaratildi."
-
-msgid "Member deleted"
-msgstr "A’zo o‘chirildi"
-
-msgid "Members"
-msgstr "A’zolar"
-
 msgid "Message"
 msgstr "Xabar"
 
-msgid "mln"
-msgstr "mln"
-
-msgid "mlrd"
-msgstr "mlrd"
-
-msgid "Moderator description"
-msgstr "Moderator tavsifi"
-
 msgid "Monday"
 msgstr "Dushanba"
+
+msgid "Money tied up in stock: {deadValue} so'm"
+msgstr "Omborda qotib qolgan pul: {deadValue} so'm"
 
 msgid ""
 "Monitor B2B marketplace liquidity, supplier quality and order flow\n"
@@ -1114,11 +886,23 @@ msgstr "Nom"
 msgid "Name is required"
 msgstr "Nom majburiy"
 
+msgid "Name of the product group"
+msgstr "Mahsulotlar guruhining nomi"
+
 msgid "Navigation"
 msgstr "Navigatsiya"
 
 msgid "New"
 msgstr "Yangi"
+
+msgid "New option"
+msgstr "Yangi qiymat"
+
+msgid "New option for {axisName}"
+msgstr "«{axisName}» uchun yangi qiymat"
+
+msgid "New option name, e.g. Diameter"
+msgstr "Yangi parametr nomi, masalan: Diametr"
 
 msgid "New orders will appear here."
 msgstr "Yangi buyurtmalar shu yerda ko'rinadi."
@@ -1126,8 +910,8 @@ msgstr "Yangi buyurtmalar shu yerda ko'rinadi."
 msgid "New user registrations by weekday."
 msgstr "Hafta kunlari bo‘yicha yangi foydalanuvchilar ro‘yxatdan o‘tishi."
 
-msgid "New users in the last 30 days"
-msgstr "So'nggi 30 kundagi yangi foydalanuvchilar"
+msgid "New users"
+msgstr "Yangi foydalanuvchilar"
 
 msgid "Next"
 msgstr "Keyingi"
@@ -1138,11 +922,11 @@ msgstr "Keyingi slayd"
 msgid "No"
 msgstr "Yo‘q"
 
+msgid "No abandoned carts right now."
+msgstr "Hozir tashlab ketilgan savat yo‘q."
+
 msgid "No category selected"
 msgstr "Kategoriya tanlanmagan"
-
-msgid "No certificates added yet."
-msgstr "Hali sertifikatlar qo‘shilmagan."
 
 msgid "No characteristics available."
 msgstr "Xususiyatlar mavjud emas."
@@ -1150,26 +934,14 @@ msgstr "Xususiyatlar mavjud emas."
 msgid "No columns found."
 msgstr "Ustunlar topilmadi."
 
-msgid "No comments yet"
-msgstr "Hozircha izohlar yo‘q"
-
-msgid "No company description provided."
-msgstr "Kompaniya tavsifi kiritilmagan."
-
 msgid "No description available."
 msgstr "Tavsif mavjud emas."
 
-msgid "No features yet."
-msgstr "Hali funksiyalar mavjud emas."
-
-msgid "No gallery photos yet"
-msgstr "Hali galereya rasmlari mavjud emas"
-
-msgid "No messages yet."
-msgstr "Hali xabarlar yo‘q."
-
 msgid "No orders yet"
 msgstr "Hozircha buyurtmalar yo'q"
+
+msgid "No products found."
+msgstr "Mahsulotlar topilmadi."
 
 msgid "No results found."
 msgstr "Natijalar topilmadi."
@@ -1179,6 +951,12 @@ msgstr "Natija yo‘q."
 
 msgid "No units yet"
 msgstr "Hali birliklar yo‘q"
+
+msgid "Not selling"
+msgstr "Sotilmayapti"
+
+msgid "Nothing to show."
+msgstr "Ko‘rsatadigan narsa yo‘q."
 
 msgid "Nov"
 msgstr "Noy"
@@ -1204,9 +982,6 @@ msgstr "dan"
 msgid "Okay"
 msgstr "Yaxshi"
 
-msgid "Old"
-msgstr "Eski"
-
 msgid "Only {maxValue} left"
 msgstr "Faqat {maxValue} ta qoldi"
 
@@ -1219,26 +994,17 @@ msgstr "Voy! Nimadir noto‘g‘ri ketdi"
 msgid "Open gallery preview"
 msgstr "Galereya preview’ni ochish"
 
-msgid "Open in new tab"
-msgstr "Yangi oynada ochish"
-
 msgid "Open panel"
 msgstr "Panelni ochish"
 
 msgid "Optional. Helps customers find the product."
 msgstr "Ixtiyoriy. Mijozlarga mahsulotni topishga yordam beradi."
 
+msgid "Options that tell the variants apart"
+msgstr "Variantlarni ajratib turadigan parametrlar"
+
 msgid "Order"
 msgstr "Buyurtma"
-
-msgid "Order count"
-msgstr "Buyurtmalar soni"
-
-msgid "Order is already completed."
-msgstr "Buyurtma allaqachon yakunlangan."
-
-msgid "Order status updated to {nextStatusLabel}."
-msgstr "Buyurtma statusi {nextStatusLabel} ga yangilandi."
 
 msgid "Order Summary"
 msgstr "Buyurtma xulosasi"
@@ -1255,26 +1021,11 @@ msgstr "Boshqalar"
 msgid "Out of stock"
 msgstr "Sotuvda yo‘q"
 
-msgid "Overview"
-msgstr "Umumiy ma’lumot"
-
-msgid "Owner"
-msgstr "Ega"
-
-msgid "Packing"
-msgstr "Qadoqlash"
-
 msgid "Parent"
 msgstr "Asosiy"
 
 msgid "Parent category"
 msgstr "Asosiy kategoriya"
-
-msgid "Password"
-msgstr "Parol"
-
-msgid "Password is required"
-msgstr "Parol majburiy"
 
 msgid "Paste iframe or URL..."
 msgstr "Iframe yoki URL joylashtiring..."
@@ -1288,9 +1039,6 @@ msgstr "Yuridik shaxslar uchun naqd pul yoki bank o'tkazmasi orqali to'lov."
 msgid "Payment terms are agreed when the order is confirmed."
 msgstr "To'lov shartlari buyurtma tasdiqlanganda kelishiladi."
 
-msgid "Pending"
-msgstr "Kutilmoqda"
-
 msgid "Personal Information"
 msgstr "Shaxsiy ma’lumot"
 
@@ -1300,11 +1048,17 @@ msgstr "Telefon"
 msgid "Phone number"
 msgstr "Telefon raqami"
 
-msgid "Phone number is required"
-msgstr "Telefon raqami majburiy"
-
 msgid "Phone number verified. Welcome!"
 msgstr "Telefon raqami tasdiqlandi. Xush kelibsiz!"
+
+msgid "Pick at least one option value."
+msgstr "Kamida bitta qiymatni tanlang."
+
+msgid "Pick only one value for each option."
+msgstr "Har bir parametr uchun faqat bitta qiymat tanlang."
+
+msgid "Pick the options of the new variants. Every combination becomes a product, copied from the current one."
+msgstr "Yangi variantlarning parametrlarini tanlang. Har bir kombinatsiya joriy mahsulotdan nusxa olingan alohida mahsulot bo'ladi."
 
 msgid "Pickup from warehouse"
 msgstr "Omboridan olish"
@@ -1315,8 +1069,8 @@ msgstr "Majburiy maydonlarni to'ldiring."
 msgid "Please log in with the appropriate credentials"
 msgstr "Tegishli hisob ma’lumotlari bilan tizimga kiring"
 
-msgid "Present your services to a wide audience. Find new clients and grow your business through our platform."
-msgstr "Xizmatlaringizni keng auditoriyaga taqdim eting. Platformamiz orqali yangi mijozlar toping va biznesingizni rivojlantiring."
+msgid "Potential revenue (so'm)"
+msgstr "Mumkin bo‘lgan daromad (so'm)"
 
 msgid "Previous"
 msgstr "Oldingi"
@@ -1333,12 +1087,6 @@ msgstr "Narx va ombor"
 msgid "Price must be a positive number"
 msgstr "Narx musbat son bo'lishi kerak"
 
-msgid "Process"
-msgstr "Jarayon"
-
-msgid "Procurement built for national-scale production."
-msgstr "Yengil sanoat uchun mahsulot sotish va sotib olish tizimiga asoslangan tizim."
-
 msgid "Product"
 msgstr "Mahsulot"
 
@@ -1354,9 +1102,6 @@ msgstr "Mahsulot tafsilotlari"
 msgid "Product image"
 msgstr "Mahsulot rasmi"
 
-msgid "Product is required"
-msgstr "Mahsulot majburiy"
-
 msgid "Product SKU"
 msgstr "Mahsulot SKU"
 
@@ -1365,6 +1110,9 @@ msgstr "Mahsulotlar"
 
 msgid "Products added to the cart"
 msgstr "Mahsulotlar savatga qo'shildi"
+
+msgid "Products of the same category that are not in a family yet."
+msgstr "Shu kategoriyadagi, hali guruhga kirmagan mahsulotlar."
 
 msgid "Profile"
 msgstr "Profil"
@@ -1396,44 +1144,17 @@ msgstr "Diapazon"
 msgid "Ranked by number of orders."
 msgstr "Buyurtmalar soni bo'yicha saralangan."
 
-msgid "Rating"
-msgstr "Baho"
-
-msgid "Rating is required"
-msgstr "Baho majburiy"
-
-msgid "Rating must be between 1 and 5"
-msgstr "Baho 1 dan 5 gacha bo‘lishi kerak"
-
 msgid "Recent buying activity"
 msgstr "Oxirgi xarid faolligi"
-
-msgid "Recommended banner size: 1200 x 400 px"
-msgstr "Tavsiya etilgan banner o‘lchami: 1200 x 400 px"
-
-msgid "Recommended logo size: 512 x 512 px"
-msgstr "Tavsiya etilgan logo o‘lchami: 512 x 512 px"
-
-msgid "Recommended ratio: 1:1."
-msgstr "Tavsiya etilgan nisbat: 1:1."
-
-msgid "Recommended ratio: 3:1."
-msgstr "Tavsiya etilgan nisbat: 3:1."
-
-msgid "Recommended size: 1200 x 400 px."
-msgstr "Tavsiya etilgan o‘lcham: 1200 x 400 px."
-
-msgid "Recommended size: 512 x 512 px."
-msgstr "Tavsiya etilgan o‘lcham: 512 x 512 px."
-
-msgid "Region"
-msgstr "Hudud"
 
 msgid "Remove"
 msgstr "Olib tashlash"
 
 msgid "Remove from favorites"
 msgstr "Sevimlilardan olib tashlash"
+
+msgid "Remove from variants"
+msgstr "Variantlardan olib tashlash"
 
 msgid "Reorder"
 msgstr "Buyurtmani takrorlash"
@@ -1450,17 +1171,29 @@ msgstr "Tozalash"
 msgid "Reset filters"
 msgstr "Filtrlarni tozalash"
 
+msgid "Returning buyers"
+msgstr "Qaytgan xaridorlar"
+
 msgid "Revenue"
 msgstr "Daromad"
+
+msgid "Revenue (so'm)"
+msgstr "Daromad (so'm)"
+
+msgid "Revenue and orders by day"
+msgstr "Kunlar bo‘yicha daromad va buyurtmalar"
+
+msgid "Revenue divided by the number of orders"
+msgstr "Daromad buyurtmalar soniga bo‘lingan"
+
+msgid "Revenue per day"
+msgstr "Kunlik daromad"
 
 msgid "Role"
 msgstr "Rol"
 
 msgid "Saturday"
 msgstr "Shanba"
-
-msgid "Save"
-msgstr "Saqlash"
 
 msgid "Save changes"
 msgstr "O‘zgarishlarni saqlash"
@@ -1471,17 +1204,11 @@ msgstr "Profilni saqlash"
 msgid "Search"
 msgstr "Qidirish"
 
-#~ msgid "Search building materials"
-#~ msgstr "Qurilish materiallarini qidirish"
-
-msgid "Search chats"
-msgstr "Chatlarni qidirish"
+msgid "Search by name or code"
+msgstr "Nom yoki kod bo'yicha qidirish"
 
 msgid "Search columns..."
 msgstr "Ustunlardan qidirish..."
-
-msgid "Search company"
-msgstr "Kompaniyani qidirish"
 
 msgid "Search products and spare parts"
 msgstr "Mahsulot va ehtiyot qismlarni qidirish"
@@ -1495,14 +1222,8 @@ msgstr "Qidirish..."
 msgid "Select"
 msgstr "Tanlash"
 
-msgid "Select a chat to start messaging."
-msgstr "Xabar yozishni boshlash uchun chatni tanlang."
-
 msgid "Select a date"
 msgstr "Sanani tanlang"
-
-msgid "Select a region"
-msgstr "Hududni tanlang"
 
 msgid "Select an attribute"
 msgstr "Atributni tanlang"
@@ -1531,23 +1252,11 @@ msgstr "Rasmni tanlang"
 msgid "Select images"
 msgstr "Rasmlarni tanlang"
 
-msgid "Select industries"
-msgstr "Sohalarni tanlang"
-
-msgid "Select issued date"
-msgstr "Berilgan sanani tanlang"
-
 msgid "Select role"
 msgstr "Rolni tanlang"
 
-msgid "Select status"
-msgstr "Statusni tanlang"
-
 msgid "Select subcategory"
 msgstr "Subkategoriyani tanlang"
-
-msgid "Select the company status and leave a comment"
-msgstr "Kompaniya statusini tanlang va izoh qoldiring"
 
 msgid "Select type"
 msgstr "Turni tanlang"
@@ -1558,9 +1267,6 @@ msgstr "Birlikni tanlang"
 msgid "Selected values are used by the filters in the catalog."
 msgstr "Tanlangan qiymatlar katalogdagi filtrlarda ishlatiladi."
 
-msgid "Seller"
-msgstr "Sotuvchi"
-
 msgid "Sep"
 msgstr "Sen"
 
@@ -1570,23 +1276,17 @@ msgstr "Sentabr"
 msgid "Service and support"
 msgstr "Xizmat va qo'llab-quvvatlash"
 
-msgid "Set rating"
-msgstr "Bahoni belgilang"
-
 msgid "Settings"
 msgstr "Sozlamalar"
 
 msgid "Share"
 msgstr "Ulashish"
 
+msgid "Share of buyers who had ordered before"
+msgstr "Avval ham buyurtma bergan xaridorlar ulushi"
+
 msgid "Share of marketplace activity."
 msgstr "Marketplace faolligidagi ulush."
-
-msgid "Share your experience with this product"
-msgstr "Ushbu mahsulot bo‘yicha tajribangizni ulashing"
-
-msgid "Share your product experience with other buyers."
-msgstr "Mahsulot bo‘yicha tajribangizni boshqa xaridorlar bilan ulashing."
 
 msgid "Show all characteristics"
 msgstr "Barcha xususiyatlarni ko'rsatish"
@@ -1606,9 +1306,6 @@ msgstr "Yon panel"
 msgid "Sign in"
 msgstr "Kirish"
 
-msgid "Sign up"
-msgstr "Ro‘yxatdan o‘tish"
-
 msgid "SNABER — B2B supply of industrial tools and components for enterprises"
 msgstr "SNABER — korxonalar uchun sanoat asboblari va komplektlovchilarining B2B yetkazib berilishi"
 
@@ -1618,26 +1315,11 @@ msgstr "SNABER — korxonalar uchun sanoat ta'minoti. Podshipniklar, zichlagichl
 msgid "so'm"
 msgstr "so‘m"
 
-msgid "So'm"
-msgstr "So‘m"
-
-msgid "Social links"
-msgstr "Ijtimoiy havolalar"
-
 msgid "Something went wrong!"
 msgstr "Nimadir xato ketdi!"
 
-msgid "Sort"
-msgstr "Saralash"
-
-msgid "Sorting"
-msgstr "Saralash"
-
 msgid "Spend"
 msgstr "Xarajat"
-
-msgid "Start procurement"
-msgstr "Xaridni boshlash"
 
 msgid "Status"
 msgstr "Status"
@@ -1645,41 +1327,26 @@ msgstr "Status"
 msgid "Stock"
 msgstr "Zaxira"
 
+msgid "Stock alerts"
+msgstr "Ombor ogohlantirishlari"
+
 msgid "Stock must be a positive number"
 msgstr "Qoldiq musbat son bo'lishi kerak"
+
+msgid "Stock value"
+msgstr "Ombor qiymati"
 
 msgid "Submit"
 msgstr "Yuborish"
 
-msgid "Successfully created certificate."
-msgstr "Sertifikat muvaffaqiyatli yaratildi."
-
-msgid "Successfully created gallery."
-msgstr "Galereya muvaffaqiyatli yaratildi."
-
-msgid "Successfully created the mini site!"
-msgstr "Mini sayt muvaffaqiyatli yaratildi!"
-
 msgid "Successfully created."
 msgstr "Muvaffaqiyatli yaratildi."
-
-msgid "Successfully deleted company"
-msgstr "Kompaniya muvaffaqiyatli o‘chirildi"
 
 msgid "Successfully deleted product."
 msgstr "Mahsulot muvaffaqiyatli o‘chirildi."
 
 msgid "Successfully deleted."
 msgstr "Muvaffaqiyatli o‘chirildi."
-
-msgid "Successfully updated certificate."
-msgstr "Sertifikat muvaffaqiyatli yangilandi."
-
-msgid "Successfully updated gallery."
-msgstr "Galereya muvaffaqiyatli yangilandi."
-
-msgid "Successfully updated the mini site!"
-msgstr "Mini sayt muvaffaqiyatli yangilandi!"
 
 msgid "Successfully updated."
 msgstr "Muvaffaqiyatli yangilandi."
@@ -1696,29 +1363,41 @@ msgstr "Ishlab chiqarish, ta’minot yoki hamkorlik ehtiyojlaringiz haqida yozin
 msgid "Text"
 msgstr "Matn"
 
-msgid "Text is required"
-msgstr "Matn majburiy"
-
-msgid "Text is too long"
-msgstr "Matn juda uzun"
-
 msgid "The first image is the cover shown in the catalog."
 msgstr "Birinchi rasm katalogda ko'rinadigan muqova hisoblanadi."
+
+msgid "The option does not belong to the category of the product."
+msgstr "Parametr mahsulot kategoriyasiga tegishli emas."
 
 msgid "The pickup address is available to the manager after the order is confirmed."
 msgstr "Buyurtma tasdiqlangandan so'ng olib ketish manzili menejer tomonidan beriladi."
 
+msgid "The product does not belong to this family."
+msgstr "Mahsulot bu guruhga kirmaydi."
+
+msgid "The product is already in another family."
+msgstr "Mahsulot allaqachon boshqa guruhda."
+
+msgid "The product is in another category."
+msgstr "Mahsulot boshqa kategoriyada."
+
+msgid "The product stays in the catalog as a separate product."
+msgstr "Mahsulot katalogda alohida mahsulot sifatida qoladi."
+
+msgid "The products stay in the catalog as separate products. Only the grouping is removed."
+msgstr "Mahsulotlar katalogda alohida mahsulot sifatida qoladi. Faqat guruhlash o'chiriladi."
+
 msgid "Theme"
 msgstr "Mavzu"
-
-msgid "There is no conversations"
-msgstr "Suhbatlar mavjud emas"
 
 msgid "These actions are sensitive and may permanently affect your account."
 msgstr "Bu amallar muhim hisoblanadi va hisobingizga doimiy ta’sir qilishi mumkin."
 
 msgid "This action cannot be undone. This will permanently delete your account and remove your data from our servers."
 msgstr "Bu amalni bekor qilib bo‘lmaydi. Bu hisobingizni butunlay o‘chiradi va ma’lumotlaringizni serverlarimizdan olib tashlaydi."
+
+msgid "This code is already used by another product."
+msgstr "Bu kod boshqa mahsulotda ishlatilgan."
 
 msgid "This field has to be filled."
 msgstr "Bu maydon to‘ldirilishi kerak."
@@ -1731,9 +1410,6 @@ msgstr "Bu yaroqli email emas."
 
 msgid "Thursday"
 msgstr "Payshanba"
-
-msgid "Title"
-msgstr "Sarlavha"
 
 msgid "to"
 msgstr "gacha"
@@ -1755,9 +1431,6 @@ msgstr "Ustunlarni almashtirish"
 
 msgid "Toggle Sidebar"
 msgstr "Yon panelni almashtirish"
-
-msgid "Toggle theme"
-msgstr "Mavzuni almashtirish"
 
 msgid "Too many wrong attempts. Try again in an hour."
 msgstr "Noto'g'ri urinishlar juda ko'p. Bir soatdan keyin qayta urinib ko'ring."
@@ -1798,9 +1471,6 @@ msgstr "Tur"
 msgid "Type a command or search..."
 msgstr "Buyruq kiriting yoki qidiring..."
 
-msgid "Type a message"
-msgstr "Xabar yozing"
-
 msgid "Unauthorized Access"
 msgstr "Ruxsatsiz kirish"
 
@@ -1834,14 +1504,8 @@ msgstr "Atributni yangilash"
 msgid "Update category"
 msgstr "Kategoriyani yangilash"
 
-msgid "Update certificate"
-msgstr "Sertifikatni yangilash"
-
 msgid "Update FAQ"
 msgstr "FAQni yangilash"
-
-msgid "Update gallery"
-msgstr "Galereyani yangilash"
 
 msgid "Update unit"
 msgstr "Birlikni yangilash"
@@ -1888,14 +1552,17 @@ msgstr "Qiymat majburiy"
 msgid "Values for"
 msgstr "Qiymatlar uchun"
 
+msgid "Variants"
+msgstr "Variantlar"
+
+msgid "Variants are products of the same kind that differ by options such as size. Each variant keeps its own code, price and stock."
+msgstr "Variantlar — o'lcham kabi parametrlari bilan farq qiladigan bir xil turdagi mahsulotlar. Har bir variantning o'z kodi, narxi va qoldig'i bor."
+
 msgid "Verification code sent"
 msgstr "Tasdiqlash kodi yuborildi"
 
 msgid "Verified"
 msgstr "Tasdiqlangan"
-
-msgid "Verified industrial marketplace"
-msgstr "Tasdiqlangan sanoat bozori"
 
 msgid "Verify"
 msgstr "Tasdiqlash"
@@ -1903,29 +1570,11 @@ msgstr "Tasdiqlash"
 msgid "View"
 msgstr "Ko‘rish"
 
-msgid "View {label} section"
-msgstr "{label} bo‘limini ko‘rish"
-
 msgid "View all"
 msgstr "Barchasini ko‘rish"
 
-msgid "View certificate"
-msgstr "Sertifikatni ko‘rish"
-
-msgid "View document"
-msgstr "Hujjatni ko‘rish"
-
-msgid "View Profile"
-msgstr "Profilni ko‘rish"
-
 msgid "We keep your favorite products here."
 msgstr "Sevimli mahsulotlaringiz shu yerda saqlanadi."
-
-msgid "We provide effective collaboration and professional development opportunities for businesses. Achieve sustainable growth and outstanding results through partnership."
-msgstr "Biz bizneslar uchun samarali hamkorlik va professional rivojlanish imkoniyatlarini taqdim etamiz. Hamkorlik orqali barqaror o‘sish va yuqori natijalarga erishing."
-
-msgid "Website"
-msgstr "Vebsayt"
 
 msgid "Wednesday"
 msgstr "Chorshanba"
@@ -1942,17 +1591,11 @@ msgstr "Nimani muhokama qilmoqchisiz?"
 msgid "Where the product is shown in the catalog."
 msgstr "Mahsulot katalogning qayerida ko'rinishi."
 
-msgid "Write a short company description"
-msgstr "Qisqa kompaniya tavsifini yozing"
-
 msgid "Yearly revenue"
 msgstr "Yillik daromad"
 
 msgid "Yes"
 msgstr "Ha"
-
-msgid "You are not allowed to submit a comment for this product. You should make a purchase first."
-msgstr "Ushbu mahsulot uchun izoh qoldira olmaysiz. Avval mahsulotni xarid qilishingiz kerak."
 
 msgid "You can pick up the order yourself from our warehouse in Tashkent."
 msgstr "Buyurtmani Toshkentdagi omborimizdan o'zingiz olib ketishingiz mumkin."
@@ -1960,20 +1603,11 @@ msgstr "Buyurtmani Toshkentdagi omborimizdan o'zingiz olib ketishingiz mumkin."
 msgid "You can resend now"
 msgstr "Endi qayta yuborishingiz mumkin"
 
-msgid "You do not have permission to perform this action."
-msgstr "Ushbu amalni bajarish uchun sizda ruxsat yo‘q."
-
 msgid "You don't have necessary permission"
 msgstr "Sizda zarur ruxsat yo‘q"
 
-msgid "You need to save the company information first to access this section."
-msgstr "Bu bo‘limga kirish uchun avval kompaniya ma’lumotlarini saqlashingiz kerak."
-
 msgid "Your cart is empty"
 msgstr "Savatingiz bo‘sh"
-
-msgid "Your comment has been submitted"
-msgstr "Izohingiz yuborildi"
 
 msgid "Your request has been sent successfully!"
 msgstr "So‘rovingiz muvaffaqiyatli yuborildi!"

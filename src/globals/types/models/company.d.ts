@@ -1,8 +1,3 @@
-interface Industry {
-  id: number;
-  name: string;
-}
-
 interface CompanyRegion {
   id: number;
   name: string;
@@ -42,18 +37,4 @@ interface Company {
   view_count: number;
 }
 
-type SortType = 'new' | 'old';
 type Status = 'active' | 'blocked' | 'draft' | 'inactive';
-
-interface CompanyDraft extends Company {
-  description_moderator: string;
-  status: Status;
-}
-
-type GetAllCompanyResponse = Pagination<Company>;
-
-type GetCompanyDraftResponse = Pagination<CompanyDraft>;
-
-type GetAllCompanyIndustryResponse = Pagination<CompanyIndustry>;
-
-type GetAllCompanyRegionsResonse = Pagination<CompanyRegion>;

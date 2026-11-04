@@ -3,16 +3,20 @@ import { useSuspenseQuery } from '@tanstack/react-query';
 import { createFileRoute } from '@tanstack/react-router';
 
 import {
+  AbandonedCarts,
   CategoryDemandChart,
-  getAdminLast30DaysStatisticsQueryOptions,
+  getAdminAbandonedCartsQueryOptions,
   getAdminMonthlyRevenueQueryOptions,
   getAdminOrdersByCategoryQueryOptions,
+  getAdminOverviewQueryOptions,
+  getAdminStockAlertsQueryOptions,
   getAdminTodayOrdersQueryOptions,
   getAdminTopProductsQueryOptions,
   getAdminUserCountsQueryOptions,
   getAdminWeeklyJoinedUsersQueryOptions,
-  MetricsCards,
+  KpiOverview,
   RevenueOrderMomentumChart,
+  StockAlerts,
   TopProducts,
   UserDistributionChart,
   WeeklyJoinedUsersChart
@@ -47,16 +51,21 @@ const AdminDashboard = () => {
           </div>
         </div>
 
-        <MetricsCards className='grid gap-4 md:grid-cols-2 xl:grid-cols-4' />
+        <KpiOverview />
 
-        <div className='grid gap-4 xl:grid-cols-[minmax(0,1.45fr)_minmax(360px,0.55fr)]'>
+        <div className='grid gap-4 xl:grid-cols-2'>
+          <AbandonedCarts />
+          <StockAlerts />
+        </div>
+
+        <div className='grid gap-4 xl:grid-cols-[minmax(0,1.2fr)_minmax(420px,0.8fr)]'>
           <RevenueOrderMomentumChart />
           <UserDistributionChart />
         </div>
 
         <CategoryDemandChart />
 
-        <div className='grid gap-4 xl:grid-cols-[minmax(0,1.45fr)_minmax(360px,0.55fr)]'>
+        <div className='grid gap-4 xl:grid-cols-[minmax(0,1.2fr)_minmax(420px,0.8fr)]'>
           <WeeklyJoinedUsersChart />
           <TopProducts />
         </div>
@@ -69,7 +78,9 @@ export const Route = createFileRoute('/admin/dashboard/')({
   component: AdminDashboard,
   loader: ({ context: { queryClient } }) =>
     Promise.all([
-      queryClient.prefetchQuery(getAdminLast30DaysStatisticsQueryOptions()),
+      queryClient.prefetchQuery(getAdminAbandonedCartsQueryOptions()),
+      queryClient.prefetchQuery(getAdminOverviewQueryOptions('30d')),
+      queryClient.prefetchQuery(getAdminStockAlertsQueryOptions()),
       queryClient.prefetchQuery(getAdminMonthlyRevenueQueryOptions()),
       queryClient.prefetchQuery(getAdminOrdersByCategoryQueryOptions()),
       queryClient.prefetchQuery(getAdminTodayOrdersQueryOptions()),

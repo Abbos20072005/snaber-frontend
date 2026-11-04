@@ -1,7 +1,13 @@
 import { api } from '@/shared/api';
 
-export const getAdminLast30DaysStatistics = () =>
-  api.get<AdminLast30DaysStatistics>('dashboards/admins/last-30-days-stats/');
+export const getAdminOverview = (period: AdminOverviewPeriod) =>
+  api.get<AdminOverview>('dashboards/admins/overview/', { params: { period } });
+
+export const getAdminAbandonedCarts = () =>
+  api.get<AdminAbandonedCarts>('dashboards/admins/abandoned-carts/');
+
+export const getAdminStockAlerts = () =>
+  api.get<AdminStockAlerts>('dashboards/admins/stock-alerts/');
 
 export const getAdminMonthlyRevenue = () =>
   api.get<AdminMonthlyRevenue>('dashboards/admins/monthly-revenue/');

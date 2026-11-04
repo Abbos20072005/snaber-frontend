@@ -1,13 +1,13 @@
 import { api, apiWithoutAuth } from '@/shared/api';
 
-export interface PostOtpSendRequest {
+interface PostOtpSendRequest {
   data: PostOtpSendDto;
 }
 
 export const postOtpSend = ({ data }: PostOtpSendRequest) =>
   apiWithoutAuth.post<ApiResponse<OtpSendResponse>>('authentication/users/otp/send/', data);
 
-export interface PostOtpVerifyRequest {
+interface PostOtpVerifyRequest {
   data: PostOtpVerifyDto;
 }
 

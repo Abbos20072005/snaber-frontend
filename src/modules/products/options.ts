@@ -11,7 +11,6 @@ import type {
 
 import {
   getAllAttributesByCategory,
-  getAttributeValues,
   getFavouriteProducts,
   getProductById,
   getProducts,
@@ -32,12 +31,6 @@ export const PRODUCT_QUERY_KEYS = {
   getFavorites: () => [...PRODUCT_QUERY_KEYS.base(), 'favorites'] as const,
   getCartList: () => [...PRODUCT_QUERY_KEYS.base(), 'cartList'] as const
 } as const;
-
-export const getPublicProductsQueryOptions = (request: GetPublicProductsRequest) =>
-  queryOptions({
-    queryKey: PRODUCT_QUERY_KEYS.getPublicProducts(request),
-    queryFn: () => getPublicProducts(request)
-  });
 
 export const getPublicProductsInfiniteOptions = (request?: GetPublicProductsRequest) =>
   infiniteQueryOptions({
@@ -92,12 +85,6 @@ export const getProductAttributesByCategoryQueryOptions = (
   queryOptions({
     queryFn: () => getAllAttributesByCategory(request),
     queryKey: PRODUCT_ATTRIBUTE_QUERY_KEYS.getByCategory(request)
-  });
-
-export const getProductAttributeValuesQueryOptions = (request?: GetAttributeValuesRequest) =>
-  queryOptions({
-    queryFn: () => getAttributeValues(request),
-    queryKey: PRODUCT_ATTRIBUTE_QUERY_KEYS.getValues(request)
   });
 
 export const getFavoritesQueryOptions = () =>

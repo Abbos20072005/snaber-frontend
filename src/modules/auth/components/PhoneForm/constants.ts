@@ -8,5 +8,3 @@ export const phoneFormSchema = () =>
       .min(1, { message: t`This field has to be filled.` })
       .regex(/^\+998\d{9}$/, t`Enter a valid phone number`)
   });
-
-export type PhoneFormSchema = z.infer<ReturnType<typeof phoneFormSchema>>;

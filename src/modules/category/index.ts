@@ -1,7 +1,6 @@
 export { CategoriesTable } from './components/CategoriesTable';
 export { CategoryAdminBreadcrumb } from './components/CategoryAdminBreadcrumb';
 export { CategoryBreadcrumb } from './components/CategoryBreadcrumb';
-export { CategoryCard } from './components/CategoryCard';
 export { CategoryChildrenGrid } from './components/CategoryChildrenGrid';
 export { CategoryCombobox } from './components/CategoryCombobox';
 export { CategoryDialog } from './components/CategoryDialog';
@@ -10,7 +9,6 @@ export { CategoryHeading } from './components/CategoryHeading';
 export { CategoryNestedSelect } from './components/CategoryNestedSelect';
 export { CategoryPendingComponent } from './components/CategoryPendingComponent';
 export { CategorySidebar } from './components/CategorySidebar';
-export { CategorySkeleton } from './components/CategorySkeleton';
 export { CATEGORY_TILE_GRID, CategoryTile } from './components/CategoryTile';
 export { TopCategoriesSection } from './components/TopCategoriesSection';
 export { TopCategoriesSkeleton } from './components/TopCategoriesSkeleton';

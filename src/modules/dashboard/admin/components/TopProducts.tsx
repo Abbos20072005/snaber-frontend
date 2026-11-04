@@ -29,7 +29,9 @@ export const TopProducts = () => {
           <TableBody>
             {data.map((product, index) => (
               <TableRow key={index}>
-                <TableCell className='font-medium'>{product.product_name}</TableCell>
+                <TableCell className='font-medium whitespace-normal'>
+                  {product.product_name}
+                </TableCell>
                 <TableCell>{product.orders_count}</TableCell>
                 <TableCell>{formatPrice(product.orders_total)}</TableCell>
               </TableRow>

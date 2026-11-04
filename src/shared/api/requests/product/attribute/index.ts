@@ -23,7 +23,7 @@ export const postAttribute = ({ data }: PostAttributeRequest) =>
     }
   });
 
-export interface PatchAttributeRequest {
+interface PatchAttributeRequest {
   data: PatchAttributeDto;
   id: number;
 }
@@ -41,13 +41,6 @@ interface DeleteAttributeRequest {
 
 export const deleteAttribute = ({ id }: DeleteAttributeRequest) =>
   api.delete(`product/attributes/${id}/`);
-
-export interface GetPublicAttributesByCategoryRequest {
-  categoryId: number;
-}
-
-export const getAttributesByCategory = ({ categoryId }: GetPublicAttributesByCategoryRequest) =>
-  apiWithoutAuth.get<AttributesResponse>(`product/public/categories/${categoryId}/attributes/`);
 
 export interface GetFilterRequest {
   params?: Partial<{

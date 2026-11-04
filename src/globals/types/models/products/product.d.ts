@@ -2,6 +2,7 @@ interface ProductBase {
   average_rating: string;
   created_at: string;
   discount_percent: number;
+  family_id: number | null;
   final_price: string;
   id: number;
   image: string | null;
@@ -13,6 +14,7 @@ interface ProductBase {
   stock_quantity: number;
   unit: UnitOfMeasure | null;
   updated_at: string;
+  variants_count: number;
   specifications: {
     name: string;
     value: string;
@@ -30,16 +32,17 @@ interface ProductMedia {
 }
 
 interface Product extends ProductBase {
+  attributes: ProductAttribute[];
+  characteristics: ProductCharacteristic[];
   description: string;
   description_en: string;
   description_ru: string;
   description_uz: string;
+  family: ProductFamily | null;
+  medias: ProductMedia[];
   name_en: string;
   name_ru: string;
   name_uz: string;
-  attributes: ProductAttribute[];
-  characteristics: ProductCharacteristic[];
-  medias: ProductMedia[];
   category: {
     id: number;
     name: string;

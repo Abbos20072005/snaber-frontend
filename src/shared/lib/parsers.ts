@@ -3,8 +3,6 @@ import { z } from 'zod';
 
 import type { ExtendedColumnSort } from '@/shared/types/data-table.ts';
 
-import { dataTableConfig } from '@/shared/config/data-table.ts';
-
 const sortingItemSchema = z.object({
   id: z.string(),
   desc: z.boolean()
@@ -36,13 +34,3 @@ export const getSortingStateParser = <TData>(columnIds?: Set<string> | string[])
       a.every((item, index) => item.id === b[index]?.id && item.desc === b[index]?.desc)
   });
 };
-
-export const filterItemSchema = z.object({
-  id: z.string(),
-  value: z.union([z.string(), z.array(z.string())]),
-  variant: z.enum(dataTableConfig.filterVariants),
-  operator: z.enum(dataTableConfig.operators),
-  filterId: z.string()
-});
-
-export type FilterItemSchema = z.infer<typeof filterItemSchema>;

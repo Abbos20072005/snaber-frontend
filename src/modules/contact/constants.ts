@@ -7,5 +7,3 @@ export const contactFormschema = () =>
     topic: z.string().min(1, { message: t`This field has to be filled.` }),
     message: z.string().min(1, { message: t`This field has to be filled.` })
   });
-
-export type ContactFormSchema = z.infer<ReturnType<typeof contactFormschema>>;

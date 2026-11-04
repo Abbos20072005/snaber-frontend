@@ -1,7 +1,6 @@
 export { OrderProductItem } from './components/OrderProductItem';
 export * from './components/product-detail';
-export { ProductCard } from './components/ProductCard';
-export { ProductCardSkeleton } from './components/ProductCardSkeleton';
+export * from './components/ProductFamily';
 export * from './components/ProductForm';
 export { ProductList } from './components/ProductList';
 export { ProductListSkeleton } from './components/ProductListSkeleton';

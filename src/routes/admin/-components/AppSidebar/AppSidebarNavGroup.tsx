@@ -193,7 +193,7 @@ const firstSeg = (s?: string) => s?.split('/')[1] ?? '';
 
 const stripQuery = (url: string) => url.split(/[?#]/)[0];
 
-export function checkIsActive(href: string, item: Omit<NavItem, 'title'>, mainNav = false) {
+function checkIsActive(href: string, item: Omit<NavItem, 'title'>, mainNav = false) {
   const cleanHref = stripQuery(href);
   const url = stripQuery(resolve(item.url, item.params) ?? '');
 
