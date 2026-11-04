@@ -72,13 +72,13 @@ export const Route = createFileRoute('/(main)')({
     </div>
   ),
   beforeLoad: async ({ context: { queryClient } }) => {
-    let user: User | null = null;
+    const hasToken = !!isomorphicCookie.get(COOKIES.ACCESS_TOKEN);
 
-    if (isomorphicCookie.get(COOKIES.ACCESS_TOKEN)) {
-      user = await queryClient.ensureQueryData(getAuthMeQueryOptions()).catch(() => null);
-    }
-
-    await Promise.all([
+    // The three requests are independent, so they run in parallel instead of one after another.
+    const [user] = await Promise.all([
+      hasToken
+        ? queryClient.ensureQueryData(getAuthMeQueryOptions()).catch((): User | null => null)
+        : null,
       queryClient.ensureQueryData(getFavoritesQueryOptions()).catch(() => []),
       queryClient
         .ensureQueryData(getCartListQueryOptions())

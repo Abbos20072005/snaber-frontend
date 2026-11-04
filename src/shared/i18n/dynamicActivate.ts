@@ -7,6 +7,13 @@ import { isomorphicCookie } from '@/shared/lib/isomorphic-cookie.ts';
 import type { Locale } from './config';
 
 import { APP_LOCALES, SOURCE_LOCALE } from './config';
+import { messages as enMessages } from './locales/en.po';
+import { messages as ruMessages } from './locales/ru.po';
+import { messages as uzMessages } from './locales/uz.po';
+
+// The catalogs are bundled, not fetched lazily: activation has to finish before React hydrates,
+// otherwise the client renders message ids and the HTML from the server does not match.
+const CATALOGS = { en: enMessages, ru: ruMessages, uz: uzMessages } as const;
 
 export const dynamicActivate = async (locale: Locale = getLocale()) => {
   if (!APP_LOCALES.includes(locale)) {
@@ -14,7 +21,6 @@ export const dynamicActivate = async (locale: Locale = getLocale()) => {
     locale = SOURCE_LOCALE;
     isomorphicCookie.set(COOKIES.LOCALE, SOURCE_LOCALE, LOCALE_COOKIE_OPTIONS);
   }
-  const catalog = await import(`./locales/${locale}.po`);
-  i18n.loadAndActivate({ locale, messages: catalog.messages });
+  i18n.loadAndActivate({ locale, messages: CATALOGS[locale] });
   isomorphicCookie.set(COOKIES.LOCALE, locale, LOCALE_COOKIE_OPTIONS);
 };

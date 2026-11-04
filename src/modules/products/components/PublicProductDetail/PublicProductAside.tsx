@@ -9,6 +9,7 @@ import {
 } from 'lucide-react';
 import { toast } from 'sonner';
 
+import { useAuth } from '@/modules/auth/hooks/useAuth';
 import { CartButtons } from '@/modules/cart/components/CartButtons';
 import { useProductFavorite } from '@/modules/products/hooks/useProductFavorite';
 import { CURRENCY_SYMBOL } from '@/shared/constants';
@@ -24,12 +25,15 @@ interface Props {
 
 export const PublicProductAside = ({ product }: Props) => {
   const { t } = useLingui();
+  const { user } = useAuth();
   const { isFavorite, onToggleFavorite } = useProductFavorite({
     ...product,
     category: product.category.id
   });
 
   const isInStock = product.stock_quantity > 0;
+  // Admins manage the catalog, they have no cart or favorites.
+  const isAdmin = user?.role === 'admin';
 
   const onShare = () => {
     void navigator.clipboard
@@ -87,13 +91,15 @@ export const PublicProductAside = ({ product }: Props) => {
             {isInStock ? `${t`In stock`}: ${formatPrice(product.stock_quantity)}` : t`Out of stock`}
           </p>
 
-          <CartButtons product={product} />
+          {!isAdmin && <CartButtons product={product} />}
 
-          <div className='grid grid-cols-2 gap-2'>
-            <Button type='button' variant='outline' onClick={onToggleFavorite}>
-              <HeartIcon className={cn(isFavorite && 'fill-red-500 text-red-500')} />
-              {t`Favorites`}
-            </Button>
+          <div className={cn('grid gap-2', !isAdmin && 'grid-cols-2')}>
+            {!isAdmin && (
+              <Button type='button' variant='outline' onClick={onToggleFavorite}>
+                <HeartIcon className={cn(isFavorite && 'fill-red-500 text-red-500')} />
+                {t`Favorites`}
+              </Button>
+            )}
             <Button type='button' variant='outline' onClick={onShare}>
               <Share2Icon />
               {t`Share`}

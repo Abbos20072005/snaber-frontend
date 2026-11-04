@@ -2,6 +2,7 @@ import { useLingui } from '@lingui/react/macro';
 import { Link } from '@tanstack/react-router';
 import { format } from 'date-fns';
 
+import { ReorderButton } from '@/modules/order';
 import { CURRENCY_SYMBOL } from '@/shared/constants';
 import { formatPrice } from '@/shared/lib/format';
 import {
@@ -31,8 +32,11 @@ export const OrderItem = ({ order }: Props) => {
             {t`Order`} #{order.id}
           </CardTitle>
           <CardDescription>{format(order.created_at, 'dd.MM.yyyy')}</CardDescription>
-          <CardAction>
-            {formatPrice(totalPrice)} {CURRENCY_SYMBOL}
+          <CardAction className='flex items-center gap-3'>
+            <span>
+              {formatPrice(totalPrice)} {CURRENCY_SYMBOL}
+            </span>
+            <ReorderButton orderId={order.id} />
           </CardAction>
         </CardHeader>
         <CardContent>

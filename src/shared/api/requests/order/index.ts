@@ -18,3 +18,6 @@ export interface GetOrderRequest {
 }
 
 export const getOrder = ({ id }: GetOrderRequest) => api.get<Order>(`order/${id}/`);
+
+export const postOrderReorder = ({ id }: GetOrderRequest) =>
+  api.post<FullCardResponse>(`order/${id}/reorder/`);

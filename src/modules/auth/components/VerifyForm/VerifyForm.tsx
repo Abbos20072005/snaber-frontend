@@ -7,6 +7,7 @@ import { useEffect, useState } from 'react';
 import { toast } from 'sonner';
 
 import { AUTH_QUERY_KEYS } from '@/modules/auth';
+import { PRODUCT_QUERY_KEYS } from '@/modules/products';
 import { postOtpSend, postOtpVerify } from '@/shared/api';
 import { COOKIES, CROSS_SITE_COOKIE_OPTIONS } from '@/shared/constants';
 import { useAuthContext } from '@/shared/context';
@@ -44,13 +45,23 @@ export const VerifyForm = () => {
       Cookies.set(COOKIES.REFRESH_TOKEN, data.data.result.refresh_token, CROSS_SITE_COOKIE_OPTIONS);
       toast.success(t`Phone number verified. Welcome!`);
       setIsOpen(false);
+      // The guest cart and favorites are merged into the account on login.
       void queryClient.invalidateQueries({ queryKey: AUTH_QUERY_KEYS.me() });
+      void queryClient.invalidateQueries({ queryKey: PRODUCT_QUERY_KEYS.getCartList() });
+      void queryClient.invalidateQueries({ queryKey: PRODUCT_QUERY_KEYS.getFavorites() });
       void router.invalidate();
     },
     meta: {
       withoutToastOnError: true
     },
-    onError: () => {
+    onError: (error: any) => {
+      setOtpCode('');
+      // Three wrong codes block the phone for an hour, a new code can't be requested before that.
+      if (error.response?.status === 429) {
+        toast.error(t`Too many wrong attempts. Try again in an hour.`);
+        setStep('phone');
+        return;
+      }
       toast.error(t`Invalid verification code`);
     }
   });

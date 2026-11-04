@@ -3,7 +3,7 @@ import { useQuery } from '@tanstack/react-query';
 import { createFileRoute, Link } from '@tanstack/react-router';
 import { HeartIcon } from 'lucide-react';
 
-import { getFavoritesQueryOptions, ProductCard, ProductCardSkeleton } from '@/modules/products';
+import { getFavoritesQueryOptions, ProductList, ProductListSkeleton } from '@/modules/products';
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -34,11 +34,11 @@ const RouteComponent = () => {
             </BreadcrumbItem>
           </BreadcrumbList>
         </Breadcrumb>
-        <div className='grid grid-cols-[repeat(auto-fill,minmax(160px,1fr))] gap-2 md:grid-cols-[repeat(auto-fill,minmax(230px,1fr))] md:gap-4'>
-          {isPending
-            ? Array.from({ length: 8 }).map((_, index) => <ProductCardSkeleton key={index} />)
-            : favorites.map((product, index) => <ProductCard key={index} product={product} />)}
-        </div>
+        {isPending ? (
+          <ProductListSkeleton view='grid' />
+        ) : (
+          <ProductList view='grid' products={favorites} />
+        )}
         {!isPending && !favorites.length && (
           <Empty className='w-full'>
             <EmptyHeader>

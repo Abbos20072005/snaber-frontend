@@ -1363,6 +1363,9 @@ msgstr "SKU товара"
 msgid "Products"
 msgstr "Товары"
 
+msgid "Products added to the cart"
+msgstr "Товары добавлены в корзину"
+
 msgid "Profile"
 msgstr "Профиль"
 
@@ -1431,6 +1434,9 @@ msgstr "Удалить"
 
 msgid "Remove from favorites"
 msgstr "Удалить из избранного"
+
+msgid "Reorder"
+msgstr "Повторить заказ"
 
 msgid "Resend code"
 msgstr "Отправить код повторно"
@@ -1752,6 +1758,9 @@ msgstr "Переключить боковую панель"
 
 msgid "Toggle theme"
 msgstr "Переключить тему"
+
+msgid "Too many wrong attempts. Try again in an hour."
+msgstr "Слишком много неверных попыток. Повторите через час."
 
 msgid "Top products"
 msgstr "Топ товары"

@@ -1364,6 +1364,9 @@ msgstr "Product SKU"
 msgid "Products"
 msgstr "Products"
 
+msgid "Products added to the cart"
+msgstr "Products added to the cart"
+
 msgid "Profile"
 msgstr "Profile"
 
@@ -1432,6 +1435,9 @@ msgstr "Remove"
 
 msgid "Remove from favorites"
 msgstr "Remove from favorites"
+
+msgid "Reorder"
+msgstr "Reorder"
 
 msgid "Resend code"
 msgstr "Resend code"
@@ -1753,6 +1759,9 @@ msgstr "Toggle Sidebar"
 
 msgid "Toggle theme"
 msgstr "Toggle theme"
+
+msgid "Too many wrong attempts. Try again in an hour."
+msgstr "Too many wrong attempts. Try again in an hour."
 
 msgid "Top products"
 msgstr "Top products"

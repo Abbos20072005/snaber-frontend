@@ -1363,6 +1363,9 @@ msgstr "Mahsulot SKU"
 msgid "Products"
 msgstr "Mahsulotlar"
 
+msgid "Products added to the cart"
+msgstr "Mahsulotlar savatga qo'shildi"
+
 msgid "Profile"
 msgstr "Profil"
 
@@ -1431,6 +1434,9 @@ msgstr "Olib tashlash"
 
 msgid "Remove from favorites"
 msgstr "Sevimlilardan olib tashlash"
+
+msgid "Reorder"
+msgstr "Buyurtmani takrorlash"
 
 msgid "Resend code"
 msgstr "Kodni qayta yuborish"
@@ -1752,6 +1758,9 @@ msgstr "Yon panelni almashtirish"
 
 msgid "Toggle theme"
 msgstr "Mavzuni almashtirish"
+
+msgid "Too many wrong attempts. Try again in an hour."
+msgstr "Noto'g'ri urinishlar juda ko'p. Bir soatdan keyin qayta urinib ko'ring."
 
 msgid "Top products"
 msgstr "Top mahsulotlar"

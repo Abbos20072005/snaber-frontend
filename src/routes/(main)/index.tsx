@@ -3,7 +3,11 @@
 import { createFileRoute } from '@tanstack/react-router';
 import { Suspense } from 'react';
 
-import { TopCategoriesSection, TopCategoriesSkeleton } from '@/modules/category';
+import {
+  getPublicAllCategoriesOptions,
+  TopCategoriesSection,
+  TopCategoriesSkeleton
+} from '@/modules/category';
 // FEATURE DISABLED: Top companies section on the home page.
 // import { CompanyCardSkeleton, TopCompaniesSlider } from '@/modules/company';
 // FEATURE DISABLED: Contact section.
@@ -73,6 +77,9 @@ const App = () => {
 };
 
 export const Route = createFileRoute('/(main)/')({
+  // Categories are loaded on the server so the first paint already has them instead of a skeleton.
+  loader: ({ context: { queryClient } }) =>
+    queryClient.ensureQueryData(getPublicAllCategoriesOptions()),
   component: App,
   pendingComponent: HomePending,
   notFoundComponent: NotFoundError,

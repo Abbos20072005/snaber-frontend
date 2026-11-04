@@ -109,6 +109,5 @@ export const getFavoritesQueryOptions = () =>
 export const getCartListQueryOptions = () =>
   queryOptions({
     queryKey: PRODUCT_QUERY_KEYS.getCartList(),
-    staleTime: 0,
     queryFn: () => getCartList()
   });

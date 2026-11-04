@@ -4,6 +4,7 @@ import { Link } from '@tanstack/react-router';
 import { ChevronRightIcon, HeartIcon, ShoppingCartIcon } from 'lucide-react';
 import { toast } from 'sonner';
 
+import { useAuth } from '@/modules/auth/hooks/useAuth';
 import { postCart } from '@/shared/api/requests/product/cart';
 import { CURRENCY_SYMBOL, generateSlugId } from '@/shared/constants';
 import { formatPrice } from '@/shared/lib/format';
@@ -23,7 +24,10 @@ interface Props {
 
 export const ProductCard = ({ product, className }: Props) => {
   const { t } = useLingui();
+  const { user } = useAuth();
   const { isFavorite: isFav, onToggleFavorite } = useProductFavorite(product);
+  // Admins manage the catalog, they have no cart or favorites.
+  const isAdmin = user?.role === 'admin';
   const productId = product.id;
   const images = product.images;
 
@@ -75,15 +79,17 @@ export const ProductCard = ({ product, className }: Props) => {
               <ProductImageIndicators images={images} />
             </Carousel>
           </Link>
-          <Button
-            aria-label={isFav ? t`Remove from favorites` : t`Add to favorites`}
-            className='absolute top-2 right-2 size-9 rounded-full bg-white/90 text-black shadow-sm backdrop-blur hover:bg-white'
-            size='icon'
-            variant='ghost'
-            onClick={onToggleFavorite}
-          >
-            <HeartIcon className={cn('size-5', isFav && 'fill-red-500 text-red-500')} />
-          </Button>
+          {!isAdmin && (
+            <Button
+              aria-label={isFav ? t`Remove from favorites` : t`Add to favorites`}
+              className='absolute top-2 right-2 size-9 rounded-full bg-white/90 text-black shadow-sm backdrop-blur hover:bg-white'
+              size='icon'
+              variant='ghost'
+              onClick={onToggleFavorite}
+            >
+              <HeartIcon className={cn('size-5', isFav && 'fill-red-500 text-red-500')} />
+            </Button>
+          )}
         </div>
         <div className='min-w-0 flex-1'>
           <Link
@@ -124,16 +130,18 @@ export const ProductCard = ({ product, className }: Props) => {
               <p className='text-muted-foreground mt-1 text-xs capitalize'>/ {product.unit.unit}</p>
             )}
           </div>
-          <Button
-            className='shrink-0 bg-yellow-400 font-bold text-black hover:bg-yellow-300 sm:mt-3 sm:w-full'
-            disabled={addToCartMutation.isPending || product.stock_quantity === 0}
-            variant='secondary'
-            loading={addToCartMutation.isPending}
-            onClick={() => addToCartMutation.mutate()}
-          >
-            <ShoppingCartIcon />
-            {product.stock_quantity === 0 ? t`Out of stock` : t`Add to cart`}
-          </Button>
+          {!isAdmin && (
+            <Button
+              className='shrink-0 bg-yellow-400 font-bold text-black hover:bg-yellow-300 sm:mt-3 sm:w-full'
+              disabled={addToCartMutation.isPending || product.stock_quantity === 0}
+              variant='secondary'
+              loading={addToCartMutation.isPending}
+              onClick={() => addToCartMutation.mutate()}
+            >
+              <ShoppingCartIcon />
+              {product.stock_quantity === 0 ? t`Out of stock` : t`Add to cart`}
+            </Button>
+          )}
         </div>
       </div>
     </Card>
