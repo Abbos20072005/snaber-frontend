@@ -3,7 +3,6 @@ import { useSuspenseQuery } from '@tanstack/react-query';
 import { createFileRoute, Link } from '@tanstack/react-router';
 import { Suspense } from 'react';
 
-import { ContactSection } from '@/modules/contact';
 import { Faqs, FaqsSkeleton, getFaqsOptions } from '@/modules/faqs';
 import { getLocale } from '@/shared/i18n';
 import { createSeoMeta, DEFAULT_OG_IMAGE } from '@/shared/lib/seo';
@@ -45,8 +44,6 @@ const RouteComponent = () => {
           <Faqs />
         </Suspense>
       </SectionWrapper>
-
-      <ContactSection />
     </>
   );
 };
@@ -62,8 +59,7 @@ export const Route = createFileRoute('/(main)/support/')({
 
     return createSeoMeta({
       title: 'Service and support',
-      description:
-        'Support service of snaber.uz: answers to frequently asked questions and a contact form for our specialists.',
+      description: 'Support service of snaber.uz: answers to frequently asked questions.',
       url: siteUrl ? `${siteUrl}${match.pathname}` : undefined,
       locale: getLocale(),
       image: siteUrl ? `${siteUrl}${DEFAULT_OG_IMAGE.url}` : DEFAULT_OG_IMAGE.url,

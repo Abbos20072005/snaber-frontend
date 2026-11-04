@@ -511,6 +511,9 @@ msgstr "Email"
 msgid "Enter a valid phone number"
 msgstr "Enter a valid phone number"
 
+msgid "Enter answer"
+msgstr "Enter answer"
+
 msgid "Enter block reason"
 msgstr "Enter block reason"
 
@@ -529,20 +532,14 @@ msgstr "Enter full name"
 msgid "Enter phone number"
 msgstr "Enter phone number"
 
+msgid "Enter question"
+msgstr "Enter question"
+
 msgid "Enter the 6-digit verification code"
 msgstr "Enter the 6-digit verification code"
 
 msgid "Enter unit of measure"
 msgstr "Enter unit of measure"
-
-msgid "Enter valid email"
-msgstr "Enter valid email"
-
-msgid "Enter your email address"
-msgstr "Enter your email address"
-
-msgid "Enter your full name"
-msgstr "Enter your full name"
 
 msgid "Enter your phone number and we will send you a verification code."
 msgstr "Enter your phone number and we will send you a verification code."
@@ -849,9 +846,6 @@ msgstr "Marketplace command center"
 
 msgid "May"
 msgstr "May"
-
-msgid "Message"
-msgstr "Message"
 
 msgid "Monday"
 msgstr "Monday"
@@ -1337,9 +1331,6 @@ msgstr "Stock must be a positive number"
 msgid "Stock value"
 msgstr "Stock value"
 
-msgid "Submit"
-msgstr "Submit"
-
 msgid "Successfully created."
 msgstr "Successfully created."
 
@@ -1357,9 +1348,6 @@ msgstr "Sunday"
 
 msgid "Tashkent"
 msgstr "Tashkent"
-
-msgid "Tell us about your production, sourcing, or partnership needs"
-msgstr "Tell us about your production, sourcing, or partnership needs"
 
 msgid "Text"
 msgstr "Text"
@@ -1438,9 +1426,6 @@ msgstr "Too many wrong attempts. Try again in an hour."
 
 msgid "Top products"
 msgstr "Top products"
-
-msgid "Topic"
-msgstr "Topic"
 
 msgid "Total"
 msgstr "Total"
@@ -1585,9 +1570,6 @@ msgstr "Weekly joined users"
 
 msgid "Weight"
 msgstr "Weight"
-
-msgid "What would you like to discuss?"
-msgstr "What would you like to discuss?"
 
 msgid "Where the product is shown in the catalog."
 msgstr "Where the product is shown in the catalog."

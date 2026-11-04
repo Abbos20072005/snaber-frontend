@@ -512,6 +512,9 @@ msgstr "Email"
 msgid "Enter a valid phone number"
 msgstr "Введите корректный номер телефона"
 
+msgid "Enter answer"
+msgstr "Введите ответ"
+
 msgid "Enter block reason"
 msgstr "Введите причину блокировки"
 
@@ -530,20 +533,14 @@ msgstr "Введите полное имя"
 msgid "Enter phone number"
 msgstr "Введите номер телефона"
 
+msgid "Enter question"
+msgstr "Введите вопрос"
+
 msgid "Enter the 6-digit verification code"
 msgstr "Введите 6-значный код подтверждения"
 
 msgid "Enter unit of measure"
 msgstr "Введите единицу измерения"
-
-msgid "Enter valid email"
-msgstr "Введите корректный email"
-
-msgid "Enter your email address"
-msgstr "Введите адрес электронной почты"
-
-msgid "Enter your full name"
-msgstr "Введите полное имя"
 
 msgid "Enter your phone number and we will send you a verification code."
 msgstr "Введите номер телефона, и мы отправим вам код подтверждения."
@@ -850,9 +847,6 @@ msgstr "Центр управления маркетплейсом"
 
 msgid "May"
 msgstr "Май"
-
-msgid "Message"
-msgstr "Сообщение"
 
 msgid "Monday"
 msgstr "Понедельник"
@@ -1336,9 +1330,6 @@ msgstr "Остаток должен быть положительным числ
 msgid "Stock value"
 msgstr "Стоимость остатка"
 
-msgid "Submit"
-msgstr "Отправить"
-
 msgid "Successfully created."
 msgstr "Успешно создано."
 
@@ -1356,9 +1347,6 @@ msgstr "Воскресенье"
 
 msgid "Tashkent"
 msgstr "Ташкент"
-
-msgid "Tell us about your production, sourcing, or partnership needs"
-msgstr "Расскажите о ваших потребностях в производстве, поставках или партнерстве"
 
 msgid "Text"
 msgstr "Текст"
@@ -1437,9 +1425,6 @@ msgstr "Слишком много неверных попыток. Повтор�
 
 msgid "Top products"
 msgstr "Топ товары"
-
-msgid "Topic"
-msgstr "Тема"
 
 msgid "Total"
 msgstr "Всего"
@@ -1584,9 +1569,6 @@ msgstr "Еженедельно присоединившиеся пользова
 
 msgid "Weight"
 msgstr "Вес"
-
-msgid "What would you like to discuss?"
-msgstr "Что бы вы хотели обсудить?"
 
 msgid "Where the product is shown in the catalog."
 msgstr "Где товар отображается в каталоге."

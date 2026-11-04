@@ -48,7 +48,7 @@ export const FaqForm = ({ defaultValues, onSubmit }: Props) => {
               <field.Input
                 isRequired
                 label={`${t`Question`} (UZ)`}
-                placeholder={t`Enter category name`}
+                placeholder={t`Enter question`}
               />
             )}
           </form.AppField>
@@ -57,7 +57,7 @@ export const FaqForm = ({ defaultValues, onSubmit }: Props) => {
               <field.Input
                 isRequired
                 label={`${t`Question`} (RU)`}
-                placeholder={t`Enter category name`}
+                placeholder={t`Enter question`}
               />
             )}
           </form.AppField>
@@ -66,36 +66,24 @@ export const FaqForm = ({ defaultValues, onSubmit }: Props) => {
               <field.Input
                 isRequired
                 label={`${t`Question`} (EN)`}
-                placeholder={t`Enter category name`}
+                placeholder={t`Enter question`}
               />
             )}
           </form.AppField>
 
           <form.AppField name='description_uz'>
             {(field) => (
-              <field.Input
-                isRequired
-                label={`${t`Answer`} (UZ)`}
-                placeholder={t`Enter category name`}
-              />
+              <field.Input isRequired label={`${t`Answer`} (UZ)`} placeholder={t`Enter answer`} />
             )}
           </form.AppField>
           <form.AppField name='description_ru'>
             {(field) => (
-              <field.Input
-                isRequired
-                label={`${t`Answer`} (RU)`}
-                placeholder={t`Enter category name`}
-              />
+              <field.Input isRequired label={`${t`Answer`} (RU)`} placeholder={t`Enter answer`} />
             )}
           </form.AppField>
           <form.AppField name='description_en'>
             {(field) => (
-              <field.Input
-                isRequired
-                label={`${t`Answer`} (EN)`}
-                placeholder={t`Enter category name`}
-              />
+              <field.Input isRequired label={`${t`Answer`} (EN)`} placeholder={t`Enter answer`} />
             )}
           </form.AppField>
         </div>

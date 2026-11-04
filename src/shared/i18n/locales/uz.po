@@ -512,6 +512,9 @@ msgstr "Email"
 msgid "Enter a valid phone number"
 msgstr "To'g'ri telefon raqamini kiriting"
 
+msgid "Enter answer"
+msgstr "Javobni kiriting"
+
 msgid "Enter block reason"
 msgstr "Bloklash sababini kiriting"
 
@@ -530,20 +533,14 @@ msgstr "To‘liq ismni kiriting"
 msgid "Enter phone number"
 msgstr "Telefon raqamini kiriting"
 
+msgid "Enter question"
+msgstr "Savolni kiriting"
+
 msgid "Enter the 6-digit verification code"
 msgstr "6 xonali tasdiqlash kodini kiriting"
 
 msgid "Enter unit of measure"
 msgstr "O‘lchov birligini kiriting"
-
-msgid "Enter valid email"
-msgstr "Yaroqli email kiriting"
-
-msgid "Enter your email address"
-msgstr "Email manzilingizni kiriting"
-
-msgid "Enter your full name"
-msgstr "To‘liq ismingizni kiriting"
 
 msgid "Enter your phone number and we will send you a verification code."
 msgstr "Telefon raqamingizni kiriting, biz sizga tasdiqlash kodini yuboramiz."
@@ -850,9 +847,6 @@ msgstr "Marketplace boshqaruv markazi"
 
 msgid "May"
 msgstr "May"
-
-msgid "Message"
-msgstr "Xabar"
 
 msgid "Monday"
 msgstr "Dushanba"
@@ -1336,9 +1330,6 @@ msgstr "Qoldiq musbat son bo'lishi kerak"
 msgid "Stock value"
 msgstr "Ombor qiymati"
 
-msgid "Submit"
-msgstr "Yuborish"
-
 msgid "Successfully created."
 msgstr "Muvaffaqiyatli yaratildi."
 
@@ -1356,9 +1347,6 @@ msgstr "Yakshanba"
 
 msgid "Tashkent"
 msgstr "Toshkent"
-
-msgid "Tell us about your production, sourcing, or partnership needs"
-msgstr "Ishlab chiqarish, ta’minot yoki hamkorlik ehtiyojlaringiz haqida yozing"
 
 msgid "Text"
 msgstr "Matn"
@@ -1437,9 +1425,6 @@ msgstr "Noto'g'ri urinishlar juda ko'p. Bir soatdan keyin qayta urinib ko'ring."
 
 msgid "Top products"
 msgstr "Top mahsulotlar"
-
-msgid "Topic"
-msgstr "Mavzu"
 
 msgid "Total"
 msgstr "Jami"
@@ -1584,9 +1569,6 @@ msgstr "Haftalik qo‘shilgan foydalanuvchilar"
 
 msgid "Weight"
 msgstr "Og'irligi"
-
-msgid "What would you like to discuss?"
-msgstr "Nimani muhokama qilmoqchisiz?"
 
 msgid "Where the product is shown in the catalog."
 msgstr "Mahsulot katalogning qayerida ko'rinishi."

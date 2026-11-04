@@ -10,8 +10,6 @@ import {
 } from '@/modules/category';
 // FEATURE DISABLED: Top companies section on the home page.
 // import { CompanyCardSkeleton, TopCompaniesSlider } from '@/modules/company';
-// FEATURE DISABLED: Contact section.
-// import { ContactSection } from '@/modules/contact';
 // FEATURE DISABLED: FAQs section.
 // import { Faqs, FaqsSkeleton } from '@/modules/faqs';
 // FEATURE DISABLED: Top products section on the home page.
@@ -70,8 +68,6 @@ const App = () => {
       {/*     <Faqs /> */}
       {/*   </Suspense> */}
       {/* </SectionWrapper> */}
-      {/* FEATURE DISABLED: Contact section. */}
-      {/* <ContactSection /> */}
     </>
   );
 };
