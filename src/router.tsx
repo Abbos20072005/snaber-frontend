@@ -10,8 +10,6 @@ import { GeneralError, NotFoundError } from '@/shared/ui/errors';
 
 import { routeTree } from './routeTree.gen';
 
-import 'flag-icons/css/flag-icons.min.css';
-
 export function getRouter() {
   const queryClient = new QueryClient({
     defaultOptions: {

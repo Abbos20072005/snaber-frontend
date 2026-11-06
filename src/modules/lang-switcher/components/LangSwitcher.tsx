@@ -44,7 +44,7 @@ export const LangSwitcher = ({ className, ...props }: Props) => {
               key={value}
               render={
                 <span className='flex items-center gap-2'>
-                  <span className={`fi fi-${flag}`} />
+                  <img alt='' className='h-3.5 w-[18px]' src={`/images/flags/${flag}.svg`} />
                   <span>{label}</span>
                 </span>
               }

@@ -1,6 +1,11 @@
 {
   "name": "b2b",
   "type": "module",
+  "sideEffects": [
+    "**/*.css",
+    "**/*.scss",
+    "**/*.css?url"
+  ],
   "private": true,
   "scripts": {
     "test": "vitest run",
@@ -50,7 +55,6 @@
     "date-fns": "^4.1.0",
     "dompurify": "^3.4.0",
     "embla-carousel-react": "^8.6.0",
-    "flag-icons": "^7.5.0",
     "husky": "^9.1.7",
     "input-otp": "^1.4.2",
     "js-cookie": "^3.0.5",

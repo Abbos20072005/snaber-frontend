@@ -1244,8 +1244,8 @@ msgstr "Search..."
 msgid "Select"
 msgstr "Select"
 
-msgid "Select a date"
-msgstr "Select a date"
+#~ msgid "Select a date"
+#~ msgstr "Select a date"
 
 msgid "Select an attribute"
 msgstr "Select an attribute"

@@ -1243,8 +1243,8 @@ msgstr "Qidirish..."
 msgid "Select"
 msgstr "Tanlash"
 
-msgid "Select a date"
-msgstr "Sanani tanlang"
+#~ msgid "Select a date"
+#~ msgstr "Sanani tanlang"
 
 msgid "Select an attribute"
 msgstr "Atributni tanlang"

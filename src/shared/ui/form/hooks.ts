@@ -1,8 +1,6 @@
 import { createFormHook, createFormHookContexts } from '@tanstack/react-form';
 
 import { FormCheckbox } from './FormCheckbox';
-import { FormDatePicker } from './FormDatePicker';
-import { FormDateRangePicker } from './FormDateRangePicker';
 import { FormFileUpload } from './FormFileUpload';
 import { FormInput } from './FormInput';
 import { FormPasswordInput } from './FormPasswordInput';
@@ -22,8 +20,6 @@ const { useAppForm } = createFormHook({
     Textarea: FormTextarea,
     Select: FormSelect,
     Checkbox: FormCheckbox,
-    DatePicker: FormDatePicker,
-    DateRangePicker: FormDateRangePicker,
     FileUpload: FormFileUpload
   },
   formComponents: {},

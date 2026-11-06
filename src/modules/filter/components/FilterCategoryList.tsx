@@ -140,6 +140,8 @@ export const FilterCategoryList = ({ resetRef, category }: Props) => {
                 alt={cat.name}
                 className='size-6 shrink-0 rounded-xs border object-cover'
                 src={cat.image}
+                decoding='async'
+                loading='lazy'
               />
             ) : (
               <span className='bg-muted/60 flex size-6 shrink-0 items-center justify-center rounded-xs border'>

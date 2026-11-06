@@ -13,7 +13,11 @@ export default defineConfig(({ mode }) => {
   return {
     plugins: [
       devtools(),
-      nitro(),
+      nitro({
+        // Hashed bundles are cached forever by Nitro itself; the rest of the static files for a month.
+        compressPublicAssets: true,
+        routeRules: { '/images/**': { headers: { 'cache-control': 'public, max-age=2592000' } } }
+      }),
       viteTsConfigPaths({
         projects: ['./tsconfig.json']
       }),
