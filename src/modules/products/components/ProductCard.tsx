@@ -1,7 +1,7 @@
 import { useLingui } from '@lingui/react/macro';
 import { useMutation } from '@tanstack/react-query';
 import { Link } from '@tanstack/react-router';
-import { ChevronRightIcon, HeartIcon, ShoppingCartIcon } from 'lucide-react';
+import { ChevronRightIcon, HeartIcon, ScaleIcon, ShoppingCartIcon } from 'lucide-react';
 import { toast } from 'sonner';
 
 import { useAuth } from '@/modules/auth/hooks/useAuth';
@@ -13,6 +13,7 @@ import { Button } from '@/shared/ui/button';
 import { Card } from '@/shared/ui/card';
 import { Carousel, CarouselContent, CarouselItem } from '@/shared/ui/carousel';
 
+import { useProductCompare } from '../hooks/useProductCompare';
 import { useProductFavorite } from '../hooks/useProductFavorite';
 import { PRODUCT_QUERY_KEYS } from '../options';
 import { ProductImageIndicators } from './ProductImageIndicators';
@@ -26,6 +27,7 @@ export const ProductCard = ({ product, className }: Props) => {
   const { t } = useLingui();
   const { user } = useAuth();
   const { isFavorite: isFav, onToggleFavorite } = useProductFavorite(product);
+  const { isCompared, onToggleCompare } = useProductCompare(product);
   // Admins manage the catalog, they have no cart or favorites.
   const isAdmin = user?.role === 'admin';
   const productId = product.id;
@@ -81,15 +83,29 @@ export const ProductCard = ({ product, className }: Props) => {
             </Carousel>
           </Link>
           {!isAdmin && (
-            <Button
-              aria-label={isFav ? t`Remove from favorites` : t`Add to favorites`}
-              className='absolute top-2 right-2 size-9 rounded-full bg-white/90 text-black shadow-sm backdrop-blur hover:bg-white'
-              size='icon'
-              variant='ghost'
-              onClick={onToggleFavorite}
-            >
-              <HeartIcon className={cn('size-5', isFav && 'fill-red-500 text-red-500')} />
-            </Button>
+            <>
+              <Button
+                aria-label={isFav ? t`Remove from favorites` : t`Add to favorites`}
+                className='absolute top-2 right-2 size-9 rounded-full bg-white/90 text-black shadow-sm backdrop-blur hover:bg-white'
+                size='icon'
+                variant='ghost'
+                onClick={onToggleFavorite}
+              >
+                <HeartIcon className={cn('size-5', isFav && 'fill-red-500 text-red-500')} />
+              </Button>
+              <Button
+                className={cn(
+                  'absolute top-13 right-2 size-9 rounded-full text-black shadow-sm backdrop-blur',
+                  isCompared ? 'bg-yellow-400 hover:bg-yellow-300' : 'bg-white/90 hover:bg-white'
+                )}
+                aria-label={isCompared ? t`Remove from comparison` : t`Add to comparison`}
+                size='icon'
+                variant='ghost'
+                onClick={onToggleCompare}
+              >
+                <ScaleIcon className='size-5' />
+              </Button>
+            </>
           )}
         </div>
         <div className='min-w-0 flex-1'>

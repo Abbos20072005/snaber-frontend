@@ -91,6 +91,9 @@ msgstr "Add products, set prices and keep the stock up to date."
 msgid "Add to cart"
 msgstr "Add to cart"
 
+msgid "Add to comparison"
+msgstr "Add to comparison"
+
 msgid "Add to favorites"
 msgstr "Add to favorites"
 
@@ -102,6 +105,9 @@ msgstr "Add variants"
 
 msgid "Added to cart"
 msgstr "Added to cart"
+
+msgid "Added to comparison"
+msgstr "Added to comparison"
 
 msgid "Added to favorites"
 msgstr "Added to favorites"
@@ -123,6 +129,9 @@ msgstr "All categories"
 
 msgid "All characteristics"
 msgstr "All characteristics"
+
+msgid "All characteristics are the same."
+msgstr "All characteristics are the same."
 
 msgid "All of these combinations already exist."
 msgstr "All of these combinations already exist."
@@ -301,8 +310,14 @@ msgstr "Clear category"
 msgid "Clear filters"
 msgstr "Clear filters"
 
+msgid "Clear list"
+msgstr "Clear list"
+
 msgid "Click the ♡ icon on items you usually order or want to buy later."
 msgstr "Click the ♡ icon on items you usually order or want to buy later."
+
+msgid "Click the ⚖ icon on products to compare their characteristics."
+msgstr "Click the ⚖ icon on products to compare their characteristics."
 
 msgid "Client"
 msgstr "Client"
@@ -327,6 +342,9 @@ msgstr "Code resent successfully"
 
 msgid "Code sent to"
 msgstr "Code sent to"
+
+msgid "Compare"
+msgstr "Compare"
 
 msgid "Compared with the previous {days} days"
 msgstr "Compared with the previous {days} days"
@@ -950,6 +968,9 @@ msgstr "No units yet"
 msgid "Not selling"
 msgstr "Not selling"
 
+msgid "Nothing to compare yet."
+msgstr "Nothing to compare yet."
+
 msgid "Nothing to show."
 msgstr "Nothing to show."
 
@@ -979,6 +1000,9 @@ msgstr "Okay"
 
 msgid "Only {maxValue} left"
 msgstr "Only {maxValue} left"
+
+msgid "Only differences"
+msgstr "Only differences"
 
 msgid "Oops! Page Not Found!"
 msgstr "Oops! Page Not Found!"
@@ -1144,6 +1168,9 @@ msgstr "Recent buying activity"
 
 msgid "Remove"
 msgstr "Remove"
+
+msgid "Remove from comparison"
+msgstr "Remove from comparison"
 
 msgid "Remove from favorites"
 msgstr "Remove from favorites"
@@ -1579,6 +1606,9 @@ msgstr "Yearly revenue"
 
 msgid "Yes"
 msgstr "Yes"
+
+msgid "You can compare up to {MAX_COMPARE_PER_CATEGORY} products of one category."
+msgstr "You can compare up to {MAX_COMPARE_PER_CATEGORY} products of one category."
 
 msgid "You can pick up the order yourself from our warehouse in Tashkent."
 msgstr "You can pick up the order yourself from our warehouse in Tashkent."

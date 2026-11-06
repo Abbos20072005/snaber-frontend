@@ -92,6 +92,9 @@ msgstr "Добавляйте товары, задавайте цены и обн
 msgid "Add to cart"
 msgstr "Добавить в корзину"
 
+msgid "Add to comparison"
+msgstr "Добавить к сравнению"
+
 msgid "Add to favorites"
 msgstr "Добавить в избранное"
 
@@ -103,6 +106,9 @@ msgstr "Добавить варианты"
 
 msgid "Added to cart"
 msgstr "Добавлено в корзину"
+
+msgid "Added to comparison"
+msgstr "Добавлено к сравнению"
 
 msgid "Added to favorites"
 msgstr "Добавлено в избранное"
@@ -124,6 +130,9 @@ msgstr "Все категории"
 
 msgid "All characteristics"
 msgstr "Все характеристики"
+
+msgid "All characteristics are the same."
+msgstr "Все характеристики совпадают."
 
 msgid "All of these combinations already exist."
 msgstr "Все эти комбинации уже существуют."
@@ -302,8 +311,14 @@ msgstr "Очистить категорию"
 msgid "Clear filters"
 msgstr "Очистить фильтры"
 
+msgid "Clear list"
+msgstr "Очистить список"
+
 msgid "Click the ♡ icon on items you usually order or want to buy later."
 msgstr "Нажмите на иконку ♡ у товаров, которые вы обычно заказываете или хотите купить позже."
+
+msgid "Click the ⚖ icon on products to compare their characteristics."
+msgstr "Нажмите на значок ⚖ у товаров, чтобы сравнить их характеристики."
 
 msgid "Client"
 msgstr "Клиент"
@@ -328,6 +343,9 @@ msgstr "Код успешно отправлен повторно"
 
 msgid "Code sent to"
 msgstr "Код отправлен на"
+
+msgid "Compare"
+msgstr "Сравнение"
 
 msgid "Compared with the previous {days} days"
 msgstr "По сравнению с предыдущими {days} днями"
@@ -949,6 +967,9 @@ msgstr "Единиц пока нет"
 msgid "Not selling"
 msgstr "Не продаются"
 
+msgid "Nothing to compare yet."
+msgstr "Пока нечего сравнивать."
+
 msgid "Nothing to show."
 msgstr "Нечего показать."
 
@@ -978,6 +999,9 @@ msgstr "Хорошо"
 
 msgid "Only {maxValue} left"
 msgstr "Осталось только {maxValue}"
+
+msgid "Only differences"
+msgstr "Только различия"
 
 msgid "Oops! Page Not Found!"
 msgstr "Упс! Страница не найдена!"
@@ -1143,6 +1167,9 @@ msgstr "Последняя покупательская активность"
 
 msgid "Remove"
 msgstr "Удалить"
+
+msgid "Remove from comparison"
+msgstr "Убрать из сравнения"
 
 msgid "Remove from favorites"
 msgstr "Удалить из избранного"
@@ -1578,6 +1605,9 @@ msgstr "Годовой доход"
 
 msgid "Yes"
 msgstr "Да"
+
+msgid "You can compare up to {MAX_COMPARE_PER_CATEGORY} products of one category."
+msgstr "Можно сравнивать до {MAX_COMPARE_PER_CATEGORY} товаров одной категории."
 
 msgid "You can pick up the order yourself from our warehouse in Tashkent."
 msgstr "Вы можете забрать заказ самостоятельно с нашего склада в Ташкенте."

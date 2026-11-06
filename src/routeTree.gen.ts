@@ -31,6 +31,7 @@ import { Route as mainProductsIndexRouteImport } from './routes/(main)/products/
 import { Route as mainLegalIndexRouteImport } from './routes/(main)/legal/index'
 import { Route as mainFavoritesIndexRouteImport } from './routes/(main)/favorites/index'
 import { Route as mainDeliveryIndexRouteImport } from './routes/(main)/delivery/index'
+import { Route as mainCompareIndexRouteImport } from './routes/(main)/compare/index'
 import { Route as mainCompaniesIndexRouteImport } from './routes/(main)/companies/index'
 import { Route as mainCatalogIndexRouteImport } from './routes/(main)/catalog/index'
 import { Route as mainCartIndexRouteImport } from './routes/(main)/cart/index'
@@ -159,6 +160,11 @@ const mainDeliveryIndexRoute = mainDeliveryIndexRouteImport.update({
   path: '/delivery/',
   getParentRoute: () => mainRouteRoute,
 } as any)
+const mainCompareIndexRoute = mainCompareIndexRouteImport.update({
+  id: '/compare/',
+  path: '/compare/',
+  getParentRoute: () => mainRouteRoute,
+} as any)
 const mainCompaniesIndexRoute = mainCompaniesIndexRouteImport.update({
   id: '/companies/',
   path: '/companies/',
@@ -259,6 +265,7 @@ export interface FileRoutesByFullPath {
   '/cart/': typeof mainCartIndexRoute
   '/catalog/': typeof mainCatalogIndexRoute
   '/companies/': typeof mainCompaniesIndexRoute
+  '/compare/': typeof mainCompareIndexRoute
   '/delivery/': typeof mainDeliveryIndexRoute
   '/favorites/': typeof mainFavoritesIndexRoute
   '/legal/': typeof mainLegalIndexRoute
@@ -297,6 +304,7 @@ export interface FileRoutesByTo {
   '/cart': typeof mainCartIndexRoute
   '/catalog': typeof mainCatalogIndexRoute
   '/companies': typeof mainCompaniesIndexRoute
+  '/compare': typeof mainCompareIndexRoute
   '/delivery': typeof mainDeliveryIndexRoute
   '/favorites': typeof mainFavoritesIndexRoute
   '/legal': typeof mainLegalIndexRoute
@@ -339,6 +347,7 @@ export interface FileRoutesById {
   '/(main)/cart/': typeof mainCartIndexRoute
   '/(main)/catalog/': typeof mainCatalogIndexRoute
   '/(main)/companies/': typeof mainCompaniesIndexRoute
+  '/(main)/compare/': typeof mainCompareIndexRoute
   '/(main)/delivery/': typeof mainDeliveryIndexRoute
   '/(main)/favorites/': typeof mainFavoritesIndexRoute
   '/(main)/legal/': typeof mainLegalIndexRoute
@@ -381,6 +390,7 @@ export interface FileRouteTypes {
     | '/cart/'
     | '/catalog/'
     | '/companies/'
+    | '/compare/'
     | '/delivery/'
     | '/favorites/'
     | '/legal/'
@@ -419,6 +429,7 @@ export interface FileRouteTypes {
     | '/cart'
     | '/catalog'
     | '/companies'
+    | '/compare'
     | '/delivery'
     | '/favorites'
     | '/legal'
@@ -460,6 +471,7 @@ export interface FileRouteTypes {
     | '/(main)/cart/'
     | '/(main)/catalog/'
     | '/(main)/companies/'
+    | '/(main)/compare/'
     | '/(main)/delivery/'
     | '/(main)/favorites/'
     | '/(main)/legal/'
@@ -648,6 +660,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof mainDeliveryIndexRouteImport
       parentRoute: typeof mainRouteRoute
     }
+    '/(main)/compare/': {
+      id: '/(main)/compare/'
+      path: '/compare'
+      fullPath: '/compare/'
+      preLoaderRoute: typeof mainCompareIndexRouteImport
+      parentRoute: typeof mainRouteRoute
+    }
     '/(main)/companies/': {
       id: '/(main)/companies/'
       path: '/companies'
@@ -797,6 +816,7 @@ interface mainRouteRouteChildren {
   mainCartIndexRoute: typeof mainCartIndexRoute
   mainCatalogIndexRoute: typeof mainCatalogIndexRoute
   mainCompaniesIndexRoute: typeof mainCompaniesIndexRoute
+  mainCompareIndexRoute: typeof mainCompareIndexRoute
   mainDeliveryIndexRoute: typeof mainDeliveryIndexRoute
   mainFavoritesIndexRoute: typeof mainFavoritesIndexRoute
   mainLegalIndexRoute: typeof mainLegalIndexRoute
@@ -814,6 +834,7 @@ const mainRouteRouteChildren: mainRouteRouteChildren = {
   mainCartIndexRoute: mainCartIndexRoute,
   mainCatalogIndexRoute: mainCatalogIndexRoute,
   mainCompaniesIndexRoute: mainCompaniesIndexRoute,
+  mainCompareIndexRoute: mainCompareIndexRoute,
   mainDeliveryIndexRoute: mainDeliveryIndexRoute,
   mainFavoritesIndexRoute: mainFavoritesIndexRoute,
   mainLegalIndexRoute: mainLegalIndexRoute,

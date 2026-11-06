@@ -4,6 +4,7 @@ import {
   CircleXIcon,
   CreditCardIcon,
   HeartIcon,
+  ScaleIcon,
   Share2Icon,
   TruckIcon
 } from 'lucide-react';
@@ -11,6 +12,7 @@ import { toast } from 'sonner';
 
 import { useAuth } from '@/modules/auth/hooks/useAuth';
 import { CartButtons } from '@/modules/cart/components/CartButtons';
+import { useProductCompare } from '@/modules/products/hooks/useProductCompare';
 import { useProductFavorite } from '@/modules/products/hooks/useProductFavorite';
 import { CURRENCY_SYMBOL } from '@/shared/constants';
 import { formatPrice } from '@/shared/lib/format';
@@ -29,6 +31,11 @@ export const PublicProductAside = ({ product }: Props) => {
   const { isFavorite, onToggleFavorite } = useProductFavorite({
     ...product,
     category: product.category.id
+  });
+
+  const { isCompared, onToggleCompare } = useProductCompare({
+    category: product.category.id,
+    id: product.id
   });
 
   const isInStock = product.stock_quantity > 0;
@@ -95,12 +102,23 @@ export const PublicProductAside = ({ product }: Props) => {
 
           <div className={cn('grid gap-2', !isAdmin && 'grid-cols-2')}>
             {!isAdmin && (
-              <Button type='button' variant='outline' onClick={onToggleFavorite}>
-                <HeartIcon className={cn(isFavorite && 'fill-red-500 text-red-500')} />
-                {t`Favorites`}
-              </Button>
+              <>
+                <Button type='button' variant='outline' onClick={onToggleFavorite}>
+                  <HeartIcon className={cn(isFavorite && 'fill-red-500 text-red-500')} />
+                  {t`Favorites`}
+                </Button>
+                <Button
+                  className={cn(isCompared && 'bg-yellow-400 hover:bg-yellow-300')}
+                  type='button'
+                  variant='outline'
+                  onClick={onToggleCompare}
+                >
+                  <ScaleIcon />
+                  {t`Compare`}
+                </Button>
+              </>
             )}
-            <Button type='button' variant='outline' onClick={onShare}>
+            <Button className='col-span-full' type='button' variant='outline' onClick={onShare}>
               <Share2Icon />
               {t`Share`}
             </Button>

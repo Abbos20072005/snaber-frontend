@@ -2,14 +2,20 @@ import type { ReactNode } from 'react';
 
 import { useLingui } from '@lingui/react/macro';
 import { Link } from '@tanstack/react-router';
-import { BriefcaseBusinessIcon, HeartIcon, PackageIcon, ShoppingCartIcon } from 'lucide-react';
+import {
+  BriefcaseBusinessIcon,
+  HeartIcon,
+  PackageIcon,
+  ScaleIcon,
+  ShoppingCartIcon
+} from 'lucide-react';
 
 import { useAuth } from '@/modules/auth';
 import { GlobalSearch } from '@/modules/global-search';
 import { LangSwitcher } from '@/modules/lang-switcher';
 import { SiteLogo } from '@/routes/(main)/-components/SiteLogo';
 import { useAuthContext } from '@/shared/context';
-import { useCartStore, useFavoritesStore } from '@/shared/store';
+import { useCartStore, useCompareStore, useFavoritesStore } from '@/shared/store';
 import { Button } from '@/shared/ui/button';
 
 import { AccountDropDown } from './AccountDropDown';
@@ -46,6 +52,7 @@ export const Header = () => {
 
   const cartItemsLength = useCartStore((state) => state.cartItemsLength);
   const favoritesCount = useFavoritesStore((state) => state.favorites.length);
+  const compareCount = useCompareStore((state) => state.items.length);
 
   const isAdmin = user?.role === 'admin';
   const ordersPath = isAdmin ? '/admin/orders' : '/profile/orders';
@@ -75,6 +82,12 @@ export const Header = () => {
                     label={t`Favorites`}
                     icon={<HeartIcon className='size-5' />}
                     to='/favorites'
+                  />
+                  <HeaderLink
+                    badge={compareCount}
+                    label={t`Compare`}
+                    icon={<ScaleIcon className='size-5' />}
+                    to='/compare'
                   />
                   <HeaderLink
                     badge={cartItemsLength}

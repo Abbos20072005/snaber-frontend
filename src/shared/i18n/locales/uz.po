@@ -92,6 +92,9 @@ msgstr "Mahsulot qo'shing, narxlarni belgilang va ombor qoldig'ini yangilab turi
 msgid "Add to cart"
 msgstr "Savatga qo‘shish"
 
+msgid "Add to comparison"
+msgstr "Taqqoslashga qo‘shish"
+
 msgid "Add to favorites"
 msgstr "Sevimlilarga qo‘shish"
 
@@ -103,6 +106,9 @@ msgstr "Variantlar qo'shish"
 
 msgid "Added to cart"
 msgstr "Savatga qo‘shildi"
+
+msgid "Added to comparison"
+msgstr "Taqqoslashga qo‘shildi"
 
 msgid "Added to favorites"
 msgstr "Sevimlilarga qo‘shildi"
@@ -124,6 +130,9 @@ msgstr "Barcha kategoriyalar"
 
 msgid "All characteristics"
 msgstr "Barcha xususiyatlar"
+
+msgid "All characteristics are the same."
+msgstr "Barcha xususiyatlar bir xil."
 
 msgid "All of these combinations already exist."
 msgstr "Bu kombinatsiyalarning hammasi allaqachon mavjud."
@@ -302,8 +311,14 @@ msgstr "Kategoriyani tozalash"
 msgid "Clear filters"
 msgstr "Filtrlarni tozalash"
 
+msgid "Clear list"
+msgstr "Ro‘yxatni tozalash"
+
 msgid "Click the ♡ icon on items you usually order or want to buy later."
 msgstr "Odatda buyurtma qiladigan yoki keyinroq sotib olmoqchi bo‘lgan mahsulotlarda ♡ ikonkasini bosing."
+
+msgid "Click the ⚖ icon on products to compare their characteristics."
+msgstr "Mahsulotlarni xususiyatlari bo‘yicha solishtirish uchun ⚖ belgisini bosing."
 
 msgid "Client"
 msgstr "Mijoz"
@@ -328,6 +343,9 @@ msgstr "Kod qayta yuborildi"
 
 msgid "Code sent to"
 msgstr "Kod yuborildi"
+
+msgid "Compare"
+msgstr "Taqqoslash"
 
 msgid "Compared with the previous {days} days"
 msgstr "Oldingi {days} kun bilan solishtirilganda"
@@ -949,6 +967,9 @@ msgstr "Hali birliklar yo‘q"
 msgid "Not selling"
 msgstr "Sotilmayapti"
 
+msgid "Nothing to compare yet."
+msgstr "Hozircha taqqoslash uchun mahsulot yo‘q."
+
 msgid "Nothing to show."
 msgstr "Ko‘rsatadigan narsa yo‘q."
 
@@ -978,6 +999,9 @@ msgstr "Yaxshi"
 
 msgid "Only {maxValue} left"
 msgstr "Faqat {maxValue} ta qoldi"
+
+msgid "Only differences"
+msgstr "Faqat farqlar"
 
 msgid "Oops! Page Not Found!"
 msgstr "Voy! Sahifa topilmadi!"
@@ -1143,6 +1167,9 @@ msgstr "Oxirgi xarid faolligi"
 
 msgid "Remove"
 msgstr "Olib tashlash"
+
+msgid "Remove from comparison"
+msgstr "Taqqoslashdan olib tashlash"
 
 msgid "Remove from favorites"
 msgstr "Sevimlilardan olib tashlash"
@@ -1578,6 +1605,9 @@ msgstr "Yillik daromad"
 
 msgid "Yes"
 msgstr "Ha"
+
+msgid "You can compare up to {MAX_COMPARE_PER_CATEGORY} products of one category."
+msgstr "Bir kategoriyadagi {MAX_COMPARE_PER_CATEGORY} tagacha mahsulotni taqqoslash mumkin."
 
 msgid "You can pick up the order yourself from our warehouse in Tashkent."
 msgstr "Buyurtmani Toshkentdagi omborimizdan o'zingiz olib ketishingiz mumkin."

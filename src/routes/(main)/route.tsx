@@ -7,7 +7,13 @@ import { getCartListQueryOptions, getFavoritesQueryOptions } from '@/modules/pro
 import { Footer, Header, MobileBottomBar } from '@/routes/(main)/-components';
 import { COOKIES } from '@/shared/constants';
 import { isomorphicCookie } from '@/shared/lib/isomorphic-cookie';
-import { CartProvider, FavoritesProvider, useCartStore, useFavoritesStore } from '@/shared/store';
+import {
+  CartProvider,
+  FavoritesProvider,
+  useCartStore,
+  useCompareStore,
+  useFavoritesStore
+} from '@/shared/store';
 import { Spinner } from '@/shared/ui/spinner.tsx';
 
 const SiteLayout = () => {
@@ -35,6 +41,11 @@ const StoreSync = ({ cart, favorites }: { cart: CartItem[]; favorites: ProductPr
   useEffect(() => {
     setFavorites(favorites);
   }, [favorites, setFavorites]);
+
+  // The comparison list is kept in the browser, so it is restored only after the first render.
+  useEffect(() => {
+    void useCompareStore.persist.rehydrate();
+  }, []);
 
   return null;
 };
