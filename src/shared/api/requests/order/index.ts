@@ -2,6 +2,7 @@ import { api } from '@/shared/api';
 
 export interface GetOrdersRequest {
   params?: Partial<{
+    buyer: number;
     page: number;
     page_size: number;
     category: number;

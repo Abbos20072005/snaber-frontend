@@ -15,7 +15,18 @@ interface User {
   role: UserRole;
 }
 
-type UsersResponse = Pagination<User>;
+interface UserListItem extends User {
+  created_at: string;
+  last_order_at: null | string;
+  orders_count: number;
+  total_spent: string;
+}
+
+interface UserDetail extends UserListItem {
+  average_order: number;
+}
+
+type UsersResponse = Pagination<UserListItem>;
 
 // DTO
 

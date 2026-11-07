@@ -41,6 +41,7 @@ import { Route as AdminCategoryIdRouteImport } from './routes/admin/category/$id
 import { Route as mainProfileSettingsRouteImport } from './routes/(main)/profile/settings'
 import { Route as mainProfileDashboardRouteImport } from './routes/(main)/profile/dashboard'
 import { Route as mainCompaniesSlugRouteImport } from './routes/(main)/companies/$slug'
+import { Route as AdminUsersIdIndexRouteImport } from './routes/admin/users/$id/index'
 import { Route as AdminProductsIdIndexRouteImport } from './routes/admin/products/$id/index'
 import { Route as AdminContentsLegalIndexRouteImport } from './routes/admin/contents/legal/index'
 import { Route as AdminContentsFaqsIndexRouteImport } from './routes/admin/contents/faqs/index'
@@ -210,6 +211,11 @@ const mainCompaniesSlugRoute = mainCompaniesSlugRouteImport.update({
   path: '/companies/$slug',
   getParentRoute: () => mainRouteRoute,
 } as any)
+const AdminUsersIdIndexRoute = AdminUsersIdIndexRouteImport.update({
+  id: '/users/$id/',
+  path: '/users/$id/',
+  getParentRoute: () => AdminRouteRoute,
+} as any)
 const AdminProductsIdIndexRoute = AdminProductsIdIndexRouteImport.update({
   id: '/products/$id/',
   path: '/products/$id/',
@@ -291,6 +297,7 @@ export interface FileRoutesByFullPath {
   '/admin/contents/faqs/': typeof AdminContentsFaqsIndexRoute
   '/admin/contents/legal/': typeof AdminContentsLegalIndexRoute
   '/admin/products/$id/': typeof AdminProductsIdIndexRoute
+  '/admin/users/$id/': typeof AdminUsersIdIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof mainIndexRoute
@@ -330,6 +337,7 @@ export interface FileRoutesByTo {
   '/admin/contents/faqs': typeof AdminContentsFaqsIndexRoute
   '/admin/contents/legal': typeof AdminContentsLegalIndexRoute
   '/admin/products/$id': typeof AdminProductsIdIndexRoute
+  '/admin/users/$id': typeof AdminUsersIdIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -373,6 +381,7 @@ export interface FileRoutesById {
   '/admin/contents/faqs/': typeof AdminContentsFaqsIndexRoute
   '/admin/contents/legal/': typeof AdminContentsLegalIndexRoute
   '/admin/products/$id/': typeof AdminProductsIdIndexRoute
+  '/admin/users/$id/': typeof AdminUsersIdIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -416,6 +425,7 @@ export interface FileRouteTypes {
     | '/admin/contents/faqs/'
     | '/admin/contents/legal/'
     | '/admin/products/$id/'
+    | '/admin/users/$id/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -455,6 +465,7 @@ export interface FileRouteTypes {
     | '/admin/contents/faqs'
     | '/admin/contents/legal'
     | '/admin/products/$id'
+    | '/admin/users/$id'
   id:
     | '__root__'
     | '/(main)'
@@ -497,6 +508,7 @@ export interface FileRouteTypes {
     | '/admin/contents/faqs/'
     | '/admin/contents/legal/'
     | '/admin/products/$id/'
+    | '/admin/users/$id/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -730,6 +742,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof mainCompaniesSlugRouteImport
       parentRoute: typeof mainRouteRoute
     }
+    '/admin/users/$id/': {
+      id: '/admin/users/$id/'
+      path: '/users/$id'
+      fullPath: '/admin/users/$id/'
+      preLoaderRoute: typeof AdminUsersIdIndexRouteImport
+      parentRoute: typeof AdminRouteRoute
+    }
     '/admin/products/$id/': {
       id: '/admin/products/$id/'
       path: '/products/$id'
@@ -867,6 +886,7 @@ interface AdminRouteRouteChildren {
   AdminContentsFaqsIndexRoute: typeof AdminContentsFaqsIndexRoute
   AdminContentsLegalIndexRoute: typeof AdminContentsLegalIndexRoute
   AdminProductsIdIndexRoute: typeof AdminProductsIdIndexRoute
+  AdminUsersIdIndexRoute: typeof AdminUsersIdIndexRoute
 }
 
 const AdminRouteRouteChildren: AdminRouteRouteChildren = {
@@ -888,6 +908,7 @@ const AdminRouteRouteChildren: AdminRouteRouteChildren = {
   AdminContentsFaqsIndexRoute: AdminContentsFaqsIndexRoute,
   AdminContentsLegalIndexRoute: AdminContentsLegalIndexRoute,
   AdminProductsIdIndexRoute: AdminProductsIdIndexRoute,
+  AdminUsersIdIndexRoute: AdminUsersIdIndexRoute,
 }
 
 const AdminRouteRouteWithChildren = AdminRouteRoute._addFileChildren(

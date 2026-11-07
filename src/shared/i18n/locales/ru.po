@@ -143,6 +143,12 @@ msgstr "Все эти комбинации уже существуют."
 msgid "All orders loaded for this buyer profile."
 msgstr "Все заказы загружены для этого профиля покупателя."
 
+#~ msgid "All orders made by this client."
+#~ msgstr "Все заказы этого клиента."
+
+msgid "All orders made by this user."
+msgstr "Все заказы этого пользователя."
+
 msgid "All prices on the site are indicated in UZS."
 msgstr "Все цены на сайте указаны в сумах."
 
@@ -211,6 +217,9 @@ msgstr "Авг"
 
 msgid "August"
 msgstr "Август"
+
+msgid "Average order"
+msgstr "Средний заказ"
 
 msgid "Average order value"
 msgstr "Средний чек"
@@ -287,8 +296,8 @@ msgstr "Спрос на категорию"
 msgid "Category is required"
 msgstr "Категория обязательна"
 
-msgid "Change photo"
-msgstr "Изменить фото"
+#~ msgid "Change photo"
+#~ msgstr "Изменить фото"
 
 msgid "Characteristics"
 msgstr "Характеристики"
@@ -325,6 +334,9 @@ msgstr "Нажмите на значок ⚖ у товаров, чтобы ср�
 
 msgid "Client"
 msgstr "Клиент"
+
+#~ msgid "Client information"
+#~ msgstr "Информация о клиенте"
 
 msgid "Clients"
 msgstr "Клиенты"
@@ -425,8 +437,8 @@ msgstr "Клиенты, оформившие заказ"
 msgid "Daily figures for the selected period."
 msgstr "Показатели по дням за выбранный период."
 
-msgid "Danger zone"
-msgstr "Опасная зона"
+#~ msgid "Danger zone"
+#~ msgstr "Опасная зона"
 
 msgid "Dark"
 msgstr "Тёмная"
@@ -439,6 +451,9 @@ msgstr "Данные не найдены"
 
 msgid "Date"
 msgstr "Дата"
+
+msgid "Date of the latest order."
+msgstr "Дата последнего заказа."
 
 msgid "Dec"
 msgstr "Дек"
@@ -518,8 +533,8 @@ msgstr "не существует или была удалена."
 msgid "Drop a file here or choose one"
 msgstr "Перетащите файл сюда или выберите его"
 
-msgid "Drop a new image here or choose a clear square photo."
-msgstr "Перетащите новое изображение сюда или выберите чёткое квадратное фото."
+#~ msgid "Drop a new image here or choose a clear square photo."
+#~ msgstr "Перетащите новое изображение сюда или выберите чёткое квадратное фото."
 
 msgid "Edit"
 msgstr "Редактировать"
@@ -803,6 +818,12 @@ msgstr "Ключевые показатели (KPI)"
 msgid "Last activity"
 msgstr "Последняя активность"
 
+msgid "Last name First name"
+msgstr "Фамилия Имя"
+
+msgid "Last order"
+msgstr "Последний заказ"
+
 msgid "Latest orders from your buyer account."
 msgstr "Последние заказы из аккаунта покупателя."
 
@@ -818,14 +839,14 @@ msgstr "Ссылка скопирована"
 msgid "Load more"
 msgstr "Загрузить ещё"
 
-msgid "Loading countries..."
-msgstr "Загрузка стран..."
+#~ msgid "Loading countries..."
+#~ msgstr "Загрузка стран..."
 
 msgid "Loading image..."
 msgstr "Загрузка изображения..."
 
-msgid "Loading photo..."
-msgstr "Загрузка фото..."
+#~ msgid "Loading photo..."
+#~ msgstr "Загрузка фото..."
 
 msgid "Loading..."
 msgstr "Загрузка..."
@@ -970,6 +991,9 @@ msgstr "Единиц пока нет"
 msgid "Not selling"
 msgstr "Не продаются"
 
+msgid "Not verified"
+msgstr "Не подтверждён"
+
 msgid "Nothing to compare yet."
 msgstr "Пока нечего сравнивать."
 
@@ -1026,6 +1050,10 @@ msgstr "Параметры, которыми различаются вариан
 
 msgid "Order"
 msgstr "Заказ"
+
+#. placeholder {0}: order.id
+msgid "Order #{0}"
+msgstr "Заказ #{0}"
 
 msgid "Order Summary"
 msgstr "Сводка заказа"
@@ -1138,8 +1166,8 @@ msgstr "Товары этой же категории, которые ещё н�
 msgid "Profile"
 msgstr "Профиль"
 
-msgid "Profile image"
-msgstr "Изображение профиля"
+#~ msgid "Profile image"
+#~ msgstr "Изображение профиля"
 
 msgid "Profile updated successfully"
 msgstr "Профиль успешно обновлён"
@@ -1168,8 +1196,11 @@ msgstr "Отсортировано по числу заказов."
 msgid "Recent buying activity"
 msgstr "Последняя покупательская активность"
 
-msgid "Remove"
-msgstr "Удалить"
+msgid "Registered"
+msgstr "Зарегистрирован"
+
+#~ msgid "Remove"
+#~ msgstr "Удалить"
 
 msgid "Remove from comparison"
 msgstr "Убрать из сравнения"
@@ -1231,6 +1262,9 @@ msgstr "Поиск"
 msgid "Search by name or code"
 msgstr "Поиск по названию или коду"
 
+msgid "Search by name, email or phone"
+msgstr "Поиск по имени, email или телефону"
+
 msgid "Search columns..."
 msgstr "Поиск по столбцам..."
 
@@ -1242,6 +1276,9 @@ msgstr "Результаты поиска для"
 
 msgid "Search..."
 msgstr "Поиск..."
+
+#~ msgid "See who buys from the store, their orders and how much they spent."
+#~ msgstr "Смотрите, кто покупает в магазине, их заказы и потраченные суммы."
 
 msgid "Select"
 msgstr "Выбрать"
@@ -1258,8 +1295,8 @@ msgstr "Выберите атрибут"
 msgid "Select category"
 msgstr "Выберите категорию"
 
-msgid "Select country"
-msgstr "Выберите страну"
+#~ msgid "Select country"
+#~ msgstr "Выберите страну"
 
 msgid "Select date"
 msgstr "Выберите дату"
@@ -1372,6 +1409,9 @@ msgstr "Успешно удалено."
 msgid "Successfully updated."
 msgstr "Успешно обновлено."
 
+msgid "Sum of all order totals."
+msgstr "Сумма всех заказов."
+
 msgid "Sunday"
 msgstr "Воскресенье"
 
@@ -1408,8 +1448,8 @@ msgstr "Товары останутся в каталоге как отдель�
 msgid "Theme"
 msgstr "Тема"
 
-msgid "These actions are sensitive and may permanently affect your account."
-msgstr "Эти действия являются чувствительными и могут навсегда повлиять на ваш аккаунт."
+#~ msgid "These actions are sensitive and may permanently affect your account."
+#~ msgstr "Эти действия являются чувствительными и могут навсегда повлиять на ваш аккаунт."
 
 msgid "This action cannot be undone. This will permanently delete your account and remove your data from our servers."
 msgstr "Это действие нельзя отменить. Ваш аккаунт будет навсегда удалён, а данные стёрты с наших серверов."
@@ -1467,6 +1507,12 @@ msgstr "Общая цена"
 
 msgid "Total revenue by month for the current year."
 msgstr "Общий доход по месяцам за текущий год."
+
+msgid "Total spent"
+msgstr "Всего потрачено"
+
+msgid "Total spent divided by the number of orders."
+msgstr "Всего потрачено, делённое на количество заказов."
 
 msgid "Total users"
 msgstr "Всего пользователей"
@@ -1549,6 +1595,9 @@ msgstr "Распределение пользователей"
 msgid "User email"
 msgstr "Email пользователя"
 
+msgid "User information"
+msgstr "Информация о пользователе"
+
 msgid "User Management"
 msgstr "Управление пользователями"
 
@@ -1602,6 +1651,12 @@ msgstr "Вес"
 
 msgid "Where the product is shown in the catalog."
 msgstr "Где товар отображается в каталоге."
+
+msgid "With orders"
+msgstr "С заказами"
+
+msgid "Without orders"
+msgstr "Без заказов"
 
 msgid "Yearly revenue"
 msgstr "Годовой доход"

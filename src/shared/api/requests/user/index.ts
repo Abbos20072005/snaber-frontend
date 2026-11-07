@@ -2,9 +2,14 @@ import { api } from '@/shared/api';
 
 export interface GetUsersRequest {
   params?: {
-    role?: UserRole;
+    has_orders?: boolean;
+    is_active?: boolean;
+    is_blocked?: boolean;
+    is_verified?: boolean;
     page?: number;
     page_size?: number;
+    role?: UserRole;
+    search?: string;
   };
 }
 
@@ -14,6 +19,9 @@ export const getUsers = (request?: GetUsersRequest) =>
 export interface GetUserByIdRequest {
   id: number;
 }
+
+export const getUserById = ({ id }: GetUserByIdRequest) =>
+  api.get<UserDetail>(`authentication/users/${id}/`);
 
 interface PatchUsersRequest {
   data: PatchUserDto;

@@ -142,6 +142,12 @@ msgstr "All of these combinations already exist."
 msgid "All orders loaded for this buyer profile."
 msgstr "All orders loaded for this buyer profile."
 
+#~ msgid "All orders made by this client."
+#~ msgstr "All orders made by this client."
+
+msgid "All orders made by this user."
+msgstr "All orders made by this user."
+
 msgid "All prices on the site are indicated in UZS."
 msgstr "All prices on the site are indicated in UZS."
 
@@ -210,6 +216,9 @@ msgstr "Aug"
 
 msgid "August"
 msgstr "August"
+
+msgid "Average order"
+msgstr "Average order"
 
 msgid "Average order value"
 msgstr "Average order value"
@@ -286,8 +295,8 @@ msgstr "Category demand"
 msgid "Category is required"
 msgstr "Category is required"
 
-msgid "Change photo"
-msgstr "Change photo"
+#~ msgid "Change photo"
+#~ msgstr "Change photo"
 
 msgid "Characteristics"
 msgstr "Characteristics"
@@ -324,6 +333,9 @@ msgstr "Click the ⚖ icon on products to compare their characteristics."
 
 msgid "Client"
 msgstr "Client"
+
+#~ msgid "Client information"
+#~ msgstr "Client information"
 
 msgid "Clients"
 msgstr "Clients"
@@ -424,8 +436,8 @@ msgstr "Customers who placed an order"
 msgid "Daily figures for the selected period."
 msgstr "Daily figures for the selected period."
 
-msgid "Danger zone"
-msgstr "Danger zone"
+#~ msgid "Danger zone"
+#~ msgstr "Danger zone"
 
 msgid "Dark"
 msgstr "Dark"
@@ -438,6 +450,9 @@ msgstr "Data not found"
 
 msgid "Date"
 msgstr "Date"
+
+msgid "Date of the latest order."
+msgstr "Date of the latest order."
 
 msgid "Dec"
 msgstr "Dec"
@@ -517,8 +532,8 @@ msgstr "does not exist or might have been removed."
 msgid "Drop a file here or choose one"
 msgstr "Drop a file here or choose one"
 
-msgid "Drop a new image here or choose a clear square photo."
-msgstr "Drop a new image here or choose a clear square photo."
+#~ msgid "Drop a new image here or choose a clear square photo."
+#~ msgstr "Drop a new image here or choose a clear square photo."
 
 msgid "Edit"
 msgstr "Edit"
@@ -802,6 +817,12 @@ msgstr "Key indicators"
 msgid "Last activity"
 msgstr "Last activity"
 
+msgid "Last name First name"
+msgstr "Last name First name"
+
+msgid "Last order"
+msgstr "Last order"
+
 msgid "Latest orders from your buyer account."
 msgstr "Latest orders from your buyer account."
 
@@ -817,14 +838,14 @@ msgstr "Link copied"
 msgid "Load more"
 msgstr "Load more"
 
-msgid "Loading countries..."
-msgstr "Loading countries..."
+#~ msgid "Loading countries..."
+#~ msgstr "Loading countries..."
 
 msgid "Loading image..."
 msgstr "Loading image..."
 
-msgid "Loading photo..."
-msgstr "Loading photo..."
+#~ msgid "Loading photo..."
+#~ msgstr "Loading photo..."
 
 msgid "Loading..."
 msgstr "Loading..."
@@ -971,6 +992,9 @@ msgstr "No units yet"
 msgid "Not selling"
 msgstr "Not selling"
 
+msgid "Not verified"
+msgstr "Not verified"
+
 msgid "Nothing to compare yet."
 msgstr "Nothing to compare yet."
 
@@ -1027,6 +1051,10 @@ msgstr "Options that tell the variants apart"
 
 msgid "Order"
 msgstr "Order"
+
+#. placeholder {0}: order.id
+msgid "Order #{0}"
+msgstr "Order #{0}"
 
 msgid "Order Summary"
 msgstr "Order Summary"
@@ -1139,8 +1167,8 @@ msgstr "Products of the same category that are not in a family yet."
 msgid "Profile"
 msgstr "Profile"
 
-msgid "Profile image"
-msgstr "Profile image"
+#~ msgid "Profile image"
+#~ msgstr "Profile image"
 
 msgid "Profile updated successfully"
 msgstr "Profile updated successfully"
@@ -1169,8 +1197,11 @@ msgstr "Ranked by number of orders."
 msgid "Recent buying activity"
 msgstr "Recent buying activity"
 
-msgid "Remove"
-msgstr "Remove"
+msgid "Registered"
+msgstr "Registered"
+
+#~ msgid "Remove"
+#~ msgstr "Remove"
 
 msgid "Remove from comparison"
 msgstr "Remove from comparison"
@@ -1232,6 +1263,9 @@ msgstr "Search"
 msgid "Search by name or code"
 msgstr "Search by name or code"
 
+msgid "Search by name, email or phone"
+msgstr "Search by name, email or phone"
+
 msgid "Search columns..."
 msgstr "Search columns..."
 
@@ -1243,6 +1277,9 @@ msgstr "Search results for"
 
 msgid "Search..."
 msgstr "Search..."
+
+#~ msgid "See who buys from the store, their orders and how much they spent."
+#~ msgstr "See who buys from the store, their orders and how much they spent."
 
 msgid "Select"
 msgstr "Select"
@@ -1259,8 +1296,8 @@ msgstr "Select attribute"
 msgid "Select category"
 msgstr "Select category"
 
-msgid "Select country"
-msgstr "Select country"
+#~ msgid "Select country"
+#~ msgstr "Select country"
 
 msgid "Select date"
 msgstr "Select date"
@@ -1373,6 +1410,9 @@ msgstr "Successfully deleted."
 msgid "Successfully updated."
 msgstr "Successfully updated."
 
+msgid "Sum of all order totals."
+msgstr "Sum of all order totals."
+
 msgid "Sunday"
 msgstr "Sunday"
 
@@ -1409,8 +1449,8 @@ msgstr "The products stay in the catalog as separate products. Only the grouping
 msgid "Theme"
 msgstr "Theme"
 
-msgid "These actions are sensitive and may permanently affect your account."
-msgstr "These actions are sensitive and may permanently affect your account."
+#~ msgid "These actions are sensitive and may permanently affect your account."
+#~ msgstr "These actions are sensitive and may permanently affect your account."
 
 msgid "This action cannot be undone. This will permanently delete your account and remove your data from our servers."
 msgstr "This action cannot be undone. This will permanently delete your account and remove your data from our servers."
@@ -1468,6 +1508,12 @@ msgstr "Total price"
 
 msgid "Total revenue by month for the current year."
 msgstr "Total revenue by month for the current year."
+
+msgid "Total spent"
+msgstr "Total spent"
+
+msgid "Total spent divided by the number of orders."
+msgstr "Total spent divided by the number of orders."
 
 msgid "Total users"
 msgstr "Total users"
@@ -1550,6 +1596,9 @@ msgstr "User distribution"
 msgid "User email"
 msgstr "User email"
 
+msgid "User information"
+msgstr "User information"
+
 msgid "User Management"
 msgstr "User Management"
 
@@ -1603,6 +1652,12 @@ msgstr "Weight"
 
 msgid "Where the product is shown in the catalog."
 msgstr "Where the product is shown in the catalog."
+
+msgid "With orders"
+msgstr "With orders"
+
+msgid "Without orders"
+msgstr "Without orders"
 
 msgid "Yearly revenue"
 msgstr "Yearly revenue"
