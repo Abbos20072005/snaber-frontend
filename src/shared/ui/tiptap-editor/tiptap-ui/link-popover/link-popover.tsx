@@ -2,6 +2,7 @@
 
 import type { Editor } from '@tiptap/react';
 
+import { useLingui } from '@lingui/react/macro';
 import { useCallback, useEffect, useState } from 'react';
 
 // --- UI Primitives ---
@@ -109,6 +110,7 @@ const LinkMain: React.FC<LinkMainProps> = ({
   openLink,
   isActive
 }) => {
+  const { t } = useLingui();
   const isMobile = useIsBreakpoint();
 
   const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
@@ -140,13 +142,13 @@ const LinkMain: React.FC<LinkMainProps> = ({
             autoFocus
             onChange={(e) => setUrl(e.target.value)}
             onKeyDown={handleKeyDown}
-            placeholder='Paste a link...'
+            placeholder={t`Paste a link...`}
           />
 
           <ButtonGroup>
             <Button
               disabled={!url && !isActive}
-              title='Apply link'
+              title={t`Apply link`}
               type='button'
               variant='ghost'
               onClick={setLink}
@@ -161,7 +163,7 @@ const LinkMain: React.FC<LinkMainProps> = ({
             <ButtonGroup>
               <Button
                 disabled={!url && !isActive}
-                title='Open in new window'
+                title={t`Open in new window`}
                 type='button'
                 variant='ghost'
                 onClick={openLink}
@@ -173,7 +175,7 @@ const LinkMain: React.FC<LinkMainProps> = ({
             <ButtonGroup>
               <Button
                 disabled={!url && !isActive}
-                title='Remove link'
+                title={t`Remove link`}
                 type='button'
                 variant='ghost'
                 onClick={removeLink}

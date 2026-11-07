@@ -1,3 +1,4 @@
+import { t } from '@lingui/core/macro';
 import { useLingui } from '@lingui/react/macro';
 import { createFileRoute, Link } from '@tanstack/react-router';
 import { Suspense } from 'react';
@@ -58,9 +59,8 @@ export const Route = createFileRoute('/(main)/catalog/')({
 
     return {
       ...createSeoMeta({
-        title: 'Catalog',
-        description:
-          'snaber.uz catalog — building materials and tools: cement, bricks, steel, lumber, roofing, paints and equipment.',
+        title: t`Catalog`,
+        description: t`snaber.uz catalog — building materials and tools: cement, bricks, steel, lumber, roofing, paints and equipment.`,
         url: canonicalUrl,
         locale: getLocale(),
         image: siteUrl ? `${siteUrl}${DEFAULT_OG_IMAGE.url}` : DEFAULT_OG_IMAGE.url,
@@ -68,8 +68,8 @@ export const Route = createFileRoute('/(main)/catalog/')({
         imageHeight: DEFAULT_OG_IMAGE.height
       }),
       scripts: createBreadcrumbJsonLd([
-        { name: 'Home', url: siteUrl || '/' },
-        { name: 'Catalog', url: canonicalUrl || '/catalog' }
+        { name: t`Home`, url: siteUrl || '/' },
+        { name: t`Catalog`, url: canonicalUrl || '/catalog' }
       ]).scripts
     };
   }

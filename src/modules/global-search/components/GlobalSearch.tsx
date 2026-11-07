@@ -67,7 +67,7 @@ export const GlobalSearch = ({ className, ...props }: Props) => {
             isFocused && search && globalSearch ? 'visible opacity-100' : 'invisible opacity-0'
           )}
         >
-          <GlobalSearchSuggestionList result={globalSearch} />
+          <GlobalSearchSuggestionList result={globalSearch} search={search} />
         </div>
       </div>
       <Dialog onOpenChange={setOpenMobile} open={openMobile}>
@@ -96,6 +96,7 @@ export const GlobalSearch = ({ className, ...props }: Props) => {
           </DialogHeader>
           <GlobalSearchSuggestionList
             result={globalSearch}
+            search={search}
             onCloseDialog={() => setOpenMobile(false)}
           />
         </DialogContent>

@@ -1,3 +1,4 @@
+import { t } from '@lingui/core/macro';
 import { useLingui } from '@lingui/react/macro';
 import { useSuspenseQuery } from '@tanstack/react-query';
 import { createFileRoute, Link } from '@tanstack/react-router';
@@ -49,10 +50,10 @@ export const Route = createFileRoute('/(main)/about/')({
 
     return {
       ...createSeoMeta({
-        title: 'About Us',
+        title: t`About Us`,
         description:
           loaderData?.information ||
-          'Learn about B2B, our marketplace, and how we connect businesses with suppliers and products.',
+          t`Learn about B2B, our marketplace, and how we connect businesses with suppliers and products.`,
         url: canonicalUrl,
         locale: getLocale(),
         image: siteUrl ? `${siteUrl}${DEFAULT_OG_IMAGE.url}` : DEFAULT_OG_IMAGE.url,

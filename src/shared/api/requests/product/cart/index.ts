@@ -9,4 +9,9 @@ interface PostCartRequest {
 
 export const postCart = ({ data }: PostCartRequest) => api.post<CartItem>('/product/cart/', data);
 
-export const postCartCheckout = () => api.post<Order>('/product/cart/checkout/');
+interface PostCartCheckoutRequest {
+  data: { custom_items: CartCustomItem[] };
+}
+
+export const postCartCheckout = ({ data }: PostCartCheckoutRequest) =>
+  api.post<Order>('/product/cart/checkout/', data);

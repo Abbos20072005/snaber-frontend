@@ -1,3 +1,4 @@
+import { t } from '@lingui/core/macro';
 import { useLingui } from '@lingui/react/macro';
 import { useInfiniteQuery, useSuspenseQuery } from '@tanstack/react-query';
 import { createFileRoute, useParams, useSearch } from '@tanstack/react-router';
@@ -14,6 +15,7 @@ import {
   ProductList,
   ProductListSkeleton
 } from '@/modules/products';
+import { ProductsNotFound } from '@/modules/quick-order';
 import { extractSlugId, generateSlugId } from '@/shared/constants';
 import { getLocale } from '@/shared/i18n';
 import { createBreadcrumbJsonLd, createSeoMeta, DEFAULT_OG_IMAGE } from '@/shared/lib/seo';
@@ -83,11 +85,7 @@ const RouteComponent = () => {
                 </div>
               )}
 
-              {products?.length === 0 && !productsQuery.isPending && (
-                <div className='flex min-h-[60svh] flex-1 items-center justify-center'>
-                  <p className='text-2xl font-medium'>{t`Data not found`}</p>
-                </div>
-              )}
+              {products?.length === 0 && !productsQuery.isPending && <ProductsNotFound />}
             </div>
           </>
         )}
@@ -123,8 +121,8 @@ export const Route = createFileRoute('/(main)/catalog/$slug/')({
     if (!category) {
       return {
         ...createSeoMeta({
-          title: 'Catalog',
-          description: 'Browse building materials and tools categories on snaber.uz.',
+          title: t`Catalog`,
+          description: t`Browse building materials and tools categories on snaber.uz.`,
           locale: getLocale()
         })
       };
@@ -134,8 +132,8 @@ export const Route = createFileRoute('/(main)/catalog/$slug/')({
     const canonicalUrl = siteUrl ? `${siteUrl}${match.pathname}` : undefined;
 
     const breadcrumbItems = [
-      { name: 'Home', url: siteUrl || '/' },
-      { name: 'Catalog', url: siteUrl ? `${siteUrl}/catalog` : '/catalog' },
+      { name: t`Home`, url: siteUrl || '/' },
+      { name: t`Catalog`, url: siteUrl ? `${siteUrl}/catalog` : '/catalog' },
       ...(breadcrumb?.map((item, index) => ({
         name: item.name,
         url:
@@ -148,7 +146,7 @@ export const Route = createFileRoute('/(main)/catalog/$slug/')({
     return {
       ...createSeoMeta({
         title: categoryName,
-        description: `Browse ${categoryName} building materials and tools with filters on snaber.uz.`,
+        description: t`Browse ${categoryName} building materials and tools with filters on snaber.uz.`,
         image:
           category.image || (siteUrl ? `${siteUrl}${DEFAULT_OG_IMAGE.url}` : DEFAULT_OG_IMAGE.url),
         imageWidth: category.image ? undefined : DEFAULT_OG_IMAGE.width,

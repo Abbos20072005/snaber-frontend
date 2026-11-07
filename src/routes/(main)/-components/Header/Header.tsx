@@ -4,6 +4,7 @@ import { useLingui } from '@lingui/react/macro';
 import { Link } from '@tanstack/react-router';
 import {
   BriefcaseBusinessIcon,
+  ClipboardListIcon,
   HeartIcon,
   PackageIcon,
   ScaleIcon,
@@ -88,6 +89,11 @@ export const Header = () => {
                     label={t`Compare`}
                     icon={<ScaleIcon className='size-5' />}
                     to='/compare'
+                  />
+                  <HeaderLink
+                    label={t`Order by list`}
+                    icon={<ClipboardListIcon className='size-5' />}
+                    to='/quick-order'
                   />
                   <HeaderLink
                     badge={cartItemsLength}

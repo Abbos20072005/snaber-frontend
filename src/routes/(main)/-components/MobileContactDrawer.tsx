@@ -44,7 +44,9 @@ export const MobileContactDrawer = () => {
                     </span>
                     <span className='min-w-0'>
                       <span className='block text-start text-xs'>{t(item.label)}</span>
-                      <span className='block text-sm wrap-break-word'>{item.value}</span>
+                      <span className='block text-sm wrap-break-word'>
+                        {typeof item.value === 'string' ? item.value : t(item.value)}
+                      </span>
                     </span>
                   </a>
                 </li>

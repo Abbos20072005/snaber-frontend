@@ -69,13 +69,13 @@ export const PublicProductAside = ({ product }: Props) => {
             {product.discount_percent > 0 && (
               <div className='mb-1 flex items-center gap-2'>
                 <span className='text-muted-foreground text-sm line-through'>
-                  {formatPrice(product.price)} {CURRENCY_SYMBOL}
+                  {formatPrice(product.price)} {t(CURRENCY_SYMBOL)}
                 </span>
                 <Badge variant='destructive'>-{product.discount_percent}%</Badge>
               </div>
             )}
             <p className='text-3xl font-extrabold'>
-              {formatPrice(product.final_price)} {CURRENCY_SYMBOL}
+              {formatPrice(product.final_price)} {t(CURRENCY_SYMBOL)}
               {product.unit && (
                 <span className='text-muted-foreground ml-1.5 text-base font-normal'>
                   / {product.unit.unit}

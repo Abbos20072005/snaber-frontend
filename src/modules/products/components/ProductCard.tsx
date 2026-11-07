@@ -164,11 +164,11 @@ export const ProductCard = ({ product, className }: Props) => {
           <div>
             {product.discount_percent > 0 && (
               <p className='text-muted-foreground text-xs whitespace-nowrap line-through'>
-                {formatPrice(product.price)} {CURRENCY_SYMBOL}
+                {formatPrice(product.price)} {t(CURRENCY_SYMBOL)}
               </p>
             )}
             <p className='text-xl leading-tight font-extrabold whitespace-nowrap lg:text-2xl'>
-              {formatPrice(product.final_price)} {CURRENCY_SYMBOL}
+              {formatPrice(product.final_price)} {t(CURRENCY_SYMBOL)}
             </p>
             {product.unit && (
               <p className='text-muted-foreground mt-1 text-xs capitalize'>/ {product.unit.unit}</p>

@@ -34,7 +34,7 @@ export const OrderItem = ({ order }: Props) => {
           <CardDescription>{format(order.created_at, 'dd.MM.yyyy')}</CardDescription>
           <CardAction className='flex items-center gap-3'>
             <span>
-              {formatPrice(totalPrice)} {CURRENCY_SYMBOL}
+              {formatPrice(totalPrice)} {t(CURRENCY_SYMBOL)}
             </span>
             <ReorderButton orderId={order.id} />
           </CardAction>

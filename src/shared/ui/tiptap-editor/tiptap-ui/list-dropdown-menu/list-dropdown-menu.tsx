@@ -10,6 +10,7 @@ import type { ListType } from '@/shared/ui/tiptap-editor/tiptap-ui/list-button';
 import { useTiptapEditor } from '@/shared/hooks/use-tiptap-editor.ts';
 // --- Icons ---
 import { ChevronDownIcon } from '@/shared/ui/tiptap-editor/tiptap-icons/chevron-down-icon.tsx';
+import { useTiptapLabel } from '@/shared/ui/tiptap-editor/tiptap-labels';
 import { Button } from '@/shared/ui/tiptap-editor/tiptap-ui-primitive/button';
 import {
   DropdownMenu,
@@ -54,6 +55,7 @@ export const ListDropdownMenu = ({
   modal = true,
   ...props
 }: ListDropdownMenuProps) => {
+  const translate = useTiptapLabel();
   const { editor } = useTiptapEditor(providedEditor);
   const [isOpen, setIsOpen] = useState(false);
 
@@ -104,7 +106,7 @@ export const ListDropdownMenu = ({
               key={option.type}
               render={
                 <ListButton
-                  text={option.label}
+                  text={translate(option.label)}
                   type={option.type}
                   editor={editor}
                   showTooltip={false}

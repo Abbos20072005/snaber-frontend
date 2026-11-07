@@ -1,3 +1,4 @@
+import { t } from '@lingui/core/macro';
 import { useLingui } from '@lingui/react/macro';
 import { createFileRoute, Link } from '@tanstack/react-router';
 import { BanknoteIcon, PackageCheckIcon, TruckIcon } from 'lucide-react';
@@ -85,9 +86,8 @@ export const Route = createFileRoute('/(main)/delivery/')({
     const siteUrl = import.meta.env.VITE_SITE_URL || '';
 
     return createSeoMeta({
-      title: 'Delivery and payment',
-      description:
-        'Delivery and payment conditions on snaber.uz: delivery in Tashkent, pickup from the warehouse and payment in UZS.',
+      title: t`Delivery and payment`,
+      description: t`Delivery and payment conditions on snaber.uz: delivery in Tashkent, pickup from the warehouse and payment in UZS.`,
       url: siteUrl ? `${siteUrl}${match.pathname}` : undefined,
       locale: getLocale(),
       image: siteUrl ? `${siteUrl}${DEFAULT_OG_IMAGE.url}` : DEFAULT_OG_IMAGE.url,

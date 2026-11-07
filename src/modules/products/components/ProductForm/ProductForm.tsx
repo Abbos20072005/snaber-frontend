@@ -210,7 +210,7 @@ export const ProductForm = ({
                       <field.Input
                         isRequired={locale === 'uz'}
                         label={t`Name`}
-                        placeholder='Sement M400'
+                        placeholder={t`Cement M400`}
                       />
                     )}
                   </form.AppField>
@@ -249,7 +249,7 @@ export const ProductForm = ({
                               {(field) => <field.Input label={t`Name`} placeholder={t`Weight`} />}
                             </form.AppField>
                             <form.AppField name={`characteristics[${index}].value_${locale}`}>
-                              {(field) => <field.Input label={t`Value`} placeholder='50 kg' />}
+                              {(field) => <field.Input label={t`Value`} placeholder={t`50 kg`} />}
                             </form.AppField>
                             <Button
                               aria-label={t`Delete`}

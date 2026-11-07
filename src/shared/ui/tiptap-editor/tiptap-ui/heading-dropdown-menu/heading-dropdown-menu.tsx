@@ -8,6 +8,7 @@ import type { UseHeadingDropdownMenuConfig } from '@/shared/ui/tiptap-editor/tip
 import { useTiptapEditor } from '@/shared/hooks/use-tiptap-editor.ts';
 // --- Icons ---
 import { ChevronDownIcon } from '@/shared/ui/tiptap-editor/tiptap-icons/chevron-down-icon.tsx';
+import { useTiptapLabel } from '@/shared/ui/tiptap-editor/tiptap-labels';
 import { Button } from '@/shared/ui/tiptap-editor/tiptap-ui-primitive/button';
 import {
   DropdownMenu,
@@ -47,6 +48,7 @@ export const HeadingDropdownMenu = ({
   modal = true,
   ...buttonProps
 }: HeadingDropdownMenuProps & { ref?: React.RefObject<HTMLButtonElement | null> }) => {
+  const translate = useTiptapLabel();
   const { editor } = useTiptapEditor(providedEditor);
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const { isVisible, isActive, canToggle, Icon } = useHeadingDropdownMenu({
@@ -104,7 +106,7 @@ export const HeadingDropdownMenu = ({
               render={
                 <HeadingButton
                   level={level}
-                  text={`Heading ${level}`}
+                  text={translate(`Heading ${level}`)}
                   editor={editor}
                   showTooltip={false}
                 />

@@ -16,6 +16,7 @@ import { Route as mainIndexRouteImport } from './routes/(main)/index'
 import { Route as mainProfileRouteRouteImport } from './routes/(main)/profile/route'
 import { Route as AdminUsersIndexRouteImport } from './routes/admin/users/index'
 import { Route as AdminUnitOfMeasureIndexRouteImport } from './routes/admin/unit-of-measure/index'
+import { Route as AdminRequestsIndexRouteImport } from './routes/admin/requests/index'
 import { Route as AdminProfileIndexRouteImport } from './routes/admin/profile/index'
 import { Route as AdminProductsIndexRouteImport } from './routes/admin/products/index'
 import { Route as AdminOrdersIndexRouteImport } from './routes/admin/orders/index'
@@ -26,6 +27,7 @@ import { Route as AdminCategoryIndexRouteImport } from './routes/admin/category/
 import { Route as AdminAttributesIndexRouteImport } from './routes/admin/attributes/index'
 import { Route as AdminAttributeValuesIndexRouteImport } from './routes/admin/attribute-values/index'
 import { Route as mainSupportIndexRouteImport } from './routes/(main)/support/index'
+import { Route as mainQuickOrderIndexRouteImport } from './routes/(main)/quick-order/index'
 import { Route as mainProfileIndexRouteImport } from './routes/(main)/profile/index'
 import { Route as mainProductsIndexRouteImport } from './routes/(main)/products/index'
 import { Route as mainLegalIndexRouteImport } from './routes/(main)/legal/index'
@@ -36,9 +38,11 @@ import { Route as mainCompaniesIndexRouteImport } from './routes/(main)/companie
 import { Route as mainCatalogIndexRouteImport } from './routes/(main)/catalog/index'
 import { Route as mainCartIndexRouteImport } from './routes/(main)/cart/index'
 import { Route as mainAboutIndexRouteImport } from './routes/(main)/about/index'
+import { Route as AdminRequestsWantedRouteImport } from './routes/admin/requests/wanted'
 import { Route as AdminProductsCreateRouteImport } from './routes/admin/products/create'
 import { Route as AdminCategoryIdRouteImport } from './routes/admin/category/$id'
 import { Route as mainProfileSettingsRouteImport } from './routes/(main)/profile/settings'
+import { Route as mainProfileRequestsRouteImport } from './routes/(main)/profile/requests'
 import { Route as mainProfileDashboardRouteImport } from './routes/(main)/profile/dashboard'
 import { Route as mainCompaniesSlugRouteImport } from './routes/(main)/companies/$slug'
 import { Route as AdminUsersIdIndexRouteImport } from './routes/admin/users/$id/index'
@@ -83,6 +87,11 @@ const AdminUsersIndexRoute = AdminUsersIndexRouteImport.update({
 const AdminUnitOfMeasureIndexRoute = AdminUnitOfMeasureIndexRouteImport.update({
   id: '/unit-of-measure/',
   path: '/unit-of-measure/',
+  getParentRoute: () => AdminRouteRoute,
+} as any)
+const AdminRequestsIndexRoute = AdminRequestsIndexRouteImport.update({
+  id: '/requests/',
+  path: '/requests/',
   getParentRoute: () => AdminRouteRoute,
 } as any)
 const AdminProfileIndexRoute = AdminProfileIndexRouteImport.update({
@@ -136,6 +145,11 @@ const mainSupportIndexRoute = mainSupportIndexRouteImport.update({
   path: '/support/',
   getParentRoute: () => mainRouteRoute,
 } as any)
+const mainQuickOrderIndexRoute = mainQuickOrderIndexRouteImport.update({
+  id: '/quick-order/',
+  path: '/quick-order/',
+  getParentRoute: () => mainRouteRoute,
+} as any)
 const mainProfileIndexRoute = mainProfileIndexRouteImport.update({
   id: '/',
   path: '/',
@@ -186,6 +200,11 @@ const mainAboutIndexRoute = mainAboutIndexRouteImport.update({
   path: '/about/',
   getParentRoute: () => mainRouteRoute,
 } as any)
+const AdminRequestsWantedRoute = AdminRequestsWantedRouteImport.update({
+  id: '/requests/wanted',
+  path: '/requests/wanted',
+  getParentRoute: () => AdminRouteRoute,
+} as any)
 const AdminProductsCreateRoute = AdminProductsCreateRouteImport.update({
   id: '/products/create',
   path: '/products/create',
@@ -199,6 +218,11 @@ const AdminCategoryIdRoute = AdminCategoryIdRouteImport.update({
 const mainProfileSettingsRoute = mainProfileSettingsRouteImport.update({
   id: '/settings',
   path: '/settings',
+  getParentRoute: () => mainProfileRouteRoute,
+} as any)
+const mainProfileRequestsRoute = mainProfileRequestsRouteImport.update({
+  id: '/requests',
+  path: '/requests',
   getParentRoute: () => mainProfileRouteRoute,
 } as any)
 const mainProfileDashboardRoute = mainProfileDashboardRouteImport.update({
@@ -264,9 +288,11 @@ export interface FileRoutesByFullPath {
   '/admin/': typeof AdminIndexRoute
   '/companies/$slug': typeof mainCompaniesSlugRoute
   '/profile/dashboard': typeof mainProfileDashboardRoute
+  '/profile/requests': typeof mainProfileRequestsRoute
   '/profile/settings': typeof mainProfileSettingsRoute
   '/admin/category/$id': typeof AdminCategoryIdRoute
   '/admin/products/create': typeof AdminProductsCreateRoute
+  '/admin/requests/wanted': typeof AdminRequestsWantedRoute
   '/about/': typeof mainAboutIndexRoute
   '/cart/': typeof mainCartIndexRoute
   '/catalog/': typeof mainCatalogIndexRoute
@@ -277,6 +303,7 @@ export interface FileRoutesByFullPath {
   '/legal/': typeof mainLegalIndexRoute
   '/products/': typeof mainProductsIndexRoute
   '/profile/': typeof mainProfileIndexRoute
+  '/quick-order/': typeof mainQuickOrderIndexRoute
   '/support/': typeof mainSupportIndexRoute
   '/admin/attribute-values/': typeof AdminAttributeValuesIndexRoute
   '/admin/attributes/': typeof AdminAttributesIndexRoute
@@ -287,6 +314,7 @@ export interface FileRoutesByFullPath {
   '/admin/orders/': typeof AdminOrdersIndexRoute
   '/admin/products/': typeof AdminProductsIndexRoute
   '/admin/profile/': typeof AdminProfileIndexRoute
+  '/admin/requests/': typeof AdminRequestsIndexRoute
   '/admin/unit-of-measure/': typeof AdminUnitOfMeasureIndexRoute
   '/admin/users/': typeof AdminUsersIndexRoute
   '/profile/orders/$id': typeof mainProfileOrdersIdRoute
@@ -304,9 +332,11 @@ export interface FileRoutesByTo {
   '/admin': typeof AdminIndexRoute
   '/companies/$slug': typeof mainCompaniesSlugRoute
   '/profile/dashboard': typeof mainProfileDashboardRoute
+  '/profile/requests': typeof mainProfileRequestsRoute
   '/profile/settings': typeof mainProfileSettingsRoute
   '/admin/category/$id': typeof AdminCategoryIdRoute
   '/admin/products/create': typeof AdminProductsCreateRoute
+  '/admin/requests/wanted': typeof AdminRequestsWantedRoute
   '/about': typeof mainAboutIndexRoute
   '/cart': typeof mainCartIndexRoute
   '/catalog': typeof mainCatalogIndexRoute
@@ -317,6 +347,7 @@ export interface FileRoutesByTo {
   '/legal': typeof mainLegalIndexRoute
   '/products': typeof mainProductsIndexRoute
   '/profile': typeof mainProfileIndexRoute
+  '/quick-order': typeof mainQuickOrderIndexRoute
   '/support': typeof mainSupportIndexRoute
   '/admin/attribute-values': typeof AdminAttributeValuesIndexRoute
   '/admin/attributes': typeof AdminAttributesIndexRoute
@@ -327,6 +358,7 @@ export interface FileRoutesByTo {
   '/admin/orders': typeof AdminOrdersIndexRoute
   '/admin/products': typeof AdminProductsIndexRoute
   '/admin/profile': typeof AdminProfileIndexRoute
+  '/admin/requests': typeof AdminRequestsIndexRoute
   '/admin/unit-of-measure': typeof AdminUnitOfMeasureIndexRoute
   '/admin/users': typeof AdminUsersIndexRoute
   '/profile/orders/$id': typeof mainProfileOrdersIdRoute
@@ -348,9 +380,11 @@ export interface FileRoutesById {
   '/admin/': typeof AdminIndexRoute
   '/(main)/companies/$slug': typeof mainCompaniesSlugRoute
   '/(main)/profile/dashboard': typeof mainProfileDashboardRoute
+  '/(main)/profile/requests': typeof mainProfileRequestsRoute
   '/(main)/profile/settings': typeof mainProfileSettingsRoute
   '/admin/category/$id': typeof AdminCategoryIdRoute
   '/admin/products/create': typeof AdminProductsCreateRoute
+  '/admin/requests/wanted': typeof AdminRequestsWantedRoute
   '/(main)/about/': typeof mainAboutIndexRoute
   '/(main)/cart/': typeof mainCartIndexRoute
   '/(main)/catalog/': typeof mainCatalogIndexRoute
@@ -361,6 +395,7 @@ export interface FileRoutesById {
   '/(main)/legal/': typeof mainLegalIndexRoute
   '/(main)/products/': typeof mainProductsIndexRoute
   '/(main)/profile/': typeof mainProfileIndexRoute
+  '/(main)/quick-order/': typeof mainQuickOrderIndexRoute
   '/(main)/support/': typeof mainSupportIndexRoute
   '/admin/attribute-values/': typeof AdminAttributeValuesIndexRoute
   '/admin/attributes/': typeof AdminAttributesIndexRoute
@@ -371,6 +406,7 @@ export interface FileRoutesById {
   '/admin/orders/': typeof AdminOrdersIndexRoute
   '/admin/products/': typeof AdminProductsIndexRoute
   '/admin/profile/': typeof AdminProfileIndexRoute
+  '/admin/requests/': typeof AdminRequestsIndexRoute
   '/admin/unit-of-measure/': typeof AdminUnitOfMeasureIndexRoute
   '/admin/users/': typeof AdminUsersIndexRoute
   '/(main)/profile/orders/$id': typeof mainProfileOrdersIdRoute
@@ -392,9 +428,11 @@ export interface FileRouteTypes {
     | '/admin/'
     | '/companies/$slug'
     | '/profile/dashboard'
+    | '/profile/requests'
     | '/profile/settings'
     | '/admin/category/$id'
     | '/admin/products/create'
+    | '/admin/requests/wanted'
     | '/about/'
     | '/cart/'
     | '/catalog/'
@@ -405,6 +443,7 @@ export interface FileRouteTypes {
     | '/legal/'
     | '/products/'
     | '/profile/'
+    | '/quick-order/'
     | '/support/'
     | '/admin/attribute-values/'
     | '/admin/attributes/'
@@ -415,6 +454,7 @@ export interface FileRouteTypes {
     | '/admin/orders/'
     | '/admin/products/'
     | '/admin/profile/'
+    | '/admin/requests/'
     | '/admin/unit-of-measure/'
     | '/admin/users/'
     | '/profile/orders/$id'
@@ -432,9 +472,11 @@ export interface FileRouteTypes {
     | '/admin'
     | '/companies/$slug'
     | '/profile/dashboard'
+    | '/profile/requests'
     | '/profile/settings'
     | '/admin/category/$id'
     | '/admin/products/create'
+    | '/admin/requests/wanted'
     | '/about'
     | '/cart'
     | '/catalog'
@@ -445,6 +487,7 @@ export interface FileRouteTypes {
     | '/legal'
     | '/products'
     | '/profile'
+    | '/quick-order'
     | '/support'
     | '/admin/attribute-values'
     | '/admin/attributes'
@@ -455,6 +498,7 @@ export interface FileRouteTypes {
     | '/admin/orders'
     | '/admin/products'
     | '/admin/profile'
+    | '/admin/requests'
     | '/admin/unit-of-measure'
     | '/admin/users'
     | '/profile/orders/$id'
@@ -475,9 +519,11 @@ export interface FileRouteTypes {
     | '/admin/'
     | '/(main)/companies/$slug'
     | '/(main)/profile/dashboard'
+    | '/(main)/profile/requests'
     | '/(main)/profile/settings'
     | '/admin/category/$id'
     | '/admin/products/create'
+    | '/admin/requests/wanted'
     | '/(main)/about/'
     | '/(main)/cart/'
     | '/(main)/catalog/'
@@ -488,6 +534,7 @@ export interface FileRouteTypes {
     | '/(main)/legal/'
     | '/(main)/products/'
     | '/(main)/profile/'
+    | '/(main)/quick-order/'
     | '/(main)/support/'
     | '/admin/attribute-values/'
     | '/admin/attributes/'
@@ -498,6 +545,7 @@ export interface FileRouteTypes {
     | '/admin/orders/'
     | '/admin/products/'
     | '/admin/profile/'
+    | '/admin/requests/'
     | '/admin/unit-of-measure/'
     | '/admin/users/'
     | '/(main)/profile/orders/$id'
@@ -565,6 +613,13 @@ declare module '@tanstack/react-router' {
       path: '/unit-of-measure'
       fullPath: '/admin/unit-of-measure/'
       preLoaderRoute: typeof AdminUnitOfMeasureIndexRouteImport
+      parentRoute: typeof AdminRouteRoute
+    }
+    '/admin/requests/': {
+      id: '/admin/requests/'
+      path: '/requests'
+      fullPath: '/admin/requests/'
+      preLoaderRoute: typeof AdminRequestsIndexRouteImport
       parentRoute: typeof AdminRouteRoute
     }
     '/admin/profile/': {
@@ -637,6 +692,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof mainSupportIndexRouteImport
       parentRoute: typeof mainRouteRoute
     }
+    '/(main)/quick-order/': {
+      id: '/(main)/quick-order/'
+      path: '/quick-order'
+      fullPath: '/quick-order/'
+      preLoaderRoute: typeof mainQuickOrderIndexRouteImport
+      parentRoute: typeof mainRouteRoute
+    }
     '/(main)/profile/': {
       id: '/(main)/profile/'
       path: '/'
@@ -707,6 +769,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof mainAboutIndexRouteImport
       parentRoute: typeof mainRouteRoute
     }
+    '/admin/requests/wanted': {
+      id: '/admin/requests/wanted'
+      path: '/requests/wanted'
+      fullPath: '/admin/requests/wanted'
+      preLoaderRoute: typeof AdminRequestsWantedRouteImport
+      parentRoute: typeof AdminRouteRoute
+    }
     '/admin/products/create': {
       id: '/admin/products/create'
       path: '/products/create'
@@ -726,6 +795,13 @@ declare module '@tanstack/react-router' {
       path: '/settings'
       fullPath: '/profile/settings'
       preLoaderRoute: typeof mainProfileSettingsRouteImport
+      parentRoute: typeof mainProfileRouteRoute
+    }
+    '/(main)/profile/requests': {
+      id: '/(main)/profile/requests'
+      path: '/requests'
+      fullPath: '/profile/requests'
+      preLoaderRoute: typeof mainProfileRequestsRouteImport
       parentRoute: typeof mainProfileRouteRoute
     }
     '/(main)/profile/dashboard': {
@@ -810,6 +886,7 @@ declare module '@tanstack/react-router' {
 
 interface mainProfileRouteRouteChildren {
   mainProfileDashboardRoute: typeof mainProfileDashboardRoute
+  mainProfileRequestsRoute: typeof mainProfileRequestsRoute
   mainProfileSettingsRoute: typeof mainProfileSettingsRoute
   mainProfileIndexRoute: typeof mainProfileIndexRoute
   mainProfileOrdersIdRoute: typeof mainProfileOrdersIdRoute
@@ -818,6 +895,7 @@ interface mainProfileRouteRouteChildren {
 
 const mainProfileRouteRouteChildren: mainProfileRouteRouteChildren = {
   mainProfileDashboardRoute: mainProfileDashboardRoute,
+  mainProfileRequestsRoute: mainProfileRequestsRoute,
   mainProfileSettingsRoute: mainProfileSettingsRoute,
   mainProfileIndexRoute: mainProfileIndexRoute,
   mainProfileOrdersIdRoute: mainProfileOrdersIdRoute,
@@ -840,6 +918,7 @@ interface mainRouteRouteChildren {
   mainFavoritesIndexRoute: typeof mainFavoritesIndexRoute
   mainLegalIndexRoute: typeof mainLegalIndexRoute
   mainProductsIndexRoute: typeof mainProductsIndexRoute
+  mainQuickOrderIndexRoute: typeof mainQuickOrderIndexRoute
   mainSupportIndexRoute: typeof mainSupportIndexRoute
   mainCatalogSlugIndexRoute: typeof mainCatalogSlugIndexRoute
   mainProductSlugIndexRoute: typeof mainProductSlugIndexRoute
@@ -858,6 +937,7 @@ const mainRouteRouteChildren: mainRouteRouteChildren = {
   mainFavoritesIndexRoute: mainFavoritesIndexRoute,
   mainLegalIndexRoute: mainLegalIndexRoute,
   mainProductsIndexRoute: mainProductsIndexRoute,
+  mainQuickOrderIndexRoute: mainQuickOrderIndexRoute,
   mainSupportIndexRoute: mainSupportIndexRoute,
   mainCatalogSlugIndexRoute: mainCatalogSlugIndexRoute,
   mainProductSlugIndexRoute: mainProductSlugIndexRoute,
@@ -871,6 +951,7 @@ interface AdminRouteRouteChildren {
   AdminIndexRoute: typeof AdminIndexRoute
   AdminCategoryIdRoute: typeof AdminCategoryIdRoute
   AdminProductsCreateRoute: typeof AdminProductsCreateRoute
+  AdminRequestsWantedRoute: typeof AdminRequestsWantedRoute
   AdminAttributeValuesIndexRoute: typeof AdminAttributeValuesIndexRoute
   AdminAttributesIndexRoute: typeof AdminAttributesIndexRoute
   AdminCategoryIndexRoute: typeof AdminCategoryIndexRoute
@@ -880,6 +961,7 @@ interface AdminRouteRouteChildren {
   AdminOrdersIndexRoute: typeof AdminOrdersIndexRoute
   AdminProductsIndexRoute: typeof AdminProductsIndexRoute
   AdminProfileIndexRoute: typeof AdminProfileIndexRoute
+  AdminRequestsIndexRoute: typeof AdminRequestsIndexRoute
   AdminUnitOfMeasureIndexRoute: typeof AdminUnitOfMeasureIndexRoute
   AdminUsersIndexRoute: typeof AdminUsersIndexRoute
   AdminContentsAboutIndexRoute: typeof AdminContentsAboutIndexRoute
@@ -893,6 +975,7 @@ const AdminRouteRouteChildren: AdminRouteRouteChildren = {
   AdminIndexRoute: AdminIndexRoute,
   AdminCategoryIdRoute: AdminCategoryIdRoute,
   AdminProductsCreateRoute: AdminProductsCreateRoute,
+  AdminRequestsWantedRoute: AdminRequestsWantedRoute,
   AdminAttributeValuesIndexRoute: AdminAttributeValuesIndexRoute,
   AdminAttributesIndexRoute: AdminAttributesIndexRoute,
   AdminCategoryIndexRoute: AdminCategoryIndexRoute,
@@ -902,6 +985,7 @@ const AdminRouteRouteChildren: AdminRouteRouteChildren = {
   AdminOrdersIndexRoute: AdminOrdersIndexRoute,
   AdminProductsIndexRoute: AdminProductsIndexRoute,
   AdminProfileIndexRoute: AdminProfileIndexRoute,
+  AdminRequestsIndexRoute: AdminRequestsIndexRoute,
   AdminUnitOfMeasureIndexRoute: AdminUnitOfMeasureIndexRoute,
   AdminUsersIndexRoute: AdminUsersIndexRoute,
   AdminContentsAboutIndexRoute: AdminContentsAboutIndexRoute,

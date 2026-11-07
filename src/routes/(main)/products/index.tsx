@@ -1,3 +1,4 @@
+import { t } from '@lingui/core/macro';
 import { useLingui } from '@lingui/react/macro';
 import { useInfiniteQuery } from '@tanstack/react-query';
 import { createFileRoute, useSearch } from '@tanstack/react-router';
@@ -9,6 +10,7 @@ import {
   ProductList,
   ProductListSkeleton
 } from '@/modules/products';
+import { ProductsNotFound } from '@/modules/quick-order';
 import { getLocale } from '@/shared/i18n';
 import { createSeoMeta, DEFAULT_OG_IMAGE } from '@/shared/lib/seo';
 import { Button } from '@/shared/ui/button';
@@ -63,9 +65,7 @@ const RouteComponent = () => {
         )}
 
         {products?.length === 0 && !getAllProductsQuery.isPending && (
-          <div className='flex min-h-[60svh] flex-1 items-center justify-center'>
-            <p className='text-2xl font-medium'>{t`Data not found`}</p>
-          </div>
+          <ProductsNotFound search={search} />
         )}
       </div>
     </SectionWrapper>
@@ -84,10 +84,10 @@ export const Route = createFileRoute('/(main)/products/')({
     const search = (match.search as { search?: string })?.search;
 
     return createSeoMeta({
-      title: search ? `Search results for "${search}"` : 'Search products',
+      title: search ? t`Search results for "${search}"` : t`Search products`,
       description: search
-        ? `Search results for "${search}" — building materials and tools on snaber.uz.`
-        : 'Search building materials and tools on snaber.uz — filter by category and find what you need.',
+        ? t`Search results for "${search}" — building materials and tools on snaber.uz.`
+        : t`Search building materials and tools on snaber.uz — filter by category and find what you need.`,
       locale: getLocale(),
       image: siteUrl ? `${siteUrl}${DEFAULT_OG_IMAGE.url}` : DEFAULT_OG_IMAGE.url,
       imageWidth: DEFAULT_OG_IMAGE.width,

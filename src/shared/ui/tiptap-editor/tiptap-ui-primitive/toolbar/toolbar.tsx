@@ -3,6 +3,7 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import { useComposedRef } from '@/shared/hooks/use-composed-ref.ts';
 import { useMenuNavigation } from '@/shared/hooks/use-menu-navigation.ts';
 import { cn } from '@/shared/lib/tiptap-utils.ts';
+import { useTiptapLabel } from '@/shared/ui/tiptap-editor/tiptap-labels';
 import { Separator } from '@/shared/ui/tiptap-editor/tiptap-ui-primitive/separator';
 
 import '@/shared/ui/tiptap-editor/tiptap-ui-primitive/toolbar/toolbar.scss';
@@ -83,6 +84,7 @@ export const Toolbar = ({
   variant = 'fixed',
   ...props
 }: ToolbarProps & { ref?: React.RefObject<HTMLDivElement | null> }) => {
+  const translate = useTiptapLabel();
   const toolbarRef = useRef<HTMLDivElement>(null);
   const composedRef = useComposedRef(toolbarRef, ref);
   useToolbarNavigation(toolbarRef);
@@ -90,7 +92,7 @@ export const Toolbar = ({
   return (
     <div
       ref={composedRef}
-      aria-label='toolbar'
+      aria-label={translate('Toolbar')}
       className={cn('tiptap-toolbar', className)}
       data-variant={variant}
       role='toolbar'

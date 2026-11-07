@@ -1,5 +1,6 @@
 import { msg } from '@lingui/core/macro';
 import {
+  ClipboardListIcon,
   GalleryVerticalEndIcon,
   LayoutDashboardIcon,
   PackageCheckIcon,
@@ -42,6 +43,11 @@ export const useSidebarData = () => {
             title: msg`Orders`,
             url: '/admin/orders',
             icon: PackageCheckIcon
+          },
+          {
+            icon: ClipboardListIcon,
+            title: msg`Requests`,
+            url: '/admin/requests'
           },
           {
             icon: ShelvingUnitIcon,

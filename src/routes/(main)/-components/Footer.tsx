@@ -71,7 +71,7 @@ export const Footer = () => {
                       <span className='min-w-0'>
                         <span className='block text-xs text-white/48'>{t(item.label)}</span>
                         <span className='block wrap-break-word text-white/82 group-hover:text-white'>
-                          {item.value}
+                          {typeof item.value === 'string' ? item.value : t(item.value)}
                         </span>
                       </span>
                     </a>

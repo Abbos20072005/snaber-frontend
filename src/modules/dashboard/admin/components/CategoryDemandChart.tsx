@@ -56,9 +56,9 @@ export const CategoryDemandChart = () => {
   const totalOrders = chartData.reduce((total, category) => total + category.value, 0);
 
   const categoryConfig = {
-    category1: { label: 'Category 1', color: 'var(--chart-1)' },
-    category2: { label: 'Category 2', color: 'var(--chart-2)' },
-    category3: { label: 'Category 3', color: 'var(--chart-3)' },
+    category1: { label: t`Category 1`, color: 'var(--chart-1)' },
+    category2: { label: t`Category 2`, color: 'var(--chart-2)' },
+    category3: { label: t`Category 3`, color: 'var(--chart-3)' },
     others: { label: t`Others`, color: 'var(--chart-4)' }
   } satisfies ChartConfig;
 

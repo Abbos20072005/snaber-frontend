@@ -7,8 +7,10 @@ import * as React from 'react';
 import { cn } from '@/shared/lib/utils';
 
 const Breadcrumb = ({ className, ...props }: React.ComponentProps<'nav'>) => {
+  const { t } = useLingui();
+
   return (
-    <nav aria-label='breadcrumb' className={cn(className)} data-slot='breadcrumb' {...props} />
+    <nav aria-label={t`Breadcrumb`} className={cn(className)} data-slot='breadcrumb' {...props} />
   );
 };
 

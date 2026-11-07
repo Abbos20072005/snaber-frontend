@@ -18,7 +18,7 @@ export const GlobalSearchInput = ({ search, setSearch, handleSubmit, setIsFocuse
     <form className='flex-1' onSubmit={handleSubmit}>
       <div className='flex h-10 items-center gap-1 rounded-xl bg-yellow-400 p-0.5'>
         <Input
-          aria-label='Search'
+          aria-label={t`Search`}
           className='bg-background h-full flex-1 rounded-lg border-0 px-3.5 text-sm shadow-none focus-visible:ring-2'
           type='search'
           value={search}

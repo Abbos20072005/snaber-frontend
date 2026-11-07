@@ -1,5 +1,6 @@
 'use client';
 
+import { useLingui } from '@lingui/react/macro';
 import { Highlight } from '@tiptap/extension-highlight';
 import { Image } from '@tiptap/extension-image';
 import { TaskItem, TaskList } from '@tiptap/extension-list';
@@ -47,6 +48,8 @@ import '@/styles/_variables.scss';
 import './simple-editor.css';
 
 const MainToolbarContent = () => {
+  const { t } = useLingui();
+
   return (
     <>
       <Spacer />
@@ -97,7 +100,7 @@ const MainToolbarContent = () => {
       <ToolbarSeparator />
 
       <ToolbarGroup>
-        <ImageUploadButton text='Add' />
+        <ImageUploadButton text={t`Add`} />
       </ToolbarGroup>
 
       <Spacer />
@@ -111,6 +114,7 @@ interface Props {
 }
 
 export const SimpleEditor = ({ content, onChange }: Props) => {
+  const { t } = useLingui();
   const editor = useEditor({
     immediatelyRender: false,
     editorProps: {
@@ -118,7 +122,7 @@ export const SimpleEditor = ({ content, onChange }: Props) => {
         autocomplete: 'off',
         autocorrect: 'off',
         autocapitalize: 'off',
-        'aria-label': 'Main content area, start typing to enter text.',
+        'aria-label': t`Main content area, start typing to enter text.`,
         class: 'simple-editor'
       }
     },

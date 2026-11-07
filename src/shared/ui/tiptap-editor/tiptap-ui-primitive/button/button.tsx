@@ -2,6 +2,7 @@ import { Fragment, useMemo } from 'react';
 
 // --- Lib ---
 import { cn, parseShortcutKeys } from '@/shared/lib/tiptap-utils.ts';
+import { useTiptapLabel } from '@/shared/ui/tiptap-editor/tiptap-labels';
 // --- Tiptap UI Primitive ---
 import {
   Tooltip,
@@ -49,7 +50,9 @@ export const Button = ({
   size,
   ...props
 }: ButtonProps & { ref?: React.RefObject<HTMLButtonElement | null> }) => {
+  const translate = useTiptapLabel();
   const shortcuts = useMemo<string[]>(() => parseShortcutKeys({ shortcutKeys }), [shortcutKeys]);
+  if (typeof props['aria-label'] === 'string') props['aria-label'] = translate(props['aria-label']);
 
   if (!tooltip || !showTooltip) {
     return (
@@ -79,7 +82,7 @@ export const Button = ({
         {children}
       </TooltipTrigger>
       <TooltipContent>
-        {tooltip}
+        {translate(tooltip)}
         <ShortcutDisplay shortcuts={shortcuts} />
       </TooltipContent>
     </Tooltip>

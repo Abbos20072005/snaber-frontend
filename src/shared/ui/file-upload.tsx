@@ -2,6 +2,7 @@
 
 import { useDirection } from '@base-ui/react/direction-provider';
 import { mergeProps } from '@base-ui/react/merge-props';
+import { useLingui } from '@lingui/react/macro';
 import {
   FileArchiveIcon,
   FileAudioIcon,
@@ -216,6 +217,7 @@ interface FileUploadProps extends Omit<React.ComponentProps<'div'>, 'defaultValu
 }
 
 const FileUpload = (props: FileUploadProps) => {
+  const { t } = useLingui();
   const {
     value,
     defaultValue,
@@ -461,7 +463,7 @@ const FileUpload = (props: FileUploadProps) => {
               store.dispatch({
                 type: 'SET_ERROR',
                 file,
-                error: error.message ?? 'Upload failed'
+                error: error.message ?? t`Upload failed`
               });
             }
           });
@@ -471,7 +473,7 @@ const FileUpload = (props: FileUploadProps) => {
           }
         }
       } catch (error) {
-        const errorMessage = error instanceof Error ? error.message : 'Upload failed';
+        const errorMessage = error instanceof Error ? error.message : t`Upload failed`;
         for (const file of files) {
           store.dispatch({
             type: 'SET_ERROR',
@@ -481,7 +483,7 @@ const FileUpload = (props: FileUploadProps) => {
         }
       }
     },
-    [store, propsRef, onProgress]
+    [store, propsRef, onProgress, t]
   );
 
   const onFilesChange = React.useCallback(
@@ -502,7 +504,7 @@ const FileUpload = (props: FileUploadProps) => {
           filesToProcess = filesToProcess.slice(0, remainingSlotCount);
 
           for (const file of rejectedFiles) {
-            let rejectionMessage = `Maximum ${maxFiles} files allowed`;
+            let rejectionMessage = t`Maximum ${maxFiles} files allowed`;
 
             if (propsRef.current.onFileValidate) {
               const validationMessage = propsRef.current.onFileValidate(file);
@@ -546,7 +548,7 @@ const FileUpload = (props: FileUploadProps) => {
                 (type.includes('/*') && fileType.startsWith(type.replace('/*', '/')))
             )
           ) {
-            rejectionMessage = 'File type not accepted';
+            rejectionMessage = t`File type not accepted`;
             propsRef.current.onFileReject?.(file, rejectionMessage);
             rejected = true;
             invalid = true;
@@ -554,7 +556,7 @@ const FileUpload = (props: FileUploadProps) => {
         }
 
         if (maxSize && file.size > maxSize) {
-          rejectionMessage = 'File too large';
+          rejectionMessage = t`File too large`;
           propsRef.current.onFileReject?.(file, rejectionMessage);
           rejected = true;
           invalid = true;
@@ -597,7 +599,7 @@ const FileUpload = (props: FileUploadProps) => {
         }
       }
     },
-    [store, isControlled, propsRef, onFilesUpload, maxFiles, acceptTypes, maxSize, disabled]
+    [store, isControlled, propsRef, onFilesUpload, maxFiles, acceptTypes, maxSize, disabled, t]
   );
 
   const onInputChange = React.useCallback(
@@ -652,7 +654,7 @@ const FileUpload = (props: FileUploadProps) => {
             onChange={onInputChange}
           />
           <div className='sr-only' id={labelId}>
-            {label ?? 'File upload'}
+            {label ?? t`File upload`}
           </div>
         </RootPrimitive>
       </FileUploadContext>
@@ -962,6 +964,7 @@ interface FileUploadItemProps extends React.ComponentProps<'div'> {
 }
 
 const FileUploadItem = (props: FileUploadItemProps) => {
+  const { t } = useLingui();
   const { value, asChild, className, ...itemProps } = props;
 
   const id = React.useId();
@@ -993,12 +996,12 @@ const FileUploadItem = (props: FileUploadItemProps) => {
   if (!fileState) return null;
 
   const statusText = fileState.error
-    ? `Error: ${fileState.error}`
+    ? t`Error: ${fileState.error}`
     : fileState.status === 'uploading'
-      ? `Uploading: ${fileState.progress}% complete`
+      ? t`Uploading: ${fileState.progress}% complete`
       : fileState.status === 'success'
-        ? 'Upload complete'
-        : 'Ready to upload';
+        ? t`Upload complete`
+        : t`Ready to upload`;
 
   const ItemPrimitive = asChild ? Slot : 'div';
 

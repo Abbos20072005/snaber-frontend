@@ -6,9 +6,11 @@ import { cn } from '@/shared/lib/utils';
 import { Button } from '@/shared/ui/button';
 
 const Pagination = ({ className, ...props }: React.ComponentProps<'nav'>) => {
+  const { t } = useLingui();
+
   return (
     <nav
-      aria-label='pagination'
+      aria-label={t`Pagination`}
       className={cn('mx-auto flex w-full justify-center', className)}
       data-slot='pagination'
       role='navigation'

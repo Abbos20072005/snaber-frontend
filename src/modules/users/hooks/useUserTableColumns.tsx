@@ -159,7 +159,7 @@ export const useUserTableColumns = (): ColumnDef<UserListItem>[] => {
     {
       accessorKey: 'total_spent',
       header: t`Total spent`,
-      cell: ({ row }) => `${formatPrice(row.original.total_spent)} ${CURRENCY_SYMBOL}`
+      cell: ({ row }) => `${formatPrice(row.original.total_spent)} ${t(CURRENCY_SYMBOL)}`
     },
     {
       accessorKey: 'last_order_at',

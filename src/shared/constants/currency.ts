@@ -1,1 +1,3 @@
-export const CURRENCY_SYMBOL = "so'm";
+import { msg } from '@lingui/core/macro';
+
+export const CURRENCY_SYMBOL = msg`so'm`;

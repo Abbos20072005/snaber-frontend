@@ -2,8 +2,9 @@ import { useLingui } from '@lingui/react/macro';
 import { useQuery } from '@tanstack/react-query';
 import { createFileRoute, Link } from '@tanstack/react-router';
 import { ShoppingCartIcon } from 'lucide-react';
+import { useState } from 'react';
 
-import { CartItems, CartOrderSummary } from '@/modules/cart';
+import { CartCustomItems, CartItems, CartOrderSummary } from '@/modules/cart';
 import { getCartListQueryOptions } from '@/modules/products';
 import { CURRENCY_SYMBOL } from '@/shared/constants';
 import { formatPrice } from '@/shared/lib/format';
@@ -25,6 +26,7 @@ const RouteComponent = () => {
   const { t } = useLingui();
   const cartQuery = useQuery(getCartListQueryOptions());
   const carts = cartQuery.data;
+  const [customItems, setCustomItems] = useState<CartCustomItem[]>([]);
 
   return (
     <SectionWrapper title={t`Cart`}>
@@ -49,7 +51,7 @@ const RouteComponent = () => {
         <Button variant='outline'>
           <span className='text-muted-foreground text-xs'>{t`Total`}:</span>
           <span className='text-primary text-sm font-bold'>
-            {formatPrice(carts?.total_amount || 0)} {CURRENCY_SYMBOL}
+            {formatPrice(carts?.total_amount || 0)} {t(CURRENCY_SYMBOL)}
           </span>
         </Button>
       </div>
@@ -105,8 +107,11 @@ const RouteComponent = () => {
       ) : (
         carts && (
           <div className='grid items-start gap-4 lg:grid-cols-[minmax(0,1fr)_320px]'>
-            <CartItems items={carts.items} />
-            <CartOrderSummary cart={carts} />
+            <div className='space-y-3'>
+              <CartItems items={carts.items} />
+              <CartCustomItems items={customItems} onChange={setCustomItems} />
+            </div>
+            <CartOrderSummary cart={carts} customItems={customItems} />
           </div>
         )
       )}

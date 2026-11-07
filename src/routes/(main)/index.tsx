@@ -1,3 +1,4 @@
+import { t } from '@lingui/core/macro';
 // FEATURE DISABLED: Top products section on the home page.
 // import { useLingui } from '@lingui/react/macro';
 import { createFileRoute } from '@tanstack/react-router';
@@ -84,9 +85,8 @@ export const Route = createFileRoute('/(main)/')({
     const siteUrl = import.meta.env.VITE_SITE_URL || '';
 
     return createSeoMeta({
-      title: 'Home',
-      description:
-        'snaber.uz — building materials and tools: cement, bricks, steel, lumber, roofing, paints and equipment from verified suppliers.',
+      title: t`Home`,
+      description: t`snaber.uz — building materials and tools: cement, bricks, steel, lumber, roofing, paints and equipment from verified suppliers.`,
       url: siteUrl ? `${siteUrl}${match.pathname}` : undefined,
       locale: getLocale(),
       image: siteUrl ? `${siteUrl}${DEFAULT_OG_IMAGE.url}` : DEFAULT_OG_IMAGE.url,

@@ -10,6 +10,11 @@ interface CartItemDto {
   quantity: number;
 }
 
+interface CartCustomItem {
+  name: string;
+  quantity: number;
+}
+
 interface FullCart {
   items: CartItem[];
   products: number;

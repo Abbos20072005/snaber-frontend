@@ -1,3 +1,4 @@
+import { t } from '@lingui/core/macro';
 import { useLingui } from '@lingui/react/macro';
 import { useSuspenseQuery } from '@tanstack/react-query';
 import { createFileRoute, Link } from '@tanstack/react-router';
@@ -50,9 +51,8 @@ export const Route = createFileRoute('/(main)/legal/')({
 
     return {
       ...createSeoMeta({
-        title: 'For legal clients',
-        description:
-          'snaber.uz for legal clients: terms of cooperation, documents and payment for companies.',
+        title: t`For legal clients`,
+        description: t`snaber.uz for legal clients: terms of cooperation, documents and payment for companies.`,
         url: canonicalUrl,
         locale: getLocale(),
         image: siteUrl ? `${siteUrl}${DEFAULT_OG_IMAGE.url}` : DEFAULT_OG_IMAGE.url,

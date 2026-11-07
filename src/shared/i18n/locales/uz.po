@@ -14,6 +14,15 @@ msgstr ""
 "Plural-Forms: \n"
 "X-Generator: @lingui/cli\n"
 
+msgid "{failedCount} products could not be added. Check the stock."
+msgstr "{failedCount} ta mahsulot qo'shilmadi. Ombordagi qoldiqni tekshiring."
+
+msgid "{notFoundCount} lines are not in the catalog. They will be sent as a request below."
+msgstr "{notFoundCount} ta qator katalogda yo'q. Ular pastda so'rov sifatida yuboriladi."
+
+#~ msgid "{notFoundCount} lines were not found. They will be sent as a request below."
+#~ msgstr "{notFoundCount} ta qator topilmadi. Ular pastda so'rov sifatida yuboriladi."
+
 msgid "{orders_count} orders"
 msgstr "{orders_count} ta buyurtma"
 
@@ -32,11 +41,20 @@ msgstr "{title} slayderi"
 msgid "{variantsCount} variants"
 msgstr "{variantsCount} ta variant"
 
+msgid "<0>Click to upload</0> or drag and drop"
+msgstr "<0>Yuklash uchun bosing</0> yoki faylni shu yerga tashlang"
+
 msgid "1 year"
 msgstr "1 yil"
 
+msgid "100192, Tashkent, Mustaqillik Shoh street, 109"
+msgstr "100192, Toshkent shahri, Mustaqillik shoh ko‘chasi, 109"
+
 msgid "30 days"
 msgstr "30 kun"
+
+msgid "50 kg"
+msgstr "50 kg"
 
 msgid "7 days"
 msgstr "7 kun"
@@ -83,11 +101,20 @@ msgstr "Xususiyat qo'shish"
 msgid "Add existing product"
 msgstr "Mavjud mahsulotni qo'shish"
 
+msgid "Add image"
+msgstr "Rasm qo'shish"
+
 msgid "Add images"
 msgstr "Rasm qo'shish"
 
+msgid "Add it to this order. We will find it and set the price. Or send a separate request."
+msgstr "Uni shu buyurtmaga qo'shing, biz topib narxini qo'yamiz. Yoki alohida so'rov yuboring."
+
 msgid "Add option"
 msgstr "Parametr qo'shish"
+
+msgid "Add own product"
+msgstr "O'z mahsulotimni qo'shish"
 
 msgid "Add products, set prices and keep the stock up to date."
 msgstr "Mahsulot qo'shing, narxlarni belgilang va ombor qoldig'ini yangilab turing."
@@ -101,14 +128,17 @@ msgstr "Taqqoslashga qo‘shish"
 msgid "Add to favorites"
 msgstr "Sevimlilarga qo‘shish"
 
+msgid "Add to order"
+msgstr "Buyurtmaga qo'shish"
+
 msgid "Add value"
 msgstr "Qiymat qo‘shish"
 
 msgid "Add variants"
 msgstr "Variantlar qo'shish"
 
-#~ msgid "Added to cart"
-#~ msgstr "Savatga qo‘shildi"
+msgid "Added to cart"
+msgstr "Savatga qo‘shildi"
 
 msgid "Added to comparison"
 msgstr "Taqqoslashga qo‘shildi"
@@ -128,6 +158,15 @@ msgstr "Admin paneli"
 msgid "Admins"
 msgstr "Adminlar"
 
+msgid "Align center"
+msgstr "Markazga tekislash"
+
+msgid "Align left"
+msgstr "Chapga tekislash"
+
+msgid "Align right"
+msgstr "O'ngga tekislash"
+
 msgid "All categories"
 msgstr "Barcha kategoriyalar"
 
@@ -136,6 +175,9 @@ msgstr "Barcha xususiyatlar"
 
 msgid "All characteristics are the same."
 msgstr "Barcha xususiyatlar bir xil."
+
+msgid "All lines were found."
+msgstr "Barcha qatorlar topildi."
 
 msgid "All of these combinations already exist."
 msgstr "Bu kombinatsiyalarning hammasi allaqachon mavjud."
@@ -156,10 +198,13 @@ msgid "All variants"
 msgstr "Barcha variantlar"
 
 msgid "Amount"
-msgstr "Miqdor"
+msgstr "Summa"
 
 msgid "Answer"
 msgstr "Javob"
+
+msgid "Apply link"
+msgstr "Havolani qo'llash"
 
 msgid "Apr"
 msgstr "Apr"
@@ -196,6 +241,9 @@ msgstr "Haqiqatan ham ushbu qiymatni o‘chirmoqchimisiz? Bu amalni ortga qaytar
 
 msgid "Asc"
 msgstr "O‘sish bo‘yicha"
+
+msgid "Attached file"
+msgstr "Biriktirilgan fayl"
 
 msgid "Attribute"
 msgstr "Atribut"
@@ -248,11 +296,35 @@ msgstr "Bloklash sababi"
 msgid "Blocked"
 msgstr "Bloklangan"
 
+msgid "Blue background"
+msgstr "Ko'k fon"
+
+msgid "Bold"
+msgstr "Qalin"
+
 msgid "Boolean"
 msgstr "Boolean"
 
+msgid "Breadcrumb"
+msgstr "Sahifa yo'li"
+
+msgid "Brown background"
+msgstr "Jigarrang fon"
+
+msgid "Browse {categoryName} building materials and tools with filters on snaber.uz."
+msgstr "snaber.uz saytida {categoryName} bo'yicha qurilish materiallari va asboblarini filtrlar bilan ko'ring."
+
+msgid "Browse building materials and tools categories on snaber.uz."
+msgstr "snaber.uz saytida qurilish materiallari va asboblar kategoriyalarini ko'ring."
+
 msgid "Browse the catalog and add items to get started."
 msgstr "Boshlash uchun katalogni ko‘rib chiqing va mahsulotlarni qo‘shing."
+
+msgid "Bullet list"
+msgstr "Belgilangan ro'yxat"
+
+msgid "Buy {productName} in {categoryName} on snaber.uz — building materials and tools."
+msgstr "{productName} mahsulotini snaber.uz saytida ({categoryName}) xarid qiling — qurilish materiallari va asboblar."
 
 msgid "Buyer dashboard"
 msgstr "Xaridor dashboard’i"
@@ -268,6 +340,18 @@ msgstr "Mahsulot narxlari va miqdoridan hisoblangan."
 
 msgid "Cancel"
 msgstr "Bekor qilish"
+
+msgid "Cannot find a product?"
+msgstr "Mahsulotni topolmadingizmi?"
+
+msgid "Cannot find it? Send a request"
+msgstr "Topolmadingizmi? So'rov yuboring"
+
+msgid "Cannot find the products?"
+msgstr "Mahsulotlarni topa olmadingizmi?"
+
+msgid "Cannot find what you need? Send us a list or a request and we will find it for you."
+msgstr "Kerakli mahsulotni topa olmadingizmi? Ro'yxat yoki so'rov yuboring, biz uni siz uchun topamiz."
 
 msgid "Cart"
 msgstr "Savat"
@@ -287,6 +371,15 @@ msgstr "Kategoriyalar"
 msgid "Category"
 msgstr "Kategoriya"
 
+msgid "Category 1"
+msgstr "1-kategoriya"
+
+msgid "Category 2"
+msgstr "2-kategoriya"
+
+msgid "Category 3"
+msgstr "3-kategoriya"
+
 msgid "Category deleted successfully."
 msgstr "Kategoriya muvaffaqiyatli o‘chirildi."
 
@@ -296,11 +389,17 @@ msgstr "Kategoriya talabi"
 msgid "Category is required"
 msgstr "Kategoriya majburiy"
 
+msgid "Cement M400"
+msgstr "Sement M400"
+
 #~ msgid "Change photo"
 #~ msgstr "Rasmni o‘zgartirish"
 
 msgid "Characteristics"
 msgstr "Xususiyatlar"
+
+msgid "Check every line, change the product or the quantity, then add them to the cart."
+msgstr "Har bir qatorni tekshiring, kerak bo'lsa mahsulot yoki miqdorni o'zgartiring, so'ng savatga qo'shing."
 
 msgid "Choose a category"
 msgstr "Kategoriyani tanlang"
@@ -350,6 +449,9 @@ msgstr "Yopish"
 msgid "Code"
 msgstr "Kod"
 
+msgid "Code block"
+msgstr "Kod bloki"
+
 msgid "Code is required"
 msgstr "Kod majburiy"
 
@@ -358,6 +460,9 @@ msgstr "Kod qayta yuborildi"
 
 msgid "Code sent to"
 msgstr "Kod yuborildi"
+
+msgid "Comment"
+msgstr "Izoh"
 
 msgid "Compare"
 msgstr "Taqqoslash"
@@ -380,8 +485,8 @@ msgstr "Kontent"
 msgid "Copy code"
 msgstr "Kodni nusxalash"
 
-msgid "Country"
-msgstr "Mamlakat"
+#~ msgid "Country"
+#~ msgstr "Mamlakat"
 
 msgid "Cover"
 msgstr "Muqova"
@@ -461,6 +566,9 @@ msgstr "Dek"
 msgid "December"
 msgstr "Dekabr"
 
+msgid "Default background"
+msgstr "Standart fon"
+
 msgid "Delete"
 msgstr "O‘chirish"
 
@@ -503,6 +611,9 @@ msgstr "Yetkazib berish"
 msgid "Delivery and payment"
 msgstr "Yetkazib berish va to'lov"
 
+msgid "Delivery and payment conditions on snaber.uz: delivery in Tashkent, pickup from the warehouse and payment in UZS."
+msgstr "snaber.uz yetkazib berish va to'lov shartlari: Toshkent bo'ylab yetkazish, ombordan olib ketish va so'mda to'lov."
+
 msgid "Delivery terms are agreed when the order is confirmed."
 msgstr "Yetkazib berish shartlari buyurtma tasdiqlanganda kelishiladi."
 
@@ -527,14 +638,23 @@ msgstr "Chegirma 0 dan 100 gacha bo'lishi kerak"
 msgid "Displays the mobile sidebar."
 msgstr "Mobil yon panelni ko‘rsatadi."
 
+msgid "Do not search product by product. Send your list and we will match it with the catalog."
+msgstr "Mahsulotlarni birma-bir qidirib o'tirmang. Ro'yxatingizni yuboring, biz uni katalog bilan solishtiramiz."
+
 msgid "does not exist or might have been removed."
 msgstr "mavjud emas yoki o‘chirilgan bo‘lishi mumkin."
+
+msgid "Done"
+msgstr "Bajarildi"
 
 msgid "Drop a file here or choose one"
 msgstr "Faylni shu yerga tashlang yoki tanlang"
 
 #~ msgid "Drop a new image here or choose a clear square photo."
 #~ msgstr "Yangi rasmni shu yerga tashlang yoki aniq kvadrat rasm tanlang."
+
+msgid "Drop a photo of the list or an Excel file here"
+msgstr "Ro'yxat rasmini yoki Excel faylni shu yerga tashlang"
 
 msgid "Edit"
 msgstr "Tahrirlash"
@@ -544,6 +664,9 @@ msgstr "Variantlarni tahrirlash"
 
 msgid "Email"
 msgstr "Email"
+
+msgid "Embed iframe"
+msgstr "Iframe joylash"
 
 msgid "Enter a valid phone number"
 msgstr "To'g'ri telefon raqamini kiriting"
@@ -581,6 +704,10 @@ msgstr "O‘lchov birligini kiriting"
 msgid "Enter your phone number and we will send you a verification code."
 msgstr "Telefon raqamingizni kiriting, biz sizga tasdiqlash kodini yuboramiz."
 
+#. placeholder {0}: fileState.error
+msgid "Error: {0}"
+msgstr "Xato: {0}"
+
 msgid "Estimated spend"
 msgstr "Taxminiy xarajat"
 
@@ -589,6 +716,9 @@ msgstr "Misol: Ko‘k"
 
 msgid "Example: Color, Size"
 msgstr "Misol: Rang, O‘lcham"
+
+msgid "Excel or CSV file"
+msgstr "Excel yoki CSV fayl"
 
 #~ msgid "Failed to add the product to the cart"
 #~ msgstr "Tovarni savatga qo‘shib bo‘lmadi"
@@ -641,6 +771,12 @@ msgstr "Foydalanuvchini o‘chirish amalga oshmadi."
 msgid "Failed to delete value."
 msgstr "Qiymatni o‘chirish amalga oshmadi."
 
+msgid "Failed to read the list. Check the file and try again."
+msgstr "Ro'yxatni o'qib bo'lmadi. Faylni tekshirib, qayta urinib ko'ring."
+
+msgid "Failed to send the request."
+msgstr "So'rovni yuborib bo'lmadi."
+
 msgid "Failed to update attribute."
 msgstr "Atributni yangilash amalga oshmadi."
 
@@ -655,6 +791,9 @@ msgstr "Mahsulotni yangilash amalga oshmadi."
 
 msgid "Failed to update profile"
 msgstr "Profilni yangilash amalga oshmadi"
+
+msgid "Failed to update the request."
+msgstr "So'rovni yangilab bo'lmadi."
 
 msgid "Failed to update unit."
 msgstr "Birlikni yangilash amalga oshmadi."
@@ -680,8 +819,20 @@ msgstr "Fev"
 msgid "February"
 msgstr "Fevral"
 
+msgid "File"
+msgstr "Fayl"
+
 msgid "File size must be less than 50MB"
 msgstr "Fayl hajmi 50MB dan kichik bo‘lishi kerak"
+
+msgid "File too large"
+msgstr "Fayl juda katta"
+
+msgid "File type not accepted"
+msgstr "Fayl turi qabul qilinmaydi"
+
+msgid "File upload"
+msgstr "Fayl yuklash"
 
 msgid "Fill in Uzbek. Russian and English default to it until you translate them."
 msgstr "O'zbekcha to'ldiring. Rus va ingliz tillari tarjima qilinmaguncha shu matn bilan bir xil bo'ladi."
@@ -701,11 +852,20 @@ msgstr "Filtrlar"
 msgid "Final price"
 msgstr "Yakuniy narx"
 
+msgid "Find products"
+msgstr "Mahsulotlarni topish"
+
 msgid "Footer navigation"
 msgstr "Footer navigatsiyasi"
 
 msgid "For legal clients"
 msgstr "Yuridik mijozlar uchun"
+
+msgid "Format text as heading"
+msgstr "Matnni sarlavha qilish"
+
+msgid "Found products"
+msgstr "Topilgan mahsulotlar"
 
 msgid "Frequently Asked Questions"
 msgstr "Ko‘p so‘raladigan savollar"
@@ -734,14 +894,50 @@ msgstr "Keyingi sahifaga o‘tish"
 msgid "Go to previous page"
 msgstr "Oldingi sahifaga o‘tish"
 
+msgid "Gray background"
+msgstr "Kulrang fon"
+
+msgid "Green background"
+msgstr "Yashil fon"
+
 msgid "Guest"
 msgstr "Mehmon"
+
+msgid "Heading"
+msgstr "Sarlavha"
+
+msgid "Heading 1"
+msgstr "1-sarlavha"
+
+msgid "Heading 2"
+msgstr "2-sarlavha"
+
+msgid "Heading 3"
+msgstr "3-sarlavha"
+
+msgid "Heading 4"
+msgstr "4-sarlavha"
+
+msgid "Heading 5"
+msgstr "5-sarlavha"
+
+msgid "Heading 6"
+msgstr "6-sarlavha"
 
 msgid "Hidden"
 msgstr "Yashirin"
 
 msgid "Hide"
 msgstr "Yashirish"
+
+msgid "Highlight"
+msgstr "Belgilash"
+
+msgid "Highlight colors"
+msgstr "Belgilash ranglari"
+
+msgid "Highlight text"
+msgstr "Matnni belgilash"
 
 msgid "Home"
 msgstr "Bosh sahifa"
@@ -754,6 +950,9 @@ msgstr "Rasm"
 
 msgid "Images"
 msgstr "Rasmlar"
+
+msgid "In progress"
+msgstr "Jarayonda"
 
 msgid "In stock"
 msgstr "Omborda"
@@ -785,6 +984,9 @@ msgstr "Bu mahsulot bir necha o'lcham yoki turda sotiladimi? Ularni guruhlang, x
 msgid "It seems like the page you're looking for"
 msgstr "Siz qidirayotgan sahifa"
 
+msgid "Italic"
+msgstr "Kursiv"
+
 msgid "Items"
 msgstr "Mahsulotlar"
 
@@ -812,6 +1014,9 @@ msgstr "Iyun"
 msgid "June"
 msgstr "Iyun"
 
+msgid "Justify"
+msgstr "Kengligi bo'yicha tekislash"
+
 msgid "Key indicators"
 msgstr "Asosiy ko‘rsatkichlar (KPI)"
 
@@ -824,8 +1029,14 @@ msgstr "Familiya Ism"
 msgid "Last order"
 msgstr "Oxirgi buyurtma"
 
+msgid "Last request"
+msgstr "Oxirgi so'rov"
+
 msgid "Latest orders from your buyer account."
 msgstr "Xaridor hisobingizdagi oxirgi buyurtmalar."
+
+msgid "Learn about B2B, our marketplace, and how we connect businesses with suppliers and products."
+msgstr "B2B, bizning platforma va biznesni yetkazib beruvchilar hamda mahsulotlar bilan qanday bog'lashimiz haqida bilib oling."
 
 msgid "Legal clients"
 msgstr "Yuridik mijozlar"
@@ -833,11 +1044,23 @@ msgstr "Yuridik mijozlar"
 msgid "Light"
 msgstr "Yorug'"
 
+msgid "Link"
+msgstr "Havola"
+
 msgid "Link copied"
 msgstr "Havola nusxalandi"
 
+msgid "List"
+msgstr "Ro'yxat"
+
+msgid "List options"
+msgstr "Ro'yxat turlari"
+
 msgid "Load more"
 msgstr "Yana yuklash"
+
+msgid "Loading"
+msgstr "Yuklanmoqda"
 
 #~ msgid "Loading countries..."
 #~ msgstr "Mamlakatlar yuklanmoqda..."
@@ -866,6 +1089,9 @@ msgstr "Qoldig‘i kam"
 msgid "Main characteristics"
 msgstr "Asosiy xususiyatlar"
 
+msgid "Main content area, start typing to enter text."
+msgstr "Asosiy matn maydoni, yozishni boshlang."
+
 msgid "Manage category attributes and reusable values for product variants."
 msgstr "Mahsulot variantlari uchun kategoriya atributlari va qayta foydalaniladigan qiymatlarni boshqaring."
 
@@ -886,6 +1112,9 @@ msgstr "Mart"
 
 msgid "Marketplace command center"
 msgstr "Marketplace boshqaruv markazi"
+
+msgid "Maximum {maxFiles} files allowed"
+msgstr "Ko'pi bilan {maxFiles} ta fayl mumkin"
 
 msgid "May"
 msgstr "May"
@@ -979,6 +1208,9 @@ msgstr "Hozircha buyurtmalar yo'q"
 msgid "No products found."
 msgstr "Mahsulotlar topilmadi."
 
+msgid "No requests yet"
+msgstr "Hozircha so'rovlar yo'q"
+
 msgid "No results found."
 msgstr "Natijalar topilmadi."
 
@@ -987,6 +1219,12 @@ msgstr "Natija yo‘q."
 
 msgid "No units yet"
 msgstr "Hali birliklar yo‘q"
+
+msgid "None of these"
+msgstr "Hech biri mos emas"
+
+msgid "Not found"
+msgstr "Topilmadi"
 
 msgid "Not selling"
 msgstr "Sotilmayapti"
@@ -1012,6 +1250,9 @@ msgstr "Raqam"
 msgid "Number of rows:"
 msgstr "Qatorlar soni:"
 
+msgid "Numbered list"
+msgstr "Raqamlangan ro'yxat"
+
 msgid "Oct"
 msgstr "Okt"
 
@@ -1036,8 +1277,14 @@ msgstr "Voy! Sahifa topilmadi!"
 msgid "Oops! Something went wrong"
 msgstr "Voy! Nimadir noto‘g‘ri ketdi"
 
+msgid "Open"
+msgstr "Ochish"
+
 msgid "Open gallery preview"
 msgstr "Galereya preview’ni ochish"
+
+msgid "Open in new window"
+msgstr "Yangi oynada ochish"
 
 msgid "Open panel"
 msgstr "Panelni ochish"
@@ -1048,12 +1295,18 @@ msgstr "Ixtiyoriy. Mijozlarga mahsulotni topishga yordam beradi."
 msgid "Options that tell the variants apart"
 msgstr "Variantlarni ajratib turadigan parametrlar"
 
+msgid "Orange background"
+msgstr "To'q sariq fon"
+
 msgid "Order"
 msgstr "Buyurtma"
 
 #. placeholder {0}: order.id
 msgid "Order #{0}"
 msgstr "Buyurtma #{0}"
+
+msgid "Order by list"
+msgstr "Ro'yxat bo'yicha buyurtma"
 
 msgid "Order Summary"
 msgstr "Buyurtma xulosasi"
@@ -1067,14 +1320,29 @@ msgstr "Buyurtmalar"
 msgid "Others"
 msgstr "Boshqalar"
 
+msgid "Our answer"
+msgstr "Bizning javobimiz"
+
 msgid "Out of stock"
 msgstr "Sotuvda yo‘q"
+
+msgid "Own product"
+msgstr "O'z mahsuloti"
+
+msgid "Own products"
+msgstr "O'z mahsulotlari"
+
+msgid "Pagination"
+msgstr "Sahifalash"
 
 msgid "Parent"
 msgstr "Asosiy"
 
 msgid "Parent category"
 msgstr "Asosiy kategoriya"
+
+msgid "Paste a link..."
+msgstr "Havolani qo'ying..."
 
 msgid "Paste iframe or URL..."
 msgstr "Iframe yoki URL joylashtiring..."
@@ -1100,6 +1368,9 @@ msgstr "Telefon raqami"
 msgid "Phone number verified. Welcome!"
 msgstr "Telefon raqami tasdiqlandi. Xush kelibsiz!"
 
+msgid "Photo or file"
+msgstr "Rasm yoki fayl"
+
 msgid "Pick at least one option value."
 msgstr "Kamida bitta qiymatni tanlang."
 
@@ -1111,6 +1382,9 @@ msgstr "Yangi variantlarning parametrlarini tanlang. Har bir kombinatsiya joriy 
 
 msgid "Pickup from warehouse"
 msgstr "Omboridan olish"
+
+msgid "Pink background"
+msgstr "Pushti fon"
 
 msgid "Please fill in the required fields."
 msgstr "Majburiy maydonlarni to'ldiring."
@@ -1136,6 +1410,12 @@ msgstr "Narx va ombor"
 msgid "Price must be a positive number"
 msgstr "Narx musbat son bo'lishi kerak"
 
+msgid "Price will be set soon"
+msgstr "Narxi tez orada qo'yiladi"
+
+msgid "Price, availability and delivery time"
+msgstr "Narx, mavjudlik va yetkazib berish muddati"
+
 msgid "Product"
 msgstr "Mahsulot"
 
@@ -1151,6 +1431,9 @@ msgstr "Mahsulot tafsilotlari"
 msgid "Product image"
 msgstr "Mahsulot rasmi"
 
+msgid "Product name"
+msgstr "Mahsulot nomi"
+
 msgid "Product SKU"
 msgstr "Mahsulot SKU"
 
@@ -1160,8 +1443,17 @@ msgstr "Mahsulotlar"
 msgid "Products added to the cart"
 msgstr "Mahsulotlar savatga qo'shildi"
 
+msgid "Products and lists the clients could not find in the catalog."
+msgstr "Mijozlar katalogdan topa olmagan mahsulotlar va ro'yxatlar."
+
 msgid "Products of the same category that are not in a family yet."
 msgstr "Shu kategoriyadagi, hali guruhga kirmagan mahsulotlar."
+
+msgid "Products the clients asked for and we do not have yet. Add them to the catalog."
+msgstr "Mijozlar so'ragan, lekin bizda hali yo'q mahsulotlar. Ularni katalogga qo'shing."
+
+msgid "Products you could not find and asked us about will appear here."
+msgstr "Topa olmagan va biz bilan so'ragan mahsulotlaringiz shu yerda ko'rinadi."
 
 msgid "Profile"
 msgstr "Profil"
@@ -1178,6 +1470,9 @@ msgstr "Nashr qilish"
 msgid "Purchase momentum"
 msgstr "Xarid dinamikasi"
 
+msgid "Purple background"
+msgstr "Binafsha fon"
+
 msgid "Quantity"
 msgstr "Miqdor"
 
@@ -1187,14 +1482,26 @@ msgstr "Savol"
 msgid "Question and Answer"
 msgstr "Savol va Javob"
 
+msgid "Quote"
+msgstr "Iqtibos"
+
 msgid "Range"
 msgstr "Diapazon"
 
 msgid "Ranked by number of orders."
 msgstr "Buyurtmalar soni bo'yicha saralangan."
 
+msgid "Ready to upload"
+msgstr "Yuklashga tayyor"
+
 msgid "Recent buying activity"
 msgstr "Oxirgi xarid faolligi"
+
+msgid "Red background"
+msgstr "Qizil fon"
+
+msgid "Redo"
+msgstr "Qaytarish"
 
 msgid "Registered"
 msgstr "Ro'yxatdan o'tgan"
@@ -1211,8 +1518,26 @@ msgstr "Sevimlilardan olib tashlash"
 msgid "Remove from variants"
 msgstr "Variantlardan olib tashlash"
 
+msgid "Remove highlight"
+msgstr "Belgilashni olib tashlash"
+
+msgid "Remove link"
+msgstr "Havolani olib tashlash"
+
 msgid "Reorder"
 msgstr "Buyurtmani takrorlash"
+
+msgid "Request"
+msgstr "So'rov"
+
+msgid "Request sent. Log in with this phone number to follow it in your profile."
+msgstr "So'rov yuborildi. Uni profilingizda kuzatish uchun shu telefon raqami bilan kiring."
+
+msgid "Request sent. We will answer you soon."
+msgstr "So'rov yuborildi. Tez orada javob beramiz."
+
+msgid "Requests"
+msgstr "So'rovlar"
 
 msgid "Resend code"
 msgstr "Kodni qayta yuborish"
@@ -1250,6 +1575,9 @@ msgstr "Rol"
 msgid "Saturday"
 msgstr "Shanba"
 
+msgid "Save"
+msgstr "Saqlash"
+
 msgid "Save changes"
 msgstr "O‘zgarishlarni saqlash"
 
@@ -1259,20 +1587,38 @@ msgstr "Profilni saqlash"
 msgid "Search"
 msgstr "Qidirish"
 
+msgid "Search building materials and tools on snaber.uz — filter by category and find what you need."
+msgstr "snaber.uz saytida qurilish materiallari va asboblarini qidiring — kategoriya bo'yicha filtrlang va kerakli narsani toping."
+
+msgid "Search by client or product"
+msgstr "Mijoz yoki mahsulot bo'yicha qidirish"
+
 msgid "Search by name or code"
 msgstr "Nom yoki kod bo'yicha qidirish"
 
 msgid "Search by name, email or phone"
 msgstr "Ism, email yoki telefon bo'yicha qidirish"
 
+msgid "Search by product"
+msgstr "Mahsulot bo'yicha qidirish"
+
 msgid "Search columns..."
 msgstr "Ustunlardan qidirish..."
+
+msgid "Search products"
+msgstr "Mahsulotlarni qidirish"
 
 msgid "Search products and spare parts"
 msgstr "Mahsulot va ehtiyot qismlarni qidirish"
 
 msgid "Search results for"
 msgstr "Qidiruv natijalari"
+
+msgid "Search results for \"{search}\""
+msgstr "\"{search}\" bo'yicha qidiruv natijalari"
+
+msgid "Search results for \"{search}\" — building materials and tools on snaber.uz."
+msgstr "snaber.uz saytida \"{search}\" bo'yicha qidiruv natijalari — qurilish materiallari va asboblar."
 
 msgid "Search..."
 msgstr "Qidirish..."
@@ -1316,6 +1662,9 @@ msgstr "Rasmlarni tanlang"
 msgid "Select role"
 msgstr "Rolni tanlang"
 
+msgid "Select status"
+msgstr "Holatni tanlang"
+
 msgid "Select subcategory"
 msgstr "Subkategoriyani tanlang"
 
@@ -1327,6 +1676,15 @@ msgstr "Birlikni tanlang"
 
 msgid "Selected values are used by the filters in the catalog."
 msgstr "Tanlangan qiymatlar katalogdagi filtrlarda ishlatiladi."
+
+msgid "Send a request instead"
+msgstr "Buning o'rniga so'rov yuborish"
+
+msgid "Send request"
+msgstr "So'rov yuborish"
+
+msgid "Send us a photo of your list, your Excel file or just describe what you need. We will find the products and answer with prices."
+msgstr "Ro'yxatingiz rasmini, Excel faylingizni yuboring yoki kerakli narsani yozib bering. Biz mahsulotlarni topib, narxlar bilan javob beramiz."
 
 msgid "Sep"
 msgstr "Sen"
@@ -1370,6 +1728,15 @@ msgstr "Kirish"
 msgid "SNABER — B2B supply of industrial tools and components for enterprises"
 msgstr "SNABER — korxonalar uchun sanoat asboblari va komplektlovchilarining B2B yetkazib berilishi"
 
+msgid "snaber.uz — building materials and tools: cement, bricks, steel, lumber, roofing, paints and equipment from verified suppliers."
+msgstr "snaber.uz — qurilish materiallari va asboblar: sement, g'isht, metall, yog'och, tom yopish materiallari, bo'yoqlar va jihozlar ishonchli yetkazib beruvchilardan."
+
+msgid "snaber.uz catalog — building materials and tools: cement, bricks, steel, lumber, roofing, paints and equipment."
+msgstr "snaber.uz katalogi — qurilish materiallari va asboblar: sement, g'isht, metall, yog'och, tom yopish materiallari, bo'yoqlar va jihozlar."
+
+msgid "snaber.uz for legal clients: terms of cooperation, documents and payment for companies."
+msgstr "snaber.uz yuridik mijozlar uchun: hamkorlik shartlari, hujjatlar va kompaniyalar uchun to'lov."
+
 msgid "snaber.uz is a marketplace for building materials and tools — cement, bricks, steel, lumber, roofing, paints, plumbing, electrical goods and equipment from verified suppliers."
 msgstr "SNABER — korxonalar uchun sanoat ta'minoti. Podshipniklar, zichlagichlar, moylar, yuritmalar, filtrlar, mahkamlagichlar, asboblar, SIZ, elektr jihozlari va yuk ko'tarish jihozlari. Ro'yxat bilan ariza yuboring — mos pozitsiyalarni tanlab, tijorat taklifini yuboramiz."
 
@@ -1397,6 +1764,12 @@ msgstr "Qoldiq musbat son bo'lishi kerak"
 msgid "Stock value"
 msgstr "Ombor qiymati"
 
+msgid "Strikethrough"
+msgstr "Chizilgan"
+
+msgid "Subscript"
+msgstr "Pastki indeks"
+
 msgid "Successfully created."
 msgstr "Muvaffaqiyatli yaratildi."
 
@@ -1415,11 +1788,23 @@ msgstr "Barcha buyurtmalar summasi."
 msgid "Sunday"
 msgstr "Yakshanba"
 
+msgid "Superscript"
+msgstr "Yuqori indeks"
+
+msgid "Support service of snaber.uz: answers to frequently asked questions."
+msgstr "snaber.uz qo'llab-quvvatlash xizmati: ko'p beriladigan savollarga javoblar."
+
 msgid "Tashkent"
 msgstr "Toshkent"
 
+msgid "Task list"
+msgstr "Vazifalar ro'yxati"
+
 msgid "Text"
 msgstr "Matn"
+
+msgid "The first column is the product, the second is the quantity"
+msgstr "Birinchi ustun mahsulot, ikkinchisi miqdor"
 
 msgid "The first image is the cover shown in the catalog."
 msgstr "Birinchi rasm katalogda ko'rinadigan muqova hisoblanadi."
@@ -1429,6 +1814,9 @@ msgstr "Parametr mahsulot kategoriyasiga tegishli emas."
 
 msgid "The pickup address is available to the manager after the order is confirmed."
 msgstr "Buyurtma tasdiqlangandan so'ng olib ketish manzili menejer tomonidan beriladi."
+
+msgid "The price of your own products is not in the total. We will set it after we find them."
+msgstr "O'z mahsulotlaringiz narxi jami summaga kirmagan. Topgach, narxini qo'yamiz."
 
 msgid "The product does not belong to this family."
 msgstr "Mahsulot bu guruhga kirmaydi."
@@ -1493,6 +1881,9 @@ msgstr "Yon panelni almashtirish"
 msgid "Too many wrong attempts. Try again in an hour."
 msgstr "Noto'g'ri urinishlar juda ko'p. Bir soatdan keyin qayta urinib ko'ring."
 
+msgid "Toolbar"
+msgstr "Asboblar paneli"
+
 msgid "Top products"
 msgstr "Top mahsulotlar"
 
@@ -1535,6 +1926,12 @@ msgstr "Buyruq kiriting yoki qidiring..."
 msgid "Unauthorized Access"
 msgstr "Ruxsatsiz kirish"
 
+msgid "Underline"
+msgstr "Tagiga chizilgan"
+
+msgid "Undo"
+msgstr "Bekor qilish"
+
 msgid "unit"
 msgstr "birlik"
 
@@ -1553,8 +1950,14 @@ msgstr "O‘lchov birligi majburiy"
 msgid "Unit of Measures"
 msgstr "O‘lchov birliklari"
 
+msgid "Unit price"
+msgstr "Birlik narxi"
+
 msgid "Units"
 msgstr "Birliklar"
+
+msgid "Up to {limit} files, {size} MB each."
+msgstr "Ko'pi bilan {limit} ta fayl, har biri {size} MB gacha."
 
 msgid "Update"
 msgstr "Yangilash"
@@ -1579,6 +1982,16 @@ msgstr "Qiymatni yangilash"
 
 msgid "Updated"
 msgstr "Yangilangan"
+
+msgid "Upload complete"
+msgstr "Yuklash tugadi"
+
+msgid "Upload failed"
+msgstr "Yuklab bo'lmadi"
+
+#. placeholder {0}: fileState.progress
+msgid "Uploading: {0}% complete"
+msgstr "Yuklanmoqda: {0}%"
 
 msgid "Use as catalog filter"
 msgstr "Katalog filtri sifatida foydalanish"
@@ -1637,6 +2050,12 @@ msgstr "Ko‘rish"
 msgid "View all"
 msgstr "Barchasini ko‘rish"
 
+msgid "View product details, prices and availability on snaber.uz."
+msgstr "snaber.uz saytida mahsulot tafsilotlari, narxlari va mavjudligini ko'ring."
+
+msgid "Wanted products"
+msgstr "So'ralgan mahsulotlar"
+
 msgid "We keep your favorite products here."
 msgstr "Sevimli mahsulotlaringiz shu yerda saqlanadi."
 
@@ -1652,14 +2071,29 @@ msgstr "Og'irligi"
 msgid "Where the product is shown in the catalog."
 msgstr "Mahsulot katalogning qayerida ko'rinishi."
 
+msgid "Which products do you need and in what quantity?"
+msgstr "Qaysi mahsulotlar va qancha miqdorda kerak?"
+
 msgid "With orders"
 msgstr "Buyurtmali"
 
 msgid "Without orders"
 msgstr "Buyurtmasiz"
 
+msgid "Write a list or upload a file."
+msgstr "Ro'yxat yozing yoki fayl yuklang."
+
+msgid "Write one product per line with its quantity, for example \"Cement M400 - 20\", or upload an Excel or CSV file."
+msgstr "Har bir qatorga bitta mahsulot va uning miqdorini yozing, masalan \"Sement M400 - 20\", yoki Excel yoki CSV fayl yuklang."
+
+msgid "Write what you need or attach a file."
+msgstr "Kerakli narsani yozing yoki fayl biriktiring."
+
 msgid "Yearly revenue"
 msgstr "Yillik daromad"
+
+msgid "Yellow background"
+msgstr "Sariq fon"
 
 msgid "Yes"
 msgstr "Ha"
@@ -1678,6 +2112,9 @@ msgstr "Sizda zarur ruxsat yo‘q"
 
 msgid "Your cart is empty"
 msgstr "Savatingiz bo‘sh"
+
+msgid "Your list"
+msgstr "Sizning ro'yxatingiz"
 
 msgid "Your request has been sent successfully!"
 msgstr "So‘rovingiz muvaffaqiyatli yuborildi!"

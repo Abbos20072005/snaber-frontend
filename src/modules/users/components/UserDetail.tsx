@@ -74,13 +74,13 @@ export const UserDetail = ({ id }: Props) => {
         />
         <MetricCard
           label={t`Total spent`}
-          value={`${formatPrice(user.total_spent)} ${CURRENCY_SYMBOL}`}
+          value={`${formatPrice(user.total_spent)} ${t(CURRENCY_SYMBOL)}`}
           description={t`Sum of all order totals.`}
           icon={WalletIcon}
         />
         <MetricCard
           label={t`Average order`}
-          value={`${formatPrice(user.average_order)} ${CURRENCY_SYMBOL}`}
+          value={`${formatPrice(user.average_order)} ${t(CURRENCY_SYMBOL)}`}
           description={t`Total spent divided by the number of orders.`}
           icon={ReceiptTextIcon}
         />

@@ -2,15 +2,17 @@ import { useLingui } from '@lingui/react/macro';
 import { Link } from '@tanstack/react-router';
 
 import { generateSlugId } from '@/shared/constants';
+import { buttonVariants } from '@/shared/ui/button';
 // FEATURE DISABLED: Company mini-site links.
 import { Separator } from '@/shared/ui/separator.tsx';
 
 interface Props {
   result?: GlobalSearch;
+  search?: string;
   onCloseDialog?: () => void;
 }
 
-export const GlobalSearchSuggestionList = ({ result, onCloseDialog }: Props) => {
+export const GlobalSearchSuggestionList = ({ result, search, onCloseDialog }: Props) => {
   const { t } = useLingui();
 
   const hasResults = !!result?.products?.length || !!result?.categories?.length; // FEATURE DISABLED: companies search results.
@@ -18,7 +20,17 @@ export const GlobalSearchSuggestionList = ({ result, onCloseDialog }: Props) => 
   return (
     <div>
       {!hasResults && (
-        <p className='text-muted-foreground px-4 py-2 text-center text-sm'>{t`No results found.`}</p>
+        <div className='flex flex-col items-center gap-2 px-4 py-2 text-center'>
+          <p className='text-muted-foreground text-sm'>{t`No results found.`}</p>
+          <Link
+            className={buttonVariants({ size: 'sm' })}
+            search={{ text: search }}
+            onClick={onCloseDialog}
+            to='/quick-order'
+          >
+            {t`Cannot find it? Send a request`}
+          </Link>
+        </div>
       )}
 
       {!!result?.products?.length && (

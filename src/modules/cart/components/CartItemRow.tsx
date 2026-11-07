@@ -50,13 +50,13 @@ export const CartItemRow = ({ item }: Props) => {
           <div className='flex items-center justify-between gap-2 pt-1'>
             <div className='flex items-center gap-1'>
               <p className='text-sm font-semibold'>
-                {formatPrice(item.total_price)} {CURRENCY_SYMBOL}
+                {formatPrice(item.total_price)} {t(CURRENCY_SYMBOL)}
               </p>
               {state.cartCount > 1 && (
                 <>
                   <span className='text-muted-foreground'>/</span>
                   <p className='text-muted-foreground text-xs'>
-                    {formatPrice(unitPrice)} {CURRENCY_SYMBOL} {t`unit`}
+                    {formatPrice(unitPrice)} {t(CURRENCY_SYMBOL)} {t`unit`}
                   </p>
                 </>
               )}

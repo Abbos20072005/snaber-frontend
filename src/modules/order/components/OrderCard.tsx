@@ -7,6 +7,7 @@ import { CURRENCY_SYMBOL } from '@/shared/constants';
 import { formatLocaleDate, formatPhoneNumber, formatPrice } from '@/shared/lib/format';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/shared/ui/card';
 
+import { OrderCustomItemRow } from './OrderCustomItemRow';
 import { ReorderButton } from './ReorderButton';
 
 interface Props {
@@ -49,11 +50,14 @@ export const OrderCard = ({ order }: Props) => {
           {order.items.map((item) => (
             <OrderProductItem key={item.id} item={item} />
           ))}
+          {order.custom_items.map((item) => (
+            <OrderCustomItemRow key={item.id} item={item} />
+          ))}
         </div>
         <div className='flex flex-wrap items-center justify-between gap-3'>
           {isOwnOrder ? <ReorderButton orderId={order.id} /> : <span />}
           <p className='text-base font-semibold'>
-            {t`Total price`}: {formatPrice(order.total_price)} {CURRENCY_SYMBOL}
+            {t`Total price`}: {formatPrice(order.total_price)} {t(CURRENCY_SYMBOL)}
           </p>
         </div>
       </CardContent>

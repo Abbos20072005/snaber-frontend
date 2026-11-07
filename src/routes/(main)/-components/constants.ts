@@ -8,7 +8,7 @@ interface ContactOption {
   href: string;
   icon: LucideIcon;
   label: MessageDescriptor;
-  value: string;
+  value: string | MessageDescriptor;
 }
 
 export const contactsLabelMap: ContactOption[] = [
@@ -27,7 +27,7 @@ export const contactsLabelMap: ContactOption[] = [
   {
     icon: MapPinIcon,
     label: msg`Address`,
-    value: '100192, Toshkent shahri, Mustaqillik shoh ko‘chasi, 109',
+    value: msg`100192, Tashkent, Mustaqillik Shoh street, 109`,
     href: 'https://maps.app.goo.gl/Bj9ruqUiLB2Y4cNt5'
   }
 ];

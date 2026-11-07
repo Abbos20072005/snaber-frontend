@@ -96,7 +96,7 @@ export const PublicProductVariants = ({ product }: Props) => {
                   ))}
                   <TableCell className='font-mono text-xs'>{variant.sku}</TableCell>
                   <TableCell className='text-right font-semibold whitespace-nowrap'>
-                    {formatPrice(variant.final_price)} {CURRENCY_SYMBOL}
+                    {formatPrice(variant.final_price)} {t(CURRENCY_SYMBOL)}
                   </TableCell>
                   <TableCell className='text-right'>
                     {formatPrice(variant.stock_quantity)} {variant.unit?.unit}

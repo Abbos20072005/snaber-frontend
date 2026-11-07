@@ -14,16 +14,18 @@ import { Card, CardContent } from '@/shared/ui/card';
 
 interface Props {
   cart: FullCart;
+  customItems: CartCustomItem[];
 }
 
-export const CartOrderSummary = ({ cart }: Props) => {
+export const CartOrderSummary = ({ cart, customItems }: Props) => {
   const { user } = useAuth();
   const { setIsOpen } = useAuthContext();
   const { t } = useLingui();
   const navigate = useNavigate();
 
   const checkoutMutation = useMutation({
-    mutationFn: () => postCartCheckout().then(({ data }) => data),
+    mutationFn: () =>
+      postCartCheckout({ data: { custom_items: customItems } }).then(({ data }) => data),
     meta: {
       invalidatesQuery: PRODUCT_QUERY_KEYS.getCartList()
     },
@@ -51,6 +53,12 @@ export const CartOrderSummary = ({ cart }: Props) => {
             <span className='text-muted-foreground'>{t`Products`}</span>
             <span>{cart.items.length}</span>
           </div>
+          {customItems.length > 0 && (
+            <div className='flex justify-between'>
+              <span className='text-muted-foreground'>{t`Own products`}</span>
+              <span>{customItems.length}</span>
+            </div>
+          )}
           <div className='flex justify-between'>
             <span className='text-muted-foreground'>{t`Units`}</span>
             <span>{totalItems}</span>
@@ -60,9 +68,15 @@ export const CartOrderSummary = ({ cart }: Props) => {
         <div className='flex justify-between border-t pt-3 text-base font-bold'>
           <span>{t`Total`}</span>
           <span>
-            {formatPrice(cart.total_amount)} {CURRENCY_SYMBOL}
+            {formatPrice(cart.total_amount)} {t(CURRENCY_SYMBOL)}
           </span>
         </div>
+
+        {customItems.length > 0 && (
+          <p className='text-muted-foreground text-xs'>
+            {t`The price of your own products is not in the total. We will set it after we find them.`}
+          </p>
+        )}
 
         <Button
           className='w-full gap-2'

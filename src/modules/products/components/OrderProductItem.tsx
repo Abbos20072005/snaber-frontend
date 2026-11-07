@@ -42,13 +42,13 @@ export const OrderProductItem = ({ item }: Props) => {
           </div>
           <div className='flex items-center gap-1'>
             <p className='text-sm font-semibold'>
-              {formatPrice(item.total_price)} {CURRENCY_SYMBOL}
+              {formatPrice(item.total_price)} {t(CURRENCY_SYMBOL)}
             </p>
             {item.quantity > 1 && (
               <>
                 <span>/</span>
                 <p className='text-muted-foreground text-xs'>
-                  {formatPrice(item.price)} {CURRENCY_SYMBOL} {t`unit`}
+                  {formatPrice(item.price)} {t(CURRENCY_SYMBOL)} {t`unit`}
                 </p>
               </>
             )}

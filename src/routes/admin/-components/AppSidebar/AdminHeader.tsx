@@ -44,7 +44,7 @@ export const AdminHeader = () => {
         <div className='flex items-center gap-4 border-r py-1 pr-4'>
           <LangSwitcher />
           <Link hash='settings' to='/admin/profile'>
-            <Button aria-label='Settings' className='cursor-pointer p-2' variant='ghost'>
+            <Button aria-label={t`Settings`} className='cursor-pointer p-2' variant='ghost'>
               <SlidersHorizontalIcon />
             </Button>
           </Link>

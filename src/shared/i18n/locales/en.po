@@ -13,6 +13,15 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
+msgid "{failedCount} products could not be added. Check the stock."
+msgstr "{failedCount} products could not be added. Check the stock."
+
+msgid "{notFoundCount} lines are not in the catalog. They will be sent as a request below."
+msgstr "{notFoundCount} lines are not in the catalog. They will be sent as a request below."
+
+#~ msgid "{notFoundCount} lines were not found. They will be sent as a request below."
+#~ msgstr "{notFoundCount} lines were not found. They will be sent as a request below."
+
 msgid "{orders_count} orders"
 msgstr "{orders_count} orders"
 
@@ -31,11 +40,20 @@ msgstr "{title} slider"
 msgid "{variantsCount} variants"
 msgstr "{variantsCount} variants"
 
+msgid "<0>Click to upload</0> or drag and drop"
+msgstr "<0>Click to upload</0> or drag and drop"
+
 msgid "1 year"
 msgstr "1 year"
 
+msgid "100192, Tashkent, Mustaqillik Shoh street, 109"
+msgstr "100192, Tashkent, Mustaqillik Shoh street, 109"
+
 msgid "30 days"
 msgstr "30 days"
+
+msgid "50 kg"
+msgstr "50 kg"
 
 msgid "7 days"
 msgstr "7 days"
@@ -82,11 +100,20 @@ msgstr "Add characteristic"
 msgid "Add existing product"
 msgstr "Add existing product"
 
+msgid "Add image"
+msgstr "Add image"
+
 msgid "Add images"
 msgstr "Add images"
 
+msgid "Add it to this order. We will find it and set the price. Or send a separate request."
+msgstr "Add it to this order. We will find it and set the price. Or send a separate request."
+
 msgid "Add option"
 msgstr "Add option"
+
+msgid "Add own product"
+msgstr "Add own product"
 
 msgid "Add products, set prices and keep the stock up to date."
 msgstr "Add products, set prices and keep the stock up to date."
@@ -100,14 +127,17 @@ msgstr "Add to comparison"
 msgid "Add to favorites"
 msgstr "Add to favorites"
 
+msgid "Add to order"
+msgstr "Add to order"
+
 msgid "Add value"
 msgstr "Add value"
 
 msgid "Add variants"
 msgstr "Add variants"
 
-#~ msgid "Added to cart"
-#~ msgstr "Added to cart"
+msgid "Added to cart"
+msgstr "Added to cart"
 
 msgid "Added to comparison"
 msgstr "Added to comparison"
@@ -127,6 +157,15 @@ msgstr "Admin dashboard"
 msgid "Admins"
 msgstr "Admins"
 
+msgid "Align center"
+msgstr "Align center"
+
+msgid "Align left"
+msgstr "Align left"
+
+msgid "Align right"
+msgstr "Align right"
+
 msgid "All categories"
 msgstr "All categories"
 
@@ -135,6 +174,9 @@ msgstr "All characteristics"
 
 msgid "All characteristics are the same."
 msgstr "All characteristics are the same."
+
+msgid "All lines were found."
+msgstr "All lines were found."
 
 msgid "All of these combinations already exist."
 msgstr "All of these combinations already exist."
@@ -159,6 +201,9 @@ msgstr "Amount"
 
 msgid "Answer"
 msgstr "Answer"
+
+msgid "Apply link"
+msgstr "Apply link"
 
 msgid "Apr"
 msgstr "Apr"
@@ -195,6 +240,9 @@ msgstr "Are you sure you want to delete this value? This action cannot be undone
 
 msgid "Asc"
 msgstr "Asc"
+
+msgid "Attached file"
+msgstr "Attached file"
 
 msgid "Attribute"
 msgstr "Attribute"
@@ -247,11 +295,35 @@ msgstr "Block reason"
 msgid "Blocked"
 msgstr "Blocked"
 
+msgid "Blue background"
+msgstr "Blue background"
+
+msgid "Bold"
+msgstr "Bold"
+
 msgid "Boolean"
 msgstr "Boolean"
 
+msgid "Breadcrumb"
+msgstr "Breadcrumb"
+
+msgid "Brown background"
+msgstr "Brown background"
+
+msgid "Browse {categoryName} building materials and tools with filters on snaber.uz."
+msgstr "Browse {categoryName} building materials and tools with filters on snaber.uz."
+
+msgid "Browse building materials and tools categories on snaber.uz."
+msgstr "Browse building materials and tools categories on snaber.uz."
+
 msgid "Browse the catalog and add items to get started."
 msgstr "Browse the catalog and add items to get started."
+
+msgid "Bullet list"
+msgstr "Bullet list"
+
+msgid "Buy {productName} in {categoryName} on snaber.uz — building materials and tools."
+msgstr "Buy {productName} in {categoryName} on snaber.uz — building materials and tools."
 
 msgid "Buyer dashboard"
 msgstr "Buyer dashboard"
@@ -267,6 +339,18 @@ msgstr "Calculated from product prices and quantities."
 
 msgid "Cancel"
 msgstr "Cancel"
+
+msgid "Cannot find a product?"
+msgstr "Cannot find a product?"
+
+msgid "Cannot find it? Send a request"
+msgstr "Cannot find it? Send a request"
+
+msgid "Cannot find the products?"
+msgstr "Cannot find the products?"
+
+msgid "Cannot find what you need? Send us a list or a request and we will find it for you."
+msgstr "Cannot find what you need? Send us a list or a request and we will find it for you."
 
 msgid "Cart"
 msgstr "Cart"
@@ -286,6 +370,15 @@ msgstr "Categories"
 msgid "Category"
 msgstr "Category"
 
+msgid "Category 1"
+msgstr "Category 1"
+
+msgid "Category 2"
+msgstr "Category 2"
+
+msgid "Category 3"
+msgstr "Category 3"
+
 msgid "Category deleted successfully."
 msgstr "Category deleted successfully."
 
@@ -295,11 +388,17 @@ msgstr "Category demand"
 msgid "Category is required"
 msgstr "Category is required"
 
+msgid "Cement M400"
+msgstr "Cement M400"
+
 #~ msgid "Change photo"
 #~ msgstr "Change photo"
 
 msgid "Characteristics"
 msgstr "Characteristics"
+
+msgid "Check every line, change the product or the quantity, then add them to the cart."
+msgstr "Check every line, change the product or the quantity, then add them to the cart."
 
 msgid "Choose a category"
 msgstr "Choose a category"
@@ -349,6 +448,9 @@ msgstr "Close"
 msgid "Code"
 msgstr "Code"
 
+msgid "Code block"
+msgstr "Code block"
+
 msgid "Code is required"
 msgstr "Code is required"
 
@@ -357,6 +459,9 @@ msgstr "Code resent successfully"
 
 msgid "Code sent to"
 msgstr "Code sent to"
+
+msgid "Comment"
+msgstr "Comment"
 
 msgid "Compare"
 msgstr "Compare"
@@ -379,8 +484,8 @@ msgstr "Contents"
 msgid "Copy code"
 msgstr "Copy code"
 
-msgid "Country"
-msgstr "Country"
+#~ msgid "Country"
+#~ msgstr "Country"
 
 msgid "Cover"
 msgstr "Cover"
@@ -460,6 +565,9 @@ msgstr "Dec"
 msgid "December"
 msgstr "December"
 
+msgid "Default background"
+msgstr "Default background"
+
 msgid "Delete"
 msgstr "Delete"
 
@@ -502,6 +610,9 @@ msgstr "Delivery"
 msgid "Delivery and payment"
 msgstr "Delivery and payment"
 
+msgid "Delivery and payment conditions on snaber.uz: delivery in Tashkent, pickup from the warehouse and payment in UZS."
+msgstr "Delivery and payment conditions on snaber.uz: delivery in Tashkent, pickup from the warehouse and payment in UZS."
+
 msgid "Delivery terms are agreed when the order is confirmed."
 msgstr "Delivery terms are agreed when the order is confirmed."
 
@@ -526,14 +637,23 @@ msgstr "Discount must be between 0 and 100"
 msgid "Displays the mobile sidebar."
 msgstr "Displays the mobile sidebar."
 
+msgid "Do not search product by product. Send your list and we will match it with the catalog."
+msgstr "Do not search product by product. Send your list and we will match it with the catalog."
+
 msgid "does not exist or might have been removed."
 msgstr "does not exist or might have been removed."
+
+msgid "Done"
+msgstr "Done"
 
 msgid "Drop a file here or choose one"
 msgstr "Drop a file here or choose one"
 
 #~ msgid "Drop a new image here or choose a clear square photo."
 #~ msgstr "Drop a new image here or choose a clear square photo."
+
+msgid "Drop a photo of the list or an Excel file here"
+msgstr "Drop a photo of the list or an Excel file here"
 
 msgid "Edit"
 msgstr "Edit"
@@ -543,6 +663,9 @@ msgstr "Edit variants"
 
 msgid "Email"
 msgstr "Email"
+
+msgid "Embed iframe"
+msgstr "Embed iframe"
 
 msgid "Enter a valid phone number"
 msgstr "Enter a valid phone number"
@@ -580,6 +703,10 @@ msgstr "Enter unit of measure"
 msgid "Enter your phone number and we will send you a verification code."
 msgstr "Enter your phone number and we will send you a verification code."
 
+#. placeholder {0}: fileState.error
+msgid "Error: {0}"
+msgstr "Error: {0}"
+
 msgid "Estimated spend"
 msgstr "Estimated spend"
 
@@ -588,6 +715,9 @@ msgstr "Example: Blue"
 
 msgid "Example: Color, Size"
 msgstr "Example: Color, Size"
+
+msgid "Excel or CSV file"
+msgstr "Excel or CSV file"
 
 #~ msgid "Failed to add the product to the cart"
 #~ msgstr "Failed to add the product to the cart"
@@ -640,6 +770,12 @@ msgstr "Failed to delete user."
 msgid "Failed to delete value."
 msgstr "Failed to delete value."
 
+msgid "Failed to read the list. Check the file and try again."
+msgstr "Failed to read the list. Check the file and try again."
+
+msgid "Failed to send the request."
+msgstr "Failed to send the request."
+
 msgid "Failed to update attribute."
 msgstr "Failed to update attribute."
 
@@ -654,6 +790,9 @@ msgstr "Failed to update product."
 
 msgid "Failed to update profile"
 msgstr "Failed to update profile"
+
+msgid "Failed to update the request."
+msgstr "Failed to update the request."
 
 msgid "Failed to update unit."
 msgstr "Failed to update unit."
@@ -679,8 +818,20 @@ msgstr "Feb"
 msgid "February"
 msgstr "February"
 
+msgid "File"
+msgstr "File"
+
 msgid "File size must be less than 50MB"
 msgstr "File size must be less than 50MB"
+
+msgid "File too large"
+msgstr "File too large"
+
+msgid "File type not accepted"
+msgstr "File type not accepted"
+
+msgid "File upload"
+msgstr "File upload"
 
 msgid "Fill in Uzbek. Russian and English default to it until you translate them."
 msgstr "Fill in Uzbek. Russian and English default to it until you translate them."
@@ -700,11 +851,20 @@ msgstr "Filters"
 msgid "Final price"
 msgstr "Final price"
 
+msgid "Find products"
+msgstr "Find products"
+
 msgid "Footer navigation"
 msgstr "Footer navigation"
 
 msgid "For legal clients"
 msgstr "For legal clients"
+
+msgid "Format text as heading"
+msgstr "Format text as heading"
+
+msgid "Found products"
+msgstr "Found products"
 
 msgid "Frequently Asked Questions"
 msgstr "Frequently Asked Questions"
@@ -733,14 +893,50 @@ msgstr "Go to next page"
 msgid "Go to previous page"
 msgstr "Go to previous page"
 
+msgid "Gray background"
+msgstr "Gray background"
+
+msgid "Green background"
+msgstr "Green background"
+
 msgid "Guest"
 msgstr "Guest"
+
+msgid "Heading"
+msgstr "Heading"
+
+msgid "Heading 1"
+msgstr "Heading 1"
+
+msgid "Heading 2"
+msgstr "Heading 2"
+
+msgid "Heading 3"
+msgstr "Heading 3"
+
+msgid "Heading 4"
+msgstr "Heading 4"
+
+msgid "Heading 5"
+msgstr "Heading 5"
+
+msgid "Heading 6"
+msgstr "Heading 6"
 
 msgid "Hidden"
 msgstr "Hidden"
 
 msgid "Hide"
 msgstr "Hide"
+
+msgid "Highlight"
+msgstr "Highlight"
+
+msgid "Highlight colors"
+msgstr "Highlight colors"
+
+msgid "Highlight text"
+msgstr "Highlight text"
 
 msgid "Home"
 msgstr "Home"
@@ -753,6 +949,9 @@ msgstr "Image"
 
 msgid "Images"
 msgstr "Images"
+
+msgid "In progress"
+msgstr "In progress"
 
 msgid "In stock"
 msgstr "In stock"
@@ -784,6 +983,9 @@ msgstr "Is this product sold in several sizes or types? Group them so shoppers s
 msgid "It seems like the page you're looking for"
 msgstr "It seems like the page you're looking for"
 
+msgid "Italic"
+msgstr "Italic"
+
 msgid "Items"
 msgstr "Items"
 
@@ -811,6 +1013,9 @@ msgstr "Jun"
 msgid "June"
 msgstr "June"
 
+msgid "Justify"
+msgstr "Justify"
+
 msgid "Key indicators"
 msgstr "Key indicators"
 
@@ -823,8 +1028,14 @@ msgstr "Last name First name"
 msgid "Last order"
 msgstr "Last order"
 
+msgid "Last request"
+msgstr "Last request"
+
 msgid "Latest orders from your buyer account."
 msgstr "Latest orders from your buyer account."
+
+msgid "Learn about B2B, our marketplace, and how we connect businesses with suppliers and products."
+msgstr "Learn about B2B, our marketplace, and how we connect businesses with suppliers and products."
 
 msgid "Legal clients"
 msgstr "Legal clients"
@@ -832,11 +1043,23 @@ msgstr "Legal clients"
 msgid "Light"
 msgstr "Light"
 
+msgid "Link"
+msgstr "Link"
+
 msgid "Link copied"
 msgstr "Link copied"
 
+msgid "List"
+msgstr "List"
+
+msgid "List options"
+msgstr "List options"
+
 msgid "Load more"
 msgstr "Load more"
+
+msgid "Loading"
+msgstr "Loading"
 
 #~ msgid "Loading countries..."
 #~ msgstr "Loading countries..."
@@ -865,6 +1088,9 @@ msgstr "Low stock"
 msgid "Main characteristics"
 msgstr "Main characteristics"
 
+msgid "Main content area, start typing to enter text."
+msgstr "Main content area, start typing to enter text."
+
 msgid "Manage category attributes and reusable values for product variants."
 msgstr "Manage category attributes and reusable values for product variants."
 
@@ -885,6 +1111,9 @@ msgstr "March"
 
 msgid "Marketplace command center"
 msgstr "Marketplace command center"
+
+msgid "Maximum {maxFiles} files allowed"
+msgstr "Maximum {maxFiles} files allowed"
 
 msgid "May"
 msgstr "May"
@@ -980,6 +1209,9 @@ msgstr "No orders yet"
 msgid "No products found."
 msgstr "No products found."
 
+msgid "No requests yet"
+msgstr "No requests yet"
+
 msgid "No results found."
 msgstr "No results found."
 
@@ -988,6 +1220,12 @@ msgstr "No results."
 
 msgid "No units yet"
 msgstr "No units yet"
+
+msgid "None of these"
+msgstr "None of these"
+
+msgid "Not found"
+msgstr "Not found"
 
 msgid "Not selling"
 msgstr "Not selling"
@@ -1013,6 +1251,9 @@ msgstr "Number"
 msgid "Number of rows:"
 msgstr "Number of rows:"
 
+msgid "Numbered list"
+msgstr "Numbered list"
+
 msgid "Oct"
 msgstr "Oct"
 
@@ -1037,8 +1278,14 @@ msgstr "Oops! Page Not Found!"
 msgid "Oops! Something went wrong"
 msgstr "Oops! Something went wrong"
 
+msgid "Open"
+msgstr "Open"
+
 msgid "Open gallery preview"
 msgstr "Open gallery preview"
+
+msgid "Open in new window"
+msgstr "Open in new window"
 
 msgid "Open panel"
 msgstr "Open panel"
@@ -1049,12 +1296,18 @@ msgstr "Optional. Helps customers find the product."
 msgid "Options that tell the variants apart"
 msgstr "Options that tell the variants apart"
 
+msgid "Orange background"
+msgstr "Orange background"
+
 msgid "Order"
 msgstr "Order"
 
 #. placeholder {0}: order.id
 msgid "Order #{0}"
 msgstr "Order #{0}"
+
+msgid "Order by list"
+msgstr "Order by list"
 
 msgid "Order Summary"
 msgstr "Order Summary"
@@ -1068,14 +1321,29 @@ msgstr "Orders"
 msgid "Others"
 msgstr "Others"
 
+msgid "Our answer"
+msgstr "Our answer"
+
 msgid "Out of stock"
 msgstr "Out of stock"
+
+msgid "Own product"
+msgstr "Own product"
+
+msgid "Own products"
+msgstr "Own products"
+
+msgid "Pagination"
+msgstr "Pagination"
 
 msgid "Parent"
 msgstr "Parent"
 
 msgid "Parent category"
 msgstr "Parent category"
+
+msgid "Paste a link..."
+msgstr "Paste a link..."
 
 msgid "Paste iframe or URL..."
 msgstr "Paste iframe or URL..."
@@ -1101,6 +1369,9 @@ msgstr "Phone number"
 msgid "Phone number verified. Welcome!"
 msgstr "Phone number verified. Welcome!"
 
+msgid "Photo or file"
+msgstr "Photo or file"
+
 msgid "Pick at least one option value."
 msgstr "Pick at least one option value."
 
@@ -1112,6 +1383,9 @@ msgstr "Pick the options of the new variants. Every combination becomes a produc
 
 msgid "Pickup from warehouse"
 msgstr "Pickup from warehouse"
+
+msgid "Pink background"
+msgstr "Pink background"
 
 msgid "Please fill in the required fields."
 msgstr "Please fill in the required fields."
@@ -1137,6 +1411,12 @@ msgstr "Price and stock"
 msgid "Price must be a positive number"
 msgstr "Price must be a positive number"
 
+msgid "Price will be set soon"
+msgstr "Price will be set soon"
+
+msgid "Price, availability and delivery time"
+msgstr "Price, availability and delivery time"
+
 msgid "Product"
 msgstr "Product"
 
@@ -1152,6 +1432,9 @@ msgstr "Product details"
 msgid "Product image"
 msgstr "Product image"
 
+msgid "Product name"
+msgstr "Product name"
+
 msgid "Product SKU"
 msgstr "Product SKU"
 
@@ -1161,8 +1444,17 @@ msgstr "Products"
 msgid "Products added to the cart"
 msgstr "Products added to the cart"
 
+msgid "Products and lists the clients could not find in the catalog."
+msgstr "Products and lists the clients could not find in the catalog."
+
 msgid "Products of the same category that are not in a family yet."
 msgstr "Products of the same category that are not in a family yet."
+
+msgid "Products the clients asked for and we do not have yet. Add them to the catalog."
+msgstr "Products the clients asked for and we do not have yet. Add them to the catalog."
+
+msgid "Products you could not find and asked us about will appear here."
+msgstr "Products you could not find and asked us about will appear here."
 
 msgid "Profile"
 msgstr "Profile"
@@ -1179,6 +1471,9 @@ msgstr "Publish"
 msgid "Purchase momentum"
 msgstr "Purchase momentum"
 
+msgid "Purple background"
+msgstr "Purple background"
+
 msgid "Quantity"
 msgstr "Quantity"
 
@@ -1188,14 +1483,26 @@ msgstr "Question"
 msgid "Question and Answer"
 msgstr "Question and Answer"
 
+msgid "Quote"
+msgstr "Quote"
+
 msgid "Range"
 msgstr "Range"
 
 msgid "Ranked by number of orders."
 msgstr "Ranked by number of orders."
 
+msgid "Ready to upload"
+msgstr "Ready to upload"
+
 msgid "Recent buying activity"
 msgstr "Recent buying activity"
+
+msgid "Red background"
+msgstr "Red background"
+
+msgid "Redo"
+msgstr "Redo"
 
 msgid "Registered"
 msgstr "Registered"
@@ -1212,8 +1519,26 @@ msgstr "Remove from favorites"
 msgid "Remove from variants"
 msgstr "Remove from variants"
 
+msgid "Remove highlight"
+msgstr "Remove highlight"
+
+msgid "Remove link"
+msgstr "Remove link"
+
 msgid "Reorder"
 msgstr "Reorder"
+
+msgid "Request"
+msgstr "Request"
+
+msgid "Request sent. Log in with this phone number to follow it in your profile."
+msgstr "Request sent. Log in with this phone number to follow it in your profile."
+
+msgid "Request sent. We will answer you soon."
+msgstr "Request sent. We will answer you soon."
+
+msgid "Requests"
+msgstr "Requests"
 
 msgid "Resend code"
 msgstr "Resend code"
@@ -1251,6 +1576,9 @@ msgstr "Role"
 msgid "Saturday"
 msgstr "Saturday"
 
+msgid "Save"
+msgstr "Save"
+
 msgid "Save changes"
 msgstr "Save changes"
 
@@ -1260,20 +1588,38 @@ msgstr "Save profile"
 msgid "Search"
 msgstr "Search"
 
+msgid "Search building materials and tools on snaber.uz — filter by category and find what you need."
+msgstr "Search building materials and tools on snaber.uz — filter by category and find what you need."
+
+msgid "Search by client or product"
+msgstr "Search by client or product"
+
 msgid "Search by name or code"
 msgstr "Search by name or code"
 
 msgid "Search by name, email or phone"
 msgstr "Search by name, email or phone"
 
+msgid "Search by product"
+msgstr "Search by product"
+
 msgid "Search columns..."
 msgstr "Search columns..."
+
+msgid "Search products"
+msgstr "Search products"
 
 msgid "Search products and spare parts"
 msgstr "Search products and spare parts"
 
 msgid "Search results for"
 msgstr "Search results for"
+
+msgid "Search results for \"{search}\""
+msgstr "Search results for \"{search}\""
+
+msgid "Search results for \"{search}\" — building materials and tools on snaber.uz."
+msgstr "Search results for \"{search}\" — building materials and tools on snaber.uz."
 
 msgid "Search..."
 msgstr "Search..."
@@ -1317,6 +1663,9 @@ msgstr "Select images"
 msgid "Select role"
 msgstr "Select role"
 
+msgid "Select status"
+msgstr "Select status"
+
 msgid "Select subcategory"
 msgstr "Select subcategory"
 
@@ -1328,6 +1677,15 @@ msgstr "Select unit"
 
 msgid "Selected values are used by the filters in the catalog."
 msgstr "Selected values are used by the filters in the catalog."
+
+msgid "Send a request instead"
+msgstr "Send a request instead"
+
+msgid "Send request"
+msgstr "Send request"
+
+msgid "Send us a photo of your list, your Excel file or just describe what you need. We will find the products and answer with prices."
+msgstr "Send us a photo of your list, your Excel file or just describe what you need. We will find the products and answer with prices."
 
 msgid "Sep"
 msgstr "Sep"
@@ -1371,6 +1729,15 @@ msgstr "Sign in"
 msgid "SNABER — B2B supply of industrial tools and components for enterprises"
 msgstr "SNABER — B2B supply of industrial tools and components for enterprises"
 
+msgid "snaber.uz — building materials and tools: cement, bricks, steel, lumber, roofing, paints and equipment from verified suppliers."
+msgstr "snaber.uz — building materials and tools: cement, bricks, steel, lumber, roofing, paints and equipment from verified suppliers."
+
+msgid "snaber.uz catalog — building materials and tools: cement, bricks, steel, lumber, roofing, paints and equipment."
+msgstr "snaber.uz catalog — building materials and tools: cement, bricks, steel, lumber, roofing, paints and equipment."
+
+msgid "snaber.uz for legal clients: terms of cooperation, documents and payment for companies."
+msgstr "snaber.uz for legal clients: terms of cooperation, documents and payment for companies."
+
 msgid "snaber.uz is a marketplace for building materials and tools — cement, bricks, steel, lumber, roofing, paints, plumbing, electrical goods and equipment from verified suppliers."
 msgstr "snaber.uz is a marketplace for building materials and tools — cement, bricks, steel, lumber, roofing, paints, plumbing, electrical goods and equipment from verified suppliers."
 
@@ -1398,6 +1765,12 @@ msgstr "Stock must be a positive number"
 msgid "Stock value"
 msgstr "Stock value"
 
+msgid "Strikethrough"
+msgstr "Strikethrough"
+
+msgid "Subscript"
+msgstr "Subscript"
+
 msgid "Successfully created."
 msgstr "Successfully created."
 
@@ -1416,11 +1789,23 @@ msgstr "Sum of all order totals."
 msgid "Sunday"
 msgstr "Sunday"
 
+msgid "Superscript"
+msgstr "Superscript"
+
+msgid "Support service of snaber.uz: answers to frequently asked questions."
+msgstr "Support service of snaber.uz: answers to frequently asked questions."
+
 msgid "Tashkent"
 msgstr "Tashkent"
 
+msgid "Task list"
+msgstr "Task list"
+
 msgid "Text"
 msgstr "Text"
+
+msgid "The first column is the product, the second is the quantity"
+msgstr "The first column is the product, the second is the quantity"
 
 msgid "The first image is the cover shown in the catalog."
 msgstr "The first image is the cover shown in the catalog."
@@ -1430,6 +1815,9 @@ msgstr "The option does not belong to the category of the product."
 
 msgid "The pickup address is available to the manager after the order is confirmed."
 msgstr "The pickup address is available to the manager after the order is confirmed."
+
+msgid "The price of your own products is not in the total. We will set it after we find them."
+msgstr "The price of your own products is not in the total. We will set it after we find them."
 
 msgid "The product does not belong to this family."
 msgstr "The product does not belong to this family."
@@ -1494,6 +1882,9 @@ msgstr "Toggle Sidebar"
 msgid "Too many wrong attempts. Try again in an hour."
 msgstr "Too many wrong attempts. Try again in an hour."
 
+msgid "Toolbar"
+msgstr "Toolbar"
+
 msgid "Top products"
 msgstr "Top products"
 
@@ -1536,6 +1927,12 @@ msgstr "Type a command or search..."
 msgid "Unauthorized Access"
 msgstr "Unauthorized Access"
 
+msgid "Underline"
+msgstr "Underline"
+
+msgid "Undo"
+msgstr "Undo"
+
 msgid "unit"
 msgstr "unit"
 
@@ -1554,8 +1951,14 @@ msgstr "Unit of measure is required"
 msgid "Unit of Measures"
 msgstr "Unit of Measures"
 
+msgid "Unit price"
+msgstr "Unit price"
+
 msgid "Units"
 msgstr "Units"
+
+msgid "Up to {limit} files, {size} MB each."
+msgstr "Up to {limit} files, {size} MB each."
 
 msgid "Update"
 msgstr "Update"
@@ -1580,6 +1983,16 @@ msgstr "Update value"
 
 msgid "Updated"
 msgstr "Updated"
+
+msgid "Upload complete"
+msgstr "Upload complete"
+
+msgid "Upload failed"
+msgstr "Upload failed"
+
+#. placeholder {0}: fileState.progress
+msgid "Uploading: {0}% complete"
+msgstr "Uploading: {0}% complete"
 
 msgid "Use as catalog filter"
 msgstr "Use as catalog filter"
@@ -1638,6 +2051,12 @@ msgstr "View"
 msgid "View all"
 msgstr "View all"
 
+msgid "View product details, prices and availability on snaber.uz."
+msgstr "View product details, prices and availability on snaber.uz."
+
+msgid "Wanted products"
+msgstr "Wanted products"
+
 msgid "We keep your favorite products here."
 msgstr "We keep your favorite products here."
 
@@ -1653,14 +2072,29 @@ msgstr "Weight"
 msgid "Where the product is shown in the catalog."
 msgstr "Where the product is shown in the catalog."
 
+msgid "Which products do you need and in what quantity?"
+msgstr "Which products do you need and in what quantity?"
+
 msgid "With orders"
 msgstr "With orders"
 
 msgid "Without orders"
 msgstr "Without orders"
 
+msgid "Write a list or upload a file."
+msgstr "Write a list or upload a file."
+
+msgid "Write one product per line with its quantity, for example \"Cement M400 - 20\", or upload an Excel or CSV file."
+msgstr "Write one product per line with its quantity, for example \"Cement M400 - 20\", or upload an Excel or CSV file."
+
+msgid "Write what you need or attach a file."
+msgstr "Write what you need or attach a file."
+
 msgid "Yearly revenue"
 msgstr "Yearly revenue"
+
+msgid "Yellow background"
+msgstr "Yellow background"
 
 msgid "Yes"
 msgstr "Yes"
@@ -1679,6 +2113,9 @@ msgstr "You don't have necessary permission"
 
 msgid "Your cart is empty"
 msgstr "Your cart is empty"
+
+msgid "Your list"
+msgstr "Your list"
 
 msgid "Your request has been sent successfully!"
 msgstr "Your request has been sent successfully!"

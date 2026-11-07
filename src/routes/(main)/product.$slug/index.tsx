@@ -1,3 +1,4 @@
+import { t } from '@lingui/core/macro';
 import { useLingui } from '@lingui/react/macro';
 import { useSuspenseQuery } from '@tanstack/react-query';
 import { createFileRoute, Link, useParams } from '@tanstack/react-router';
@@ -108,8 +109,8 @@ export const Route = createFileRoute('/(main)/product/$slug/')({
     if (!product) {
       return {
         ...createSeoMeta({
-          title: 'Product details',
-          description: 'View product details, prices and availability on snaber.uz.',
+          title: t`Product details`,
+          description: t`View product details, prices and availability on snaber.uz.`,
           locale: getLocale()
         })
       };
@@ -119,7 +120,7 @@ export const Route = createFileRoute('/(main)/product/$slug/')({
     const categoryName = product.category.name;
     const description =
       product.specifications.map(({ name, value }) => `${name}: ${value}`).join(', ') ||
-      `Buy ${productName} in ${categoryName} on snaber.uz — building materials and tools.`;
+      t`Buy ${productName} in ${categoryName} on snaber.uz — building materials and tools.`;
     const seoImage = getGallery(product)[0]?.src;
     const canonicalUrl = siteUrl ? `${siteUrl}${match.pathname}` : undefined;
     const categoryUrl = `${siteUrl}/catalog/${generateSlugId(product.category.id, categoryName)}`;
@@ -151,8 +152,8 @@ export const Route = createFileRoute('/(main)/product/$slug/')({
           }
         }).scripts,
         ...createBreadcrumbJsonLd([
-          { name: 'Home', url: siteUrl ? `${siteUrl}/` : '/' },
-          { name: 'Catalog', url: siteUrl ? `${siteUrl}/catalog` : '/catalog' },
+          { name: t`Home`, url: siteUrl ? `${siteUrl}/` : '/' },
+          { name: t`Catalog`, url: siteUrl ? `${siteUrl}/catalog` : '/catalog' },
           { name: categoryName, url: categoryUrl },
           { name: productName, url: canonicalUrl || match.pathname }
         ]).scripts

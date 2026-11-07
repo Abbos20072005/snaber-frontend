@@ -158,7 +158,7 @@ export const Compare = () => {
                         {product.name}
                       </Link>
                       <p className='text-lg font-extrabold'>
-                        {formatPrice(product.final_price)} {CURRENCY_SYMBOL}
+                        {formatPrice(product.final_price)} {t(CURRENCY_SYMBOL)}
                       </p>
                       <CartButtons product={product} />
                     </div>

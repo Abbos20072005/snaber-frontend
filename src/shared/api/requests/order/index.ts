@@ -22,3 +22,11 @@ export const getOrder = ({ id }: GetOrderRequest) => api.get<Order>(`order/${id}
 
 export const postOrderReorder = ({ id }: GetOrderRequest) =>
   api.post<FullCardResponse>(`order/${id}/reorder/`);
+
+interface PatchOrderCustomItemRequest {
+  data: { price: number };
+  id: number;
+}
+
+export const patchOrderCustomItem = ({ data, id }: PatchOrderCustomItemRequest) =>
+  api.patch<Order>(`order/custom-items/${id}/`, data);
