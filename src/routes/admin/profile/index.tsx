@@ -1,6 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router';
 
-import { DangerZoneSection, ProfileSection, SettingsSidebar } from '@/modules/profile';
+import { ProfileSection, SettingsSidebar } from '@/modules/profile';
 import { PageContent } from '@/shared/ui/page';
 
 const AdminProfilePage = () => {
@@ -10,7 +10,6 @@ const AdminProfilePage = () => {
         <SettingsSidebar className='mt-1 lg:sticky lg:top-0 lg:self-start' />
         <div className='no-scrollbar max-h-[calc(100dvh-7rem)] space-y-4 overflow-y-auto p-1'>
           <ProfileSection />
-          <DangerZoneSection />
         </div>
       </div>
     </PageContent>

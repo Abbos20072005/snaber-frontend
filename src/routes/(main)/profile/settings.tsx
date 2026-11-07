@@ -2,7 +2,7 @@ import { useLingui } from '@lingui/react/macro';
 import { createFileRoute, Link } from '@tanstack/react-router';
 import { ArrowLeftIcon, SettingsIcon } from 'lucide-react';
 
-import { DangerZoneSection, ProfileSection } from '@/modules/profile';
+import { ProfileSection } from '@/modules/profile';
 import { GeneralError, NotFoundError } from '@/shared/ui/errors';
 import { PageLoading } from '@/shared/ui/page';
 import { SectionWrapper } from '@/shared/ui/section-wrapper';
@@ -28,13 +28,11 @@ const SettingsPage = () => {
       >
         <section className='space-y-4'>
           <ProfileSection />
-          <DangerZoneSection />
         </section>
       </SectionWrapper>
       <div className='hidden md:block'>
         <section className='space-y-4'>
           <ProfileSection />
-          <DangerZoneSection />
         </section>
       </div>
     </>

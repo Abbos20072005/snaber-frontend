@@ -2,14 +2,11 @@ import type { ComponentProps } from 'react';
 
 import { msg } from '@lingui/core/macro';
 import { useLingui } from '@lingui/react/macro';
-import { ShieldAlertIcon, UserRoundIcon } from 'lucide-react';
+import { UserRoundIcon } from 'lucide-react';
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/shared/ui/card';
 
-const sections = [
-  { id: 'profile', icon: UserRoundIcon, label: msg`Profile` },
-  { id: 'danger-zone', icon: ShieldAlertIcon, label: msg`Danger zone` }
-] as const;
+const sections = [{ id: 'profile', icon: UserRoundIcon, label: msg`Profile` }] as const;
 
 type Props = ComponentProps<'div'>;
 

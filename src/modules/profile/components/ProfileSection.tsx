@@ -1,9 +1,11 @@
 import { useLingui } from '@lingui/react/macro';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
+import { LogOutIcon } from 'lucide-react';
 import { useId } from 'react';
 import { toast } from 'sonner';
 
 import { AUTH_QUERY_KEYS, useAuth } from '@/modules/auth';
+import { AlertLogoutDialog } from '@/modules/auth/components';
 import { patchAuthMe } from '@/shared/api';
 import { toFormData } from '@/shared/lib/form-data';
 import { Button } from '@/shared/ui/button';
@@ -50,15 +52,19 @@ export const ProfileSection = () => {
           onSubmit={(value) => {
             profileMutation.mutate({
               data: toFormData({
-                full_name: value.full_name,
-                country: value.country,
-                image: value.image[0]
+                full_name: value.full_name
               })
             });
           }}
         />
       </CardContent>
-      <CardFooter className='justify-end'>
+      <CardFooter className='justify-end gap-2'>
+        <AlertLogoutDialog>
+          <Button type='button' variant='destructiveOutline'>
+            <LogOutIcon />
+            {t`Logout`}
+          </Button>
+        </AlertLogoutDialog>
         <Button type='submit' form={formId} loading={profileMutation.isPending}>
           {t`Save profile`}
         </Button>

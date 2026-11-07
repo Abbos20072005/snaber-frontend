@@ -3,7 +3,6 @@ import { useSuspenseQuery } from '@tanstack/react-query';
 import { Link } from '@tanstack/react-router';
 
 import { getBuyerRecentBuyingActivityQueryOptions } from '@/modules/dashboard/buyer';
-import { generateSlugId } from '@/shared/constants';
 import { formatDate, formatPrice } from '@/shared/lib/format';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/shared/ui/card';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/shared/ui/table';
@@ -22,7 +21,7 @@ export const RecentBuyingActivityTable = () => {
         <Table>
           <TableHeader>
             <TableRow>
-              <TableHead>{t`Product`}</TableHead>
+              <TableHead>{t`Order`}</TableHead>
               <TableHead>{t`Quantity`}</TableHead>
               <TableHead>{t`Amount`}</TableHead>
               <TableHead>{t`Date`}</TableHead>
@@ -33,13 +32,11 @@ export const RecentBuyingActivityTable = () => {
               <TableRow key={`${order.id}-${order.date}`}>
                 <TableCell className='font-medium'>
                   <Link
-                    params={{
-                      slug: generateSlugId(order.id, order.product || '')
-                    }}
                     className='text-primary underline-offset-2 hover:underline'
-                    to='/product/$slug'
+                    params={{ id: String(order.id) }}
+                    to='/profile/orders/$id'
                   >
-                    {order.product || '-'}
+                    {t`Order #${order.id}`}
                   </Link>
                 </TableCell>
                 <TableCell>{order.quantity}</TableCell>
