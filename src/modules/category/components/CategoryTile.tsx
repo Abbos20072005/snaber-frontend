@@ -13,7 +13,7 @@ export const CategoryTile = ({ category }: { category: Category }) => {
 
   return (
     <Link
-      className='bg-muted/70 hover:bg-muted flex flex-col gap-2 rounded-xl p-2 transition-colors'
+      className='group/tile bg-background flex flex-col gap-2 rounded-xl border p-2 transition-colors hover:border-yellow-400 hover:bg-yellow-400/25'
       params={{ slug: generateSlugId(category.id, category.name) }}
       to='/catalog/$slug'
     >
@@ -30,8 +30,14 @@ export const CategoryTile = ({ category }: { category: Category }) => {
           <ImageIcon className='text-muted-foreground/60 size-8' />
         </span>
       )}
-      <span className='text-foreground/80 line-clamp-3 px-0.5 pb-1 text-center text-[13px] leading-snug'>
+      <span className='text-foreground/80 line-clamp-3 px-0.5 pb-1 text-center text-[13px] leading-snug group-hover/tile:text-black'>
         {category.name}
+        {category.products_count !== undefined && (
+          <span className='text-muted-foreground group-hover/tile:text-black/70'>
+            {' '}
+            ({category.products_count})
+          </span>
+        )}
       </span>
     </Link>
   );

@@ -11,6 +11,7 @@ interface Category {
   name_ru?: string;
   name_uz?: string;
   parent: Category | null;
+  products_count?: number;
 }
 
 interface CategoryById extends Category {

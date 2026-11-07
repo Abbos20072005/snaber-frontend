@@ -1,7 +1,8 @@
 import { useLingui } from '@lingui/react/macro';
 import { useSuspenseQuery } from '@tanstack/react-query';
 import { Link } from '@tanstack/react-router';
-import { useMemo, useState } from 'react';
+import { parseAsInteger, useQueryState } from 'nuqs';
+import { useMemo } from 'react';
 
 import {
   CATEGORY_TILE_GRID,
@@ -19,14 +20,22 @@ export const TopCategoriesSection = () => {
     () => getPublicAllCategoriesQuery.data ?? [],
     [getPublicAllCategoriesQuery.data]
   );
-  const [selectedId, setSelectedId] = useState<number | undefined>(undefined);
+  const [selectedSection, setSelectedSection] = useQueryState(
+    'section',
+    parseAsInteger.withOptions({ history: 'replace' })
+  );
+  const selectedId = selectedSection ?? undefined;
   const visibleSections = selectedId
     ? sections.filter((section) => section.id === selectedId)
     : sections;
 
   return (
     <div className='flex flex-col gap-6 md:flex-row'>
-      <CategorySidebar selectedId={selectedId} onSelect={setSelectedId} roots={sections} />
+      <CategorySidebar
+        selectedId={selectedId}
+        onSelect={(id) => void setSelectedSection(id === selectedId ? null : id)}
+        roots={sections}
+      />
       <div className='min-w-0 flex-1 space-y-3'>
         <CategoryHeading title={t`All categories`} />
 
