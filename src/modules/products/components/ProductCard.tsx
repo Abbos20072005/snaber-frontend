@@ -1,11 +1,16 @@
 import { useLingui } from '@lingui/react/macro';
-import { useMutation } from '@tanstack/react-query';
 import { Link } from '@tanstack/react-router';
-import { ChevronRightIcon, HeartIcon, ScaleIcon, ShoppingCartIcon } from 'lucide-react';
-import { toast } from 'sonner';
+import {
+  ChevronRightIcon,
+  CircleCheckIcon,
+  CircleXIcon,
+  HeartIcon,
+  ScaleIcon,
+  StarIcon
+} from 'lucide-react';
 
 import { useAuth } from '@/modules/auth/hooks/useAuth';
-import { postCart } from '@/shared/api/requests/product/cart';
+import { CartButtons } from '@/modules/cart/components/CartButtons';
 import { CURRENCY_SYMBOL, generateSlugId } from '@/shared/constants';
 import { formatPrice } from '@/shared/lib/format';
 import { cn } from '@/shared/lib/utils';
@@ -15,7 +20,6 @@ import { Carousel, CarouselContent, CarouselItem } from '@/shared/ui/carousel';
 
 import { useProductCompare } from '../hooks/useProductCompare';
 import { useProductFavorite } from '../hooks/useProductFavorite';
-import { PRODUCT_QUERY_KEYS } from '../options';
 import { ProductImageIndicators } from './ProductImageIndicators';
 
 interface Props {
@@ -48,15 +52,6 @@ export const ProductCard = ({ product, className }: Props) => {
                 : t`Out of stock`
           }
         ];
-
-  const addToCartMutation = useMutation({
-    mutationFn: () => postCart({ data: { product: productId, quantity: 1 } }),
-    meta: {
-      invalidatesQuery: PRODUCT_QUERY_KEYS.getCartList()
-    },
-    onSuccess: () => toast.success(t`Added to cart`),
-    onError: () => toast.error(t`Failed to add the product to the cart`)
-  });
 
   return (
     <Card className={cn('p-3 sm:p-5', className)} size='sm'>
@@ -121,6 +116,33 @@ export const ProductCard = ({ product, className }: Props) => {
           {variantsCount > 1 && (
             <p className='text-primary mt-1 text-sm font-medium'>{t`${variantsCount} variants`}</p>
           )}
+          <div className='mt-2 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm'>
+            {product.stock_quantity > 0 ? (
+              <span className='flex items-center gap-1 font-semibold text-green-600'>
+                <CircleCheckIcon className='size-4' />
+                {t`In stock`}
+              </span>
+            ) : (
+              <span className='text-destructive flex items-center gap-1 font-semibold'>
+                <CircleXIcon className='size-4' />
+                {t`Out of stock`}
+              </span>
+            )}
+            {Number(product.average_rating) > 0 && (
+              <span className='flex items-center gap-1 font-medium'>
+                <StarIcon className='size-4 fill-yellow-400 text-yellow-400' />
+                {product.average_rating}
+              </span>
+            )}
+          </div>
+          <p className='text-muted-foreground mt-2 flex flex-wrap items-center gap-x-1 text-sm'>
+            {product.category_path.map((name, index) => (
+              <span key={name} className='flex items-center gap-1'>
+                {index > 0 && <ChevronRightIcon className='size-3.5' />}
+                {name}
+              </span>
+            ))}
+          </p>
           <dl className='mt-3 space-y-1.5'>
             {specifications.map((spec) => (
               <div key={`${spec.name}-${spec.value}`} className='flex gap-1 text-sm leading-6'>
@@ -153,16 +175,9 @@ export const ProductCard = ({ product, className }: Props) => {
             )}
           </div>
           {!isAdmin && (
-            <Button
-              className='shrink-0 bg-yellow-400 font-bold text-black hover:bg-yellow-300 sm:mt-3 sm:w-full'
-              disabled={addToCartMutation.isPending || product.stock_quantity === 0}
-              variant='secondary'
-              loading={addToCartMutation.isPending}
-              onClick={() => addToCartMutation.mutate()}
-            >
-              <ShoppingCartIcon />
-              {product.stock_quantity === 0 ? t`Out of stock` : t`Add to cart`}
-            </Button>
+            <div className='sm:mt-3'>
+              <CartButtons product={product} />
+            </div>
           )}
         </div>
       </div>

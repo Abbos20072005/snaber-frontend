@@ -17,6 +17,9 @@ msgstr ""
 msgid "{orders_count} orders"
 msgstr "{orders_count} заказов"
 
+msgid "{productsCount} products"
+msgstr "{productsCount} товаров"
+
 msgid "{selectedSize} selected"
 msgstr "Выбрано: {selectedSize}"
 
@@ -104,8 +107,8 @@ msgstr "Добавить значение"
 msgid "Add variants"
 msgstr "Добавить варианты"
 
-msgid "Added to cart"
-msgstr "Добавлено в корзину"
+#~ msgid "Added to cart"
+#~ msgstr "Добавлено в корзину"
 
 msgid "Added to comparison"
 msgstr "Добавлено к сравнению"
@@ -572,8 +575,8 @@ msgstr "Пример: Синий"
 msgid "Example: Color, Size"
 msgstr "Пример: Цвет, Размер"
 
-msgid "Failed to add the product to the cart"
-msgstr "Не удалось добавить товар в корзину"
+#~ msgid "Failed to add the product to the cart"
+#~ msgstr "Не удалось добавить товар в корзину"
 
 msgid "Failed to create attribute."
 msgstr "Не удалось создать атрибут."

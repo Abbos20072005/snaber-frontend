@@ -1,5 +1,6 @@
 interface ProductBase {
   average_rating: string;
+  category_path: string[];
   created_at: string;
   discount_percent: number;
   family_id: number | null;

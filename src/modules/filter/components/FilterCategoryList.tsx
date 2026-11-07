@@ -113,7 +113,9 @@ export const FilterCategoryList = ({ resetRef, category }: Props) => {
     return (
       <Collapsible key={cat.id} open={isExpanded}>
         <Button
-          className={cn('h-auto w-full justify-start py-1.5 whitespace-normal')}
+          className={cn(
+            'h-auto w-full justify-start py-1.5 whitespace-normal hover:bg-transparent'
+          )}
           variant='ghost'
           onClick={() => {
             void setCategoryId(cat.id);

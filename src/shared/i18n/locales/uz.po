@@ -17,6 +17,9 @@ msgstr ""
 msgid "{orders_count} orders"
 msgstr "{orders_count} ta buyurtma"
 
+msgid "{productsCount} products"
+msgstr "{productsCount} ta mahsulot"
+
 msgid "{selectedSize} selected"
 msgstr "{selectedSize} ta tanlandi"
 
@@ -104,8 +107,8 @@ msgstr "Qiymat qo‘shish"
 msgid "Add variants"
 msgstr "Variantlar qo'shish"
 
-msgid "Added to cart"
-msgstr "Savatga qo‘shildi"
+#~ msgid "Added to cart"
+#~ msgstr "Savatga qo‘shildi"
 
 msgid "Added to comparison"
 msgstr "Taqqoslashga qo‘shildi"
@@ -572,8 +575,8 @@ msgstr "Misol: Ko‘k"
 msgid "Example: Color, Size"
 msgstr "Misol: Rang, O‘lcham"
 
-msgid "Failed to add the product to the cart"
-msgstr "Tovarni savatga qo‘shib bo‘lmadi"
+#~ msgid "Failed to add the product to the cart"
+#~ msgstr "Tovarni savatga qo‘shib bo‘lmadi"
 
 msgid "Failed to create attribute."
 msgstr "Atribut yaratilmadi."

@@ -16,6 +16,9 @@ msgstr ""
 msgid "{orders_count} orders"
 msgstr "{orders_count} orders"
 
+msgid "{productsCount} products"
+msgstr "{productsCount} products"
+
 msgid "{selectedSize} selected"
 msgstr "{selectedSize} selected"
 
@@ -103,8 +106,8 @@ msgstr "Add value"
 msgid "Add variants"
 msgstr "Add variants"
 
-msgid "Added to cart"
-msgstr "Added to cart"
+#~ msgid "Added to cart"
+#~ msgstr "Added to cart"
 
 msgid "Added to comparison"
 msgstr "Added to comparison"
@@ -571,8 +574,8 @@ msgstr "Example: Blue"
 msgid "Example: Color, Size"
 msgstr "Example: Color, Size"
 
-msgid "Failed to add the product to the cart"
-msgstr "Failed to add the product to the cart"
+#~ msgid "Failed to add the product to the cart"
+#~ msgstr "Failed to add the product to the cart"
 
 msgid "Failed to create attribute."
 msgstr "Failed to create attribute."
