@@ -68,7 +68,7 @@ export const ProductCard = ({ product, className }: Props) => {
                   <CarouselItem key={image}>
                     <img
                       alt={t`Product image`}
-                      className='aspect-square w-full rounded-lg border object-cover'
+                      className='aspect-square w-full rounded-lg border object-contain'
                       src={image}
                       decoding='async'
                       loading='lazy'

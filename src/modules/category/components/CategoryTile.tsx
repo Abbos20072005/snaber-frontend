@@ -20,7 +20,7 @@ export const CategoryTile = ({ category }: { category: Category }) => {
       {image ? (
         <img
           alt={category.name}
-          className='bg-background aspect-square w-full rounded-lg object-cover'
+          className='bg-background aspect-square w-full rounded-lg object-contain'
           src={image}
           decoding='async'
           loading='lazy'

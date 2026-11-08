@@ -44,6 +44,8 @@ export function getRouter() {
     routeTree,
     context: { queryClient },
     scrollRestoration: true,
+    // The page data is fetched on hover or touch, so the click opens the page right away.
+    defaultPreload: 'intent',
     defaultPreloadStaleTime: 0,
     defaultNotFoundComponent: NotFoundError,
     defaultErrorComponent: GeneralError

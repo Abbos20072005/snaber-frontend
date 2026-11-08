@@ -21,6 +21,10 @@ export const dynamicActivate = async (locale: Locale = getLocale()) => {
     locale = SOURCE_LOCALE;
     isomorphicCookie.set(COOKIES.LOCALE, SOURCE_LOCALE, LOCALE_COOKIE_OPTIONS);
   }
-  i18n.loadAndActivate({ locale, messages: CATALOGS[locale] });
-  isomorphicCookie.set(COOKIES.LOCALE, locale, LOCALE_COOKIE_OPTIONS);
+  // Every activation fires the change event and re-renders all translated components,
+  // and this runs on every navigation, so it only runs when the locale really changes.
+  if (i18n.locale !== locale) i18n.loadAndActivate({ locale, messages: CATALOGS[locale] });
+  if (isomorphicCookie.get(COOKIES.LOCALE) !== locale) {
+    isomorphicCookie.set(COOKIES.LOCALE, locale, LOCALE_COOKIE_OPTIONS);
+  }
 };

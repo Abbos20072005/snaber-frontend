@@ -38,6 +38,8 @@ export const RangeSlider = ({ min, max }: { min: number; max: number }) => {
     const rawVal = Number(debouncedMin);
     if (Number.isNaN(rawVal)) return;
     const clamped = Math.max(min, Math.min(rawVal, maxPrice - MIN_DISTANCE));
+    // Nothing changed (this also runs on mount), and every URL write navigates the whole page.
+    if (clamped === minPrice) return;
     prevValues.current = [clamped, maxPrice];
     setMinPrice(clamped);
   }, [debouncedMin]);
@@ -46,6 +48,7 @@ export const RangeSlider = ({ min, max }: { min: number; max: number }) => {
     const rawVal = Number(debouncedMax);
     if (Number.isNaN(rawVal)) return;
     const clamped = Math.min(max, Math.max(rawVal, minPrice + MIN_DISTANCE));
+    if (clamped === maxPrice) return;
     prevValues.current = [minPrice, clamped];
     setMaxPrice(clamped);
   }, [debouncedMax]);

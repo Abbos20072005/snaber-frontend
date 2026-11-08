@@ -23,7 +23,7 @@ export const CategoryCard = ({ category }: { category: Category }) => {
       {image ? (
         <img
           alt={category.name}
-          className='bg-background size-24 shrink-0 rounded-md object-cover'
+          className='bg-background size-24 shrink-0 rounded-md object-contain'
           src={image}
           decoding='async'
           loading='lazy'
